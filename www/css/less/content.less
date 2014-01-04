@@ -1,0 +1,271 @@
+html {
+	width:100%;
+	height:100%;
+}
+
+body {
+	background:@grey;
+	font-family: helvetica, arial, sans-serif;
+	font-size:62.5%;
+	text-align: center;
+	min-height: 100%;
+	
+	&.fillit {
+		width:100%;
+		height:100%;
+	}
+}
+
+.bottom {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  width:100%;
+  height:100%;
+
+	img {
+		max-width:100%;
+	}
+}
+
+#logo {
+	padding:25px 0 10px 0;
+	
+	img {
+		display: inline-block;
+		max-width:180px;
+	}
+}
+
+/* Generic list styling */
+.link-list {
+	border-top:1px solid @mgrey;
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align: left;
+	
+	li {
+		margin:0;
+		padding:0;
+		border-bottom:1px solid @mgrey;
+		position: relative;
+		
+		a {
+			cursor: pointer;
+			display:block;
+			font-size: 2.6em;
+			padding:20px 20px 20px 60px;
+			text-decoration: none;
+			color:@dark;
+			
+			&:before {
+				color: @orange;
+				font-size: 1.2em;
+				width:50px;
+				padding: 25px 0 0 0;
+				position: absolute;
+				top:0px;
+				left:15px;
+			}
+			
+			&:hover {
+				border:0;
+			}
+			
+			span {
+				display: block;
+				font-size:0.5em;
+				padding:2px 0 0 0;
+			}
+		}
+	}
+	
+	&.bottom {
+		
+		li {
+			text-align:center;
+			
+			a {
+				padding-left:20px;
+				
+				&:before {
+					position:relative;
+					top: auto;
+					left: auto;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+actionName {
+	
+	p {
+		padding:0 20px;
+	}
+}
+
+/* Index Page */
+#landing {
+
+	h2 {
+		font-size:2em;
+	}
+}
+
+#writeRing {
+	
+	img {
+		max-width:70%;
+	}
+	
+	.link-list {
+		text-align: center;
+		li {
+			a {
+				padding-left:0;
+				
+				&:before {
+					left: auto;
+					position: relative;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+/* Program ring area */
+.ringActions {
+	
+}
+
+#optionInput {
+  display: block;
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+  font-size: 2.8em;
+  padding: 15px 2%;
+  border:1px solid @mgrey;
+}
+
+#optionForm {
+	
+	label {
+		font-size:1.2em;
+	}
+	
+	#submit {
+		width:100%;
+		
+		&:after {
+			display: inline-block;
+			color: @orange;
+			font-size: 1.2em;
+			width:50px;
+			padding: 0;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+
+
+
+
+
+.step {
+    width: 100%;
+}
+.count {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+#scan { height: 40px }
+
+
+.obviousButton {
+    width: 80%;
+    height: 80px;
+}
+
+.platforms {
+    padding-top: 20px;
+    text-align: center;
+}
+#qrCode {
+    text-align: center;
+    margin: 50px;
+}
+.back {
+    display: none !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.next { float: right }
+
+a.paddedIcon > img { padding-bottom: 10px }
+a.paddedIcon {
+    display: inline-block;
+    width: 125px;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid #fff;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2;
+    opacity: .98;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    display: none;
+}
+#androidInfo,
+#windowsMobileInfo,
+#blackBerryInfo { display: none }
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+a.paddedIcon { padding: 5px }
+
+#option, #writeRing{display:none;}
+
+#heatMap{
+	display: none;
+  position:fixed;
+  height:100%;
+  width:100%;
+}
+
+#bubble{
+  position:absolute;
+  display:none;
+  height:30px;
+  width:30px;
+  background-color:@orange;
+  border-radius: 15px;
+  .boxShadow(0,0,15px,7px,@orange);
+}
+

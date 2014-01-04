@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="co.mclear.nfcringpro" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>NFC Ring Control</name>
+    <description>
+	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
+    </description>
+
+    <author href="http://nfcring.com" email="john@mclear.co">
+        NFC Ring Team
+    </author>
+    <preference name="orientation" value="portrait" />
+    <content src="index.html" />
+    <access origin="http://127.0.0.1*" />
+    <access origin="http://10.0.0.12*" />
+    <access origin="http://parse.com"/> <!-- allow parse stuff -->
+    <access origin="http://api.parse.com"/> <!-- allow parse stuff -->
+    <access origin="https://parse.com"/> <!-- allow parse stuff -->
+    <access origin="https://api.parse.com"/> <!-- allow parse stuff -->
+</widget>
