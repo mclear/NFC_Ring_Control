@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name = "format-detection" content = "telephone=no"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
+	<title>NFC Ring App</title>
+</head>
+<body>
+
+<div class="container">
+	<div class="mainContents">
+
+		<div id="landing" class="landing">
+			<header id="header">
+				<div id="logo"><img src="img/nfcring-logo.png"></div>
+			</header>
+		  <div class="count"></div>
+		  <h2>What do you want to do today?</h2>
+		  <ul class="link-list">
+		    <li><a href="createAction.html" id="createNew" class="icon icon-plus">Create<span>Write a new action to your ring</span></a></li>
+				<!-- <li><button type="button" id="scan" class="icon icon-facebook">Scan QR Code from my computer</button></li> -->
+		    <li><a href="readAction.html" id="read" class="icon icon-eye">Read<span>See what's on your ring</span></a></li>
+		  </ul>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+app.initialize();
+
+// listeners
+$("body").on('click', "#finish", function (e) {
+  debug("Restarting");
+});
+</script>
+</body>
+</html>

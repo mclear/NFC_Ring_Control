@@ -1,0 +1,6 @@
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.exe.config
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.exe
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\bin\Debug\CordovaDeploy.pdb
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.csprojResolveAssemblyReference.cache
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.exe
+C:\Users\jose\NFC_Ring_Control\platforms\wp8\cordova\lib\CordovaDeploy\CordovaDeploy\obj\x86\Debug\CordovaDeploy.pdb
