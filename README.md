@@ -34,6 +34,7 @@ export ANT_HOME="/usr/local/ant"
 
 # Publishing
 ```
+Bump version number in www/config.xml
 cordova build android --release
 cd platforms/android/bin
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore KEYSTOREFILELOCATION NFCRingPro-release-unsigned.apk nfcring
