@@ -23,7 +23,6 @@ var app = {
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
-    /*
     if (nfc) {
       nfc.addNdefListener(function (nfcEvent) {
         nfcRing.readOrWrite(nfcEvent);
@@ -35,7 +34,6 @@ var app = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
     }
-    */
   }
 };
 
