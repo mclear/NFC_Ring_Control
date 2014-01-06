@@ -13,17 +13,17 @@ var app = {
     console.log('deviceready');
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
-	if(window.location.pathname == "www/index.html") document.removeEventListener("backbutton", nfcRing.handleBack, false);
+    if(window.location.pathname == "www/index.html" && device.platform == "Win32NT") document.removeEventListener("backbutton", nfcRing.handleBack, false);
 
-	// Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-	if(device.platform == "Win32NT"){
+    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
+    if(device.platform == "Win32NT"){
       $('#read').hide();
     }
 	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
-
+    /*
     if (nfc) {
       nfc.addNdefListener(function (nfcEvent) {
         nfcRing.readOrWrite(nfcEvent);
@@ -35,6 +35,7 @@ var app = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
     }
+    */
   }
 };
 
@@ -89,5 +90,8 @@ nfcRing.handleBack = function(){
 
   // When on location page take back to home page
   if(nfcRing.location == "actions") window.location = "index.html";
+
+  // When back on index page leave the app..
+  if(nfcRing.location == "index") navigator.app.exitApp();
 }
 

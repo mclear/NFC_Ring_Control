@@ -15,7 +15,7 @@ cordova plugin add org.apache.cordova.vibration
 Obviously some changes need to be made to the below
 
 ```
-export ANT_HOME="/home/jose/apache-ant-1.9.3"
+export ANT_HOME="/usr/local/ant"
 export PATH=/home/jose/Downloads/adt-bundle-linux-x86_64-20131030/sdk/platform-tools:$PATH
 export PATH=/home/jose/Downloads/adt-bundle-linux-x86_64-20131030/sdk/tools:$PATH
 export PATH=$ANT_HOME:$PATH
@@ -24,12 +24,6 @@ export PATH=$ANT_HOME:$PATH
 Run with
 ```
 cordova run android
-```
-
-Note if you install with apt you should do 
-
-```
-export ANT_HOME="/usr/local/ant"
 ```
 
 # Publishing
