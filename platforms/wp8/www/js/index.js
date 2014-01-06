@@ -15,6 +15,11 @@ var app = {
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
 	if(window.location.pathname == "www/index.html") document.removeEventListener("backbutton", nfcRing.handleBack, false);
 
+	// Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
+	if(device.platform == "Win32NT"){
+      $('#read').hide();
+    }
+	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
