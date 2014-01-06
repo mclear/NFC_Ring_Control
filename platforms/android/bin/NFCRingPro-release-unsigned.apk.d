@@ -1,4 +1,4 @@
-/home/jose/NFCRingPro/platforms/android/bin/NFCRingPro-release-unsigned.apk : \
-/home/jose/NFCRingPro/platforms/android/bin/NFCRingPro.ap_ \
-/home/jose/NFCRingPro/platforms/android/bin/classes.dex \
-/home/jose/NFCRingPro/platforms/android/CordovaLib/bin/classes.jar \
+/home/jose/NFC_Ring_Control/platforms/android/bin/NFCRingPro-release-unsigned.apk : \
+/home/jose/NFC_Ring_Control/platforms/android/bin/NFCRingPro.ap_ \
+/home/jose/NFC_Ring_Control/platforms/android/bin/classes.dex \
+/home/jose/NFC_Ring_Control/platforms/android/CordovaLib/bin/classes.jar \
