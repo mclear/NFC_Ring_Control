@@ -13,7 +13,11 @@ var app = {
     console.log('deviceready');
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
-    if(window.location.pathname == "www/index.html" && device.platform == "Win32NT") document.removeEventListener("backbutton", nfcRing.handleBack, false);
+    if(nfcRing.location == "index"){
+      document.removeEventListener("backbutton", nfcRing.handleBack, false);
+      // Clear history so back button on home page always leaves the app
+      navigator.app.clearHistory();
+    }
 
     // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
     if(device.platform == "Win32NT"){

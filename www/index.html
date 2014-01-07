@@ -33,12 +33,11 @@
 <script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
-app.initialize();
+// Set the location to the index page
+nfcRing.location = "index";
 
-// listeners
-$("body").on('click', "#finish", function (e) {
-  debug("Restarting");
-});
+// Initialize the page
+app.initialize();
 </script>
 </body>
 </html>
