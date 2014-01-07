@@ -4,8 +4,8 @@ Prereq to build cordova = NodeJS, linux, Java, Ant, Android dev tools, git
 
 ```
 sudo npm install -g cordova
-git clone https://github.com/mclear/NFC_Ring_PhoneGap_App.git NFCRingPro
-cd NFCRingPro
+git clone https://github.com/mclear/NFC_Ring_Control.git
+cd NFC_Ring_Control
 cordova platform add android
 cordova plugin add https://github.com/chariotsolutions/phonegap-nfc.git
 cordova plugin add https://github.com/apache/cordova-plugin-device.git
@@ -32,6 +32,6 @@ cordova run android
 Bump version number in www/config.xml and platforms/android/androidManifest.xml
 cordova build android --release
 cd platforms/android/bin
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore KEYSTOREFILELOCATION NFCRingPro-release-unsigned.apk nfcring
-zipalign -v 4 NFCRingPro-release-unsigned.apk NFCRingControl.apk
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore KEYSTOREFILELOCATION NFCRingControl-release-unsigned.apk nfcring
+zipalign -v 4 NFCRingControl-release-unsigned.apk NFCRingControl.apk
 ```
