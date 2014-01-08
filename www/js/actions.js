@@ -65,7 +65,7 @@ var actions = {
   text: {
     label: "Text",
     description: "Write arbitary text such as a Bitcoin public key",
-    optionText: "What is your text value?",
+    optionText: "What is your text?",
     placeHolder: "Hello world",
     format: function(option){
       return option
