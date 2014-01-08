@@ -47,6 +47,7 @@ function debug(msg) {
 
 nfcRing.readOrWrite = function(nfcEvent){
   if(nfcRing.toWrite){
+    console.log("Doing write event", nfcEvent);
     nfcRing.write(nfcEvent);
     $('#writeRing').show();
   }else{
@@ -56,9 +57,13 @@ nfcRing.readOrWrite = function(nfcEvent){
 
 nfcRing.write = function(nfcEvent){
   // If the string is a valid URL
-  if(validURL(nfcRing.toWrite)){
+  var isURL = nfcRing.validURL(nfcRing.toWrite);
+ 
+  if(isURL){
+    console.log("URL Record");
     var ndefRecord = ndef.uriRecord(nfcRing.toWrite); // Creates a URI record
   }else{
+    console.log("Text record");
     // The string must be a text record as that's the only other type we support
     var ndefRecord = ndef.textRecord(nfcRing.toWrite); // Creates a Text record
   }
@@ -104,15 +109,14 @@ nfcRing.handleBack = function(){
 }
 
 
-function ValidURL(str) {
-  var pattern = new RegExp('^(https?:\/\/)?'+ // protocol
-    '((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // domain name
-    '((\d{1,3}\.){3}\d{1,3}))'+ // OR ip (v4) address
-    '(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port and path
-    '(\?[;&a-z\d%_.~+=-]*)?'+ // query string
-    '(\#[-a-z\d_]*)?$','i'); // fragment locater
-  if(!pattern.test(str)) {
-    alert("Please enter a valid URL.");
+nfcRing.validURL = function(url) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  if(!pattern.test(url)) {
     return false;
   } else {
     return true;
