@@ -92,6 +92,7 @@ nfcRing.addActions = function() {
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
+    setTimeout(function(){nfcRing.showNeedHelp()}, 5000);
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
     console.log("Formatted as ", actions[key].format(response));
@@ -127,13 +128,17 @@ nfcRing.submitted = function(key){
           alert("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
         }
       });
-	}catch(e){
-	  // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
-	  if(device.platform == "Win32NT"){
-	    alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
-	  }
-	}
+    }catch(e){
+      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
+      if(device.platform == "Win32NT"){
+        alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
+      }
+    }
   }
+}
+
+nfcRing.showNeedHelp = function(){
+  $("#writeRing > .actionName").append("<h2>Struggling to Find your sweet spot?  <button onclick=\"location.href='help.html'\">Get help</button></h2>");
 }
 
 function drawHeatMap(coOrds){
