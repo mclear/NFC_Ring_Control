@@ -74,7 +74,7 @@ nfcRing.read = function(nfcEvent){
   var ring = nfcEvent.tag;
   console.log(ring);
   ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
-  alert(ringData);
+  alert(ringData, false, "Ring contents:");
 }
 
 nfcRing.handleBack = function(){
