@@ -11,6 +11,13 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
+	
+	// Remove read from windows phone, it's far too buggy
+    if(device.platform == "Win32NT"){
+      $('#read').hide();
+	  $('.icon-text').parent().hide(); // Also hide writing text as it will cause issues where the ring wont be read again
+	  // note we need to this here beacuse device isn't avialable previously..  It's a bit of a PITA but it's only temporary
+    }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
     if(nfcRing.location == "index"){
@@ -70,7 +77,11 @@ nfcRing.write = function(nfcEvent){
   nfc.write([ndefRecord], function () {
     navigator.notification.vibrate(100);
     console.log("Written", ndefRecord);
-    var shareLocation = confirm("Woohoo!  Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ");
+    if(device.platform == "Win32NT"){ // dont ask for sharing if they are Windows Phone as it doesn't work
+	  var shareLocation = false;
+    }else{
+      var shareLocation = confirm("Woohoo!  Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ");
+	}
     if(shareLocation){
       window.location = "shareLocation.html";
     }

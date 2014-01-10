@@ -11,19 +11,28 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
+	
+	// Remove read from windows phone, it's far too buggy
+    if(device.platform == "Win32NT"){
+      $('#read').hide();
+	  $('.icon-text').parent().hide(); // Also hide writing text as it will cause issues where the ring wont be read again
+    }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
-	if(window.location.pathname == "www/index.html") document.removeEventListener("backbutton", nfcRing.handleBack, false);
+    if(nfcRing.location == "index"){
+      document.removeEventListener("backbutton", nfcRing.handleBack, false);
+      // Clear history so back button on home page always leaves the app
+      navigator.app.clearHistory();
+    }
 
-	// Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-	if(device.platform == "Win32NT"){
+    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
+    if(device.platform == "Win32NT"){
       $('#read').hide();
     }
 	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
-
     if (nfc) {
       nfc.addNdefListener(function (nfcEvent) {
         nfcRing.readOrWrite(nfcEvent);
@@ -44,6 +53,7 @@ function debug(msg) {
 
 nfcRing.readOrWrite = function(nfcEvent){
   if(nfcRing.toWrite){
+    console.log("Doing write event", nfcEvent);
     nfcRing.write(nfcEvent);
     $('#writeRing').show();
   }else{
@@ -52,11 +62,25 @@ nfcRing.readOrWrite = function(nfcEvent){
 }
 
 nfcRing.write = function(nfcEvent){
-  var ndefRecord = ndef.uriRecord(nfcRing.toWrite); // support more types.. TODO
+  // If the string is a valid URL
+  var isURL = nfcRing.validURL(nfcRing.toWrite);
+ 
+  if(isURL){
+    console.log("URL Record");
+    var ndefRecord = ndef.uriRecord(nfcRing.toWrite); // Creates a URI record
+  }else{
+    console.log("Text record");
+    // The string must be a text record as that's the only other type we support
+    var ndefRecord = ndef.textRecord(nfcRing.toWrite); // Creates a Text record
+  }
   nfc.write([ndefRecord], function () {
     navigator.notification.vibrate(100);
     console.log("Written", ndefRecord);
-    var shareLocation = confirm("Woohoo!  Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ");
+    if(device.platform == "Win32NT"){ // dont ask for sharing if they are Windows Phone as it doesn't work
+	  var shareLocation = false;
+    }else{
+      var shareLocation = confirm("Woohoo!  Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ");
+	}
     if(shareLocation){
       window.location = "shareLocation.html";
     }
@@ -89,5 +113,22 @@ nfcRing.handleBack = function(){
 
   // When on location page take back to home page
   if(nfcRing.location == "actions") window.location = "index.html";
+
+  // When back on index page leave the app..
+  if(nfcRing.location == "index") navigator.app.exitApp();
 }
 
+
+nfcRing.validURL = function(url) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  if(!pattern.test(url)) {
+    return false;
+  } else {
+    return true;
+  }
+}
