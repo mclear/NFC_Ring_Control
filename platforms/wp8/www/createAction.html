@@ -72,6 +72,7 @@ nfcRing.addActions = function() {
     };
     $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
+
   
   $('#ringActions a').click(function(){
     nfcRing.location = "option";
@@ -179,6 +180,5 @@ $("body").on('click', "#finish", function () {
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
 
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 </body>
 </html>
