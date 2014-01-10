@@ -74,6 +74,7 @@ nfcRing.write = function(nfcEvent){
     console.log("Written", ndefRecord);
     if(device.platform == "Win32NT"){ // dont ask for sharing if they are Windows Phone as it doesn't work
 	  var shareLocation = false;
+	  alert("Woohooo", false, "Your ring is ready");
     }else{
       var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
 	}

@@ -16,6 +16,7 @@ var app = {
     if(device.platform == "Win32NT"){
       $('#read').hide();
 	  $('.icon-text').parent().hide(); // Also hide writing text as it will cause issues where the ring wont be read again
+	  // note we need to this here beacuse device isn't avialable previously..  It's a bit of a PITA but it's only temporary
     }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
@@ -23,11 +24,6 @@ var app = {
       document.removeEventListener("backbutton", nfcRing.handleBack, false);
       // Clear history so back button on home page always leaves the app
       navigator.app.clearHistory();
-    }
-
-    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-    if(device.platform == "Win32NT"){
-      $('#read').hide();
     }
 	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
@@ -78,8 +74,9 @@ nfcRing.write = function(nfcEvent){
     console.log("Written", ndefRecord);
     if(device.platform == "Win32NT"){ // dont ask for sharing if they are Windows Phone as it doesn't work
 	  var shareLocation = false;
+	  alert("Woohooo", false, "Your ring is ready");
     }else{
-      var shareLocation = confirm("Woohoo!  Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ");
+      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
 	}
     if(shareLocation){
       window.location = "shareLocation.html";
@@ -95,7 +92,7 @@ nfcRing.read = function(nfcEvent){
   var ring = nfcEvent.tag;
   console.log(ring);
   ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
-  alert(ringData);
+  alert(ringData, false, "Ring contents:");
 }
 
 nfcRing.handleBack = function(){

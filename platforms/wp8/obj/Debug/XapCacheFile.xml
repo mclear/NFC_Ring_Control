@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="1/10/2014 6:05:52 PM">
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\obj\Debug\co.mclear.nfcringpro.dll" archivePath="co.mclear.nfcringpro.dll" lastWriteTime="1/10/2014 6:05:51 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="1/10/2014 6:05:50 PM" />
+﻿<xapCache source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="1/10/2014 6:51:45 PM">
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\obj\Debug\co.mclear.nfcringpro.dll" archivePath="co.mclear.nfcringpro.dll" lastWriteTime="1/10/2014 6:51:44 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\config.xml" archivePath="config.xml" lastWriteTime="1/10/2014 6:51:43 PM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Images\appbar.back.rest.png" archivePath="Images\appbar.back.rest.png" lastWriteTime="12/5/2013 12:32:39 PM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Images\appbar.close.rest.png" archivePath="Images\appbar.close.rest.png" lastWriteTime="12/5/2013 12:32:39 PM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Images\appbar.feature.video.rest.png" archivePath="Images\appbar.feature.video.rest.png" lastWriteTime="12/5/2013 12:32:39 PM" />
@@ -9,47 +9,47 @@
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Images\appbar.stop.rest.png" archivePath="Images\appbar.stop.rest.png" lastWriteTime="12/5/2013 12:32:39 PM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="1/6/2014 12:10:05 AM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Plugins\org.apache.cordova.dialogs\notification-beep.wav" archivePath="Plugins\org.apache.cordova.dialogs\notification-beep.wav" lastWriteTime="1/5/2014 9:49:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\config.xml" archivePath="www\config.xml" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\cordova.js" archivePath="www\cordova.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\cordova_plugins.js" archivePath="www\cordova_plugins.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\createAction.html" archivePath="www\createAction.html" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\index.css" archivePath="www\css\index.css" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\content.less" archivePath="www\css\less\content.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\icons.less" archivePath="www\css\less\icons.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\mixins.less" archivePath="www\css\less\mixins.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\nfcring-app.less" archivePath="www\css\less\nfcring-app.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\reset.less" archivePath="www\css\less\reset.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\vars.less" archivePath="www\css\less\vars.less" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\nfcringapp.css" archivePath="www\css\nfcringapp.css" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\nfcringapp.min.css" archivePath="www\css\nfcringapp.min.css" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\rung.css" archivePath="www\css\rung.css" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\icon.png" archivePath="www\icon.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\actionIcons.eot" archivePath="www\img\actionIcons.eot" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\android.png" archivePath="www\img\android.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\blackberry.png" archivePath="www\img\blackberry.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\clone.png" archivePath="www\img\clone.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\cordova.png" archivePath="www\img\cordova.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\loading.gif" archivePath="www\img\loading.gif" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\nfcring-classic.jpg" archivePath="www\img\nfcring-classic.jpg" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\nfcring-logo.png" archivePath="www\img\nfcring-logo.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\phone-to-ring.png" archivePath="www\img\phone-to-ring.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\windowsmobile.png" archivePath="www\img\windowsmobile.png" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\index.html" archivePath="www\index.html" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\actions.js" archivePath="www\js\actions.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\heatmap.js" archivePath="www\js\heatmap.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\index.js" archivePath="www\js\index.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\jquery-1.9.1.min.js" archivePath="www\js\jquery-1.9.1.min.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\parse-1.2.9.min.js" archivePath="www\js\parse-1.2.9.min.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\parseDetails.js" archivePath="www\js\parseDetails.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" archivePath="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.device\www\device.js" archivePath="www\plugins\org.apache.cordova.device\www\device.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.dialogs\www\notification.js" archivePath="www\plugins\org.apache.cordova.dialogs\www\notification.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.vibration\www\vibration.js" archivePath="www\plugins\org.apache.cordova.vibration\www\vibration.js" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\readAction.html" archivePath="www\readAction.html" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\scanQR.html" archivePath="www\scanQR.html" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\shareLocation.html" archivePath="www\shareLocation.html" lastWriteTime="1/10/2014 6:05:50 PM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/10/2014 6:05:52 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\config.xml" archivePath="www\config.xml" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\cordova.js" archivePath="www\cordova.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\cordova_plugins.js" archivePath="www\cordova_plugins.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\createAction.html" archivePath="www\createAction.html" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\index.css" archivePath="www\css\index.css" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\content.less" archivePath="www\css\less\content.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\icons.less" archivePath="www\css\less\icons.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\mixins.less" archivePath="www\css\less\mixins.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\nfcring-app.less" archivePath="www\css\less\nfcring-app.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\reset.less" archivePath="www\css\less\reset.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\less\vars.less" archivePath="www\css\less\vars.less" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\nfcringapp.css" archivePath="www\css\nfcringapp.css" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\nfcringapp.min.css" archivePath="www\css\nfcringapp.min.css" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\css\rung.css" archivePath="www\css\rung.css" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\icon.png" archivePath="www\icon.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\actionIcons.eot" archivePath="www\img\actionIcons.eot" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\android.png" archivePath="www\img\android.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\blackberry.png" archivePath="www\img\blackberry.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\clone.png" archivePath="www\img\clone.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\cordova.png" archivePath="www\img\cordova.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\loading.gif" archivePath="www\img\loading.gif" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\nfcring-classic.jpg" archivePath="www\img\nfcring-classic.jpg" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\nfcring-logo.png" archivePath="www\img\nfcring-logo.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\phone-to-ring.png" archivePath="www\img\phone-to-ring.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\img\windowsmobile.png" archivePath="www\img\windowsmobile.png" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\index.html" archivePath="www\index.html" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\actions.js" archivePath="www\js\actions.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\heatmap.js" archivePath="www\js\heatmap.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\index.js" archivePath="www\js\index.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\jquery-1.9.1.min.js" archivePath="www\js\jquery-1.9.1.min.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\parse-1.2.9.min.js" archivePath="www\js\parse-1.2.9.min.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\js\parseDetails.js" archivePath="www\js\parseDetails.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" archivePath="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.device\www\device.js" archivePath="www\plugins\org.apache.cordova.device\www\device.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.dialogs\www\notification.js" archivePath="www\plugins\org.apache.cordova.dialogs\www\notification.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\plugins\org.apache.cordova.vibration\www\vibration.js" archivePath="www\plugins\org.apache.cordova.vibration\www\vibration.js" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\readAction.html" archivePath="www\readAction.html" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\scanQR.html" archivePath="www\scanQR.html" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\www\shareLocation.html" archivePath="www\shareLocation.html" lastWriteTime="1/10/2014 6:51:43 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="1/10/2014 6:51:44 PM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="1/6/2014 1:47:20 AM" />
   <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="1/6/2014 1:47:20 AM" />
-  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/10/2014 6:05:52 PM" />
+  <file source="C:\Users\jose\NFC_Ring_Control\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="1/10/2014 6:51:44 PM" />
 </xapCache>
