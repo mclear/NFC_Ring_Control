@@ -25,11 +25,6 @@ var app = {
       // Clear history so back button on home page always leaves the app
       navigator.app.clearHistory();
     }
-
-    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-    if(device.platform == "Win32NT"){
-      $('#read').hide();
-    }
 	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
