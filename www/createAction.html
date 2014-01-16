@@ -7,20 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
 	<title>NFC Ring App</title>
 </head>
-<body>
+<body id="create">
 <div id="heatMap"></div>
+
+<div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
+
 <div id="help">
-	<h2>Struggling to Find your sweet spot?<button onclick="$('#helpContents').show();">Show help</button></h2>
-	<div id="helpContents">
+	<div id="helpContents" class="white-popup mfp-hide">
+		<h3 class="icon icon-support">Help Tips</h3>
 		<ul>
-		<li>Make sure the colored non metal part of the ring is touching and facing the back of your device (picture would be handy)</li>
-		<li>Remove any cases from your device</li>
-		<li>Turn your device volume up</li>
-		<li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
-		<li>Move your ring slowly around the back of the device</li>
-		<li>Try with another NFC Device if you have one</li>
-		<li>Windows Phone requires the NFC Ring to already have a URI on the ring before the write event will fire, to fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL</li>
+			<li>Make sure the colored, non metal part of the ring is touching and facing the back of your device</li>
+			<li>Remove any cases from your device</li>
+			<li>Turn your device volume up</li>
+			<li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
+			<li>Move your ring slowly around the back of the device</li>
+			<li>Try with another NFC Device if you have one</li>
 		</ul>
+		<button class="button" id="helpClose">Ok, got it</button>
 	</div>
 </div>
 
@@ -65,6 +68,7 @@
 
 <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/magpop.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/actions.js"></script>
@@ -100,7 +104,7 @@ nfcRing.addActions = function() {
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
-    setTimeout(function(){nfcRing.showNeedHelp()}, 5000);
+    setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
     console.log("Formatted as ", actions[key].format(response));
@@ -146,7 +150,7 @@ nfcRing.submitted = function(key){
 }
 
 nfcRing.showNeedHelp = function(){
-  $('#help').show();
+  $('#message').fadeIn('slow');
 }
 
 function drawHeatMap(coOrds){
