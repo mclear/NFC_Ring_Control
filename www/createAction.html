@@ -147,6 +147,7 @@ nfcRing.submitted = function(key){
       if(device.platform == "Win32NT"){
         alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
       }
+      setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
     }
   }
 }
