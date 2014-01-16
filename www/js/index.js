@@ -25,6 +25,12 @@ var app = {
       // Clear history so back button on home page always leaves the app
       navigator.app.clearHistory();
     }
+
+    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
+    if(device.platform == "Win32NT"){
+      $('#read').hide();
+      $('#helpContents ul').append('<li>Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL</li>');
+    }
 	
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
@@ -40,6 +46,29 @@ var app = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
     }
+    
+		$('#helpLink').on('click', function(e){
+			e.preventDefault();
+			$.magnificPopup.open({
+			  items: {
+			    src: '#helpContents'
+			  },
+			  type: 'inline',
+				mainClass: 'mfp-fade',
+				showCloseBtn: false,
+				closeOnBgClick: false,
+				callbacks: {
+			    close: function() {
+			    setTimeout( $('#message').fadeOut('slow'), 5000);
+			    }
+			  }
+			}, 0);
+		});
+
+		$('#helpClose').click( function(){		
+			$.magnificPopup.close();
+		});
+    
   }
 };
 
@@ -48,6 +77,7 @@ function debug(msg) {
 }
 
 nfcRing.readOrWrite = function(nfcEvent){
+  $('#message').hide(); // hide help message
   if(nfcRing.toWrite){
     console.log("Doing write event", nfcEvent);
     nfcRing.write(nfcEvent);
