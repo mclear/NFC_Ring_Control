@@ -70,6 +70,7 @@ function debug(msg) {
 }
 
 nfcRing.readOrWrite = function(nfcEvent){
+  $('#message').hide(); // hide help message
   if(nfcRing.toWrite){
     nfcRing.write(nfcEvent);
     $('#writeRing').show();
