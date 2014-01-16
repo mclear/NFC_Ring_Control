@@ -104,7 +104,6 @@ nfcRing.addActions = function() {
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
-    setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
     console.log("Formatted as ", actions[key].format(response));
@@ -134,10 +133,12 @@ nfcRing.submitted = function(key){
           }else{
             drawHeatMap(coOrdinateCounter);
           }
+          setTimeout(function(){nfcRing.showNeedHelp()}, 8000); // this would be better handled by a promise
         },
         failure: function(){
           // fires on failure to connect
           alert("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+          setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
         }
       });
     }catch(e){
