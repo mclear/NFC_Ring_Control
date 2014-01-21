@@ -218,12 +218,6 @@
         <Compile Include="Plugins\org.apache.cordova.vibration\Vibration.cs" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\Ndef.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\NfcPlugin.cs" />
-    </ItemGroup>
-    <ItemGroup>
         <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
     </ItemGroup>
     <ItemGroup>
@@ -231,9 +225,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\cordova.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\cordova_plugins.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\createAction.html" />
@@ -323,10 +314,19 @@
         <Content Include="www\js\parseDetails.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
+        <Content Include="www\readAction.html" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
+        <Content Include="www\scanQR.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\shareLocation.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\Ndef.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\NfcPlugin.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />
@@ -335,12 +335,12 @@
         <Content Include="www\plugins\org.apache.cordova.vibration\www\vibration.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\readAction.html" />
+        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\scanQR.html" />
+        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\shareLocation.html" />
+        <Content Include="www\cordova_plugins.js" />
     </ItemGroup>
 </Project>
