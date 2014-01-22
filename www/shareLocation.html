@@ -49,6 +49,7 @@ $("body").click(function(e){
       var phoneModel = device.model; 
       console.log("Sending ", centerX, centerY, phoneModel, " to Database");
       sendToParse(centerX, centerY, phoneModel);
+      localStorage.setItem("sweetSpotLocation", {x: centerX, y:centerY}); // store to localstorage too, we can draw this another time
     }
   }, 100);
 });
