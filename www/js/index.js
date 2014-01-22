@@ -105,12 +105,18 @@ nfcRing.write = function(nfcEvent){
       var shareLocation = false;
       alert("Woohooo", false, "Your ring is ready");
     }else{
-      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+      var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
+      if(!dontAskSweetSpotAgain){
+        var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+      }
     }
     if(shareLocation){
+      localStorage.setItem("dontAskSweetSpotAgain", true);
       var idStr = nfcEvent.tag.id;
       idStr = idStr.join(",");
       window.location = "shareLocation.html#?guid="+idStr;
+    }else{
+      localStorage.setItem("dontAskSweetSpotAgain", true);
     }
   }, function (reason) {
     console.log("Inlay write failed")
