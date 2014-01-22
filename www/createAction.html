@@ -77,6 +77,7 @@
 app.initialize();
 
 nfcRing.coOrds = {};
+nfcRing.localSweetSpot = localStorage.getItem("sweetSpotLocation"); // get local sweet spot location
 nfcRing.coOrdData = {
   max: 10,
   data: []
@@ -97,7 +98,11 @@ nfcRing.showNeedHelp = function(){
 }
 
 nfcRing.drawHeatMap = function(){
-  
+  if(nfcRing.localSweetSpot){
+    localSweetSpot = JSON.parse(nfcRing.localSweetSpot);
+    nfcRing.coOrdData.data.push({x: localSweetSpot.x, y: localSweetSpot.y, count: 10}); // adds 10 weight to the position the user specified
+  }
+
   console.log("coOrds", nfcRing.coOrds);
 
   $.each(nfcRing.coOrds, function(k,v){

@@ -101,16 +101,12 @@ nfcRing.write = function(nfcEvent){
   nfc.write([ndefRecord], function () {
     navigator.notification.vibrate(100);
     console.log("Written", ndefRecord);
-    if(device.platform == "Win32NT"){ // dont ask for sharing if they are Windows Phone as it doesn't work
-      var shareLocation = false;
+    var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
+    console.log("dontAskSweetSpotAgain", dontAskSweetSpotAgain);
+    if(dontAskSweetSpotAgain === "true"){ // we should ask for the sweet spot
       alert("Woohooo", false, "Your ring is ready");
     }else{
-      var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
-      if(!dontAskSweetSpotAgain){
-        var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
-      }else{
-        alert("Woohooo", false, "Your ring is ready");
-      }
+      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
     }
     if(shareLocation){
       localStorage.setItem("dontAskSweetSpotAgain", true);
