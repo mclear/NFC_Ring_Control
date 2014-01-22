@@ -76,7 +76,113 @@
 <script type="text/javascript">
 app.initialize();
 
+nfcRing.coOrds = {};
+nfcRing.coOrdData = {
+  max: 10,
+  data: []
+};
+
+nfcRing.submitted = function(key){
+  var response = $('#optionInput').val();
+  if(response){
+    nfcRing.location = "writing";
+    $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
+    console.log("Formatted as ", actions[key].format(response));
+    nfcRing.toWrite = actions[key].format(response);
+  }
+}
+
+nfcRing.showNeedHelp = function(){
+  $('#message').fadeIn('slow');
+}
+
+nfcRing.drawHeatMap = function(){
+  
+  console.log("coOrds", nfcRing.coOrds);
+
+  $.each(nfcRing.coOrds, function(k,v){
+    var x = k.split(":")[0];
+    var y = k.split(":")[1];
+    var coOrd = {
+      x: x,
+      y: y,
+      count: v*5
+    };
+    nfcRing.coOrdData.data.push(coOrd);
+  });
+
+  // heatmap configuration
+  var config = {
+    element: document.getElementById("heatMap"),
+    radius: 30,
+    opacity: 100
+  };
+
+  console.log("heatmap config", config);
+
+  //creates and initializes the heatmap
+  var heatmap = h337.create(config);
+
+  console.log("Writing data to heatmap", nfcRing.coOrdData);
+
+  heatmap.store.setDataSet(nfcRing.coOrdData);
+}
+
+$("body").on('click', "#finish", function () {
+  debug("Restarting");
+  window.location = "index.html";
+});
+
+nfcRing.heatmapInit = function(){
+  console.log("initting heatmap");
+  // Placeholder data object
+  var coOrdinateCounter = {};
+
+  // Getting data from Parse..
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+  var query = new Parse.Query(TestObject);
+  try{
+    if(!device){return false;}
+  }catch(e){
+    return false;
+  }
+  query.equalTo("model", device.model);
+  console.log("Model", device.model);
+  try{
+    query.find({
+      success: function(results){
+        for (var i = 0; i < results.length; i++) { 
+          $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
+          var object = results[i];
+          var x = object.get('x');
+          var y = object.get('y');
+          // Turns it into a counted set of objects instead of single objects
+          coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
+        }
+        if(results.length == 0){ // if there are no results
+          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");
+        }else{ // there are some heatmap results so let's draw em
+          console.log("Drawing heatmap");
+          nfcRing.coOrds = coOrdinateCounter;
+          drawHeatMap();
+        }
+      },
+      failure: function(){
+        // fires on failure to connect
+        $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+      }
+    });
+  }catch(e){
+    // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
+    if(device.platform == "Win32NT"){
+      $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+    }
+  }
+}
+
 nfcRing.addActions = function() {
+  // Load each action icon and text
   $.each(actions, function (key, action) {
     debug(action);
     if (!action.image) {
@@ -84,9 +190,12 @@ nfcRing.addActions = function() {
     };
     $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
-
-  
+  // click listener for each action
   $('#ringActions a').click(function(){
+    // Begin heatmap stuff, this pre-loads the data for us :)
+    console.log("beginning init");
+    nfcRing.heatmapInit();
+
     nfcRing.location = "option";
     var key = $(this).data("key");
     $('#option').show(); $('#action').hide();
@@ -97,104 +206,17 @@ nfcRing.addActions = function() {
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.submitted(key);
+      nfcRing.drawHeatMap();
       return false;
     });
   });
 }
 
-nfcRing.submitted = function(key){
-  var response = $('#optionInput').val();
-  if(response){
-    nfcRing.location = "writing";
-    $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
-    console.log("Formatted as ", actions[key].format(response));
-    nfcRing.toWrite = actions[key].format(response);
-
-    // Placeholder data object
-    var coOrdinateCounter = {};
-
-    // Getting data from Parse..
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-    var query = new Parse.Query(TestObject);
-    query.equalTo("model", device.model);
-	try{
-      query.find({
-        success: function(results){
-          for (var i = 0; i < results.length; i++) { 
-            $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
-            var object = results[i];
-            var x = object.get('x');
-            var y = object.get('y');
-            // Turns it into a counted set of objects instead of single objects
-            coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
-          }
-          if(results.length == 0){ // if there are no results
-            $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");   
-          }else{
-            drawHeatMap(coOrdinateCounter);
-          }
-          setTimeout(function(){nfcRing.showNeedHelp()}, 8000); // this would be better handled by a promise
-        },
-        failure: function(){
-          // fires on failure to connect
-          alert("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
-          setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
-        }
-      });
-    }catch(e){
-      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
-      if(device.platform == "Win32NT"){
-        alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
-      }
-    }
-  }
-}
-
-nfcRing.showNeedHelp = function(){
-  $('#message').fadeIn('slow');
-}
-
-function drawHeatMap(coOrds){
-
-  var data = {
-    max: 10,
-    data: []
-  };
-
-  $.each(coOrds, function(k,v){
-    var x = k.split(":")[0];
-    var y = k.split(":")[1];
-    var coOrd = {
-      x: x,
-      y: y,
-      count: v*5
-    };
-    data.data.push(coOrd);
-  });
-
-  // heatmap configuration
-  var config = {
-    element: document.getElementById("heatMap"),
-    radius: 30,
-    opacity: 100
-  };
-
-  //creates and initializes the heatmap
-  var heatmap = h337.create(config);
-
-  heatmap.store.setDataSet(data);
-}
-
 nfcRing.addActions();
 nfcRing.location = "actions";
-
-$("body").on('click', "#finish", function () {
-  debug("Restarting");
-  window.location = "index.html";
-});
 </script>
 
+<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
 </body>

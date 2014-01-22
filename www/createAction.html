@@ -76,6 +76,12 @@
 <script type="text/javascript">
 app.initialize();
 
+nfcRing.coOrds = {};
+nfcRing.coOrdData = {
+  max: 10,
+  data: []
+};
+
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
@@ -90,14 +96,11 @@ nfcRing.showNeedHelp = function(){
   $('#message').fadeIn('slow');
 }
 
-function drawHeatMap(coOrds){
+nfcRing.drawHeatMap = function(){
+  
+  console.log("coOrds", nfcRing.coOrds);
 
-  var data = {
-    max: 10,
-    data: []
-  };
-
-  $.each(coOrds, function(k,v){
+  $.each(nfcRing.coOrds, function(k,v){
     var x = k.split(":")[0];
     var y = k.split(":")[1];
     var coOrd = {
@@ -105,7 +108,7 @@ function drawHeatMap(coOrds){
       y: y,
       count: v*5
     };
-    data.data.push(coOrd);
+    nfcRing.coOrdData.data.push(coOrd);
   });
 
   // heatmap configuration
@@ -115,10 +118,14 @@ function drawHeatMap(coOrds){
     opacity: 100
   };
 
+  console.log("heatmap config", config);
+
   //creates and initializes the heatmap
   var heatmap = h337.create(config);
 
-  heatmap.store.setDataSet(data);
+  console.log("Writing data to heatmap", nfcRing.coOrdData);
+
+  heatmap.store.setDataSet(nfcRing.coOrdData);
 }
 
 $("body").on('click', "#finish", function () {
@@ -126,7 +133,8 @@ $("body").on('click', "#finish", function () {
   window.location = "index.html";
 });
 
-nfcRing.heatmapInit = function(key){
+nfcRing.heatmapInit = function(){
+  console.log("initting heatmap");
   // Placeholder data object
   var coOrdinateCounter = {};
 
@@ -140,6 +148,7 @@ nfcRing.heatmapInit = function(key){
     return false;
   }
   query.equalTo("model", device.model);
+  console.log("Model", device.model);
   try{
     query.find({
       success: function(results){
@@ -153,8 +162,10 @@ nfcRing.heatmapInit = function(key){
         }
         if(results.length == 0){ // if there are no results
           $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");
-        }else{
-          drawHeatMap(coOrdinateCounter);
+        }else{ // there are some heatmap results so let's draw em
+          console.log("Drawing heatmap");
+          nfcRing.coOrds = coOrdinateCounter;
+          drawHeatMap();
         }
       },
       failure: function(){
@@ -171,9 +182,6 @@ nfcRing.heatmapInit = function(key){
 }
 
 nfcRing.addActions = function() {
-  // Begin heatmap stuff, this pre-loads the data for us :)
-  nfcRing.heatmapInit();
-
   // Load each action icon and text
   $.each(actions, function (key, action) {
     debug(action);
@@ -184,6 +192,10 @@ nfcRing.addActions = function() {
   });
   // click listener for each action
   $('#ringActions a').click(function(){
+    // Begin heatmap stuff, this pre-loads the data for us :)
+    console.log("beginning init");
+    nfcRing.heatmapInit();
+
     nfcRing.location = "option";
     var key = $(this).data("key");
     $('#option').show(); $('#action').hide();
@@ -194,6 +206,7 @@ nfcRing.addActions = function() {
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.submitted(key);
+      nfcRing.drawHeatMap();
       return false;
     });
   });
@@ -203,6 +216,7 @@ nfcRing.addActions();
 nfcRing.location = "actions";
 </script>
 
+<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
 </body>

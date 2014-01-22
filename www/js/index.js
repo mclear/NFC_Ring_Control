@@ -108,6 +108,8 @@ nfcRing.write = function(nfcEvent){
       var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
       if(!dontAskSweetSpotAgain){
         var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+      }else{
+        alert("Woohooo", false, "Your ring is ready");
       }
     }
     if(shareLocation){
