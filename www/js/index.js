@@ -108,7 +108,9 @@ nfcRing.write = function(nfcEvent){
       var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
     }
     if(shareLocation){
-      window.location = "shareLocation.html";
+      var idStr = nfcEvent.tag.id;
+      idStr = idStr.join(",");
+      window.location = "shareLocation.html#?guid="+idStr;
     }
   }, function (reason) {
     console.log("Inlay write failed")
