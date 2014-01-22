@@ -76,36 +76,6 @@
 <script type="text/javascript">
 app.initialize();
 
-nfcRing.addActions = function() {
-  // Begin heatmap stuff, this pre-loads the data for us :) 
-  nfcRing.heatmapInit();
-
-  // Load each action icon and text
-  $.each(actions, function (key, action) {
-    debug(action);
-    if (!action.image) {
-      action.image = key.toLowerCase() + ".png";
-    };
-    $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
-  });
-
-  // click listener for each action
-  $('#ringActions a').click(function(){
-    nfcRing.location = "option";
-    var key = $(this).data("key");
-    $('#option').show(); $('#action').hide();
-    $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
-    $('#optionInput').attr("placeholder", actions[key].placeHolder);
-    $('form > label').text(actions[key].optionText);
-    $('#optionForm').submit(function(e){
-      e.preventDefault();
-      console.log("Submitting a write value to the nfcRing object");
-      nfcRing.submitted(key);
-      return false;
-    });
-  });
-}
-
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
@@ -151,16 +121,12 @@ function drawHeatMap(coOrds){
   heatmap.store.setDataSet(data);
 }
 
-nfcRing.addActions();
-nfcRing.location = "actions";
-
 $("body").on('click', "#finish", function () {
   debug("Restarting");
   window.location = "index.html";
 });
 
-nfcRing.heatmapInit = function(){
-
+nfcRing.heatmapInit = function(key){
   // Placeholder data object
   var coOrdinateCounter = {};
 
@@ -168,6 +134,11 @@ nfcRing.heatmapInit = function(){
   var TestObject = Parse.Object.extend("TestObject");
   var testObject = new TestObject();
   var query = new Parse.Query(TestObject);
+  try{
+    if(!device){return false;}
+  }catch(e){
+    return false;
+  }
   query.equalTo("model", device.model);
   try{
     query.find({
@@ -197,9 +168,39 @@ nfcRing.heatmapInit = function(){
       $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
     }
   }
-
 }
 
+nfcRing.addActions = function() {
+  // Begin heatmap stuff, this pre-loads the data for us :)
+  nfcRing.heatmapInit();
+
+  // Load each action icon and text
+  $.each(actions, function (key, action) {
+    debug(action);
+    if (!action.image) {
+      action.image = key.toLowerCase() + ".png";
+    };
+    $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
+  });
+  // click listener for each action
+  $('#ringActions a').click(function(){
+    nfcRing.location = "option";
+    var key = $(this).data("key");
+    $('#option').show(); $('#action').hide();
+    $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
+    $('#optionInput').attr("placeholder", actions[key].placeHolder);
+    $('form > label').text(actions[key].optionText);
+    $('#optionForm').submit(function(e){
+      e.preventDefault();
+      console.log("Submitting a write value to the nfcRing object");
+      nfcRing.submitted(key);
+      return false;
+    });
+  });
+}
+
+nfcRing.addActions();
+nfcRing.location = "actions";
 </script>
 
 
