@@ -100,7 +100,7 @@ nfcRing.showNeedHelp = function(){
 nfcRing.drawHeatMap = function(){
   if(nfcRing.localSweetSpot){
     localSweetSpot = JSON.parse(nfcRing.localSweetSpot);
-    nfcRing.coOrdData.data.push({x: localSweetSpot.x, y: localSweetSpot.y, count: 10});
+    nfcRing.coOrdData.data.push({x: localSweetSpot.x, y: localSweetSpot.y, count: 10}); // adds 10 weight to the position the user specified
   }
 
   console.log("coOrds", nfcRing.coOrds);
@@ -176,12 +176,14 @@ nfcRing.heatmapInit = function(){
       failure: function(){
         // fires on failure to connect
         $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+        drawHeatMap();
       }
     });
   }catch(e){
     // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
     if(device.platform == "Win32NT"){
       $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+      drawHeatMap();
     }
   }
 }
