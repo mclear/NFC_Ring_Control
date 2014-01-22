@@ -41,12 +41,6 @@
 
 		<div id="writeRing" class="step writeRing">
 		  <div class="actionName"></div>
-<!--
-		  <h2>Hold your NFC Ring to the back of your device</h2>
-		  <div class="actionContents">
-		    <img src="img/nfcring-classic.jpg">
-		  </div>
--->
 		  <ul class="link-list bottom">
 		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
 		  </ul>
@@ -98,42 +92,8 @@ nfcRing.submitted = function(key){
     console.log("Formatted as ", actions[key].format(response));
     nfcRing.toWrite = actions[key].format(response);
 
-    // Placeholder data object
-    var coOrdinateCounter = {};
-
-    // Getting data from Parse..
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-    var query = new Parse.Query(TestObject);
-    query.equalTo("model", device.model);
-	try{
-      query.find({
-        success: function(results){
-          for (var i = 0; i < results.length; i++) { 
-            $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
-            var object = results[i];
-            var x = object.get('x');
-            var y = object.get('y');
-            // Turns it into a counted set of objects instead of single objects
-            coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
-          }
-          if(results.length == 0){ // if there are no results
-            $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");   
-          }else{
-            drawHeatMap(coOrdinateCounter);
-          }
-        },
-        failure: function(){
-          // fires on failure to connect
-          alert("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
-        }
-      });
-    }catch(e){
-      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
-      if(device.platform == "Win32NT"){
-        alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
-      }
-    }
+    // Begin heatmap stuff
+    nfcRing.heatmapInit();
   }
 }
 
@@ -179,6 +139,48 @@ $("body").on('click', "#finish", function () {
   debug("Restarting");
   window.location = "index.html";
 });
+
+nfcRing.heatmapInit = function(){
+
+  // Placeholder data object
+  var coOrdinateCounter = {};
+
+  // Getting data from Parse..
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+  var query = new Parse.Query(TestObject);
+  query.equalTo("model", device.model);
+  try{
+    query.find({
+      success: function(results){
+        for (var i = 0; i < results.length; i++) { 
+          $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
+          var object = results[i];
+          var x = object.get('x');
+          var y = object.get('y');
+          // Turns it into a counted set of objects instead of single objects
+          coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
+        }
+        if(results.length == 0){ // if there are no results
+          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");
+        }else{
+          drawHeatMap(coOrdinateCounter);
+        }
+      },
+      failure: function(){
+        // fires on failure to connect
+        $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+      }
+    });
+  }catch(e){
+    // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
+    if(device.platform == "Win32NT"){
+      $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+    }
+  }
+
+}
+
 </script>
 
 
