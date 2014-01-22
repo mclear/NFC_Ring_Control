@@ -77,6 +77,10 @@
 app.initialize();
 
 nfcRing.addActions = function() {
+  // Begin heatmap stuff, this pre-loads the data for us :) 
+  nfcRing.heatmapInit();
+
+  // Load each action icon and text
   $.each(actions, function (key, action) {
     debug(action);
     if (!action.image) {
@@ -85,7 +89,7 @@ nfcRing.addActions = function() {
     $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
 
-  
+  // click listener for each action
   $('#ringActions a').click(function(){
     nfcRing.location = "option";
     var key = $(this).data("key");
@@ -109,9 +113,6 @@ nfcRing.submitted = function(key){
     $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
     console.log("Formatted as ", actions[key].format(response));
     nfcRing.toWrite = actions[key].format(response);
-
-    // Begin heatmap stuff
-    nfcRing.heatmapInit();
   }
 }
 
