@@ -7,8 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
 	<title>NFC Ring App</title>
 </head>
-<body>
+<body id="create">
 <div id="heatMap"></div>
+
+<div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
+
+<div id="help">
+	<div id="helpContents" class="white-popup mfp-hide">
+		<h3 class="icon icon-support">Help Tips</h3>
+		<ul>
+			<li>Make sure the colored, non metal part of the ring is touching and facing the back of your device</li>
+			<li>Remove any cases from your device</li>
+			<li>Turn your device volume up</li>
+			<li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
+			<li>Move your ring slowly around the back of the device</li>
+			<li>Try with another NFC Device if you have one</li>
+		</ul>
+		<button class="button" id="helpClose">Ok, got it</button>
+	</div>
+</div>
 
 <div class="container">
 	<div class="mainContents">
@@ -41,12 +58,6 @@
 
 		<div id="writeRing" class="step writeRing">
 		  <div class="actionName"></div>
-<!--
-		  <h2>Hold your NFC Ring to the back of your device</h2>
-		  <div class="actionContents">
-		    <img src="img/nfcring-classic.jpg">
-		  </div>
--->
 		  <ul class="link-list bottom">
 		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
 		  </ul>
@@ -57,6 +68,7 @@
 
 <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/magpop.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/actions.js"></script>
@@ -72,6 +84,7 @@ nfcRing.addActions = function() {
     };
     $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
+
   
   $('#ringActions a').click(function(){
     nfcRing.location = "option";
@@ -121,19 +134,25 @@ nfcRing.submitted = function(key){
           }else{
             drawHeatMap(coOrdinateCounter);
           }
+          setTimeout(function(){nfcRing.showNeedHelp()}, 8000); // this would be better handled by a promise
         },
         failure: function(){
           // fires on failure to connect
           alert("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+          setTimeout(function(){nfcRing.showNeedHelp()}, 8000);
         }
       });
-	}catch(e){
-	  // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
-	  if(device.platform == "Win32NT"){
-	    alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
-	  }
-	}
+    }catch(e){
+      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
+      if(device.platform == "Win32NT"){
+        alert("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, usually on nokia windows phone the nfc sweet spot is just below the camera");
+      }
+    }
   }
+}
+
+nfcRing.showNeedHelp = function(){
+  $('#message').fadeIn('slow');
 }
 
 function drawHeatMap(coOrds){
@@ -178,6 +197,5 @@ $("body").on('click', "#finish", function () {
 
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
-
 </body>
 </html>

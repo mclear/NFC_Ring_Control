@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.mclear.nfcringpro" version="0.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <access origin="*" />
+    <feature name="Device">
+        <param name="wp-package" value="Device" />
+    </feature>
     <feature name="Notification">
         <param name="wp-package" value="Notification" />
     </feature>
@@ -22,8 +25,5 @@
     <access origin="https://parse.com" subdomains="true" />
     <feature name="NfcPlugin">
         <param name="wp-package" value="NfcPlugin" />
-    </feature>
-    <feature name="Device">
-        <param name="wp-package" value="Device" />
     </feature>
 </widget>

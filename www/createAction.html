@@ -7,8 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
 	<title>NFC Ring App</title>
 </head>
-<body>
+<body id="create">
 <div id="heatMap"></div>
+
+<div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
+
+<div id="help">
+	<div id="helpContents" class="white-popup mfp-hide">
+		<h3 class="icon icon-support">Help Tips</h3>
+		<ul>
+			<li>Make sure the colored, non metal part of the ring is touching and facing the back of your device</li>
+			<li>Remove any cases from your device</li>
+			<li>Turn your device volume up</li>
+			<li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
+			<li>Move your ring slowly around the back of the device</li>
+			<li>Try with another NFC Device if you have one</li>
+		</ul>
+		<button class="button" id="helpClose">Ok, got it</button>
+	</div>
+</div>
 
 <div class="container">
 	<div class="mainContents">
@@ -51,6 +68,7 @@
 
 <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/magpop.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/actions.js"></script>
@@ -66,6 +84,7 @@ nfcRing.addActions = function() {
     };
     $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
+
   
   $('#ringActions a').click(function(){
     nfcRing.location = "option";
@@ -86,7 +105,6 @@ nfcRing.addActions = function() {
 nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
-    setTimeout(function(){nfcRing.showNeedHelp()}, 5000);
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
     console.log("Formatted as ", actions[key].format(response));
@@ -98,7 +116,7 @@ nfcRing.submitted = function(key){
 }
 
 nfcRing.showNeedHelp = function(){
-  $("#writeRing > .actionName").append("<h2>Struggling to Find your sweet spot?  <button onclick=\"location.href='help.html'\">Get help</button></h2>");
+  $('#message').fadeIn('slow');
 }
 
 function drawHeatMap(coOrds){
@@ -185,6 +203,5 @@ nfcRing.heatmapInit = function(){
 
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
-
 </body>
 </html>
