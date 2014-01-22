@@ -35,6 +35,7 @@ var app = {
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
     if (nfc) {
+	  console.log("NFC Found, adding listener");
       nfc.addNdefListener(function (nfcEvent) {
         nfcRing.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC");
@@ -44,7 +45,9 @@ var app = {
         alert("NFC Functionality is not working, is NFC enabled on your device?");
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
-    }
+    }else{
+	  console.log("NO NFC, SOMETHING IS WRONG HERE");
+	}
     
 		$('#helpLink').on('click', function(e){
 			e.preventDefault();
@@ -108,10 +111,16 @@ nfcRing.write = function(nfcEvent){
     }else{
       var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
     }
+	console.log("Share location response", shareLocation);
     if(shareLocation){
+	  console.log("Set localstorage item dont ask sweet spot again");
       localStorage.setItem("dontAskSweetSpotAgain", true);
-      var idStr = nfcEvent.tag.id;
-      idStr = idStr.join(",");
+	  console.log("nfcEvent", nfcEvent)
+      if(nfcEvent.tag.id){
+	    var idStr = nfcEvent.tag.id.join(",");
+	  }else{
+	    var idStr = "false";
+	  }
       window.location = "shareLocation.html#?guid="+idStr;
     }else{
       localStorage.setItem("dontAskSweetSpotAgain", true);

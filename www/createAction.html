@@ -133,6 +133,7 @@ nfcRing.drawHeatMap = function(){
   console.log("Writing data to heatmap", nfcRing.coOrdData);
 
   heatmap.store.setDataSet(nfcRing.coOrdData);
+  console.log("Done writing data to the heatmap");
 }
 
 $("body").on('click', "#finish", function () {
@@ -141,6 +142,8 @@ $("body").on('click', "#finish", function () {
 });
 
 nfcRing.heatmapInit = function(){
+  if(nfcRing.heatMapIsInit) return false; // dont init heat map twice.
+  nfcRing.heatMapIsInit = true;
   console.log("initting heatmap");
   // Placeholder data object
   var coOrdinateCounter = {};
@@ -209,10 +212,12 @@ nfcRing.addActions = function() {
     console.log("Setting location to option");
     nfcRing.location = "option";
     var key = $(this).data("key");
+	console.log("Key ", key);
     $('#option').show(); $('#action').hide();
     $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
     $('#optionInput').attr("placeholder", actions[key].placeHolder);
     $('form > label').text(actions[key].optionText);
+	console.log("Updated UI to show form etc");
     $('#optionForm').submit(function(e){
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
