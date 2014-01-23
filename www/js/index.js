@@ -19,11 +19,16 @@ var app = {
     }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
+	console.log("location...", nfcRing.location)
     if(nfcRing.location == "index"){
-      document.removeEventListener("backbutton", nfcRing.handleBack, false);
-      // Clear history so back button on home page always leaves the app
-      navigator.app.clearHistory();
-    }
+	  // Clear history so back button on home page always leaves the app
+	  console.log("Cleared app history");
+	  history.go(-(history.length-9999));
+	  document.addEventListener("backbutton", nfcRing.handleBack, true);
+      // navigator.app.clearHistory(); // This doesn't even exist in WP -- does it actually exist on Android?
+    }else{
+	  document.addEventListener("backbutton", nfcRing.handleBack, false);
+	}
 
     // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
     if(device.platform == "Win32NT"){
@@ -140,23 +145,33 @@ nfcRing.read = function(nfcEvent){
 }
 
 nfcRing.handleBack = function(){
+  console.log("Handling back without any nativeness");
+  
   // If we're providing an input such as a twitter username and we hit back then go back to the actions prompt page
-  if(nfcRing.location == "option"){
+  if(nfcRing.location === "option"){
     console.log("reloading");
     location.reload();
   }
 
   // When writing an NFC Ring if back button is pressed show the input page IE twitter username prompt
-  if(nfcRing.location == "writing") $('#option').show(); $('#writeRing').hide(); $('#heatMap').hide();
+  if(nfcRing.location === "writing"){
+    $('#option').show(); $('#writeRing').hide(); $('#heatMap').hide(); nfcRing.location = "option";
+  }
   
   // When on shareLocation screen if back button is pressed we should go back to the createAction page
-  if(nfcRing.location == "shareLocation") window.location = "createAction.html";
+  if(nfcRing.location === "shareLocation") window.location = "createAction.html";
 
   // When on location page take back to home page
-  if(nfcRing.location == "actions") window.location = "index.html";
+  if(nfcRing.location === "actions"){
+    console.log("Redirecting back to home page");
+    window.location = "index.html";
+  }
 
   // When back on index page leave the app..
-  if(nfcRing.location == "index") navigator.app.exitApp();
+  if(nfcRing.location === "index"){
+    console.log("I shouldn't be here..");
+    navigator.app.exitApp();
+  }
 }
 
 
