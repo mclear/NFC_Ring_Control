@@ -41,17 +41,32 @@ var app = {
     prompt = navigator.notification.prompt;
     if (nfc) {
 	  console.log("NFC Found, adding listener");
-      nfc.addNdefListener(function (nfcEvent) {
-        nfcRing.readOrWrite(nfcEvent);
-        console.log("Attempting to bind to NFC");
-      }, function () {
-        console.log("Success.  Listening for rings..");
-      }, function () {
-        alert("NFC Functionality is not working, is NFC enabled on your device?");
-        $('#createNew, #read, #scan').attr('disabled', 'disabled');
-      });
+	  
+	  // Win 32 only supports NDEF tags
+      if(device.platform == "Win32NT"){
+        nfc.addNdefListener(function (nfcEvent) {
+          nfcRing.readOrWrite(nfcEvent);
+          console.log("Attempting to bind to NFC NDEF");
+        }, function () {
+          console.log("Success.  Listening for rings..");
+        }, function () {
+          alert("NFC Functionality is not working, is NFC enabled on your device?");
+          $('#createNew, #read, #scan').attr('disabled', 'disabled');
+        });
+	  // Android & BB support all tags
+	  }else{
+	    nfc.addTagDiscoveredListener(function (nfcEvent) {
+          nfcRing.readOrWrite(nfcEvent);
+          console.log("Attempting to bind to NFC TAG");
+        }, function () {
+          console.log("Success.  Listening for rings..");
+        }, function () {
+          alert("NFC Functionality is not working, is NFC enabled on your device?");
+          $('#createNew, #read, #scan').attr('disabled', 'disabled');
+        });
+	  }
     }else{
-	  console.log("NO NFC, SOMETHING IS WRONG HERE");
+  	  console.log("NO NFC, SOMETHING IS WRONG HERE");
 	}
     
 		$('#helpLink').on('click', function(e){
