@@ -87,9 +87,13 @@ nfcRing.submitted = function(key){
   var response = $('#optionInput').val();
   if(response){
     nfcRing.location = "writing";
-    $('#writeRing').show(); $('#option').hide(); $('#heatMap').show();
+    $('#writeRing').show(); $('#option').hide();
     console.log("Formatted as ", actions[key].format(response));
     nfcRing.toWrite = actions[key].format(response);
+    setTimeout(function(){ // TODO use a callback here, using a timeout is ghetto
+      $('#heatMap').fadeIn("slow");
+      nfcRing.drawHeatMap(); // additional draw request
+    }, 500);
   }
 }
 
@@ -98,13 +102,6 @@ nfcRing.showNeedHelp = function(){
 }
 
 nfcRing.drawHeatMap = function(){
-  console.log("Loading loacl sweet spot");
-  if(nfcRing.localSweetSpot){
-    console.log("Found local sweet spot");
-    localSweetSpot = JSON.parse(nfcRing.localSweetSpot);
-    nfcRing.coOrdData.data.push({x: localSweetSpot.x, y: localSweetSpot.y, count: 10}); // adds 10 weight to the position the user specified
-  }
-
   console.log("coOrds", nfcRing.coOrds);
 
   $.each(nfcRing.coOrds, function(k,v){
@@ -117,6 +114,13 @@ nfcRing.drawHeatMap = function(){
     };
     nfcRing.coOrdData.data.push(coOrd);
   });
+
+  console.log("Loading loacl sweet spot");
+  if(nfcRing.localSweetSpot){
+    console.log("Found local sweet spot");
+    localSweetSpot = JSON.parse(nfcRing.localSweetSpot);
+    nfcRing.coOrdData.data.push({x: ""+localSweetSpot.x, y: ""+localSweetSpot.y, count: 10}); // adds 10 weight to the position the user specified
+  }
 
   // heatmap configuration
   var config = {
@@ -175,13 +179,13 @@ nfcRing.heatmapInit = function(){
         }else{ // there are some heatmap results so let's draw em
           console.log("Drawing heatmap");
           nfcRing.coOrds = coOrdinateCounter;
-          nfcRing.drawHeatMap();
+          // nfcRing.drawHeatMap();
         }
       },
       failure: function(){
         // fires on failure to connect
         $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
-        nfcRing.drawHeatMap();
+        // nfcRing.drawHeatMap();
       }
     });
   }catch(e){
@@ -189,7 +193,7 @@ nfcRing.heatmapInit = function(){
     if(device.platform == "Win32NT"){
       $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
 	  console.log("Unable to process Parse on WP");
-      nfcRing.drawHeatMap();
+      // nfcRing.drawHeatMap();
     }
   }
   console.log("Finished heatmap init");
@@ -222,7 +226,7 @@ nfcRing.addActions = function() {
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.submitted(key);
-      nfcRing.drawHeatMap();
+      // nfcRing.drawHeatMap();
       return false;
     });
   });
