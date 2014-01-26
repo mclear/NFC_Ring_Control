@@ -73,6 +73,7 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/actions.js"></script>
 <script type="text/javascript" src="js/heatmap.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
 <script type="text/javascript">
 app.initialize();
 
@@ -218,7 +219,10 @@ nfcRing.addActions = function() {
   if(nfcRing.actionHistory) nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
   reverseForIn(nfcRing.actionHistory, function(key){ console.log('KEY:', key, 'VALUE:', this[key]); 
     var action = this[key];
-    $('#ringActions').append('<li><a data-key="'+action+'" class="historical icon icon-'+ action +'">' + action + '<span>' + action + '</span></a></li>');
+    console.log(key);
+    key = parseInt(key);
+    var ts = new Date(key).toISOString();
+    $('#ringActions').append('<li><a data-key="'+action+'" class="historical icon icon-'+ action +'">' + action + '<span>Action created <i class=timeago title="'+ts+'"></span></span></a></i>');
   });
 
   // Load each action icon and text
@@ -227,17 +231,17 @@ nfcRing.addActions = function() {
     if (!action.image) {
       action.image = key.toLowerCase() + ".png";
     };
-    $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
+    $('#ringActions').append('<li><a data-key="'+key+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
   // click listener for each action
-  $('#ringActions a').click(function(){
+  $('#ringActions > li > .action').click(function(){
     // Begin heatmap stuff, this pre-loads the data for us :)
     console.log("beginning init");
     nfcRing.heatmapInit();
     console.log("Setting location to option");
     nfcRing.location = "option";
     var key = $(this).data("key");
-	console.log("Key ", key);
+    console.log("Key ", key);
     $('#option').show(); $('#action').hide();
     $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
     $('#optionInput').attr("placeholder", actions[key].placeHolder);
@@ -265,6 +269,7 @@ function gup( name ){
 
 nfcRing.addActions();
 nfcRing.location = "actions";
+jQuery(".timeago").timeago();
 
 
 // f is a function that has the obj as 'this' and the property name as first parameter
@@ -278,6 +283,7 @@ function reverseForIn(obj, f) {
     f.call(obj, arr[i]);
   }
 }
+
 </script>
 
 <script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
