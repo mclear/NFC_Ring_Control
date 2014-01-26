@@ -84,17 +84,22 @@ nfcRing.coOrdData = {
   data: []
 };
 
-nfcRing.submitted = function(key){
-  var response = $('#optionInput').val();
+nfcRing.submitted = function(key, ts){
+  var response = $('#optionInput').val() || key;
   if(response){
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide();
-    console.log("Formatted as ", actions[key].format(response));
-    nfcRing.toWrite = actions[key].format(response);
+    if(actions[key]){ // if we're using a pre-defined structure
+      console.log("Formatted as ", actions[key].format(response));
+      nfcRing.toWrite = actions[key].format(response);
+    }else{ // if we're using a historic action
+      nfcRing.toWrite = key;
+    }
 
     // Store the event in the actionHistory
     nfcRing.actionHistory = localStorage.getItem("actionHistory") || "{}";
     nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+    if(ts) delete nfcRing.actionHistory[ts]; // Deletes previous record of this action
     console.log("Previous action History", nfcRing.actionHistory, "pushing ", nfcRing.toWrite);
     var ts = new Date().getTime();
     nfcRing.actionHistory[ts] = nfcRing.toWrite;
@@ -222,7 +227,7 @@ nfcRing.addActions = function() {
     console.log(key);
     key = parseInt(key);
     var ts = new Date(key).toISOString();
-    $('#ringActions').append('<li><a data-key="'+action+'" class="historical icon icon-'+ action +'">' + action + '<span>Action created <i class=timeago title="'+ts+'"></span></span></a></i>');
+    $('#ringActions').append('<li><a data-key="'+key+'" data-action="'+action+'" class="historical icon icon-'+ action +'">' + action + '<span>Action created/used <i class=timeago title="'+ts+'"></span></span></a></i>');
   });
 
   // Load each action icon and text
@@ -233,7 +238,21 @@ nfcRing.addActions = function() {
     };
     $('#ringActions').append('<li><a data-key="'+key+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
-  // click listener for each action
+  // click action for previously historical actions
+  $('#ringActions > li > .historical').click(function(){ 
+    $('#action').hide();
+    console.log("beginning init");
+    nfcRing.heatmapInit();
+    console.log("Setting location to option");
+    nfcRing.location = "writing";
+    var action = $(this).data("action");
+    var key = $(this).data("key");
+    console.log("Key ", key);
+    console.log("Submitting a write value to the nfcRing object");
+    nfcRing.submitted(action, key);
+  });
+
+  // click listener for each action from actions.js
   $('#ringActions > li > .action').click(function(){
     // Begin heatmap stuff, this pre-loads the data for us :)
     console.log("beginning init");
