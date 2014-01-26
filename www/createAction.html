@@ -109,6 +109,10 @@ nfcRing.submitted = function(key, ts){
     localStorage.setItem("actionHistory", nfcRing.actionHistory);
     nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
 
+	if(device.platform === "Win32NT"){  // HACK to support multiple write events on WP8
+	  nfcRing.write(false); // Sets WP up to write to a tag, ignores using the event system
+	}
+	
     setTimeout(function(){ // TODO use a callback here, using a timeout is ghetto
       $('#heatMap').fadeIn("slow");
       nfcRing.drawHeatMap(); // additional draw request

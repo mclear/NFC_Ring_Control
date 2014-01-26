@@ -32,6 +32,7 @@
 
 <script type="text/javascript">
 app.initialize();
+var guid = gup("guid");
 
 // listeners
 $("body").click(function(e){
@@ -45,9 +46,19 @@ $("body").click(function(e){
   setTimeout(function(){
     var correctLocation = confirm("Looks good!  Is the red dot close to where the ring works with your phone?");
     if(correctLocation){
+      localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
+      // weird note, I thought localStorage had better support for objects, turns out it wants strings..  Not convinced I'm doing this right..
+      // Docs at http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+
       var phoneModel = device.model; 
       console.log("Sending ", centerX, centerY, phoneModel, " to Database");
-      sendToParse(centerX, centerY, phoneModel);
+	  try{
+        sendToParse(centerX, centerY, phoneModel);
+	  }catch(e){
+	    console.log("silently failing for now");
+      window.location = "index.html"; // Return user back to start page
+
+	  }
     }
   }, 100);
 });
@@ -56,7 +67,7 @@ function sendToParse(x, y, phoneModel){
 
   var TestObject = Parse.Object.extend("TestObject");
   var testObject = new TestObject();
-  testObject.save({x: x,y: y,model: phoneModel}, {
+  testObject.save({x: x, y: y, model: phoneModel, guid: guid}, {
     success: function(object) {
       alert("Yay!  It worked.  Thank you for being awesome");
       window.location = "index.html"; // Return user back to start page
@@ -67,9 +78,18 @@ function sendToParse(x, y, phoneModel){
   });
 };
 
+function gup( name ){
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  
+  var regexS = "[\\?&]"+name+"=([^&#]*)";  
+  var regex = new RegExp( regexS );  
+  var results = regex.exec( window.location.href ); 
+  if( results == null ) return "";  
+  else return results[1];
+}
 nfcRing.location = "shareLocation";
 </script>
 <script type="text/javascript" src="js/parseDetails.js"></script>
+<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 </body>
 </html>
