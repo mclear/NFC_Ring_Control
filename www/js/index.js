@@ -39,6 +39,7 @@ var app = {
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
+
     if (nfc) {
 	  console.log("NFC Found, adding listener");
 	  
@@ -112,8 +113,6 @@ nfcRing.readOrWrite = function(nfcEvent){
 nfcRing.write = function(nfcEvent){
   // If the string is a valid URL
   var isURL = nfcRing.validURL(nfcRing.toWrite);
-  nfcRing.actionHistory = localStorage.getItem("actionHistory") || [];
-  localStorage.setItem("actionHistory", nfcRing.actionHistory.push(nfcRing.toWrite));
  
   if(isURL){
     console.log("URL Record");

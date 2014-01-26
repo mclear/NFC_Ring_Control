@@ -90,6 +90,19 @@ nfcRing.submitted = function(key){
     $('#writeRing').show(); $('#option').hide();
     console.log("Formatted as ", actions[key].format(response));
     nfcRing.toWrite = actions[key].format(response);
+
+    // Store the event in the actionHistory
+    nfcRing.actionHistory = localStorage.getItem("actionHistory") || "{}";
+    nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+    console.log("Previous action History", nfcRing.actionHistory, "pushing ", nfcRing.toWrite);
+    var ts = new Date().getTime();
+    nfcRing.actionHistory[ts] = nfcRing.toWrite;
+    console.log("obj historY", ts, nfcRing.actionHistory);
+    nfcRing.actionHistory = JSON.stringify(nfcRing.actionHistory);
+    console.log("new action History", nfcRing.actionHistory);
+    localStorage.setItem("actionHistory", nfcRing.actionHistory);
+    nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+
     setTimeout(function(){ // TODO use a callback here, using a timeout is ghetto
       $('#heatMap').fadeIn("slow");
       nfcRing.drawHeatMap(); // additional draw request
@@ -200,6 +213,14 @@ nfcRing.heatmapInit = function(){
 }
 
 nfcRing.addActions = function() {
+  // Firstly we need to load them from history
+  nfcRing.actionHistory = localStorage.getItem("actionHistory");
+  if(nfcRing.actionHistory) nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+  reverseForIn(nfcRing.actionHistory, function(key){ console.log('KEY:', key, 'VALUE:', this[key]); 
+    var action = this[key];
+    $('#ringActions').append('<li><a data-key="'+action+'" class="historical icon icon-'+ action +'">' + action + '<span>' + action + '</span></a></li>');
+  });
+
   // Load each action icon and text
   $.each(actions, function (key, action) {
     debug(action);
@@ -232,8 +253,31 @@ nfcRing.addActions = function() {
   });
 }
 
+function gup( name ){
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null ) return "";
+  else return results[1];
+}
+
+
 nfcRing.addActions();
 nfcRing.location = "actions";
+
+
+// f is a function that has the obj as 'this' and the property name as first parameter
+function reverseForIn(obj, f) {
+  var arr = [];
+  for (var key in obj) {
+    // add hasOwnPropertyCheck if needed
+    arr.push(key);
+  }
+  for (var i=arr.length-1; i>=0; i--) {
+    f.call(obj, arr[i]);
+  }
+}
 </script>
 
 <script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
