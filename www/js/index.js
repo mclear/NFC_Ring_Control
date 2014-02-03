@@ -241,3 +241,11 @@ nfcRing.validURL = function (url) {
     return true;
   }
 }
+
+// Displays the first Run helper
+nfcRing.firstRun = function(){
+  var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
+  if(wantHelp){
+    alert("Cool story bro");
+  }
+}
