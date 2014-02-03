@@ -69,7 +69,8 @@ var app = {
     } else {
       console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
-
+    
+    
     $('#helpLink').on('click', function (e) {
       e.preventDefault();
       $.magnificPopup.open({
@@ -98,6 +99,23 @@ var app = {
 function debug(msg) {
   console.log(msg);
 }
+
+
+$('#nav-btn').on('click', function() {
+  $('body').toggleClass('context-open');
+});
+
+$('#viewHistory').on('click', function(e) {
+	e.preventDefault();
+  $('body').toggleClass('show-history');
+  $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
+});
+
+$('body').on('click', '#back-btn', function() {
+  $('#back-btn').remove();
+  $('body').toggleClass('show-history');
+});
+    
 
 nfcRing.readOrWrite = function (nfcEvent) {
   $('#message').hide(); // hide help message
