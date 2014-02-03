@@ -100,13 +100,12 @@ function debug(msg) {
   console.log(msg);
 }
 
-
 $('#nav-btn').on('click', function() {
   $('body').toggleClass('context-open');
 });
 
 $('#viewHistory').on('click', function(e) {
-	e.preventDefault();
+  e.preventDefault();
   $('body').toggleClass('show-history');
   $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
 });
@@ -115,7 +114,6 @@ $('body').on('click', '#back-btn', function() {
   $('#back-btn').remove();
   $('body').toggleClass('show-history');
 });
-    
 
 nfcRing.readOrWrite = function (nfcEvent) {
   $('#message').hide(); // hide help message
@@ -229,7 +227,6 @@ nfcRing.handleBack = function () {
   }
   
 }
-
 
 nfcRing.validURL = function (url) {
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
