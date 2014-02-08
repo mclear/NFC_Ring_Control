@@ -246,8 +246,25 @@ nfcRing.validURL = function (url) {
 
 // Displays the first Run helper
 nfcRing.firstRun = function(){
+  /*
   var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
   if(wantHelp){
     alert("Cool story bro");
   }
+  */
 }
+
+$('#clearSweetSpot').click(function(){
+  if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+    console.log("clearing sweet spot history");
+    localStorage.setItem("dontAskSweetSpotAgain", false);
+    localStorage.setItem("sweetSpotLocation", false);
+  } 
+});
+$('#clearPreviousActions').click(function(){
+  if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+    console.log("Clearing previous actions");
+    localStorage.setItem("actionHistory", "{}");
+  }
+});
+
