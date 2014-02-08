@@ -26,25 +26,16 @@
 
 	</div>
 </div>
-
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/fastclick.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/fastclick.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
 // Set the location to the settings page
 nfcRing.location = "settings";
-
-$('#clearSweetSpot').click(function(){
-  console.log("clearing sweet spot history");
-  localStorage.setItem("dontAskSweetSpotAgain", false);  
-  localStorage.setItem("sweetSpotLocation", false);
-});
-$('#clearPreviousActions').click(function(){
-  console.log("Clearing previous actions");
-  localStorage.setItem("actionHistory", "{}");
-});
+// Initialize the page
+app.initialize();
 </script>
 
 </body>

@@ -11,6 +11,8 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
+    
+    FastClick.attach(document.body);
 
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
@@ -69,7 +71,8 @@ var app = {
     } else {
       console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
-
+    
+    
     $('#helpLink').on('click', function (e) {
       e.preventDefault();
       $.magnificPopup.open({
@@ -95,9 +98,20 @@ var app = {
   }
 };
 
-function debug(msg) {
-  console.log(msg);
-}
+$('#nav-btn').on('click', function() {
+  $('body').toggleClass('context-open');
+});
+
+$('#viewHistory').on('click', function(e) {
+  e.preventDefault();
+  $('body').toggleClass('show-history');
+  $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
+});
+
+$('body').on('click', '#back-btn', function() {
+  $('#back-btn').remove();
+  $('body').toggleClass('show-history');
+});
 
 nfcRing.readOrWrite = function (nfcEvent) {
   $('#message').hide(); // hide help message
@@ -170,6 +184,7 @@ nfcRing.read = function (nfcEvent) {
   var ring = nfcEvent.tag;
   console.log(ring);
   ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
+  console.log(ringData, false, "Ring contents:");
   alert(ringData, false, "Ring contents:");
 }
 
@@ -198,14 +213,19 @@ nfcRing.handleBack = function () {
     console.log("Redirecting back to home page");
     window.location = "index.html";
   }
+  
+  // When back on settings page..
+  if (nfcRing.location === "settings") {
+     window.location = "index.html";
+  }
 
   // When back on index page leave the app..
   if (nfcRing.location === "index") {
     console.log("I shouldn't be here..");
     navigator.app.exitApp();
   }
+  
 }
-
 
 nfcRing.validURL = function (url) {
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
@@ -220,3 +240,28 @@ nfcRing.validURL = function (url) {
     return true;
   }
 }
+
+// Displays the first Run helper
+nfcRing.firstRun = function(){
+  /*
+  var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
+  if(wantHelp){
+    alert("Cool story bro");
+  }
+  */
+}
+
+$('#clearSweetSpot').click(function(){
+  if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+    console.log("clearing sweet spot history");
+    localStorage.setItem("dontAskSweetSpotAgain", false);
+    localStorage.setItem("sweetSpotLocation", false);
+  } 
+});
+$('#clearPreviousActions').click(function(){
+  if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+    console.log("Clearing previous actions");
+    localStorage.setItem("actionHistory", "{}");
+  }
+});
+

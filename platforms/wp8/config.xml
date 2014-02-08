@@ -1,29 +1,24 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <access origin="*" />
-    <feature name="NfcPlugin">
-        <param name="wp-package" value="NfcPlugin" />
-    </feature>
-    <feature name="Device">
-        <param name="wp-package" value="Device" />
-    </feature>
-    <feature name="Notification">
-        <param name="wp-package" value="Notification" />
-    </feature>
-    <feature name="Vibration">
-        <param name="wp-package" value="Vibration" />
-    </feature>
-    <name>NFC Ring Control</name>
-    <description>
-	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
-    </description>
-    <author email="john@mclear.co" href="http://nfcring.com">
-        NFC Ring Team
-    </author>
-    <preference name="orientation" value="portrait" />
-    <content src="index.html" />
-    <access origin="http://127.0.0.1*" />
-    <access origin="http://10.0.0.12*" />
-    <access origin="http://parse.com" subdomains="true" />
-    <access origin="https://parse.com" subdomains="true" />
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+-->
+<widget>
+    <access origin="*"/>
 </widget>

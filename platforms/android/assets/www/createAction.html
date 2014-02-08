@@ -185,7 +185,6 @@ nfcRing.drawHeatMap = function(){
 }
 
 $("body").on('click', "#finish", function () {
-  debug("Restarting");
   window.location = "index.html";
 });
 
@@ -258,7 +257,6 @@ nfcRing.addActions = function() {
 
   // Load each action icon and text
   $.each(actions, function (key, action) {
-    debug(action);
     if (!action.image) {
       action.image = key.toLowerCase() + ".png";
     };
@@ -331,9 +329,10 @@ function reverseForIn(obj, f) {
     f.call(obj, arr[i]);
   }
 }
-
 </script>
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
+<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
+
 </body>
 </html>
