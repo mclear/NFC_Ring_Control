@@ -58,7 +58,9 @@ var app = {
         });
         // Android & BB support all tags
       } else {
-        nfc.addTagDiscoveredListener(function (nfcEvent) {
+        // The issue here is if we use addTagDiscoveredListener we don't get NDEF record on read..
+        // so we have to use addNdefFormatableListener
+        nfc.addNdefListener(function (nfcEvent) {
           nfcRing.readOrWrite(nfcEvent);
           console.log("Attempting to bind to NFC TAG");
         }, function () {
@@ -97,10 +99,6 @@ var app = {
 
   }
 };
-
-function debug(msg) {
-  console.log(msg);
-}
 
 $('#nav-btn').on('click', function() {
   $('body').toggleClass('context-open');
@@ -187,8 +185,13 @@ nfcRing.read = function (nfcEvent) {
   console.log(nfcEvent);
   var ring = nfcEvent.tag;
   console.log(ring);
-  ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
-  alert(ringData, false, "Ring contents:");
+  if(ring.ndefMessage){
+    ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
+    console.log(ringData, false, "Ring contents:");
+    alert(ringData, false, "Ring contents:");
+  }else{
+    alert("No NDEF data found", false, "Unable to read");
+  }
 }
 
 nfcRing.handleBack = function () {
@@ -246,8 +249,25 @@ nfcRing.validURL = function (url) {
 
 // Displays the first Run helper
 nfcRing.firstRun = function(){
+  /*
   var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
   if(wantHelp){
     alert("Cool story bro");
   }
+  */
 }
+
+$('#clearSweetSpot').click(function(){
+  if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+    console.log("clearing sweet spot history");
+    localStorage.setItem("dontAskSweetSpotAgain", false);
+    localStorage.setItem("sweetSpotLocation", false);
+  } 
+});
+$('#clearPreviousActions').click(function(){
+  if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+    console.log("Clearing previous actions");
+    localStorage.setItem("actionHistory", "{}");
+  }
+});
+

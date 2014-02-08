@@ -16,36 +16,6 @@ body {
 	}
 }
 
-#create {
-/* 	padding-bottom: 65px; */
-}
-
-.bottom {
-	position:absolute;
-	bottom:0;
-	width:100%;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  width:100%;
-  height:100%;
-
-	img {
-		max-width:100%;
-	}
-}
-
-#logo {
-	padding:25px 0 10px 0;
-	
-	img {
-		display: inline-block;
-		max-width:180px;
-	}
-}
-
 /* Generic list styling */
 .link-list {
 	border-top:1px solid @mgrey;
@@ -91,6 +61,10 @@ body {
 	}
 	
 	&.bottom {
+	  position: absolute;
+	  bottom:0;
+	  left: 0;
+	  width:100%;
 		
 		li {
 			text-align:center;
@@ -109,6 +83,236 @@ body {
 	}
 }
 
+#create {
+/* 	padding-bottom: 65px; */
+}
+
+.bottom {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+#header {
+	width:100%;
+	z-index:900;
+	
+	#title {
+		position: relative;
+		background:@grey;
+		z-index: 100;
+	}
+	#nav-btn, #back-btn {
+		height:55px;
+		width:55px;
+		position:absolute;
+		top:0;
+		right:0;
+		font-size: 2.6em;
+		cursor: pointer;
+		z-index: 99999;
+		
+		&:before {
+			color:@dark;
+			vertical-align: middle;
+			line-height: 55px;
+		}
+		
+		.context-open & {
+			background-color:@dark;
+			
+			&:before {
+				color:@white;
+			}
+		}
+	}
+
+	#logo {
+		padding:15px 0 0 0;
+		height:40px;
+		
+		img {
+			display: inline-block;
+			max-width:150px;
+		}
+	}
+}
+
+#context-nav {
+	position: absolute;
+	top: 0;
+	right:0;
+	width:100%;
+	height: 100%;
+	background: @dark;
+	color:@white;
+	.transition(all, 0.2s, ease);
+	.translate(100%, 0);
+	z-index: 9999;
+	text-align: left;
+	overflow: hidden;
+	overflow-y: scroll;
+	
+	h3 {
+		margin:0;
+		padding:15px 0 0 10px;
+	}
+	
+	#options-list {
+  	position:absolute;
+  	top:0;
+  	right:0;
+  	width:100%;
+		.transition(all, 0.2s, ease);
+		.translate(0, 0);
+    .backface-visibility(hidden);
+		
+		ul {
+			list-style: none;
+			margin:5px 0 0 0;
+			padding: 0;
+			
+			li {
+		  	border-top: 1px solid darken(@white, 80%);
+			
+				&:first-child {
+					border-top:0;
+				}
+				
+				a {
+					color:@white;
+					text-decoration: none;
+					font-size: 1.8em;
+					display: block;
+					padding:15px;
+				}
+			}
+		}
+
+		.show-history & {
+			.translate(-100%, 0);		
+		}
+	}
+
+  #history {
+  	position: absolute;
+  	top:0;
+  	right:0;
+  	width:100%;
+  	height:100%;
+  	background: @dark;
+  	color:@white;
+  	.transition(all, 0.2s, ease);
+  	.translate(200%, 0);
+    .backface-visibility(hidden);
+  	overflow-y: scroll;
+  	
+  	.show-history & {
+  		.translate(0, 0);		
+  	}
+  	
+  	ul {
+  		margin:0;
+  		padding:0;
+  		list-style:none;
+  		text-align: left;
+  		
+  		li {
+  			margin:0;
+  			padding:0;
+  	  	border-top: 1px solid darken(@white, 80%);
+  			position: relative;
+  
+  			&:first-child {
+  				border-top:0;
+  			} 
+  						
+  			a {
+  				cursor: pointer;
+  				display:block;
+  				font-size: 2em;
+  				padding:15px;
+  				text-decoration: none;
+  				color:@white;
+  				
+  				&:hover {
+  					border:0;
+  				}
+  				
+  				span {
+  					display: block;
+  					font-size:0.5em;
+  					padding:2px 0 0 0;
+  				}
+  			}
+  		}
+  
+  	}
+  }
+
+}
+
+.container {
+  position: absolute;
+  width:100%;
+  height:100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  
+	img {
+		max-width:100%;
+	}
+	
+	.mainContents {
+    position: absolute;
+    width:100%;
+    height:100%;
+  	background:@grey;
+  	height:100%;
+    overflow-y: scroll;
+	}
+  
+  .context-open & {
+  
+    #context-nav {
+    	.transition(all, 0.2s, ease);
+    	.translate(20%, 0);
+    }
+  	.mainContents {
+    	.transition(all, 0.2s, ease);
+      .translate(-80%, 0);
+    }
+  }
+
+}
+
+
+#action {
+  background: @grey;
+	.show-history & {
+
+	}	
+}
+
+.ln-back {
+	height:55px;
+	width:55px;
+	position:absolute;
+	top:0;
+	left:0;
+	font-size: 2.6em;
+	cursor: pointer;
+	
+	&:before {
+		color:@white;
+		vertical-align: middle;
+		line-height: 55px;
+	}
+}
+
+
+
 actionName {
 	
 	p {
@@ -125,6 +329,15 @@ actionName {
 }
 
 #writeRing {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+	
+	h2 {
+    margin-top:55px;
+	}
 	
 	img {
 		max-width:70%;
@@ -194,7 +407,7 @@ actionName {
 
 
 .step {
-    width: 100%;
+  width: 100%;
 }
 .count {
     display: none;
@@ -360,7 +573,8 @@ a.paddedIcon { padding: 5px }
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  .backface-visibility(hidden);
+}
 
 .mfp-container {
   text-align: center;

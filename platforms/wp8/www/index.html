@@ -32,6 +32,7 @@
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/fastclick.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 
 <script type="text/javascript">
@@ -39,8 +40,16 @@
 nfcRing.location = "index";
 // Initialize the page
 app.initialize();
+
+// Is this the first run?
+if(localStorage.getItem("firstRunCompleted") !== "true" ){
+  // Show a first run dialog
+  nfcRing.firstRun();
+
+  // If it was the first run we can save this and never do this event again
+  localStorage.setItem("firstRunCompleted", true); 
+}
 </script>
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 </body>
 </html>
