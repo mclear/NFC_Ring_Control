@@ -142,7 +142,7 @@ body {
 	position: absolute;
 	top: 0;
 	right:0;
-	width:100%;
+	width:80%;
 	height: 100%;
 	background: @dark;
 	color:@white;
@@ -234,6 +234,7 @@ body {
   				padding:15px;
   				text-decoration: none;
   				color:@white;
+  				word-wrap:break-word;
   				
   				&:hover {
   					border:0;
@@ -277,7 +278,7 @@ body {
   
     #context-nav {
     	.transition(all, 0.2s, ease);
-    	.translate(20%, 0);
+    	.translate(0, 0);
     }
   	.mainContents {
     	.transition(all, 0.2s, ease);
@@ -477,9 +478,12 @@ a.paddedIcon { padding: 5px }
 
 #heatMap{
 	display: none;
+	visibility: hidden;
   position:fixed;
   height:100%;
   width:100%;
+  z-index:901;
+  opacity:0.5;
 }
 
 #bubble{

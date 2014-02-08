@@ -142,12 +142,10 @@ body {
 	position: absolute;
 	top: 0;
 	right:0;
-	width:100%;
+	width:80%;
 	height: 100%;
 	background: @dark;
 	color:@white;
-	.transition(all, 0.2s, ease);
-	.translate(100%, 0);
 	z-index: 9999;
 	text-align: left;
 	overflow: hidden;
@@ -234,6 +232,7 @@ body {
   				padding:15px;
   				text-decoration: none;
   				color:@white;
+  				word-wrap:break-word;
   				
   				&:hover {
   					border:0;
@@ -264,6 +263,12 @@ body {
 		max-width:100%;
 	}
 	
+	#context-nav {
+  	.transition(all, 0.2s, ease);
+  	.translate(100%, 0);
+    .backface-visibility(hidden);
+	}
+	
 	.mainContents {
     position: absolute;
     width:100%;
@@ -271,16 +276,18 @@ body {
   	background:@grey;
   	height:100%;
     overflow-y: scroll;
+   	.transition(all, 0.2s, ease);
+    .translate(0, 0);
+    .backface-visibility(hidden);
 	}
   
   .context-open & {
   
     #context-nav {
     	.transition(all, 0.2s, ease);
-    	.translate(20%, 0);
+    	.translate(0, 0);
     }
   	.mainContents {
-    	.transition(all, 0.2s, ease);
       .translate(-80%, 0);
     }
   }
@@ -477,11 +484,20 @@ a.paddedIcon { padding: 5px }
 
 #heatMap{
 	display: none;
+	visibility: hidden;
   position:fixed;
   height:100%;
   width:100%;
   z-index:901;
-  opacity:0.5;
+  opacity:1;
+	.transition(opacity, 0.2s, ease);
+  .backface-visibility(hidden);
+  
+  .show-heatmap & {
+    display:block;
+    visibility: visible;
+    opacity: 0.5;
+  }
 }
 
 #bubble{

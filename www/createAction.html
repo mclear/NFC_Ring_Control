@@ -135,7 +135,7 @@ nfcRing.submitted = function(key, ts){
 	}
 	
     setTimeout(function(){ // TODO use a callback here, using a timeout is ghetto
-      $('#heatMap').fadeIn("slow");
+      $('body').addClass('show-heatmap');
       nfcRing.drawHeatMap(); // additional draw request
     }, 500);
   }
