@@ -11,6 +11,8 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
+    
+    FastClick.attach(document.body);
 
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
@@ -100,13 +102,12 @@ function debug(msg) {
   console.log(msg);
 }
 
-
 $('#nav-btn').on('click', function() {
   $('body').toggleClass('context-open');
 });
 
 $('#viewHistory').on('click', function(e) {
-	e.preventDefault();
+  e.preventDefault();
   $('body').toggleClass('show-history');
   $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
 });
@@ -115,7 +116,6 @@ $('body').on('click', '#back-btn', function() {
   $('#back-btn').remove();
   $('body').toggleClass('show-history');
 });
-    
 
 nfcRing.readOrWrite = function (nfcEvent) {
   $('#message').hide(); // hide help message
@@ -230,7 +230,6 @@ nfcRing.handleBack = function () {
   
 }
 
-
 nfcRing.validURL = function (url) {
   var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -242,5 +241,13 @@ nfcRing.validURL = function (url) {
     return false;
   } else {
     return true;
+  }
+}
+
+// Displays the first Run helper
+nfcRing.firstRun = function(){
+  var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
+  if(wantHelp){
+    alert("Cool story bro");
   }
 }

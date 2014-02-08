@@ -28,9 +28,11 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/fastclick.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
 <script type="text/javascript">
-nfcRing = {};
 // Set the location to the settings page
 nfcRing.location = "settings";
 
@@ -44,7 +46,6 @@ $('#clearPreviousActions').click(function(){
   localStorage.setItem("actionHistory", "{}");
 });
 </script>
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 </body>
 </html>

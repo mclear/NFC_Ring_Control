@@ -11,6 +11,8 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
+    
+    FastClick.attach(document.body);
 
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
