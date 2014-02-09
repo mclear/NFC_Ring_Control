@@ -856,19 +856,10 @@ body.fillit {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
   background: #162132;
   color: #ffffff;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform: translate(100%, 0);
-  -moz-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  -o-transform: translate(100%, 0);
   z-index: 9999;
   text-align: left;
   overflow: hidden;
@@ -972,6 +963,7 @@ body.fillit {
   padding: 15px;
   text-decoration: none;
   color: #ffffff;
+  word-wrap: break-word;
 }
 #context-nav #history ul li a:hover {
   border: 0;
@@ -992,12 +984,40 @@ body.fillit {
 .container img {
   max-width: 100%;
 }
+.container #context-nav {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 .container .mainContents {
   position: absolute;
   width: 100%;
   background: #ebecec;
   height: 100%;
   overflow-y: scroll;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .context-open .container #context-nav {
   -webkit-transition: all 0.2s ease;
@@ -1005,17 +1025,12 @@ body.fillit {
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-transform: translate(20%, 0);
-  -moz-transform: translate(20%, 0);
-  -ms-transform: translate(20%, 0);
-  -o-transform: translate(20%, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
 }
 .context-open .container .mainContents {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   -webkit-transform: translate(-80%, 0);
   -moz-transform: translate(-80%, 0);
   -ms-transform: translate(-80%, 0);
@@ -1174,10 +1189,25 @@ a.paddedIcon {
 }
 #heatMap {
   display: none;
+  visibility: hidden;
   position: fixed;
   height: 100%;
   width: 100%;
   z-index: 901;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.show-heatmap #heatMap {
+  display: block;
+  visibility: visible;
   opacity: 0.5;
 }
 #bubble {

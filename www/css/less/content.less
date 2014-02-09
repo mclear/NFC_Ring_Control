@@ -484,19 +484,19 @@ a.paddedIcon { padding: 5px }
 
 #heatMap{
 	display: none;
-	visibility: hidden;
   position:fixed;
   height:100%;
   width:100%;
-  z-index:901;
-  opacity:1;
+  z-index:0;
+  opacity:0;
 	.transition(opacity, 0.2s, ease);
   .backface-visibility(hidden);
   
   .show-heatmap & {
     display:block;
-    visibility: visible;
     opacity: 0.5;
+    background-color:#f00;
+    z-index:999;
   }
 }
 

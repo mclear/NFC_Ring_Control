@@ -168,7 +168,7 @@ nfcRing.write = function (nfcEvent) {
     // This may seem crazy but WP needs to continue to call this but we should wait two seconds
     if (device.platform === "Win32NT") {
       setTimeout(function () {
-        nfcRing.write(false)
+        // nfcRing.write(false)
       }, 2000);
     }
   }, function (reason) {
@@ -205,9 +205,9 @@ nfcRing.handleBack = function () {
 
   // When writing an NFC Ring if back button is pressed show the input page IE twitter username prompt
   if (nfcRing.location === "writing") {
+    $('body').removeClass('show-heatmap');
     $('#option').show();
     $('#writeRing').hide();
-    $('#heatMap').hide();
     nfcRing.location = "option";
   }
 
