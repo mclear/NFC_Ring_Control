@@ -789,6 +789,7 @@ body.fillit {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 .link-list.bottom li {
   text-align: center;
@@ -802,9 +803,6 @@ body.fillit {
   left: auto;
   vertical-align: middle;
 }
-#create {
-  /* 	padding-bottom: 65px; */
-}
 .bottom {
   position: absolute;
   bottom: 0;
@@ -816,7 +814,6 @@ body.fillit {
 }
 #header #title {
   position: relative;
-  background: #ebecec;
   z-index: 100;
 }
 #header #nav-btn,
@@ -874,6 +871,7 @@ body.fillit {
   top: 0;
   right: 0;
   width: 100%;
+  height: 100%;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -905,6 +903,17 @@ body.fillit {
   font-size: 1.8em;
   display: block;
   padding: 15px;
+}
+#context-nav #options-list #geninfo {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+#context-nav #options-list #geninfo p#version {
+  color: #808080;
+  margin: 0;
+  padding: 0 10px;
 }
 .show-history #context-nav #options-list {
   -webkit-transform: translate(-100%, 0);
@@ -973,13 +982,13 @@ body.fillit {
   font-size: 0.5em;
   padding: 2px 0 0 0;
 }
+/* Structural and UI anims */
 .container {
   position: absolute;
   width: 100%;
   height: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   overflow: hidden;
+  background: #ebecec;
 }
 .container img {
   max-width: 100%;
@@ -1002,7 +1011,6 @@ body.fillit {
 .container .mainContents {
   position: absolute;
   width: 100%;
-  background: #ebecec;
   height: 100%;
   overflow-y: scroll;
   -webkit-transition: all 0.2s ease;
@@ -1018,6 +1026,17 @@ body.fillit {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.container .mainContents .step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.container .mainContents .step .inner {
+  padding-top: 55px;
 }
 .context-open .container #context-nav {
   -webkit-transition: all 0.2s ease;
@@ -1059,16 +1078,6 @@ actionName p {
 /* Index Page */
 #landing h2 {
   font-size: 2em;
-}
-#writeRing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#writeRing h2 {
-  margin-top: 55px;
 }
 #writeRing img {
   max-width: 70%;
@@ -1112,9 +1121,6 @@ actionName p {
 }
 #optionForm .icon-next:before {
   vertical-align: middle;
-}
-.step {
-  width: 100%;
 }
 .count {
   display: none;
@@ -1188,13 +1194,14 @@ a.paddedIcon {
   display: none;
 }
 #heatMap {
-  display: none;
-  visibility: hidden;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  z-index: 901;
-  opacity: 1;
+  z-index: 0;
+  opacity: 0;
   -webkit-transition: opacity 0.2s ease;
   -moz-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
@@ -1206,9 +1213,7 @@ a.paddedIcon {
   backface-visibility: hidden;
 }
 .show-heatmap #heatMap {
-  display: block;
-  visibility: visible;
-  opacity: 0.5;
+  opacity: 1;
 }
 #bubble {
   position: absolute;
@@ -1220,6 +1225,7 @@ a.paddedIcon {
   -webkit-box-shadow: 0 0 15px 7px #e63712;
   -moz-box-shadow: 0 0 15px 7px #e63712;
   box-shadow: 0 0 15px 7px #e63712;
+  z-index: 100000000;
 }
 #message {
   display: none;

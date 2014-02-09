@@ -6,7 +6,7 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
 	<title>NFC Ring App</title>
-	<script src="http://192.168.1.125:8080/target/target-script-min.js#anonymous"></script>
+		<script src="http://192.168.1.125:8080/target/target-script-min.js#anonymous"></script>
 </head>
 <body id="create">
 <div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
@@ -219,7 +219,7 @@ nfcRing.heatmapInit = function(){
     query.find({
       success: function(results){
         for (var i = 0; i < results.length; i++) { 
-          $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
+          $('#writeRing .inner > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
           var object = results[i];
           var x = object.get('x');
           var y = object.get('y');
@@ -227,7 +227,7 @@ nfcRing.heatmapInit = function(){
           coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
         }
         if(results.length == 0){ // if there are no results
-          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
+          $('#writeRing .inner > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
         }else{ // there are some heatmap results so let's draw em
           console.log("Drawing heatmap");
           nfcRing.coOrds = coOrdinateCounter;
@@ -236,14 +236,14 @@ nfcRing.heatmapInit = function(){
       },
       failure: function(){
         // fires on failure to connect
-        $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+        $('#writeRing .inner > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
         // nfcRing.drawHeatMap();
       }
     });
   }catch(e){
     // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
     if(device.platform == "Win32NT"){
-      $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+      $('#writeRing .inner > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
 	  console.log("Unable to process Parse on WP");
       // nfcRing.drawHeatMap();
     }
