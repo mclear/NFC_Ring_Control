@@ -13,6 +13,9 @@ var app = {
     console.log('deviceready');
     
     FastClick.attach(document.body);
+    
+    cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+
 
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
@@ -139,9 +142,9 @@ nfcRing.write = function (nfcEvent) {
     var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
     console.log("dontAskSweetSpotAgain", dontAskSweetSpotAgain);
     if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
-      alert("Woohooo", false, "Your ring is ready");
+      alert("Your ring is now ready", false, "Success!");
     } else {
-      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Done, Thank you!");
     }
     console.log("Share location response", shareLocation);
     if (shareLocation) {
@@ -244,12 +247,13 @@ nfcRing.validURL = function (url) {
 
 // Displays the first Run helper
 nfcRing.firstRun = function(){
-  /*
+/*
   var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
   if(wantHelp){
-    alert("Cool story bro");
+    $('body').addClass('walkthrough walk1');
   }
-  */
+*/
+ 
 }
 
 $('#clearSweetSpot').click(function(){

@@ -35,7 +35,7 @@ app.initialize();
 var guid = gup("guid");
 
 // listeners
-$("body").click(function(e){
+$(".mainContents").click(function(e){
   $('#bubble').show();
   var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
   var centerY = e.clientY - ($('#bubble').height()/2);

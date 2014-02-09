@@ -6,11 +6,8 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
 	<title>NFC Ring App</title>
-	<script src="http://192.168.1.125:8080/target/target-script-min.js#anonymous"></script>
 </head>
 <body id="create">
-<div id="heatMap"></div>
-
 <div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
 
 <div id="help">
@@ -30,23 +27,8 @@
 </div>
 
 <div class="container">
-
-  <div id="context-nav">
-  	<div id="options-list">
-  		<h3>Options</h3>
-  		<ul>
-  			<li><a href="#" id="viewHistory">View your recent actions</a></li>
-  			<li><a href="#" id="clearSweetSpot">Clear all recent actions</a></li>
-  			<li><a href="#" id="clearPreviousActions">Clear sweet spot data</a></li>
-  		</ul>
-  	</div>
-  	<div id="history">
-  		<h3>History</h3>
-  		<ul id="history-list"></ul>
-  	</div>
-  </div>
-
 	<div class="mainContents">
+    <div id="heatMap"></div>
 	
 		<header id="header">
 			<div id="title">
@@ -56,34 +38,59 @@
 		</header>
 		
 		<div id="action" class="step action">
-		  <h2>What do you want your Ring to do?</h2>
-		  <div class="actionContents">
-		    <div class="ringActions">
-			    <ul id="ringActions" class="link-list"></ul>
-		    </div>
+		  <div class="inner">
+  		  <h2>What do you want your Ring to do?</h2>
+  		  <div class="actionContents">
+  		    <div class="ringActions">
+  			    <ul id="ringActions" class="link-list"></ul>
+  		    </div>
+  		  </div>
 		  </div>
 		</div>
 
 		<div id="option" class="step option">
-		  <div class="actionName"></div>
-		  <div class="actionContents">
-		    <form id="optionForm">
-		      <label for="optionInput"></label>
-		      <input name="option" id="optionInput" type="text">
-		      <input type="hidden" id="action" name="action">
-		      <button type="submit" class="btn-link icon icon-next" id="submit">Next</button>
-		    </form>
+		  <div class="inner">
+  		  <div class="actionName"></div>
+  		  <div class="actionContents">
+  		    <form id="optionForm">
+  		      <label for="optionInput"></label>
+  		      <input name="option" id="optionInput" type="text">
+  		      <input type="hidden" id="action" name="action">
+  		      <button type="submit" class="btn-link icon icon-next" id="submit">Next</button>
+  		    </form>
+  		  </div>
 		  </div>
 		</div>
 
 		<div id="writeRing" class="step writeRing">
-		  <div class="actionName"></div>
-		  <ul class="link-list bottom">
-		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
-		  </ul>
+		  <div class="inner">
+  		  <div class="actionName"></div>
+  		  <ul class="link-list bottom">
+  		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
+  		  </ul>
+		  </div>
 		</div>
 	
 	</div>
+	
+  <div id="context-nav">
+  	<div id="options-list">
+  		<h3>Options</h3>
+  		<ul>
+  			<li><a href="#" id="viewHistory">View your recent actions</a></li>
+  			<li><a href="#" id="clearPreviousActions">Clear all recent actions</a></li>
+  			<li><a href="#" id="clearSweetSpot">Clear sweet spot data</a></li>
+  		</ul>
+  		<div id="geninfo">
+        <p id="version">Version <span id="versionNumber"></span></p>
+  		</div>
+  		</ul>
+  	</div>
+  	<div id="history">
+  		<h3>History</h3>
+  		<ul id="history-list"></ul>
+  	</div>
+  </div>
 	
 </div>
 
@@ -219,7 +226,7 @@ nfcRing.heatmapInit = function(){
           coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
         }
         if(results.length == 0){ // if there are no results
-          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");
+          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
         }else{ // there are some heatmap results so let's draw em
           console.log("Drawing heatmap");
           nfcRing.coOrds = coOrdinateCounter;
@@ -297,7 +304,7 @@ nfcRing.addActions = function() {
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.submitted(key);
-      // nfcRing.drawHeatMap();
+      //nfcRing.drawHeatMap();
       return false;
     });
   });

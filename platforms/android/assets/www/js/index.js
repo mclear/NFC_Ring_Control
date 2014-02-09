@@ -13,6 +13,9 @@ var app = {
     console.log('deviceready');
     
     FastClick.attach(document.body);
+    
+    cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+
 
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
@@ -42,38 +45,33 @@ var app = {
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
 
-    if (nfc && device.platform !== "Win32NT") {
+    if (nfc && device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
       console.log("NFC Found, adding listener");
+      // Android requires both listeners -- It then choses which event to fire
+      // Because we currently only support Android and WP we don't need to wrap this in an If
+      nfc.addTagDiscoveredListener(function (nfcEvent) {
+        nfcRing.readOrWrite(nfcEvent);
+        console.log("Attempting to bind to NFC TAG");
+      }, function () {
+        console.log("Success.  Listening for rings..");
+      }, function () {
+        alert("NFC Functionality is not working, is NFC enabled on your device?");
+        $('#createNew, #read, #scan').attr('disabled', 'disabled');
+      });
 
-      // Win 32 only supports NDEF tags
-      if (device.platform == "Win32NT") {
-        nfc.addNdefListener(function (nfcEvent) {
-          nfcRing.readOrWrite(nfcEvent);
-          console.log("Attempting to bind to NFC NDEF");
-        }, function () {
-          console.log("Success.  Listening for rings..");
-        }, function () {
-          alert("NFC Functionality is not working, is NFC enabled on your device?");
-          $('#createNew, #read, #scan').attr('disabled', 'disabled');
-        });
-        // Android & BB support all tags
-      } else {
-        // The issue here is if we use addTagDiscoveredListener we don't get NDEF record on read..
-        // so we have to use addNdefFormatableListener
-        nfc.addNdefListener(function (nfcEvent) {
-          nfcRing.readOrWrite(nfcEvent);
-          console.log("Attempting to bind to NFC TAG");
-        }, function () {
-          console.log("Success.  Listening for rings..");
-        }, function () {
-          alert("NFC Functionality is not working, is NFC enabled on your device?");
-          $('#createNew, #read, #scan').attr('disabled', 'disabled');
-        });
-      }
+      nfc.addNdefListener(function (nfcEvent) {
+        nfcRing.readOrWrite(nfcEvent);
+        console.log("Attempting to bind to NFC NDEF");
+      }, function () {
+        console.log("Success.  Listening for rings NDEF records..");
+      }, function () {
+        alert("NFC Functionality is not working, is NFC enabled on your device?");
+        $('#createNew, #read, #scan').attr('disabled', 'disabled');
+      });
+
     } else {
       console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
-    
     
     $('#helpLink').on('click', function (e) {
       e.preventDefault();
@@ -144,9 +142,9 @@ nfcRing.write = function (nfcEvent) {
     var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
     console.log("dontAskSweetSpotAgain", dontAskSweetSpotAgain);
     if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
-      alert("Woohooo", false, "Your ring is ready");
+      alert("Your ring is now ready", false, "Success!");
     } else {
-      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Done, Thank you!");
     }
     console.log("Share location response", shareLocation);
     if (shareLocation) {
@@ -168,7 +166,7 @@ nfcRing.write = function (nfcEvent) {
     // This may seem crazy but WP needs to continue to call this but we should wait two seconds
     if (device.platform === "Win32NT") {
       setTimeout(function () {
-        // nfcRing.write(false)
+        nfcRing.write(false)
       }, 2000);
     }
   }, function (reason) {
@@ -249,12 +247,13 @@ nfcRing.validURL = function (url) {
 
 // Displays the first Run helper
 nfcRing.firstRun = function(){
-  /*
+/*
   var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
   if(wantHelp){
-    alert("Cool story bro");
+    $('body').addClass('walkthrough walk1');
   }
-  */
+*/
+ 
 }
 
 $('#clearSweetSpot').click(function(){

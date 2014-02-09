@@ -65,6 +65,7 @@ body {
 	  bottom:0;
 	  left: 0;
 	  width:100%;
+	  z-index:2;
 		
 		li {
 			text-align:center;
@@ -83,10 +84,6 @@ body {
 	}
 }
 
-#create {
-/* 	padding-bottom: 65px; */
-}
-
 .bottom {
 	position:absolute;
 	bottom:0;
@@ -99,7 +96,6 @@ body {
 	
 	#title {
 		position: relative;
-		background:@grey;
 		z-index: 100;
 	}
 	#nav-btn, #back-btn {
@@ -161,6 +157,7 @@ body {
   	top:0;
   	right:0;
   	width:100%;
+  	height:100%;
 		.transition(all, 0.2s, ease);
 		.translate(0, 0);
     .backface-visibility(hidden);
@@ -186,6 +183,19 @@ body {
 				}
 			}
 		}
+
+    #geninfo {
+      position:absolute;
+      bottom:10px;
+      left:0;
+      width:100%;
+      
+      p#version {
+        color:darken(@white, 50%);
+        margin:0;
+        padding:0 10px;
+      }
+    }
 
 		.show-history & {
 			.translate(-100%, 0);		
@@ -251,13 +261,13 @@ body {
 
 }
 
+/* Structural and UI anims */
 .container {
   position: absolute;
   width:100%;
   height:100%;
-  max-width: 900px;
-  margin: 0 auto;
   overflow: hidden;
+ 	background:@grey;
   
 	img {
 		max-width:100%;
@@ -273,12 +283,25 @@ body {
     position: absolute;
     width:100%;
     height:100%;
-  	background:@grey;
   	height:100%;
     overflow-y: scroll;
    	.transition(all, 0.2s, ease);
     .translate(0, 0);
     .backface-visibility(hidden);
+
+    .step {    
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      z-index:1;
+      
+      .inner {
+        padding-top:55px;
+      }
+    }
+    
 	}
   
   .context-open & {
@@ -336,15 +359,6 @@ actionName {
 }
 
 #writeRing {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-	
-	h2 {
-    margin-top:55px;
-	}
 	
 	img {
 		max-width:70%;
@@ -411,11 +425,6 @@ actionName {
 
 
 
-
-
-.step {
-  width: 100%;
-}
 .count {
     display: none;
     width: 200px;
@@ -483,8 +492,10 @@ a.paddedIcon { padding: 5px }
 #option, #writeRing{display:none;}
 
 #heatMap{
-	display: none;
-  position:fixed;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
   height:100%;
   width:100%;
   z-index:0;
@@ -493,10 +504,7 @@ a.paddedIcon { padding: 5px }
   .backface-visibility(hidden);
   
   .show-heatmap & {
-    display:block;
-    opacity: 0.5;
-    background-color:#f00;
-    z-index:999;
+    opacity: 1;
   }
 }
 
@@ -508,6 +516,7 @@ a.paddedIcon { padding: 5px }
   background-color:@orange;
   border-radius: 15px;
   .boxShadow(0,0,15px,7px,@orange);
+  z-index:100000000;
 }
 
 #message {
