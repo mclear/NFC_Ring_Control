@@ -35,7 +35,7 @@ app.initialize();
 var guid = gup("guid");
 
 // listeners
-$("body").click(function(e){
+$(".mainContents").click(function(e){
   $('#bubble').show();
   var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
   var centerY = e.clientY - ($('#bubble').height()/2);
@@ -46,12 +46,19 @@ $("body").click(function(e){
   setTimeout(function(){
     var correctLocation = confirm("Looks good!  Is the red dot close to where the ring works with your phone?");
     if(correctLocation){
-      var phoneModel = device.model; 
-      console.log("Sending ", centerX, centerY, phoneModel, " to Database");
-      sendToParse(centerX, centerY, phoneModel);
       localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
       // weird note, I thought localStorage had better support for objects, turns out it wants strings..  Not convinced I'm doing this right..
       // Docs at http://stackoverflow.com/questions/2010892/storing-objects-in-html5-localstorage
+
+      var phoneModel = device.model; 
+      console.log("Sending ", centerX, centerY, phoneModel, " to Database");
+	  try{
+        sendToParse(centerX, centerY, phoneModel);
+	  }catch(e){
+	    console.log("silently failing for now");
+      window.location = "index.html"; // Return user back to start page
+
+	  }
     }
   }, 100);
 });

@@ -35,7 +35,7 @@ app.initialize();
 var guid = gup("guid");
 
 // listeners
-$("body").click(function(e){
+$(".mainContents").click(function(e){
   $('#bubble').show();
   var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
   var centerY = e.clientY - ($('#bubble').height()/2);
@@ -89,7 +89,6 @@ function gup( name ){
 nfcRing.location = "shareLocation";
 </script>
 <script type="text/javascript" src="js/parseDetails.js"></script>
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
 
 </body>
 </html>

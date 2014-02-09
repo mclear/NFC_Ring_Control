@@ -11,89 +11,127 @@ var app = {
     // note that this is an event handler so the scope is that of the event
     // so we need to call app.report(), and not this.report()
     console.log('deviceready');
-	
-	// Remove read from windows phone, it's far too buggy
-    if(device.platform == "Win32NT"){
+    
+    FastClick.attach(document.body);
+    
+    cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+
+
+    // Remove read from windows phone, it's far too buggy
+    if (device.platform == "Win32NT") {
       $('#read').hide();
       // note we need to this here beacuse device isn't avialable previously..  It's a bit of a PITA but it's only temporary
     }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
-    if(nfcRing.location == "index"){
-      document.removeEventListener("backbutton", nfcRing.handleBack, false);
+    console.log("location...", nfcRing.location)
+    if (nfcRing.location == "index") {
       // Clear history so back button on home page always leaves the app
-      navigator.app.clearHistory();
+      console.log("Cleared app history");
+      history.go(-(history.length - 9999));
+      document.addEventListener("backbutton", nfcRing.handleBack, true);
+      // navigator.app.clearHistory(); // This doesn't even exist in WP -- does it actually exist on Android?
+    } else {
+      document.addEventListener("backbutton", nfcRing.handleBack, false);
     }
 
     // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-    if(device.platform == "Win32NT"){
+    if (device.platform == "Win32NT") {
       $('#read').hide();
       $('#helpContents ul').append('<li>Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL</li>');
     }
-	
+
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
-    if (nfc) {
-      nfc.addNdefListener(function (nfcEvent) {
+
+    if (nfc && device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
+      console.log("NFC Found, adding listener");
+      // Android requires both listeners -- It then choses which event to fire
+      // Because we currently only support Android and WP we don't need to wrap this in an If
+      nfc.addTagDiscoveredListener(function (nfcEvent) {
         nfcRing.readOrWrite(nfcEvent);
-        console.log("Attempting to bind to NFC");
+        console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
       }, function () {
         alert("NFC Functionality is not working, is NFC enabled on your device?");
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
+
+      nfc.addNdefListener(function (nfcEvent) {
+        nfcRing.readOrWrite(nfcEvent);
+        console.log("Attempting to bind to NFC NDEF");
+      }, function () {
+        console.log("Success.  Listening for rings NDEF records..");
+      }, function () {
+        alert("NFC Functionality is not working, is NFC enabled on your device?");
+        $('#createNew, #read, #scan').attr('disabled', 'disabled');
+      });
+
+    } else {
+      console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
     
-		$('#helpLink').on('click', function(e){
-			e.preventDefault();
-			$.magnificPopup.open({
-			  items: {
-			    src: '#helpContents'
-			  },
-			  type: 'inline',
-				mainClass: 'mfp-fade',
-				showCloseBtn: false,
-				closeOnBgClick: false,
-				callbacks: {
-			    close: function() {
-			    setTimeout( $('#message').fadeOut('slow'), 5000);
-			    }
-			  }
-			}, 0);
-		});
+    $('#helpLink').on('click', function (e) {
+      e.preventDefault();
+      $.magnificPopup.open({
+        items: {
+          src: '#helpContents'
+        },
+        type: 'inline',
+        mainClass: 'mfp-fade',
+        showCloseBtn: false,
+        closeOnBgClick: false,
+        callbacks: {
+          close: function () {
+            setTimeout($('#message').fadeOut('slow'), 5000);
+          }
+        }
+      }, 0);
+    });
 
-		$('#helpClose').click( function(){		
-			$.magnificPopup.close();
-		});
-    
+    $('#helpClose').click(function () {
+      $.magnificPopup.close();
+    });
+
   }
 };
 
-function debug(msg) {
-  console.log(msg);
-}
+$('#nav-btn').on('click', function() {
+  $('body').toggleClass('context-open');
+});
 
-nfcRing.readOrWrite = function(nfcEvent){
+$('#viewHistory').on('click', function(e) {
+  e.preventDefault();
+  $('body').toggleClass('show-history');
+  $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
+});
+
+$('body').on('click', '#back-btn', function() {
+  $('#back-btn').remove();
+  $('body').toggleClass('show-history');
+});
+
+nfcRing.readOrWrite = function (nfcEvent) {
   $('#message').hide(); // hide help message
-  if(nfcRing.toWrite){
+  if (nfcRing.toWrite) {
     console.log("Doing write event", nfcEvent);
     nfcRing.write(nfcEvent);
     $('#writeRing').show();
-  }else{
+  } else {
     nfcRing.read(nfcEvent);
   }
 }
 
-nfcRing.write = function(nfcEvent){
+nfcRing.write = function (nfcEvent) {
   // If the string is a valid URL
   var isURL = nfcRing.validURL(nfcRing.toWrite);
- 
-  if(isURL){
+
+  if (isURL) {
     console.log("URL Record");
     var ndefRecord = ndef.uriRecord(nfcRing.toWrite); // Creates a URI record
-  }else{
+  } else {
     console.log("Text record");
     // The string must be a text record as that's the only other type we support
     var ndefRecord = ndef.textRecord(nfcRing.toWrite); // Creates a Text record
@@ -103,64 +141,132 @@ nfcRing.write = function(nfcEvent){
     console.log("Written", ndefRecord);
     var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
     console.log("dontAskSweetSpotAgain", dontAskSweetSpotAgain);
-    if(dontAskSweetSpotAgain === "true"){ // we should ask for the sweet spot
-      alert("Woohooo", false, "Your ring is ready");
-    }else{
-      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Woohooo");
+    if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
+      alert("Your ring is now ready", false, "Woohoo!");
+    } else {
+      var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Done, Thank you!");
     }
-    if(shareLocation){
+    console.log("Share location response", shareLocation);
+    if (shareLocation) {
+      console.log("Set localstorage item dont ask sweet spot again");
       localStorage.setItem("dontAskSweetSpotAgain", true);
-      var idStr = nfcEvent.tag.id;
-      idStr = idStr.join(",");
-      window.location = "shareLocation.html#?guid="+idStr;
-    }else{
+      console.log("nfcEvent", nfcEvent)
+      if (!nfcEvent) nfcEvent = {}; // Hack as WP8 doesn't pass event always
+      if (!nfcEvent.tag) nfcEvent.tag = {}; // Continued Hack
+      if (nfcEvent.tag.id) {
+        var idStr = nfcEvent.tag.id.join(",");
+      } else {
+        var idStr = "false";
+      }
+      window.location = "shareLocation.html#?guid=" + idStr;
+    } else {
       localStorage.setItem("dontAskSweetSpotAgain", true);
+    }
+
+    // This may seem crazy but WP needs to continue to call this but we should wait two seconds
+    if (device.platform === "Win32NT") {
+      setTimeout(function () {
+        nfcRing.write(false)
+      }, 2000);
     }
   }, function (reason) {
-    console.log("Inlay write failed")
+    console.log("Inlay write failed");
+    // This may seem crazy but WP needs to continue to call this..
+    if (device.platform === "Win32NT") {
+      nfcRing.write(false)
+    }
   });
 }
 
-nfcRing.read = function(nfcEvent){
+nfcRing.read = function (nfcEvent) {
   console.log("Reading")
   console.log(nfcEvent);
   var ring = nfcEvent.tag;
   console.log(ring);
-  ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
-  alert(ringData, false, "Ring contents:");
+  if(ring.ndefMessage){
+    ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
+    console.log(ringData, false, "Ring contents:");
+    alert(ringData, false, "Ring contents:");
+  }else{
+    alert("No NDEF data found", false, "Unable to read");
+  }
 }
 
-nfcRing.handleBack = function(){
+nfcRing.handleBack = function () {
+  console.log("Handling back without any nativeness");
+
   // If we're providing an input such as a twitter username and we hit back then go back to the actions prompt page
-  if(nfcRing.location == "option"){
+  if (nfcRing.location === "option") {
     console.log("reloading");
     location.reload();
   }
 
   // When writing an NFC Ring if back button is pressed show the input page IE twitter username prompt
-  if(nfcRing.location == "writing") $('#option').show(); $('#writeRing').hide(); $('#heatMap').hide();
-  
+  if (nfcRing.location === "writing") {
+    $('body').removeClass('show-heatmap');
+    $('#option').show();
+    $('#writeRing').hide();
+    nfcRing.location = "option";
+  }
+
   // When on shareLocation screen if back button is pressed we should go back to the createAction page
-  if(nfcRing.location == "shareLocation") window.location = "createAction.html";
+  if (nfcRing.location === "shareLocation") window.location = "createAction.html";
 
   // When on location page take back to home page
-  if(nfcRing.location == "actions") window.location = "index.html";
+  if (nfcRing.location === "actions") {
+    console.log("Redirecting back to home page");
+    window.location = "index.html";
+  }
+  
+  // When back on settings page..
+  if (nfcRing.location === "settings") {
+     window.location = "index.html";
+  }
 
   // When back on index page leave the app..
-  if(nfcRing.location == "index") navigator.app.exitApp();
+  if (nfcRing.location === "index") {
+    console.log("I shouldn't be here..");
+    navigator.app.exitApp();
+  }
+  
 }
 
-
-nfcRing.validURL = function(url) {
-  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-  if(!pattern.test(url)) {
+nfcRing.validURL = function (url) {
+  var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+  if (!pattern.test(url)) {
     return false;
   } else {
     return true;
   }
 }
+
+// Displays the first Run helper
+nfcRing.firstRun = function(){
+/*
+  var wantHelp = confirm("It looks like this is the first time you have used the NFC Ring Control app, would you like some help?");
+  if(wantHelp){
+    $('body').addClass('walkthrough walk1');
+  }
+*/
+ 
+}
+
+$('#clearSweetSpot').click(function(){
+  if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+    console.log("clearing sweet spot history");
+    localStorage.setItem("dontAskSweetSpotAgain", false);
+    localStorage.setItem("sweetSpotLocation", false);
+  } 
+});
+$('#clearPreviousActions').click(function(){
+  if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+    console.log("Clearing previous actions");
+    localStorage.setItem("actionHistory", "{}");
+  }
+});
+

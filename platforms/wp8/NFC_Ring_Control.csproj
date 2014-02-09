@@ -221,6 +221,12 @@
         <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\Ndef.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\NfcPlugin.cs" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\config.xml" />
     </ItemGroup>
     <ItemGroup>
@@ -299,6 +305,9 @@
         <Content Include="www\js\actions.js" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www\js\fastclick.js" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\js\heatmap.js" />
     </ItemGroup>
     <ItemGroup>
@@ -306,6 +315,12 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\js\jquery-1.9.1.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\js\jquery.timeago.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\js\magpop.js" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\js\parse-1.2.9.min.js" />
@@ -320,13 +335,10 @@
         <Content Include="www\scanQR.html" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www\settings.html" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\shareLocation.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\Ndef.cs" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\NfcPlugin.cs" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />

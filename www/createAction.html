@@ -8,8 +8,6 @@
 	<title>NFC Ring App</title>
 </head>
 <body id="create">
-<div id="heatMap"></div>
-
 <div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
 
 <div id="help">
@@ -22,6 +20,7 @@
 			<li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
 			<li>Move your ring slowly around the back of the device</li>
 			<li>Try with another NFC Device if you have one</li>
+			<li>If you are using an aftermarket battery make sure it's NFC enabled</li>
 		</ul>
 		<button class="button" id="helpClose">Ok, got it</button>
 	</div>
@@ -29,50 +28,81 @@
 
 <div class="container">
 	<div class="mainContents">
-
+    <div id="heatMap"></div>
+	
 		<header id="header">
-			<div id="logo"><img src="img/nfcring-logo.png"></div>
+			<div id="title">
+				<div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
+				<div id="logo"><img src="img/nfcring-logo.png"></div>
+			</div>
 		</header>
 		
 		<div id="action" class="step action">
-		  <h2>What do you want your Ring to do?</h2>
-		  <div class="actionContents">
-		    <div class="ringActions">
-			    <ul id="ringActions" class="link-list">
-			    </ul>
-		    </div>
+		  <div class="inner">
+  		  <h2>What do you want your Ring to do?</h2>
+  		  <div class="actionContents">
+  		    <div class="ringActions">
+  			    <ul id="ringActions" class="link-list"></ul>
+  		    </div>
+  		  </div>
 		  </div>
 		</div>
 
 		<div id="option" class="step option">
-		  <div class="actionName"></div>
-		  <div class="actionContents">
-		    <form id="optionForm">
-		      <label for="optionInput"></label>
-		      <input name="option" id="optionInput" type="text">
-		      <input type="hidden" id="action" name="action">
-		      <button type="submit" class="btn-link icon icon-next" id="submit">Next</button>
-		    </form>
+		  <div class="inner">
+  		  <div class="actionName"></div>
+  		  <div class="actionContents">
+  		    <form id="optionForm">
+  		      <label for="optionInput"></label>
+  		      <input name="option" id="optionInput" type="text">
+  		      <input type="hidden" id="action" name="action">
+  		      <button type="submit" class="btn-link icon icon-next" id="submit">Next</button>
+  		    </form>
+  		  </div>
 		  </div>
 		</div>
 
 		<div id="writeRing" class="step writeRing">
-		  <div class="actionName"></div>
-		  <ul class="link-list bottom">
-		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
-		  </ul>
+		  <div class="inner">
+  		  <div class="actionName"></div>
+  		  <ul class="link-list bottom">
+  		  	<li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
+  		  </ul>
+		  </div>
 		</div>
 	
 	</div>
+	
+  <div id="context-nav">
+  	<div id="options-list">
+  		<h3>Options</h3>
+  		<ul>
+  			<li><a href="#" id="viewHistory">View your recent actions</a></li>
+  			<li><a href="#" id="clearPreviousActions">Clear all recent actions</a></li>
+  			<li><a href="#" id="clearSweetSpot">Clear sweet spot data</a></li>
+  		</ul>
+  		<div id="geninfo">
+        <p id="version">Version <span id="versionNumber"></span></p>
+  		</div>
+  		</ul>
+  	</div>
+  	<div id="history">
+  		<h3>History</h3>
+  		<ul id="history-list"></ul>
+  	</div>
+  </div>
+	
 </div>
 
 <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/magpop.js"></script>
+<script type="text/javascript" src="js/fastclick.min.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/magpop.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/actions.js"></script>
 <script type="text/javascript" src="js/heatmap.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
 <script type="text/javascript">
 app.initialize();
 
@@ -83,15 +113,37 @@ nfcRing.coOrdData = {
   data: []
 };
 
-nfcRing.submitted = function(key){
-  var response = $('#optionInput').val();
+nfcRing.submitted = function(key, ts){
+  var response = $('#optionInput').val() || key;
   if(response){
     nfcRing.location = "writing";
     $('#writeRing').show(); $('#option').hide();
-    console.log("Formatted as ", actions[key].format(response));
-    nfcRing.toWrite = actions[key].format(response);
+    if(actions[key]){ // if we're using a pre-defined structure
+      console.log("Formatted as ", actions[key].format(response));
+      nfcRing.toWrite = actions[key].format(response);
+    }else{ // if we're using a historic action
+      nfcRing.toWrite = key;
+    }
+
+    // Store the event in the actionHistory
+    nfcRing.actionHistory = localStorage.getItem("actionHistory") || "{}";
+    nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+    if(ts) delete nfcRing.actionHistory[ts]; // Deletes previous record of this action
+    console.log("Previous action History", nfcRing.actionHistory, "pushing ", nfcRing.toWrite);
+    var ts = new Date().getTime();
+    nfcRing.actionHistory[ts] = nfcRing.toWrite;
+    console.log("obj historY", ts, nfcRing.actionHistory);
+    nfcRing.actionHistory = JSON.stringify(nfcRing.actionHistory);
+    console.log("new action History", nfcRing.actionHistory);
+    localStorage.setItem("actionHistory", nfcRing.actionHistory);
+    nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+
+	if(device.platform === "Win32NT"){  // HACK to support multiple write events on WP8
+	  nfcRing.write(false); // Sets WP up to write to a tag, ignores using the event system
+	}
+	
     setTimeout(function(){ // TODO use a callback here, using a timeout is ghetto
-      $('#heatMap').fadeIn("slow");
+      $('body').addClass('show-heatmap');
       nfcRing.drawHeatMap(); // additional draw request
     }, 500);
   }
@@ -141,7 +193,6 @@ nfcRing.drawHeatMap = function(){
 }
 
 $("body").on('click', "#finish", function () {
-  debug("Restarting");
   window.location = "index.html";
 });
 
@@ -167,7 +218,7 @@ nfcRing.heatmapInit = function(){
     query.find({
       success: function(results){
         for (var i = 0; i < results.length; i++) { 
-          $('#writeRing > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
+          $('#writeRing .inner > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
           var object = results[i];
           var x = object.get('x');
           var y = object.get('y');
@@ -175,7 +226,7 @@ nfcRing.heatmapInit = function(){
           coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
         }
         if(results.length == 0){ // if there are no results
-          $('#writeRing > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a message telling you that you found your sweet spot.  This can take a little bit of time so be patient :)</p>");
+          $('#writeRing .inner > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
         }else{ // there are some heatmap results so let's draw em
           console.log("Drawing heatmap");
           nfcRing.coOrds = coOrdinateCounter;
@@ -184,14 +235,14 @@ nfcRing.heatmapInit = function(){
       },
       failure: function(){
         // fires on failure to connect
-        $('#writeRing > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+        $('#writeRing .inner > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
         // nfcRing.drawHeatMap();
       }
     });
   }catch(e){
     // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
     if(device.platform == "Win32NT"){
-      $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+      $('#writeRing .inner > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
 	  console.log("Unable to process Parse on WP");
       // nfcRing.drawHeatMap();
     }
@@ -200,23 +251,50 @@ nfcRing.heatmapInit = function(){
 }
 
 nfcRing.addActions = function() {
+
+  // Firstly we need to load them from history
+  nfcRing.actionHistory = localStorage.getItem("actionHistory");
+  if(nfcRing.actionHistory) nfcRing.actionHistory = JSON.parse(nfcRing.actionHistory);
+  reverseForIn(nfcRing.actionHistory, function(key){ console.log('KEY:', key, 'VALUE:', this[key]); 
+    var action = this[key];
+    console.log(key);
+    key = parseInt(key);
+    var ts = new Date(key).toISOString();
+    $('#history ul').append('<li><a data-key="'+key+'" data-action="'+action+'" class="historical">' + action + '<span>Action created/used <em class=timeago title="'+ts+'"></span></span></a></em>');
+  });
+
   // Load each action icon and text
   $.each(actions, function (key, action) {
-    debug(action);
     if (!action.image) {
       action.image = key.toLowerCase() + ".png";
     };
-    $('#ringActions').append('<li><a data-key="'+key+'" class="icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
+    $('#ringActions').append('<li><a data-key="'+key+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
   });
-  // click listener for each action
-  $('#ringActions a').click(function(){
+  // click action for previously historical actions
+  $('#history li > .historical').click(function(){ 
+    $('#action').hide();
+    $('body').toggleClass('show-history').toggleClass('context-open');
+    $('#back-btn').remove();
+    console.log("beginning init");
+    nfcRing.heatmapInit();
+    console.log("Setting location to option");
+    nfcRing.location = "writing";
+    var action = $(this).data("action");
+    var key = $(this).data("key");
+    console.log("Key ", key);
+    console.log("Submitting a write value to the nfcRing object");
+    nfcRing.submitted(action, key);
+  });
+
+  // click listener for each action from actions.js
+  $('#ringActions > li > .action').click(function(){
     // Begin heatmap stuff, this pre-loads the data for us :)
     console.log("beginning init");
     nfcRing.heatmapInit();
     console.log("Setting location to option");
     nfcRing.location = "option";
     var key = $(this).data("key");
-	console.log("Key ", key);
+    console.log("Key ", key);
     $('#option').show(); $('#action').hide();
     $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
     $('#optionInput').attr("placeholder", actions[key].placeHolder);
@@ -226,17 +304,39 @@ nfcRing.addActions = function() {
       e.preventDefault();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.submitted(key);
-      // nfcRing.drawHeatMap();
+      //nfcRing.drawHeatMap();
       return false;
     });
   });
 }
 
+function gup( name ){
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null ) return "";
+  else return results[1];
+}
+
+
 nfcRing.addActions();
 nfcRing.location = "actions";
-</script>
+jQuery(".timeago").timeago();
 
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
+
+// f is a function that has the obj as 'this' and the property name as first parameter
+function reverseForIn(obj, f) {
+  var arr = [];
+  for (var key in obj) {
+    // add hasOwnPropertyCheck if needed
+    arr.push(key);
+  }
+  for (var i=arr.length-1; i>=0; i--) {
+    f.call(obj, arr[i]);
+  }
+}
+</script>
 
 <script type="text/javascript" src="js/parseDetails.js"></script>
 </body>

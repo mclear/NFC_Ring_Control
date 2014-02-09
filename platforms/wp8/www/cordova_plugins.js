@@ -15,16 +15,16 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js",
-        "id": "com.chariotsolutions.nfc.plugin.NFC",
-        "runs": true
-    },
-    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js",
+        "id": "com.chariotsolutions.nfc.plugin.NFC",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -32,8 +32,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.dialogs": "0.2.5",
     "org.apache.cordova.vibration": "0.3.6",
-    "com.chariotsolutions.nfc.plugin": "0.4.7",
-    "org.apache.cordova.device": "0.2.7"
+    "org.apache.cordova.device": "0.2.7",
+    "com.chariotsolutions.nfc.plugin": "0.4.7"
 }
 // BOTTOM OF METADATA
 });
