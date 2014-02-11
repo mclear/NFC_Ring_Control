@@ -39,8 +39,8 @@
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
   <ul class="link-list">
     <li><a id="createNew" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
-    <li><a id="read" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDesription"}}</span></a></li>
-    <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDesription"}}</span></a></li>
+    <li><a id="read" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
+    <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
   </ul>
 </script>
 
@@ -99,10 +99,10 @@
 nfcRing.location = "index"
 // Initialize the page
 nfcRing.ui.domListenersInit();
-try{
-  app.initialize()
-}catch(e){
-  console.log("This is not running as a Cordova app"); // this doesn't work
+if(typeof cordova !== 'undefined'){
+  app.initialize();
+}else{
+  console.log("This is not running as a Cordova app, we will fake cordova");
   device = {};
   device.platform = "browser";
 }
