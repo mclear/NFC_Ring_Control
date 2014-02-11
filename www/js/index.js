@@ -9,7 +9,8 @@ var app = {
     // Remove read from windows phone, it's far too buggy
     if (device.platform == "Win32NT") {
       $('#read').hide();
-      $('#helpContents ul').append('<li>Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL</li>');
+      $('.win32').show(); // Note to Designer, by default this needs to be hidden
+      $('#writeRing > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
     }
 
     // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton

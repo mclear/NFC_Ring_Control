@@ -41,6 +41,7 @@ nfcRing.ui = {
       var source = $('#index').html();
       var template = Handlebars.compile(source);
       $("#container").html(template());
+      console.log("Writing ", source, " to #container");
     });
 
     FastClick.attach(document.body); // What does this do?
