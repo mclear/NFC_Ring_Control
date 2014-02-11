@@ -20,6 +20,21 @@
     "help.slowly":"Move your ring slowly around the back of your device",
     "help.another":"Try with another NFC Device if you have one",
     "help.winPhone":"Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL",
-    "help.gotIt":"Ok, I got it"
+    "help.gotIt":"Ok, I got it",
+    "actions.twitter.name":"Twitter",
+    "actions.twitter.description":"Link to a Twitter user",
+    "actions.twitter.optionText":"What is your Twitter Username?",
+    "actions.facebook.name":"Facebook",
+    "actions.facebook.description":"Link to a Facebook page",
+    "actions.facebook.optionText":"What is your Facebook Page URL?",
+    "actions.website.name":"Link",
+    "actions.website.description":"Link to a web address",
+    "actions.website.optionText":"What is the URL of the website?",
+    "actions.youtube.name":"Youtube",
+    "actions.youtube.description":"Link to a video or channel",
+    "actions.youtube.optionText":"What is your Youtube Video / Channel?",
+    "actions.text.name":"Text",
+    "actions.text.description":"Write arbitary text such as a Bitcoin public key",
+    "actions.text.optionText":"What is your text?"
   }
 }

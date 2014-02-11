@@ -2,7 +2,7 @@ nfcRing.ui = {
   addActions: function(){
     // Firstly we need to load them from history
     nfcRing.userValues.history.values = localStorage.getItem("actionHistory");
-    if(nfcRing.history.values) nfcRing.userValues.history.values = JSON.parse(nfcRing.userValues.history.values);
+    if(nfcRing.userValues.history.values) nfcRing.userValues.history.values = JSON.parse(nfcRing.userValues.history.values);
     nfcRing.userValues.history.reverse(nfcRing.userValues.history.values, function(key){
       console.log('KEY:', key, 'VALUE:', this[key]); 
       var action = this[key];
@@ -13,17 +13,27 @@ nfcRing.ui = {
     });
 
     // Load each action icon and text
-    $.each(actions, function (key, action) {
-      debug(action);
+    $.each(nfcRing.actions, function (key, action) {
+      console.log("action", action);
       if (!action.image) {
         action.image = key.toLowerCase() + ".png";
-      } ;
-     $('#ringActions').append('<li><a data-key="'+key+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
+      }
+      action.title = html10n.get('actions.'+key+'.name');
+      action.descriptionI18n = html10n.get('actions.'+key+'.description');
+      if(!typeof action.descriptionI18n == 'object'){ // If it's an object the string value was missing so we return nada
+         action.description = action.descriptionI18n;
+      }
+      $('#ringActions').append('<li><a data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
     });
 
   }, // Note this will be a PITA to do i18n
   showNeedHelp: function(){}, // Shows the need help button
   domListenersInit: function(){
+    $('body').on('click', '#createNew', function(){
+      nfcRing.ui.displayPage("action");
+      nfcRing.ui.addActions();
+    });
+
     Handlebars.registerHelper('html10n', function(str,a){
       console.log("STRING", str);
       return (html10n != undefined ? html10n.get(str) : str);
@@ -38,10 +48,7 @@ nfcRing.ui = {
       console.log("Localized");
       document.documentElement.lang = html10n.getLanguage()
       document.documentElement.dir = html10n.getDirection()
-      var source = $('#index').html();
-      var template = Handlebars.compile(source);
-      $("#container").html(template());
-      console.log("Writing ", source, " to #container");
+      nfcRing.ui.displayPage("index");
     });
 
     FastClick.attach(document.body); // What does this do?
@@ -109,7 +116,13 @@ nfcRing.ui = {
   updateVersion: function(){ // show Version number on the page
     cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
   },
-  displayPage: function(page){}, // Display a page
+  displayPage: function(page){ // Display a page
+    console.log("Displaying page", page);
+    var source = $('#'+page).html();
+    var template = Handlebars.compile(source);
+    $("#container").html(template());
+    console.log("Writing ", source, " to #container");
+  }, 
   handleBack: function(){  // Init the Back Button event handlers
     if (nfcRing.location == "index") {
       // Clear history so back button on home page always leaves the app
