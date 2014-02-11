@@ -38,14 +38,14 @@
   <div class="count"></div>
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
   <ul class="link-list">
-    <li><a id="createNew" class="icon icon-plus">Create<span> Write a new action to your ring</span></a></li>
-    <li><a id="read" class="icon icon-eye">Read<span> See what's on your ring</span></a></li>
-    <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">Feedback<span> Love something or want to change something? Let us know</span></a></li>
+    <li><a id="createNew" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
+    <li><a id="read" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDesription"}}</span></a></li>
+    <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDesription"}}</span></a></li>
   </ul>
 </script>
 
 <script id="action" class="step action" type="x-handlebars-template">
-  <h2>What do you want your Ring to do?</h2>
+  <h2>{{html10n "action.whatDoYouWantYourRingToDo"}}</h2>
   <div class="actionContents">
     <div class="ringActions">
       <ul id="ringActions" class="link-list"></ul>
@@ -60,7 +60,7 @@
       <label for="optionInput"></label>
       <input name="option" id="optionInput" type="text">
       <input type="hidden" id="action" name="action">
-      <button type="submit" class="btn-link icon icon-next" id="submit">Next</button>
+      <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
     </form>
   </div>
 </script>
@@ -70,23 +70,23 @@
     <div class="win32">Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry</div>
   </div>
   <ul class="link-list bottom">
-    <li><a href="index.html" id="finish" class="icon icon-exit">Finish</a></li>
+    <li><a href="index.html" id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
   </ul>
 </script>
 
 <script id="help" type="x-handlebars-template">
   <div id="helpContents" class="white-popup mfp-hide">
-    <h3 class="icon icon-support">Help Tips</h3>
+    <h3 class="icon icon-support">{{html10n "help.helpTips"}}</h3>
     <ul>
-      <li>Make sure the colored, non metal part of the ring is touching and facing the back of your device</li>
-      <li>Remove any cases from your device</li>
-      <li>Turn your device volume up</li>
-      <li>Make sure your device screen is on and the device is on (note devices go to sleep often)</li>
-      <li>Move your ring slowly around the back of the device</li>
-      <li>Try with another NFC Device if you have one</li>
-      <li class="win32">Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL</li>
+      <li>{{html10n "help.facing"}}</li>
+      <li>{{html10n "help.cases"}}</li>
+      <li>{{html10n "help.volume"}}</li>
+      <li>{{html10n "help.on"}}</li>
+      <li>{{html10n "help.slowly"}}</li>
+      <li>{{html10n "help.another"}}</li>
+      <li class="win32">{{html10n "help.winPhone"}}</li>
     </ul>
-    <button class="button" id="helpClose">Ok, got it</button>
+    <button class="button" id="helpClose">{{html10n "help.gotIt"}}</button>
   </div>
 </script>
 

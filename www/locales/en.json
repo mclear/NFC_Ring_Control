@@ -2,6 +2,24 @@
   "en":{
     "myVar":"foo", 
     "yourVar":"bar", 
-    "index.whatDoYouWantToDoToday":"What do you want to do today?"
+    "index.whatDoYouWantToDoToday":"What do you want to do today?",
+    "index.create":"Create",
+    "index.createDescription":"Write a new action to your ring",
+    "index.read":"Read",
+    "index.readDescription":"See what's on your ring",
+    "index.feedback":"Feedback",
+    "index.feedbackDescription":"Love something or want to change something? Let us know",
+    "action.whatDoYouWantYourRingToDo":"What do you want your Ring to do?",
+    "option.next":"Next",
+    "writeRing.finish":"Finish",
+    "help.helpTips":"Help Tips",
+    "help.facing":"Make sure the colored, non metal part of the ring is touching and facing the back of your device",
+    "help.cases":"Remove any cases from your device",
+    "help.volume":"Turn your device volume up",
+    "help.on":"Make sure your device screen is on and the device is on (devices often go to sleep)",
+    "help.slowly":"Move your ring slowly around the back of your device",
+    "help.another":"Try with another NFC Device if you have one",
+    "help.winPhone":"Windows Phone requires the NFC Ring to already have a link on. To fix this grab an android handset or another App and write a URL to your phone then you will be able to use the NFC Ring Control app to write a URL",
+    "help.gotIt":"Ok, I got it"
   }
 }
