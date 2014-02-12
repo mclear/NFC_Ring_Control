@@ -18,7 +18,7 @@
   <script type="text/javascript" src="js/timeago.js"></script>
 
   <link rel="localizations" type="application/l10n+json" href="locales.json">
-  <link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
   <title>NFC Ring Control App</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
 </script>
 
 <script id="action" class="step action" type="x-handlebars-template">
-  <h2>{{html10n "action.whatDoYouWantYourRingToDo"}}</h2>
+  <h2 class=>{{html10n "action.whatDoYouWantYourRingToDo"}}</h2>
   <div class="actionContents">
     <div class="ringActions">
       <ul id="ringActions" class="link-list"></ul>
@@ -54,8 +54,8 @@
 </script>
 
 <script id="option" class="step option" type="x-handlebars-template">
- <div class="actionName"></div>
-   <div class="actionContents">
+<div class="actionName optionName"></div>
+  <div class="actionContents">
     <form id="optionForm">
       <label for="optionInput"></label>
       <input name="option" id="optionInput" type="text">

@@ -961,10 +961,7 @@ button.close {
 a.paddedIcon {
   padding: 5px;
 }
-#option,
-#writeRing {
-  display: none;
-}
+
 #heatMap {
   display: none;
   position: fixed;

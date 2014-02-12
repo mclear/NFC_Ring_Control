@@ -35,6 +35,9 @@
     "actions.youtube.optionText":"What is your Youtube Video / Channel?",
     "actions.text.name":"Text",
     "actions.text.description":"Write arbitary text such as a Bitcoin public key",
-    "actions.text.optionText":"What is your text?"
+    "actions.text.optionText":"What is your text?",
+    "actions.etherpad.name":"Etherpad",
+    "actions.etherpad.description":"Link to an Etherpad",
+    "actions.etherpad.optionText":"What is your Pad URL?"
   }
 }

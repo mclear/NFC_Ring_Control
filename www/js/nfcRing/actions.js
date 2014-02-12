@@ -19,13 +19,6 @@ nfcRing.actions = {
       return this.prefix + option
     }
   },
-  /*
-  clone: {
-    label: "Clone Ring",
-    isClone: true,
-    requiresString: false
-  },
-  */
   website: {
     label: "Link",
     description: "Link to a web address",
@@ -35,14 +28,6 @@ nfcRing.actions = {
       return option
     }
   },
-  /*
-  ,
-  skype: {
-    label: "Skype",
-    optionText: "What is your Skype Username?",
-    placeHolder: "JohnMcLear"
-  }
-  */
   etherpad: {
     label: "Etherpad",
     description: "Link to an Etherpad",

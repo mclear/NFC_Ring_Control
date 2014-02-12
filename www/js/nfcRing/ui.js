@@ -35,7 +35,6 @@ nfcRing.ui = {
     });
 
     Handlebars.registerHelper('html10n', function(str,a){
-      console.log("STRING", str);
       return (html10n != undefined ? html10n.get(str) : str);
     });
 
@@ -72,14 +71,13 @@ nfcRing.ui = {
       }, 0);
     });
 
-    $('#helpClose').on('click', function () {
+    $('body').on('click', '#helpClose', function () {
       $.magnificPopup.close();
     });  
 
+
     // click action for previously historical actions
-    $('#ringActions > li > .historical').on('click', function(){ 
-      $('#action').hide();
-      console.log("beginning init");
+    $('body').on('click', '.ringActions > li > .historical', function(){ 
       nfcRing.heatmapInit();
       console.log("Setting location to option");
       nfcRing.location = "writing";
@@ -91,25 +89,32 @@ nfcRing.ui = {
     });
 
     // click listener for each action from actions.js
-    $('#ringActions > li > .action').on('click', function(){
+    $('body').on('click', '#ringActions > li > .action', function(){
       // Begin heatmap stuff, this pre-loads the data for us :)
-      console.log("beginning init");
-      nfcRing.heatmapInit();
+      nfcRing.heatmap.init();
       console.log("Setting location to option");
-      nfcRing.location = "option";
       var key = $(this).data("key");
-      console.log("Key ", key);
-      $('#option').show(); $('#action').hide();
-      $('#option > .actionName').html('<h2>' + actions[key].label + '</h2>');
-      $('#optionInput').attr("placeholder", actions[key].placeHolder);
-      $('form > label').text(actions[key].optionText);
-      console.log("Updated UI to show form etc");
-      $('#optionForm').submit(function(e){
-        e.preventDefault();
-        console.log("Submitting a write value to the nfcRing object");
-        nfcRing.submitted(key);
-        return false;
-      });
+      nfcRing.action = $(this).data("key");
+      nfcRing.ui.displayPage("option");
+      var labelI18n = html10n.get('actions.'+key.toLowerCase()+'.optionText');
+      if(!typeof labelI18n == 'object'){ // If it's an object the string value was missing so we return nada
+         var label = action.labelI18n;
+      }else{
+         var label = nfcRing.actions[key.toLowerCase()].optionText;
+      }
+      $('.optionName').html('<h2>' + label + '</h2>');
+      /*
+      // $('#optionInput').attr("placeholder", actions[key].placeHolder);
+      // $('form > label').text(actions[key].optionText);
+      
+      */
+    });
+
+    $('body').on('submit', '#optionForm', function(e){
+      e.preventDefault();
+      console.log("Submitting a write value to the nfcRing object");
+      nfcRing.ui.displayPage("writeRing");
+      return false;
     });
 
   }, // Creates Dom listeners for events
@@ -118,10 +123,11 @@ nfcRing.ui = {
   },
   displayPage: function(page){ // Display a page
     console.log("Displaying page", page);
+    nfcRing.location = page;
     var source = $('#'+page).html();
     var template = Handlebars.compile(source);
     $("#container").html(template());
-    console.log("Writing ", source, " to #container");
+    // console.log("Writing ", source, " to #container");
   }, 
   handleBack: function(){  // Init the Back Button event handlers
     if (nfcRing.location == "index") {
