@@ -1,7 +1,5 @@
 {
   "en":{
-    "myVar":"foo", 
-    "yourVar":"bar", 
     "index.whatDoYouWantToDoToday":"What do you want to do today?",
     "index.create":"Create",
     "index.createDescription":"Write a new action to your ring",
