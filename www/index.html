@@ -25,10 +25,6 @@
 
 
 <div id="container">
-  <!--
-  <div id="heatMap"></div>
-  <div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
-  -->
 </div>
 
 <script id="index" type="x-handlebars-template">
@@ -40,7 +36,9 @@
   <ul class="link-list">
     <li><a id="createNew" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
     <li><a id="read" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
+    <li><a id="settingsBtn" class="icon icon-settings">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
     <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
+
   </ul>
 </script>
 
@@ -54,7 +52,7 @@
 </script>
 
 <script id="option" class="step option" type="x-handlebars-template">
-<div class="actionName optionName"></div>
+  <div class="actionName optionName"></div>
   <div class="actionContents">
     <form id="optionForm">
       <label for="optionInput"></label>
@@ -72,6 +70,8 @@
   <ul class="link-list bottom">
     <li><a href="index.html" id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
   </ul>
+  <div id="heatMap"></div>
+  <div id="message"><p id="helpLink">Struggling to find your Sweet Spot? <br><a href="#">Show help</a></p></div>
 </script>
 
 <script id="help" type="x-handlebars-template">
@@ -90,6 +90,20 @@
   </div>
 </script>
 
+<script id="settings" type="x-handlebars-template">
+  <header id="header">
+    <div id="logo"><img src="img/nfcring-logo.png"></div>
+  </header>
+  <h2>{{html10n "index.settings"}}</h2>
+  <ul class="link-list">
+    <li><a id="clearSweetSpot" class="icon icon-settings">{{html10n "settings.mySweetSpot"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></a></li>
+    <li><a id="clearPreviousActions" class="icon icon-settings">{{html10n "settings.previousActions"}}<span>{{html10n "settings.previousActionsDescription"}}</span></a></li>
+  </ul>
+  <div id="geninfo">
+    <p id="version">{{settings.version}}<span id="versionNumber"></span></p>
+  </div>
+</div>
+</script>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

@@ -34,6 +34,10 @@ nfcRing.ui = {
       nfcRing.ui.addActions();
     });
 
+    $('body').on('click', '#settingsBtn', function(){
+      nfcRing.ui.displayPage("settings");
+    });
+
     Handlebars.registerHelper('html10n', function(str,a){
       return (html10n != undefined ? html10n.get(str) : str);
     });
