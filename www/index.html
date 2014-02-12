@@ -26,6 +26,25 @@
 
 <div id="container">
 </div>
+<script id="context" type="x-handlebars-template">
+  <div id="context-nav">
+    <div id="options-list">
+      <h3>Options</h3>
+      <ul>
+        <li><a href="#" id="viewHistory">{{html10n "context.recentActions"}}</a></li>
+        <li><a href="#" id="clearPreviousActions">{{html10n "settings.previousActionsDescription"}}</a></li>
+        <li><a href="#" id="clearSweetSpot">{{html10n "settings.mySweetSpotDescription"}}</a></li>
+      </ul>
+      <div id="geninfo">
+        <p id="version">Version <span id="versionNumber"></span></p>
+      </div>
+    </div>
+    <div id="history">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+</script>
 
 <script id="index" type="x-handlebars-template">
   <header id="header">
@@ -34,15 +53,23 @@
   <div class="count"></div>
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
   <ul class="link-list">
-    <li><a id="createNew" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
-    <li><a id="read" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
+    <li><a id="actionBtn" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
+    <li><a id="readBtn" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
     <li><a id="settingsBtn" class="icon icon-settings">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
-    <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
+    <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
 
   </ul>
 </script>
 
 <script id="action" class="step action" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="trigger">
+        <div id="nav-btn" class="icon icon-settings selected"></div>
+      </div>
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
   <h2 class=>{{html10n "action.whatDoYouWantYourRingToDo"}}</h2>
   <div class="actionContents">
     <div class="ringActions">
@@ -113,6 +140,7 @@
 nfcRing.location = "index"
 // Initialize the page
 nfcRing.ui.domListenersInit();
+
 if(typeof cordova !== 'undefined'){
   app.initialize();
 }else{

@@ -29,9 +29,13 @@ nfcRing.ui = {
   }, // Note this will be a PITA to do i18n
   showNeedHelp: function(){}, // Shows the need help button
   domListenersInit: function(){
-    $('body').on('click', '#createNew', function(){
+    $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
       nfcRing.ui.addActions();
+    });
+
+    $('body').on('click', '#readBtn', function(){
+      nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
     });
 
     $('body').on('click', '#settingsBtn', function(){
@@ -79,7 +83,6 @@ nfcRing.ui = {
       $.magnificPopup.close();
     });  
 
-
     // click action for previously historical actions
     $('body').on('click', '.ringActions > li > .historical', function(){ 
       nfcRing.heatmapInit();
@@ -120,18 +123,23 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("writeRing");
       return false;
     });
-
   }, // Creates Dom listeners for events
   updateVersion: function(){ // show Version number on the page
-    cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+    if(device.platform === "browser"){
+      $('#versionNumber').text("N/A");
+    }else{
+      cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+    }
   },
   displayPage: function(page){ // Display a page
     console.log("Displaying page", page);
     nfcRing.location = page;
     var source = $('#'+page).html();
+    source = source + $('#context').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
     $("#container").html(template());
     // console.log("Writing ", source, " to #container");
+    nfcRing.ui.updateVersion();
   }, 
   handleBack: function(){  // Init the Back Button event handlers
     if (nfcRing.location == "index") {
