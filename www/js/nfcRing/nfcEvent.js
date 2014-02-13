@@ -75,7 +75,9 @@ nfcRing.nfcEvent = {
         } else {
           var idStr = "false";
         }
-        window.location = "shareLocation.html#?guid=" + idStr;
+        nfcRing.userValues.guid = idStr;
+        // window.location = "shareLocation.html#?guid=" + idStr;
+        nfcRing.ui.displayPage("sweetSpot");
       } else {
         localStorage.setItem("dontAskSweetSpotAgain", true);
       }

@@ -6,6 +6,7 @@ nfcRing.heatmap = {
     radius: 30,
     opacity: 100
   }, 
+
   init: function(){
     var heatmap = h337.create(config);
     console.log("Writing data to heatmap", nfcRing.coOrdData);
@@ -61,5 +62,47 @@ nfcRing.heatmap = {
         console.log("Unable to process Parse on WP");
       }
     }
+  },
+
+  sweetSpot : {
+    send: function(e){
+      $('#bubble').show();
+      var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
+      var centerY = e.clientY - ($('#bubble').height()/2);
+      var guid = nfcRing.userValues.guid;
+      $('#bubble').css({
+        top: centerY+"px",
+        left: centerX+"px"
+      })
+      setTimeout(function(){
+        var correctLocation = confirm("Looks good!  Is the red dot close to where the ring works with your phone?");
+        if(correctLocation){
+          localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
+          var phoneModel = device.model; 
+          console.log("Sending ", centerX, centerY, phoneModel, " to Database");
+          try{
+            nfcRing.heatmap.sendToParse(centerX, centerY, phoneModel);
+          }catch(e){
+            alert("FAILED"); // TODO i18n me
+          }
+        }
+      }, 100);
+    }
+  },
+
+  sendToParse: function(x,y,phoneModel){
+    var TestObject = Parse.Object.extend("TestObject");
+    var testObject = new TestObject();
+    testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.guid}, {
+      success: function(object) {
+        // TODO: i18n me
+        alert("Yay!  It worked.  Thank you for being awesome");
+        nfcRing.ui.displayPage("index"); // Return user back to start page
+      },
+      failure: function(e){
+        // TODO: i18n me
+        alert("Unable to share details with others, is your Internet enabled?")
+      }
+    });
   }
 }

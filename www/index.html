@@ -33,7 +33,8 @@
       <ul>
         <li><a href="#" id="viewHistory">{{html10n "context.recentActions"}}</a></li>
         <li><a href="#" id="clearPreviousActions">{{html10n "settings.previousActionsDescription"}}</a></li>
-        <li><a href="#" id="clearSweetSpot">{{html10n "settings.mySweetSpotDescription"}}</a></li>
+        <li><a href="#" id="clearSweetSpot">{{html10n "settings.clearMySweetSpotDescription"}}</a></li>
+        <li><a href="#" id="sweetSpotBtn">{{html10n "settings.mySweetSpotDescription"}}</a></li>
       </ul>
       <div id="geninfo">
         <p id="version">Version <span id="versionNumber"></span></p>
@@ -123,14 +124,30 @@
   </header>
   <h2>{{html10n "index.settings"}}</h2>
   <ul class="link-list">
-    <li><a id="clearSweetSpot" class="icon icon-settings">{{html10n "settings.mySweetSpot"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></a></li>
+    <li><a id="clearSweetSpot" class="icon icon-settings">{{html10n "settings.clearMySweetSpot"}}<span>{{html10n "settings.clearMySweetSpotDescription"}}</span></a></li>
     <li><a id="clearPreviousActions" class="icon icon-settings">{{html10n "settings.previousActions"}}<span>{{html10n "settings.previousActionsDescription"}}</span></a></li>
+    <li><a id="sweetSpotBtn" class="icon icon-settings">{{html10n "settings.mySweetSpotDescription"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></a></li>
+
   </ul>
   <div id="geninfo">
-    <p id="version">{{settings.version}}<span id="versionNumber"></span></p>
+    <p id="version">{{html10n settings.version}}<span id="versionNumber"></span></p>
   </div>
 </div>
 </script>
+
+<script id="sweetSpot" type="x-handlebars-template">
+  <div id="sweetSpotOverlay">
+    <header id="header">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </header>
+
+    <div id="landing" class="landing">
+    <div class="count"></div>
+      <h2 class="actionName">{{html10n "sweetSpot.pressTheScreen"}}</h2>
+    </div>
+  </div>
+</script>
+
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

@@ -172,6 +172,16 @@ nfcRing.ui = {
       $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
     });
 
+    $('body').on('click', '#sweetSpotBtn', function(){
+      console.log("Showing sweet spot location page");
+      nfcRing.ui.displayPage("sweetSpot");
+    });
+
+    $('body').on('click', '#sweetSpotOverlay', function(e){
+      console.log("Click event for sweet spot overlay", e);
+      nfcRing.heatmap.sweetSpot.send(e);
+    });
+
   },
   updateVersion: function(){ // show Version number on the page
     if(device.platform === "browser"){

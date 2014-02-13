@@ -13,8 +13,10 @@
     "action.whatDoYouWantYourRingToDo":"What do you want your Ring to do?",
     "option.next":"Next",
     "writeRing.finish":"Finish",
+    "settings.clearMySweetSpot":"My Sweet Spot",
+    "settings.clearMySweetSpotDescription":"Clear my stored sweet spot location",
     "settings.mySweetSpot":"My Sweet Spot",
-    "settings.mySweetSpotDescription":"Clear my stored sweet spot location",
+    "settings.mySweetSpotDescription":"Re-insert my stored sweet spot location",
     "settings.previousActions":"My Previous Actions",
     "settings.previousActionsDescription":"Clear my previous action history",
     "settings.version":"Version",
@@ -44,6 +46,7 @@
     "actions.text.optionText":"What is your text?",
     "actions.etherpad.name":"Etherpad",
     "actions.etherpad.description":"Link to an Etherpad",
-    "actions.etherpad.optionText":"What is your Pad URL?"
+    "actions.etherpad.optionText":"What is your Pad URL?",
+    "sweetSpot.pressTheScreen":"Press the screen in the location your ring registered"
   }
 }
