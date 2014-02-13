@@ -30,6 +30,29 @@ nfcRing.ui = {
   showNeedHelp: function(){}, // Shows the need help button
   domListenersInit: function(){
 
+    jQuery(document).ready(function($) {
+      if (window.history && window.history.pushState) {
+        $(window).on('popstate', function() {
+          var hashLocation = location.hash
+          var hashSplit = hashLocation.split("#!/");
+          var hashName = hashSplit[1];
+          if (hashName !== '') {
+            var hash = window.location.hash;
+            if (hash !== "#index"){
+              if(hash){
+                console.log("going back from ", hash);
+                // nfcRing.ui.handleBack();
+              }
+            }
+            if (hash === '') {
+              alert('Back button was pressed.');
+            }
+          }
+        });
+        window.history.pushState('forward', null, './#forward');
+      }
+    });
+
     nfcRing.ui.history = []; // Create blank history stack
 
     $('body').on('click', '#actionBtn', function(){
@@ -158,6 +181,7 @@ nfcRing.ui = {
     }
   },
   displayPage: function(page){ // Display a page
+    window.location.hash = '#'+page;
     console.log("Displaying page", page);
     nfcRing.ui.history.push(page); // Write the this page to the history stack
     nfcRing.location = page;
