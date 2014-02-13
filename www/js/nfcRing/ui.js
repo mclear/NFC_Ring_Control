@@ -29,6 +29,9 @@ nfcRing.ui = {
   }, // Note this will be a PITA to do i18n
   showNeedHelp: function(){}, // Shows the need help button
   domListenersInit: function(){
+
+    nfcRing.ui.history = []; // Create blank history stack
+
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
       nfcRing.ui.addActions();
@@ -156,6 +159,7 @@ nfcRing.ui = {
   },
   displayPage: function(page){ // Display a page
     console.log("Displaying page", page);
+    nfcRing.ui.history.push(page); // Write the this page to the history stack
     nfcRing.location = page;
     var source = $('#'+page).html();
     source = source + $('#context').html(); // always include context nav on every page :)
@@ -173,6 +177,8 @@ nfcRing.ui = {
       // navigator.app.clearHistory(); // This doesn't even exist in WP -- does it actually exist on Android?
     } else {
       document.addEventListener("backbutton", nfcRing.handleBack, false);
+      nfcRing.ui.history.pop(); // drop the last item from the history array
+      nfcRing.ui.displayPage(nfcRing.ui.history[nfcRing.ui.history.length-1]); // display the previous page
     }
 
     // NOTE this is a bit more tricky in a single page app because you have to remember an array of what page you were on..
