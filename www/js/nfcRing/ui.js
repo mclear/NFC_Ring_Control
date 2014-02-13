@@ -123,7 +123,30 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("writeRing");
       return false;
     });
-  }, // Creates Dom listeners for events
+
+    $('body').on('click', '#clearSweetSpot', function(){
+      if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+        console.log("clearing sweet spot history");
+        localStorage.setItem("dontAskSweetSpotAgain", false);
+        localStorage.setItem("sweetSpotLocation", false);
+      }
+    });
+
+    $('body').on('click', '#clearPreviousActions', function(){
+      if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+        console.log("Clearing previous actions");
+        localStorage.setItem("actionHistory", "{}");
+      }
+    });
+
+    $('body').on('click', '#viewHistory', function(e) {
+      console.log("Showing history");
+      e.preventDefault();
+      $('body').toggleClass('show-history');
+      $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
+    });
+
+  },
   updateVersion: function(){ // show Version number on the page
     if(device.platform === "browser"){
       $('#versionNumber').text("N/A");
@@ -151,6 +174,9 @@ nfcRing.ui = {
     } else {
       document.addEventListener("backbutton", nfcRing.handleBack, false);
     }
+
+    // NOTE this is a bit more tricky in a single page app because you have to remember an array of what page you were on..
+
   },
   paramFromURL: function(name){
     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
