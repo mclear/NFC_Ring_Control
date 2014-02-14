@@ -47,6 +47,13 @@
     "actions.etherpad.name":"Etherpad",
     "actions.etherpad.description":"Link to an Etherpad",
     "actions.etherpad.optionText":"What is your Pad URL?",
-    "sweetSpot.pressTheScreen":"Press the screen in the location your ring registered"
+    "sweetSpot.pressTheScreen":"Press the screen in the location your ring registered",
+    "sweetSpot.holdRingToPhoneByDot":"Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.",
+    "sweetSpot.noDataYet":"It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.",
+    "sweetSpot.moveTheRing":"Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)",
+    "sweetSpot.unableToConnect":"We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks",
+    "sweetSpot.looksGood":"Looks good!  Is the red dot close to where the ring works with your phone?",
+    "sweetSpot.failedWrite":"Failed to write sweet spot location to database, ensure you have an Internet connection",
+    "sweetSpot.yay":"Yay!  It worked.  Thank you for being awesome"
   }
 }
