@@ -1,23 +1,53 @@
 nfcRing.heatmap = {
   coOrds: {}, // The Co-Ordinates we have stored for this phone
-
-  config: { // Our heatmap config
-    element: document.getElementById("heatMap"),
-    radius: 30,
-    opacity: 100
-  }, 
+  coOrdData: {
+    max: 10,
+    data: []
+  },
 
   init: function(){
-    var heatmap = h337.create(config);
-    console.log("Writing data to heatmap", nfcRing.coOrdData);
-    heatmap.store.setDataSet(nfcRing.heatmap.coOrds);
-    console.log("Done writing data to the heatmap");
-  }, // Initialize the heatmap
+
+    nfcRing.heatmap.loadFromParse(function(){
+
+      // Initialize the heatmap
+      var config = { // Our heatmap config
+        element: document.getElementById("heatMap"),
+        radius: 30,
+        opacity: 100
+      }
+
+      $.each(nfcRing.heatmap.coOrds, function(k,v){
+        var x = k.split(":")[0];
+        var y = k.split(":")[1];
+        var coOrd = {
+          x: x,
+          y: y,
+          count: v*5
+        };
+
+        console.log("COSY", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
+
+        nfcRing.heatmap.coOrdData.data.push(coOrd);
+
+      });
+
+      console.log("COSY", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
+
+
+      console.log("initiating heatmap");
+      var heatmap = h337.create(config);
+      console.log("Writing data to heatmap", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
+      heatmap.store.setDataSet(nfcRing.heatmap.coOrdData);
+      console.log("Done writing data to the heatmap");
+    });
+  }, 
+
   draw: function(){ // Draw the data from our coOrds onto the heatmap
 
   }, 
 
-  loadFromParse: function(){ // Getting data from Parse..
+  loadFromParse: function(callback){ // Getting data from Parse..
+    var coOrdinateCounter = {};
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     var query = new Parse.Query(TestObject);
@@ -39,14 +69,17 @@ nfcRing.heatmap = {
             var y = object.get('y');
             // Turns it into a counted set of objects instead of single objects
             coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
+            console.log("Got results from Parse", coOrdinateCounter);
           }
           if(results.length == 0){ // if there are no results
             // TODO i18n this
+            console.log("no results from parse");
             $('#writeRing .inner > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
           }else{ // there are some heatmap results so let's draw em
             console.log("Drawing heatmap");
-            nfcRing.coOrds = coOrdinateCounter;
+            nfcRing.heatmap.coOrds = coOrdinateCounter;
             // nfcRing.drawHeatMap();
+            callback();
           }
         },
         failure: function(){
