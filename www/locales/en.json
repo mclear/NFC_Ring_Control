@@ -54,6 +54,9 @@
     "sweetSpot.unableToConnect":"We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks",
     "sweetSpot.looksGood":"Looks good!  Is the red dot close to where the ring works with your phone?",
     "sweetSpot.failedWrite":"Failed to write sweet spot location to database, ensure you have an Internet connection",
-    "sweetSpot.yay":"Yay!  It worked.  Thank you for being awesome"
+    "sweetSpot.yay":"Yay!  It worked.  Thank you for being awesome",
+    "sweetSpot.struggling":"Struggling to find your Sweet Spot?",
+    "sweetSpot.showHelp":"Show help"
+
   }
 }
