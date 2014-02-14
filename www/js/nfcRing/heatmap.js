@@ -39,6 +39,7 @@ nfcRing.heatmap = {
       console.log("Writing data to heatmap", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
       heatmap.store.setDataSet(nfcRing.heatmap.coOrdData);
       console.log("Done writing data to the heatmap");
+      $('#heatMap').hide();
     });
   }, 
 
@@ -62,8 +63,7 @@ nfcRing.heatmap = {
       query.find({
         success: function(results){
           for (var i = 0; i < results.length; i++) { 
-            // TODO i18n this
-            $('#writeRing .inner > .actionName').html("<h2>Hold your NFC Ring to the back of your phone at the location indicated by the colored dots.</h2>");
+            $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
             var object = results[i];
             var x = object.get('x');
             var y = object.get('y');
@@ -72,9 +72,8 @@ nfcRing.heatmap = {
             console.log("Got results from Parse", coOrdinateCounter);
           }
           if(results.length == 0){ // if there are no results
-            // TODO i18n this
             console.log("no results from parse");
-            $('#writeRing .inner > .actionName').html("<h2>It looks like our awesome community hasn't stored a location of the NFC Sweet Spot for your phone yet.</h2><p>Move the ring around the back of the phone until you recieve a confirmation.  This can take a little bit of time so be patient :)</p>");
+            $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2><p>"+html10n.get('sweetSpot.moveTheRing')+"</p>");
           }else{ // there are some heatmap results so let's draw em
             console.log("Drawing heatmap");
             nfcRing.heatmap.coOrds = coOrdinateCounter;
@@ -84,14 +83,13 @@ nfcRing.heatmap = {
         },
         failure: function(){
           // fires on failure to connect
-          // TODO i18n this
-          $('#writeRing .inner > .actionName').html("We were unable to connect to our community sweet spot location servers, the sweet spot location will help you identify where to hold the ring on your phone.  You might need to turn on your Internet connection to access our servers, thanks");
+          $('#writeRingTitle').html(html10n.get('sweetSpot.unableToConnect'));
         }
       });
     }catch(e){
       // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't so we handle it here
-      if(device.platform == "Win32NT"){
-        $('#writeRing .inner > .actionName').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
+      if(device.platform === "Win32NT"){
+        $('#writeRingTitle').html("Windows Phone is unable to use our Community Sweet Spot location servers, we hope to get this fixed as soon as possible, sorry");
         console.log("Unable to process Parse on WP");
       }
     }
@@ -108,7 +106,7 @@ nfcRing.heatmap = {
         left: centerX+"px"
       })
       setTimeout(function(){
-        var correctLocation = confirm("Looks good!  Is the red dot close to where the ring works with your phone?");
+        var correctLocation = confirm(html10n('sweetSpot.looksGood'));
         if(correctLocation){
           localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
           var phoneModel = device.model; 
@@ -116,7 +114,7 @@ nfcRing.heatmap = {
           try{
             nfcRing.heatmap.sendToParse(centerX, centerY, phoneModel);
           }catch(e){
-            alert("FAILED"); // TODO i18n me
+            alert(html10n('sweetSpot.failedWrite'));
           }
         }
       }, 100);
@@ -129,7 +127,7 @@ nfcRing.heatmap = {
     testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.guid}, {
       success: function(object) {
         // TODO: i18n me
-        alert("Yay!  It worked.  Thank you for being awesome");
+        alert(html10n(sweetSpot.yay));
         nfcRing.ui.displayPage("index"); // Return user back to start page
       },
       failure: function(e){

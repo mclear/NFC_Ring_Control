@@ -60,6 +60,7 @@ nfcRing.nfcEvent = {
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
         alert("Your ring is now ready", false, "Woohoo!");
       } else {
+        // TODO i18n
         var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Done, Thank you!");
       }
 
