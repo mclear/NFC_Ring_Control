@@ -10,7 +10,7 @@ nfcRing.nfcEvent = {
       }, function () {
         console.log("Success.  Listening for rings..");
       }, function () {
-        alert("NFC Functionality is not working, is NFC enabled on your device?");
+        alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
 
@@ -20,7 +20,7 @@ nfcRing.nfcEvent = {
       }, function () {
         console.log("Success.  Listening for rings NDEF records..");
       }, function () {
-        alert("NFC Functionality is not working, is NFC enabled on your device?");
+        alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
 
@@ -58,10 +58,9 @@ nfcRing.nfcEvent = {
       console.log("dontAskSweetSpotAgain", dontAskSweetSpotAgain);
   
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
-        alert("Your ring is now ready", false, "Woohoo!");
+        alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
       } else {
-        // TODO i18n
-        var shareLocation = confirm("Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model? ", false, "Done, Thank you!");
+        var shareLocation = confirm(html10n.get("sweetSpot.askToShare"), false, html10n.get("sweetSpot.done"));
       }
 
       console.log("Share location response", shareLocation);
@@ -77,7 +76,6 @@ nfcRing.nfcEvent = {
           var idStr = "false";
         }
         nfcRing.userValues.guid = idStr;
-        // window.location = "shareLocation.html#?guid=" + idStr;
         nfcRing.ui.displayPage("sweetSpot");
       } else {
         localStorage.setItem("dontAskSweetSpotAgain", true);
@@ -104,7 +102,7 @@ nfcRing.nfcEvent = {
     if(ring.ndefMessage){
       ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
       console.log(ringData, false, "Ring contents:");
-      alert(ringData, false, "Ring contents:");
+      alert(ringData, false, html10n.get("readRing.contents"));
     }else{
       alert("No NDEF data found", false, "Unable to read");
     }

@@ -13,6 +13,10 @@
     "action.whatDoYouWantYourRingToDo":"What do you want your Ring to do?",
     "option.next":"Next",
     "writeRing.finish":"Finish",
+    "writeRing.noNFC":"NFC Functionality is not working, is NFC enabled on your device?",
+    "writeRing.woohoo":"Woohoo!",
+    "writeRing.ready":"Your ring is now ready",
+    "readRing.contents":"Ring Contents:",
     "settings.clearMySweetSpot":"My Sweet Spot",
     "settings.clearMySweetSpotDescription":"Clear my stored sweet spot location",
     "settings.mySweetSpot":"My Sweet Spot",
@@ -56,7 +60,11 @@
     "sweetSpot.failedWrite":"Failed to write sweet spot location to database, ensure you have an Internet connection",
     "sweetSpot.yay":"Yay!  It worked.  Thank you for being awesome",
     "sweetSpot.struggling":"Struggling to find your Sweet Spot?",
-    "sweetSpot.showHelp":"Show help"
+    "sweetSpot.showHelp":"Show help",
+    "sweetSpot.askToShare":"Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model?",
+    "sweetSpot.done":"Done, Thank you!",
+    "sweetSpot.areYouSureSS":"Are you sure you want to clear your sweet spot data?",
+    "sweetSpot.areYouSureActions":"Are you sure you want to clear your previous actions?"
 
   }
 }

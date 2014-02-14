@@ -151,7 +151,7 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#clearSweetSpot', function(){
-      if(confirm("Are you sure you want to clear your sweet spot data? ", false, "Are you sure?")){
+      if(confirm(html10n.get("sweetSpot.areYouSureSS"), false, html10n.get("sweetSpot.areYouSure"))){
         console.log("clearing sweet spot history");
         localStorage.setItem("dontAskSweetSpotAgain", false);
         localStorage.setItem("sweetSpotLocation", false);
@@ -159,7 +159,7 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#clearPreviousActions', function(){
-      if(confirm("Are you sure you want to clear your previous actions? ", false, "Are you sure?")){
+      if(confirm(html10n.get("sweetSpot.areYouSureActions"), html10n.get("sweetSpot.areYouSure"))){
         console.log("Clearing previous actions");
         localStorage.setItem("actionHistory", "{}");
       }
