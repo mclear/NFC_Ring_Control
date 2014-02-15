@@ -25,14 +25,9 @@ nfcRing.heatmap = {
           count: v*5
         };
 
-        console.log("COSY", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
-
         nfcRing.heatmap.coOrdData.data.push(coOrd);
 
       });
-
-      console.log("COSY", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
-
 
       console.log("initiating heatmap");
       var heatmap = h337.create(config);
