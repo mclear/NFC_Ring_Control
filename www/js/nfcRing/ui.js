@@ -89,7 +89,7 @@ nfcRing.ui = {
         closeOnBgClick: false,
         callbacks: {
           close: function () {
-            setTimeout($('#message').fadeOut('slow'), 5000);
+            $('#needHelp').fadeOut('slow');
           }
         }
       }, 0);
