@@ -33,7 +33,7 @@ nfcRing.ui = {
           nfcRing.ui.addActions();
         }
         if(window.location.hash.split("#")[1] == "option"){
-          $('.optionName').html('<h2>' + nfcRing.userValues.action + '</h2>');
+          $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
         }
       }
     });
@@ -114,17 +114,6 @@ nfcRing.ui = {
       $.magnificPopup.close();
     });  
 
-    // click action for previously historical actions
-    $('body').on('click', '.ringActions > li > .historical', function(){ 
-      console.log("Setting location to option");
-      nfcRing.location = "writing";
-      var action = $(this).data("action");
-      var key = $(this).data("key");
-      console.log("Key ", key);
-      console.log("Submitting a write value to the nfcRing object");
-      nfcRing.submitted(action, key);
-    });
-
     // click listener for each action from actions.js
     $('body').on('click', '#ringActions > li > .action', function(){
       // Begin heatmap stuff, this pre-loads the data for us :)
@@ -139,7 +128,8 @@ nfcRing.ui = {
       }else{
          var label = nfcRing.actions[key.toLowerCase()].optionText;
       }
-      nfcRing.userValues.action = label;
+      nfcRing.userValues.optionTitle = label;
+      nfcRing.userValues.action = key.toLowerCase();;
       $('.optionName').html('<h2>' + label + '</h2>');
       /*
       // $('#optionInput').attr("placeholder", actions[key].placeHolder);
@@ -150,7 +140,7 @@ nfcRing.ui = {
 
     $('body').on('submit', '#optionForm', function(e){
       e.preventDefault();
-      nfcRing.userValues.toWrite = $('#optionInput').val(); // gets the value to write
+      nfcRing.userValues.toWrite = nfcRing.actions[nfcRing.userValues.action].format($('#optionInput').val()); // gets the value to write
    
       nfcRing.userValues.history.set(); // saves it to history
       console.log("Submitting a write value to the nfcRing object");
@@ -208,15 +198,16 @@ nfcRing.ui = {
     $('body').on('click', '#history li > .historical', function(){
       // $('#action').hide();
       $('body').toggleClass('show-history').toggleClass('context-open');
-      $('#back-btn').remove();
-      console.log("beginning init");
-      console.log("Setting location to option");
-      nfcRing.location = "writing";
       var action = $(this).data("action");
-      var key = $(this).data("key");
-      console.log("Key ", key);
-      console.log("Submitting a write value to the nfcRing object");
-      nfcRing.submitted(action, key);
+      nfcRing.userValues.toWrite = action;
+      nfcRing.heatmap.init();
+      nfcRing.ui.displayPage("writeRing");
+      $('#heatMap').css("opacity","0.8");
+      if(nfcRing.heatmap.coOrds){
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
+      }else{
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
+      }
     });
 
     $('body').on('click', '#finish', function(){
@@ -237,17 +228,21 @@ nfcRing.ui = {
     $('#modelName').text(device.model);
   },
   displayPage: function(page){ // Display a page
-    if(nfcRing.location !== "#writeRing") $('#heatMap').css("opacity","0");
+    if(nfcRing.location !== "#writeRing"){
+      $('#heatMap').css("opacity","0");
+    }else{
+      $('#heatMap').css("opacity","0.8");
+    }
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
     nfcRing.ui.history.push(page); // Write the this page to the history stack
     nfcRing.location = page;
     var source = $('#'+page).html();
-    // var context = $('#contextContent').html(); // always include context nav on every page :)
+    var context = $('#contextContent').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
-    // var context = Handlebars.compile(context);
+    context = Handlebars.compile(context);
     $("#mainContents").html(template());
-    // $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
+    $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
     console.log("Writing ", source, " to #container");
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated

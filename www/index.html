@@ -41,8 +41,8 @@
         <li><a href="#" id="sweetSpotBtn">{{html10n "settings.mySweetSpotDescription"}}</a></li>
       </ul>
       <div id="geninfo">
-        <p id="model">{{html10n "settings.phoneModel"}} <span id="modelName"></span</p>
-        <p id="version">{{html10n "settings.version"}} <span id="versionNumber"></span></p>
+        <p id="model">{{html10n "settings.phoneModel"}}: <span id="modelName"></span</p>
+        <p id="version">{{html10n "settings.version"}}: <span id="versionNumber"></span></p>
       </div>
     </div>
     <div id="history">
@@ -54,7 +54,12 @@
 
 <script id="index" type="x-handlebars-template">
   <header id="header">
-    <div id="logo"><img src="img/nfcring-logo.png"></div>
+    <div id="title">
+      <div id="trigger">
+        <div id="nav-btn" class="icon icon-settings selected"></div>
+      </div>
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
   </header>
   <div class="count"></div>
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
@@ -85,6 +90,13 @@
 </script>
 
 <script id="option" class="step option" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="trigger">
+        <div id="nav-btn" class="icon icon-settings selected"></div>
+      </div>
+    </div>
+  </header>
   <div class="actionName optionName"></div>
   <div class="actionContents">
     <form id="optionForm">
@@ -97,6 +109,13 @@
 </script>
 
 <script id="writeRing" class="step writeRing" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="trigger">
+        <div id="nav-btn" class="icon icon-settings selected"></div>
+      </div>
+    </div>
+  </header>
   <div class="actionName" id="writeRingTitle">
   </div>
   <ul class="link-list bottom">
@@ -120,7 +139,11 @@
 
 <script id="settings" type="x-handlebars-template">
   <header id="header">
-    <div id="logo"><img src="img/nfcring-logo.png"></div>
+    <div id="title">
+      <div id="trigger">
+        <div id="nav-btn" class="icon icon-settings selected"></div>
+      </div>
+    </div>
   </header>
   <h2>{{html10n "index.settings"}}</h2>
   <ul class="link-list">

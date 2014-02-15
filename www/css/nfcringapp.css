@@ -911,7 +911,7 @@ body.fillit {
   left: 0;
   width: 100%;
 }
-#context-nav #options-list #geninfo p#version {
+#context-nav #options-list #geninfo p {
   color: #808080;
   margin: 0;
   padding: 0 10px;
