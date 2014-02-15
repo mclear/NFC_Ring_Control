@@ -9,6 +9,11 @@ nfcRing.heatmap = {
 
     nfcRing.heatmap.loadFromParse(function(){
 
+      if($('#heatMap canvas').length >= 1){
+        console.log("Heatmap already drawn");
+        return;
+      }
+
       // Initialize the heatmap
       var config = { // Our heatmap config
         element: document.getElementById("heatMap"),
@@ -68,7 +73,9 @@ nfcRing.heatmap = {
             console.log("no results from parse");
           }else{ // there are some heatmap results so let's draw em
             console.log("Drawing heatmap");
-            nfcRing.heatmap.coOrds = coOrdinateCounter;
+            if($('#heatMap canvas').length < 1){
+              nfcRing.heatmap.coOrds = coOrdinateCounter;
+            }
             // nfcRing.drawHeatMap();
             callback();
           }
