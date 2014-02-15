@@ -30,7 +30,7 @@ nfcRing.nfcEvent = {
   }, // create Event listeners
   readOrWrite: function(nfcEvent){ // Should we read or write to an NFC Event?
     $('#message').hide(); // hide help message
-    if (nfcRing.toWrite) {
+    if (nfcRing.userValues.toWrite) {
       console.log("Doing write event", nfcEvent);
       nfcRing.write(nfcEvent);
       $('#writeRing').show();
@@ -40,15 +40,15 @@ nfcRing.nfcEvent = {
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
     // If the string is a valid URL
-    var isURL = nfcRing.validURL(nfcRing.toWrite);
+    var isURL = nfcRing.validURL(nfcRing.userValues.toWrite);
 
     if (isURL) {
       console.log("URL Record");
-      var ndefRecord = ndef.uriRecord(nfcRing.toWrite); // Creates a URI record
+      var ndefRecord = ndef.uriRecord(nfcRing.userValues.toWrite); // Creates a URI record
     } else {
       console.log("Text record");
       // The string must be a text record as that's the only other type we support
-      var ndefRecord = ndef.textRecord(nfcRing.toWrite); // Creates a Text record
+      var ndefRecord = ndef.textRecord(nfcRing.userValues.toWrite); // Creates a Text record
     }
 
     nfc.write([ndefRecord], function () {

@@ -145,6 +145,9 @@ nfcRing.ui = {
 
     $('body').on('submit', '#optionForm', function(e){
       e.preventDefault();
+      nfcRing.userValues.toWrite = $('#optionInput').val(); // gets the value to write
+   
+      nfcRing.userValues.history.set(); // saves it to history
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
       return false;
