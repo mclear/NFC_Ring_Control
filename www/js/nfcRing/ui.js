@@ -1,17 +1,5 @@
 nfcRing.ui = {
   addActions: function(){
-    // Firstly we need to load them from history
-    nfcRing.userValues.history.values = localStorage.getItem("actionHistory");
-    if(nfcRing.userValues.history.values) nfcRing.userValues.history.values = JSON.parse(nfcRing.userValues.history.values);
-    nfcRing.userValues.history.reverse(nfcRing.userValues.history.values, function(key){
-      console.log('KEY:', key, 'VALUE:', this[key]); 
-      var action = this[key];
-      console.log(key);
-      key = parseInt(key);
-      var ts = new Date(key).toISOString();
-      $('#ringActions').append('<li><a data-key="'+key+'" data-action="'+action+'" class="historical icon icon-'+ action +'">' + action +   '<span>Action created/used <i class=timeago title="'+ts+'"></span></span></a></i>');
-    });
-
     // Load each action icon and text
     $.each(nfcRing.actions, function (key, action) {
       console.log("action", action);
@@ -85,7 +73,6 @@ nfcRing.ui = {
     });
 
     FastClick.attach(document.body); // What does this do?
-    $(".timeago").timeago(); // assign timeago stuff
 
     $('#helpLink').on('click', function (e) {
       e.preventDefault();
@@ -185,6 +172,30 @@ nfcRing.ui = {
       nfcRing.heatmap.sweetSpot.send(e);
     });
 
+    $('body').on('click', '#nav-btn', function() {
+      $('body').toggleClass('context-open');
+    });
+
+    // click action for previously historical actions
+    $('body').on('click', '#history li > .historical', function(){
+      $('#action').hide();
+      $('body').toggleClass('show-history').toggleClass('context-open');
+      $('#back-btn').remove();
+      console.log("beginning init");
+      nfcRing.heatmapInit();
+      console.log("Setting location to option");
+      nfcRing.location = "writing";
+      var action = $(this).data("action");
+      var key = $(this).data("key");
+      console.log("Key ", key);
+      console.log("Submitting a write value to the nfcRing object");
+      nfcRing.submitted(action, key);
+    });
+
+    $('body').on('click', '#finish', function(){
+      nfcRing.ui.displayPage("index");
+    });
+
   },
   updateVersion: function(){ // show Version number on the page
     if(device.platform === "browser"){
@@ -199,11 +210,15 @@ nfcRing.ui = {
     nfcRing.ui.history.push(page); // Write the this page to the history stack
     nfcRing.location = page;
     var source = $('#'+page).html();
-    source = source + $('#context').html(); // always include context nav on every page :)
+    // var context = $('#contextContent').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
-    $("#container").html(template());
+    // var context = Handlebars.compile(context);
+    $("#mainContents").html(template());
+    // $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
     // console.log("Writing ", source, " to #container");
     nfcRing.ui.updateVersion();
+    nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
+    $(".timeago").timeago(); // show " time ago " strings
   }, 
   handleBack: function(){  // Init the Back Button event handlers
     if (nfcRing.location == "index") {

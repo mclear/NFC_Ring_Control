@@ -23,6 +23,16 @@ nfcRing.userValues = { // stuff like what value we're going to write
 
     get: function() { // loads action history
       nfcRing.userValues.history.value = JSON.parse(localStorage.getItem("actionHistory") || "{}");
+      // Firstly we need to load them from history
+      nfcRing.userValues.history.values = localStorage.getItem("actionHistory");
+      if(nfcRing.userValues.history.values) nfcRing.userValues.history.values = JSON.parse(nfcRing.userValues.history.values);
+      nfcRing.userValues.history.reverse(nfcRing.userValues.history.values, function(key){
+        var action = this[key];
+        key = parseInt(key);
+        var ts = new Date(key).toISOString();
+        // TODO i18n me!
+        $('#history ul').append('<li><a data-key="'+key+'" data-action="'+action+'" class="historical">' + action + '<span>Action created/used <em class="timeago" title="'+ts+'"></span></span></a></em>');
+      });
     },
 
     reverse: function(obj, f) {

@@ -26,8 +26,10 @@
 
 <div id="heatMap"></div>
 <div id="container">
+  <div id="mainContents"></div>
+  <div id="context"></div>
 </div>
-<script id="context" type="x-handlebars-template">
+<script id="contextContent" type="x-handlebars-template">
   <div id="context-nav">
     <div id="options-list">
       <h3>Options</h3>
@@ -96,7 +98,7 @@
   <div class="actionName" id="writeRingTitle">
   </div>
   <ul class="link-list bottom">
-    <li><a href="index.html" id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
+    <li><a id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
   </ul>
   <div id="message"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
 </script>
