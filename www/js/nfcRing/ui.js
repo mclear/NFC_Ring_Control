@@ -67,7 +67,25 @@ nfcRing.ui = {
     $('body').on('click', '#simulateWrite', function(){
       $('#needHelp').hide();
       ringData = "http://whatever.com";
-      alert("TODO");
+      console.log("Simulating Write");
+ 
+      var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
+
+      if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
+        alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
+      } else {
+        var shareLocation = confirm(html10n.get("sweetSpot.askToShare"), false, html10n.get("sweetSpot.done"));
+      }
+
+      console.log("Share location response", shareLocation);
+      if (shareLocation) {
+        console.log("Set localstorage item dont ask sweet spot again");
+        localStorage.setItem("dontAskSweetSpotAgain", true);
+        nfcRing.ui.displayPage("sweetSpot");
+      } else {
+        localStorage.setItem("dontAskSweetSpotAgain", true);
+      }
+
     });
 
     $('body').on('click', '#settingsBtn', function(){
@@ -243,7 +261,7 @@ nfcRing.ui = {
     context = Handlebars.compile(context);
     $("#mainContents").html(template());
     $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
-    console.log("Writing ", source, " to #container");
+    // console.log("Writing ", source, " to #container");
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
