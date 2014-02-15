@@ -3,7 +3,31 @@ nfcRing.userValues = { // stuff like what value we're going to write
   location: "", // Our current location
   localSweetSpot: {
     value: function(){}, // The Local Sweet Spot location
-    set: function(sweetSpot){}, // Save the Local Sweet Spot location
+    set: function(e){
+      $('#bubble').show();
+      var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
+      var centerY = e.clientY - ($('#bubble').height()/2);
+      $('#bubble').css({
+        top: centerY+"px",
+        left: centerX+"px"
+      });
+
+      setTimeout(function(){
+        var correctLocation = confirm(html10n.get('sweetSpot.looksGood'));
+        if(correctLocation){
+          localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
+
+          console.log("Sending ", centerX, centerY, device.model, " to Database");
+	  try{
+            nfcRing.heatmap.sendToParse(centerX, centerY, device.model);
+	  }catch(e){
+            nfcRing.ui.displayPage("index");
+	  }
+        }
+      }, 100);
+
+    }, // Save the Local Sweet Spot location
+
   },
   history: {
     value: {}, // The users previous action history

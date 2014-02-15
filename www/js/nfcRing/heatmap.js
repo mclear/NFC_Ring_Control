@@ -90,39 +90,13 @@ nfcRing.heatmap = {
     }
   },
 
-  sweetSpot : {
-    send: function(e){
-      $('#bubble').show();
-      var centerX = e.clientX - ($('#bubble').width()/2); // get the center of the bubble
-      var centerY = e.clientY - ($('#bubble').height()/2);
-      var guid = nfcRing.userValues.guid;
-      $('#bubble').css({
-        top: centerY+"px",
-        left: centerX+"px"
-      })
-      setTimeout(function(){
-        var correctLocation = confirm(html10n('sweetSpot.looksGood'));
-        if(correctLocation){
-          localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
-          var phoneModel = device.model; 
-          console.log("Sending ", centerX, centerY, phoneModel, " to Database");
-          try{
-            nfcRing.heatmap.sendToParse(centerX, centerY, phoneModel);
-          }catch(e){
-            alert(html10n('sweetSpot.failedWrite'));
-          }
-        }
-      }, 100);
-    }
-  },
-
   sendToParse: function(x,y,phoneModel){
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
     testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.guid}, {
       success: function(object) {
         // TODO: i18n me
-        alert(html10n(sweetSpot.yay));
+        alert(html10n.get("sweetSpot.yay"));
         nfcRing.ui.displayPage("index"); // Return user back to start page
       },
       failure: function(e){

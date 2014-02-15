@@ -50,6 +50,21 @@ nfcRing.ui = {
 
     $('body').on('click', '#readBtn', function(){
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
+      if(device.model == "browser"){
+        $('#heatMap').hide();
+        $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
+      }
+    });
+
+    $('body').on('click', '#simulateRead', function(){
+      ringData = "http://whatever.com";     
+      alert(ringData, false, html10n.get("readRing.contents"));
+    });
+
+    $('body').on('click', '#simulateWrite', function(){
+      ringData = "http://whatever.com";
+alert("TODO");
+//      alert(ringData, false, html10n.get("readRing.contents"));
     });
 
     $('body').on('click', '#settingsBtn', function(){
@@ -137,6 +152,12 @@ nfcRing.ui = {
       nfcRing.userValues.history.set(); // saves it to history
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
+
+      if(device.model == "browser"){
+        $('#heatMap').hide();
+        $('#mainContents').append("<button id='simulateWrite'>Simulate Write Event</button>");
+      }
+
       return false;
     });
 
@@ -167,11 +188,6 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("sweetSpot");
     });
 
-    $('body').on('click', '#sweetSpotOverlay', function(e){
-      console.log("Click event for sweet spot overlay", e);
-      nfcRing.heatmap.sweetSpot.send(e);
-    });
-
     $('body').on('click', '#nav-btn', function() {
       $('body').toggleClass('context-open');
     });
@@ -194,6 +210,10 @@ nfcRing.ui = {
 
     $('body').on('click', '#finish', function(){
       nfcRing.ui.displayPage("index");
+    });
+
+    $('body').on('click', '#sweetSpotOverlay', function(e){
+      nfcRing.userValues.localSweetSpot.set(e);
     });
 
   },
