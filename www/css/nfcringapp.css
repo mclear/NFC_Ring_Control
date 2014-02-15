@@ -1200,7 +1200,7 @@ a.paddedIcon {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: -1;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
   -moz-transition: opacity 0.2s ease;
@@ -1227,7 +1227,7 @@ a.paddedIcon {
   box-shadow: 0 0 15px 7px #e63712;
   z-index: 100000000;
 }
-#message {
+#needHelp {
   display: none;
   position: fixed;
   bottom: 0;
@@ -1237,12 +1237,12 @@ a.paddedIcon {
   background: #162132;
   z-index: 999;
 }
-#message p {
+#needHelp p {
   color: #ffffff;
   padding: 15px 10px;
   margin: 0;
 }
-#message p a {
+#needHelp p a {
   color: #e63712;
   cursor: pointer;
   text-decoration: none;

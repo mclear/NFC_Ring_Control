@@ -75,6 +75,7 @@ nfcRing.nfcEvent = {
         } else {
           var idStr = "false";
         }
+        // Why do I need ID?
         nfcRing.userValues.guid = idStr;
         nfcRing.ui.displayPage("sweetSpot");
       } else {
@@ -86,6 +87,8 @@ nfcRing.nfcEvent = {
         setTimeout(function () {
           nfcRing.write(false)
         }, 2000);
+      }else{
+        $('#needHelp').hide(); // dont hide this on win32 but do if there is a write event on any other device
       }
 
     }, function (reason) {

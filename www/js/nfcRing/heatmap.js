@@ -34,7 +34,6 @@ nfcRing.heatmap = {
       console.log("Writing data to heatmap", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
       heatmap.store.setDataSet(nfcRing.heatmap.coOrdData);
       console.log("Done writing data to the heatmap");
-      $('#heatMap').hide();
     });
   }, 
 
@@ -58,7 +57,6 @@ nfcRing.heatmap = {
       query.find({
         success: function(results){
           for (var i = 0; i < results.length; i++) { 
-            $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
             var object = results[i];
             var x = object.get('x');
             var y = object.get('y');
@@ -68,7 +66,6 @@ nfcRing.heatmap = {
           }
           if(results.length == 0){ // if there are no results
             console.log("no results from parse");
-            $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2><p>"+html10n.get('sweetSpot.moveTheRing')+"</p>");
           }else{ // there are some heatmap results so let's draw em
             console.log("Drawing heatmap");
             nfcRing.heatmap.coOrds = coOrdinateCounter;

@@ -15,30 +15,19 @@ nfcRing.ui = {
     });
 
   }, // Note this will be a PITA to do i18n
-  showNeedHelp: function(){}, // Shows the need help button
+ 
+  showNeedHelp: function(){
+    $('#needHelp').fadeIn('slow');
+  }, // Shows the need help button
+
   domListenersInit: function(){
 
-    jQuery(document).ready(function($) {
-      if (window.history && window.history.pushState) {
-        $(window).on('popstate', function() {
-          var hashLocation = location.hash
-          var hashSplit = hashLocation.split("#!/");
-          var hashName = hashSplit[1];
-          if (hashName !== '') {
-            var hash = window.location.hash;
-            if (hash !== "#index"){
-              if(hash){
-                console.log("going back from ", hash);
-                // nfcRing.ui.handleBack();
-              }
-            }
-            if (hash === '') {
-              alert('Back button was pressed.');
-            }
-          }
-        });
-        window.history.pushState('forward', null, './#forward');
+    // In the browser when we use the back button it doesn't fire the handleBack or whatever so sometimes we have to catch it
+    $(window).on('hashchange', function() {
+      if(window.location.hash.split("#")[1] !== nfcRing.location){
+        nfcRing.ui.displayPage(window.location.hash.split("#")[1]);
       }
+      console.log("SUP Bitches");
     });
 
     nfcRing.ui.history = []; // Create blank history stack
@@ -51,7 +40,6 @@ nfcRing.ui = {
     $('body').on('click', '#readBtn', function(){
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
       if(device.model == "browser"){
-        $('#heatMap').hide();
         $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
       }
     });
@@ -62,9 +50,9 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#simulateWrite', function(){
+      $('#needHelp').hide();
       ringData = "http://whatever.com";
-alert("TODO");
-//      alert(ringData, false, html10n.get("readRing.contents"));
+      alert("TODO");
     });
 
     $('body').on('click', '#settingsBtn', function(){
@@ -89,7 +77,7 @@ alert("TODO");
 
     FastClick.attach(document.body); // What does this do?
 
-    $('#helpLink').on('click', function (e) {
+    $('body').on('click', '#helpLink', function (e) {
       e.preventDefault();
       $.magnificPopup.open({
         items: {
@@ -154,9 +142,18 @@ alert("TODO");
       nfcRing.ui.displayPage("writeRing");
 
       if(device.model == "browser"){
-        $('#heatMap').hide();
         $('#mainContents').append("<button id='simulateWrite'>Simulate Write Event</button>");
       }
+      if(nfcRing.heatmap.coOrds){
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
+      }else{
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
+      }
+      $('#heatMap').css("opacity","0.8");
+
+      setTimeout(function(){
+        nfcRing.ui.showNeedHelp()
+      },5000);
 
       return false;
     });
@@ -247,7 +244,6 @@ alert("TODO");
       console.log("Cleared app history");
       history.go(-(history.length - 9999));
       document.addEventListener("backbutton", nfcRing.handleBack, true);
-      // navigator.app.clearHistory(); // This doesn't even exist in WP -- does it actually exist on Android?
     } else {
       document.addEventListener("backbutton", nfcRing.handleBack, false);
       nfcRing.ui.history.pop(); // drop the last item from the history array

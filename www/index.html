@@ -17,6 +17,7 @@
   <script type="text/javascript" src="js/html10n.js"></script>
   <script type="text/javascript" src="js/fastclick.js"></script>
   <script type="text/javascript" src="js/timeago.js"></script>
+  <script type="text/javascript" src="js/magpop.js"></script>
 
   <link rel="localizations" type="application/l10n+json" href="locales.json">
   <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
@@ -24,9 +25,7 @@
 </head>
 <body>
 
-<!--
 <div id="heatMap"></div>
--->
 <div id="container">
   <div id="mainContents"></div>
   <div id="context"></div>
@@ -103,10 +102,7 @@
   <ul class="link-list bottom">
     <li><a id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
   </ul>
-  <div id="message"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
-</script>
-
-<script id="help" type="x-handlebars-template">
+  <div id="needHelp"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
   <div id="helpContents" class="white-popup mfp-hide">
     <h3 class="icon icon-support">{{html10n "help.helpTips"}}</h3>
     <ul>
