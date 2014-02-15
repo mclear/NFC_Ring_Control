@@ -38,10 +38,12 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#readBtn', function(){
+      nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
       if(device.model == "browser"){
         $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
       }
+      $('#heatMap').css("opacity","0.8");
     });
 
     $('body').on('click', '#simulateRead', function(){
@@ -101,7 +103,6 @@ nfcRing.ui = {
 
     // click action for previously historical actions
     $('body').on('click', '.ringActions > li > .historical', function(){ 
-      nfcRing.heatmapInit();
       console.log("Setting location to option");
       nfcRing.location = "writing";
       var action = $(this).data("action");
@@ -195,7 +196,6 @@ nfcRing.ui = {
       $('body').toggleClass('show-history').toggleClass('context-open');
       $('#back-btn').remove();
       console.log("beginning init");
-      nfcRing.heatmapInit();
       console.log("Setting location to option");
       nfcRing.location = "writing";
       var action = $(this).data("action");
@@ -223,6 +223,7 @@ nfcRing.ui = {
     $('#modelName').text(device.model);
   },
   displayPage: function(page){ // Display a page
+    if(nfcRing.location !== "#writeRing") $('#heatMap').css("opacity","0");
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
     nfcRing.ui.history.push(page); // Write the this page to the history stack
