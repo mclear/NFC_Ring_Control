@@ -203,6 +203,7 @@ nfcRing.ui = {
     }else{
       cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
     }
+    $('#modelName').text(device.model);
   },
   displayPage: function(page){ // Display a page
     window.location.hash = '#'+page;
