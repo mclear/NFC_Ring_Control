@@ -26,8 +26,16 @@ nfcRing.ui = {
     $(window).on('hashchange', function() {
       if(window.location.hash.split("#")[1] !== nfcRing.location){
         nfcRing.ui.displayPage(window.location.hash.split("#")[1]);
+        // I don't like these bits..  We'd be better off using .emit / .on
+        console.log(window.location.hash.split("#")[1]);
+        if(window.location.hash.split("#")[1] == "action"){
+          console.log("Adding actions");
+          nfcRing.ui.addActions();
+        }
+        if(window.location.hash.split("#")[1] == "option"){
+          $('.optionName').html('<h2>' + nfcRing.userValues.action + '</h2>');
+        }
       }
-      console.log("SUP Bitches");
     });
 
     nfcRing.ui.history = []; // Create blank history stack
@@ -42,6 +50,11 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
       if(device.model == "browser"){
         $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
+      }
+      if(nfcRing.heatmap.coOrds){
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
+      }else{
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
       }
       $('#heatMap').css("opacity","0.8");
     });
@@ -126,6 +139,7 @@ nfcRing.ui = {
       }else{
          var label = nfcRing.actions[key.toLowerCase()].optionText;
       }
+      nfcRing.userValues.action = label;
       $('.optionName').html('<h2>' + label + '</h2>');
       /*
       // $('#optionInput').attr("placeholder", actions[key].placeHolder);
@@ -192,7 +206,7 @@ nfcRing.ui = {
 
     // click action for previously historical actions
     $('body').on('click', '#history li > .historical', function(){
-      $('#action').hide();
+      // $('#action').hide();
       $('body').toggleClass('show-history').toggleClass('context-open');
       $('#back-btn').remove();
       console.log("beginning init");
@@ -234,7 +248,7 @@ nfcRing.ui = {
     // var context = Handlebars.compile(context);
     $("#mainContents").html(template());
     // $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
-    // console.log("Writing ", source, " to #container");
+    console.log("Writing ", source, " to #container");
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
