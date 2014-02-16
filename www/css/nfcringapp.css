@@ -817,8 +817,8 @@ body.fillit {
   position: relative;
   z-index: 100;
 }
-#header #nav-btn,
-#header #back-btn {
+#nav-btn,
+#back-btn {
   height: 55px;
   width: 55px;
   position: absolute;
@@ -828,18 +828,18 @@ body.fillit {
   cursor: pointer;
   z-index: 99999;
 }
-#header #nav-btn:before,
-#header #back-btn:before {
+#nav-btn:before,
+#back-btn:before {
   color: #162132;
   vertical-align: middle;
   line-height: 55px;
 }
-.context-open #header #nav-btn,
-.context-open #header #back-btn {
+.context-open #nav-btn,
+.context-open #back-btn {
   background-color: #162132;
 }
-.context-open #header #nav-btn:before,
-.context-open #header #back-btn:before {
+.context-open #nav-btn:before,
+.context-open #back-btn:before {
   color: #ffffff;
 }
 #header #logo {

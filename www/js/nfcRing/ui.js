@@ -204,7 +204,7 @@ nfcRing.ui = {
       console.log("Showing history");
       e.preventDefault();
       $('body').toggleClass('show-history');
-      $('#trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
+      $('#container > #trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
     });
 
     $('body').on('click', '#sweetSpotBtn', function(){
@@ -214,6 +214,11 @@ nfcRing.ui = {
 
     $('body').on('click', '#nav-btn', function() {
       $('body').toggleClass('context-open');
+    });
+
+    $('body').on('click', '#back-btn', function() {
+      $('#back-btn').remove();
+      $('body').toggleClass('show-history');
     });
 
     // click action for previously historical actions
@@ -252,6 +257,7 @@ nfcRing.ui = {
     }else{
       $('#heatMap').css("opacity","0.8");
     }
+    $('#back-btn').remove();
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
     nfcRing.ui.history.push(page); // Write the this page to the history stack

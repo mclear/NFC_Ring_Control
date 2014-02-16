@@ -29,6 +29,7 @@
 <div id="container" class="container">
   <div id="mainContents"></div>
   <div id="context"></div>
+  <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
 </div>
 <script id="contextContent" type="x-handlebars-template">
   <div id="context-nav">
@@ -55,9 +56,6 @@
 <script id="index" type="x-handlebars-template">
   <header id="header">
     <div id="title">
-      <div id="trigger">
-        <div id="nav-btn" class="icon icon-settings selected"></div>
-      </div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
@@ -76,9 +74,6 @@
 <script id="action" class="step action" type="x-handlebars-template">
   <header id="header">
     <div id="title">
-      <div id="trigger">
-        <div id="nav-btn" class="icon icon-settings selected"></div>
-      </div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
@@ -92,11 +87,7 @@
 
 <script id="option" class="step option" type="x-handlebars-template">
   <header id="header">
-    <div id="title">
-      <div id="trigger">
-        <div id="nav-btn" class="icon icon-settings selected"></div>
-      </div>
-    </div>
+    <div id="title"></div>
   </header>
   <div class="actionName optionName"></div>
   <div class="actionContents">
@@ -111,11 +102,7 @@
 
 <script id="writeRing" class="step writeRing" type="x-handlebars-template">
   <header id="header">
-    <div id="title">
-      <div id="trigger">
-        <div id="nav-btn" class="icon icon-settings selected"></div>
-      </div>
-    </div>
+    <div id="title"></div>
   </header>
   <div class="actionName" id="writeRingTitle">
   </div>
@@ -140,11 +127,7 @@
 
 <script id="settings" type="x-handlebars-template">
   <header id="header">
-    <div id="title">
-      <div id="trigger">
-        <div id="nav-btn" class="icon icon-settings selected"></div>
-      </div>
-    </div>
+    <div id="title"></div>
   </header>
   <h2>{{html10n "index.settings"}}</h2>
   <ul class="link-list">
