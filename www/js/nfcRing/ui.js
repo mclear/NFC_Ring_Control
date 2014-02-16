@@ -48,29 +48,14 @@ nfcRing.ui = {
     $('body').on('click', '#readBtn', function(){
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
-      if(device.model == "browser"){
-        $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
-      }
-      if(nfcRing.heatmap.coOrds){
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
-      }else{
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
-      }
-      $('#heatMap').css("opacity","0.8");
+      nfcRing.ui.prepareWritePage("read");
     });
 
     $('body').on('click', '#registerBtn', function(){
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
-      if(device.model == "browser"){
-        $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
-      }
-      if(nfcRing.heatmap.coOrds){
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
-      }else{
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
-      }
-      $('#heatMap').css("opacity","0.8");
+      nfcRing.ui.prepareWritePage("register");
+
       // NOTE: we shouldn't provide the keys for this publicly!
       // We wait for an NFC Event, on NFC Event we check the GUID of the Ring VS the GUID of the Ring in our sweet Spot Store
       // If the GUID of the Ring in our Sweet Spot Store exists we provide a screen were the user can type in an email addy
@@ -82,8 +67,14 @@ nfcRing.ui = {
     $('body').on('click', '#simulateRead', function(){
       clearTimeout(nfcRing.ui.helpTimeout);
       $('#needHelp').hide();
-      ringData = "http://whatever.com";     
-      alert(ringData, false, html10n.get("readRing.contents"));
+      if(nfcRing.userValues.activity === "read"){
+        ringData = "http://whatever.com";
+        alert(ringData, false, html10n.get("readRing.contents"));
+      }
+      if(nfcRing.userValues.activity === "register"){
+        alert("Before we display the register page we should check this GUID");
+        nfcRing.ui.displayPage("register");
+      }
     });
 
     $('body').on('click', '#simulateWrite', function(){
@@ -186,21 +177,7 @@ nfcRing.ui = {
       nfcRing.userValues.history.set(); // saves it to history
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
-
-      if(device.model == "browser"){
-        $('#mainContents').append("<button id='simulateWrite'>Simulate Write Event</button>");
-      }
-      if(nfcRing.heatmap.coOrds){
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
-      }else{
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
-      }
-      $('#heatMap').css("opacity","0.8");
-
-      nfcRing.ui.helpTimeout = setTimeout(function(){
-        nfcRing.ui.showNeedHelp()
-      },5000);
-
+      nfcRing.ui.prepareWritePage("write");
       return false;
     });
 
@@ -247,12 +224,7 @@ nfcRing.ui = {
       nfcRing.userValues.toWrite = action;
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing");
-      $('#heatMap').css("opacity","0.8");
-      if(nfcRing.heatmap.coOrds){
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
-      }else{
-        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
-      }
+      nfcRing.ui.prepareWritePage("write");
     });
 
     $('body').on('click', '#finish', function(){
@@ -264,6 +236,7 @@ nfcRing.ui = {
     });
 
   },
+
   updateVersion: function(){ // show Version number on the page
     if(device.platform === "browser"){
       $('#versionNumber').text("N/A");
@@ -272,6 +245,7 @@ nfcRing.ui = {
     }
     $('#modelName').text(device.model);
   },
+
   displayPage: function(page){ // Display a page
     if(nfcRing.location !== "#writeRing"){
       $('#heatMap').css("opacity","0");
@@ -293,7 +267,11 @@ nfcRing.ui = {
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
   }, 
+
   handleBack: function(){  // Init the Back Button event handlers
+
+    nfcRing.userValues.activity = false;
+
     if (nfcRing.location == "index") {
       // Clear history so back button on home page always leaves the app
       console.log("Cleared app history");
@@ -308,6 +286,30 @@ nfcRing.ui = {
     // NOTE this is a bit more tricky in a single page app because you have to remember an array of what page you were on..
 
   },
+
+  prepareWritePage: function(eventType){
+    nfcRing.userValues.activity = eventType;
+    
+    if(eventType === "write" && device.model == "browser"){
+      $('#mainContents').append("<button id='simulateWrite'>Simulate Write Event</button>");
+    }
+    if((eventType === "read" || eventType === "register") && device.model == "browser"){
+      $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
+    }
+
+    if(nfcRing.heatmap.coOrds){
+      $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
+    }else{
+      $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
+    }
+
+    $('#heatMap').css("opacity","0.8");
+    nfcRing.ui.helpTimeout = setTimeout(function(){
+      console.log("Showing Help Message");
+      nfcRing.ui.showNeedHelp()
+    },5000);
+  },
+
   paramFromURL: function(name){
     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
     var regexS = "[\\?&]"+name+"=([^&#]*)";
