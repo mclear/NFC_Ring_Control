@@ -67,6 +67,7 @@
     <li><a id="actionBtn" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
     <li><a id="readBtn" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
     <li><a id="settingsBtn" class="icon icon-settings">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
+    <li><a id="registerBtn" class="icon icon-settings">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
     <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
 
   </ul>
@@ -171,6 +172,18 @@
     </div>
   </div>
   <div id="bubble"></div>
+</script>
+
+<script id="register" type="x-handlebars-template">
+  <header id="header">
+    <div id="logo"><img src="img/nfcring-logo.png"></div>
+  </header>
+
+  <h2 class="actionName">{{html10n "register.emailTitle"}}</h2>
+  <form id="registerEmail">
+    <input type="email" id="emailInput">
+    <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+  </form>    
 </script>
 
 

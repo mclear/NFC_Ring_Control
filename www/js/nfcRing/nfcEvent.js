@@ -39,6 +39,8 @@ nfcRing.nfcEvent = {
     }
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
+    clearTimeout(nfcRing.ui.helpTimeout);
+    $('#needHelp').hide();
     // If the string is a valid URL
     var isURL = nfcRing.validURL(nfcRing.userValues.toWrite);
 
@@ -100,6 +102,8 @@ nfcRing.nfcEvent = {
     });
   }, 
   read: function(nfcEvent){ // Read an NFC NDEF record
+    clearTimeout(nfcRing.ui.helpTimeout);
+    $('#needHelp').hide();
     console.log("Reading", nfcEvent);
     var ring = nfcEvent.tag;
     if(ring.ndefMessage){

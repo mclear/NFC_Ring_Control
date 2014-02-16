@@ -59,12 +59,35 @@ nfcRing.ui = {
       $('#heatMap').css("opacity","0.8");
     });
 
+    $('body').on('click', '#registerBtn', function(){
+      nfcRing.heatmap.init();
+      nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
+      if(device.model == "browser"){
+        $('#mainContents').append("<button id='simulateRead'>Simulate Read Event</button>");
+      }
+      if(nfcRing.heatmap.coOrds){
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.holdRingToPhoneByDot')+"</h2>");
+      }else{
+        $('#writeRingTitle').html("<h2>"+html10n.get('sweetSpot.noDataYet')+"</h2>");
+      }
+      $('#heatMap').css("opacity","0.8");
+      // NOTE: we shouldn't provide the keys for this publicly!
+      // We wait for an NFC Event, on NFC Event we check the GUID of the Ring VS the GUID of the Ring in our sweet Spot Store
+      // If the GUID of the Ring in our Sweet Spot Store exists we provide a screen were the user can type in an email addy
+      // On submit of the email addy we tell the user their passwd and that they are ready to verify the NFC ring Unlock app
+      // Alternatively we could email the user a password and tell them we emailed you your password..
+
+    });
+
     $('body').on('click', '#simulateRead', function(){
+      clearTimeout(nfcRing.ui.helpTimeout);
+      $('#needHelp').hide();
       ringData = "http://whatever.com";     
       alert(ringData, false, html10n.get("readRing.contents"));
     });
 
     $('body').on('click', '#simulateWrite', function(){
+      clearTimeout(nfcRing.ui.helpTimeout);
       $('#needHelp').hide();
       ringData = "http://whatever.com";
       console.log("Simulating Write");
@@ -174,11 +197,15 @@ nfcRing.ui = {
       }
       $('#heatMap').css("opacity","0.8");
 
-      setTimeout(function(){
+      nfcRing.ui.helpTimeout = setTimeout(function(){
         nfcRing.ui.showNeedHelp()
       },5000);
 
       return false;
+    });
+
+    $('body').on('submit', '#registerEmail', function(e){
+      alert("This functionality is not ready yet..");
     });
 
     $('body').on('click', '#clearSweetSpot', function(){

@@ -7,6 +7,8 @@
     "index.readDescription":"See what's on your ring",
     "index.settings":"Settings",
     "index.settingsDescription":"Configure your App",
+    "index.register":"Register",
+    "index.registerDescription":"Register your NFC Ring and Obtain your NFC Ring Unlock App Code",
     "index.feedback":"Feedback",
     "index.feedbackDescription":"Love something or want to change something? Let us know",
     "context.recentActions":"View your recent actions",
@@ -66,7 +68,7 @@
     "sweetSpot.askToShare":"Your ring is ready.  Would you like to be awesome and help others by sharing the sweet spot location for this phone model?",
     "sweetSpot.done":"Done, Thank you!",
     "sweetSpot.areYouSureSS":"Are you sure you want to clear your sweet spot data?",
-    "sweetSpot.areYouSureActions":"Are you sure you want to clear your previous actions?"
-
+    "sweetSpot.areYouSureActions":"Are you sure you want to clear your previous actions?",
+    "register.emailTitle":"Your email address:"
   }
 }
