@@ -1716,7 +1716,7 @@ img.mfp-img {
   right:0;
 }
 
-#emailInput{
+.textInput{
   display: block;
   max-width: 800px;
   width: 90%;

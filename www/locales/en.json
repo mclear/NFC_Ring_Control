@@ -69,6 +69,11 @@
     "sweetSpot.done":"Done, Thank you!",
     "sweetSpot.areYouSureSS":"Are you sure you want to clear your sweet spot data?",
     "sweetSpot.areYouSureActions":"Are you sure you want to clear your previous actions?",
-    "register.emailTitle":"Your email address:"
+    "register.emailTitle":"Email address:",
+    "register.title":"Register your Ring",
+    "register.passwordTitle":"Password:",
+    "register.passwordAgainTitle":"Password Again:",
+    "register.passwordsDontMatch":"Passwords don't match",
+    "register.success":"Registration Success"
   }
 }

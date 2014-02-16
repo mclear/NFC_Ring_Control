@@ -72,7 +72,9 @@ nfcRing.ui = {
         alert(ringData, false, html10n.get("readRing.contents"));
       }
       if(nfcRing.userValues.activity === "register"){
-        nfcRing.registration.isValidUid("4,33,81,2,-74,40,-128", function(isValid){ // TODO REMOVE UID!
+        nfcRing.userValues.uid = "4,33,81,2,-74,40,-128";
+        console.log(nfcRing.registration);
+        nfcRing.registration.isValidUid(function(isValid){ // TODO REMOVE UID!
           if(isValid){
             nfcRing.ui.displayPage("register");
           }else{
@@ -187,7 +189,12 @@ nfcRing.ui = {
     });
 
     $('body').on('submit', '#registerEmail', function(e){
-      alert("This functionality is not ready yet..");
+      // alert("This functionality is not ready yet..");
+      if($('#passwordInput').val() === $('#passwordAgainInput').val()){
+        nfcRing.registration.registerUser();
+      }else{
+        alert(html10n.get("register.passwordsDontMatch"));
+      }
     });
 
     $('body').on('click', '#clearSweetSpot', function(){

@@ -1,5 +1,6 @@
 nfcRing.registration = {
-  isValidUid: function(uid, callback){ // Getting data from Parse..
+  isValidUid: function(callback){ // Getting data from Parse..
+    var uid = nfcRing.userValues.uid;
     parseInitUID();
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
@@ -34,5 +35,28 @@ nfcRing.registration = {
         console.log("Unable to process Parse on WP");
       }
     }
+  },
+
+  registerUser: function(){
+    parseInitUsers();
+    var user = new Parse.User();
+    var email = $('#emailInput').val();
+    var pwd = $('#passwordInput').val();
+    console.log("Creating new user");
+    user.set("username", email);
+    user.set("password", pwd);
+    user.set("email", email);
+    user.set("guid", nfcRing.userValues.uid);
+    
+    user.signUp(null, {
+      success: function(user) {
+        alert(html10n.get("register.success"));
+        nfcRing.ui.displayPage("index");
+      },
+      error: function(user, error) {
+        // Show the error message somewhere and let the user try again.
+        alert("Error: " + error.code + " " + error.message);
+      }
+    });
   }
 }

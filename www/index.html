@@ -163,9 +163,14 @@
     <div id="logo"><img src="img/nfcring-logo.png"></div>
   </header>
 
-  <h2 class="actionName">{{html10n "register.emailTitle"}}</h2>
+  <h2 class="actionName">{{html10n "register.title"}}</h2>
   <form id="registerEmail">
-    <input type="email" id="emailInput">
+    <h2 class="actionName">{{html10n "register.emailTitle"}}</h2>
+    <input type="email" class='textInput' id="emailInput">
+    <h2 class="actionName">{{html10n "register.passwordTitle"}}</h2>
+    <input type="password" class='textInput' id="passwordInput">
+    <h2 class="actionName">{{html10n "register.passwordAgainTitle"}}</h2>
+    <input type="password" class='textInput' id="passwordAgainInput">
     <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
   </form>    
 </script>
