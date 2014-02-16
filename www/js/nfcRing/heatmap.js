@@ -47,6 +47,7 @@ nfcRing.heatmap = {
   }, 
 
   loadFromParse: function(callback){ // Getting data from Parse..
+    parseInitSS();
     var coOrdinateCounter = {};
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
@@ -95,9 +96,10 @@ nfcRing.heatmap = {
   },
 
   sendToParse: function(x,y,phoneModel){
+    parseInitSS();
     var TestObject = Parse.Object.extend("TestObject");
     var testObject = new TestObject();
-    testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.guid}, {
+    testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.uid}, {
       success: function(object) {
         // TODO: i18n me
         alert(html10n.get("sweetSpot.yay"));

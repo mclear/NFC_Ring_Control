@@ -70,7 +70,6 @@ nfcRing.userValues = { // stuff like what value we're going to write
         f.call(obj, arr[i]);
       }
     }
-  }
- 
+  } 
 }
 

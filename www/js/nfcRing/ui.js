@@ -14,7 +14,7 @@ nfcRing.ui = {
       $('#ringActions').append('<li><a data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
     });
 
-  }, // Note this will be a PITA to do i18n
+  },
  
   showNeedHelp: function(){
     $('#needHelp').fadeIn('slow');
@@ -57,8 +57,8 @@ nfcRing.ui = {
       nfcRing.ui.prepareWritePage("register");
 
       // NOTE: we shouldn't provide the keys for this publicly!
-      // We wait for an NFC Event, on NFC Event we check the GUID of the Ring VS the GUID of the Ring in our sweet Spot Store
-      // If the GUID of the Ring in our Sweet Spot Store exists we provide a screen were the user can type in an email addy
+      // We wait for an NFC Event, on NFC Event we check the UID of the Ring VS the UID of the Ring in our sweet Spot Store
+      // If the UID of the Ring in our Sweet Spot Store exists we provide a screen were the user can type in an email addy
       // On submit of the email addy we tell the user their passwd and that they are ready to verify the NFC ring Unlock app
       // Alternatively we could email the user a password and tell them we emailed you your password..
 
@@ -72,8 +72,13 @@ nfcRing.ui = {
         alert(ringData, false, html10n.get("readRing.contents"));
       }
       if(nfcRing.userValues.activity === "register"){
-        alert("Before we display the register page we should check this GUID");
-        nfcRing.ui.displayPage("register");
+        nfcRing.registration.isValidUid("4,33,81,2,-74,40,-128", function(isValid){ // TODO REMOVE UID!
+          if(isValid){
+            nfcRing.ui.displayPage("register");
+          }else{
+            alert("NOT NFC RING");
+          }
+        });
       }
     });
 

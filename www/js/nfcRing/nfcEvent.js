@@ -78,7 +78,7 @@ nfcRing.nfcEvent = {
           var idStr = "false";
         }
         // Why do I need ID?
-        nfcRing.userValues.guid = idStr;
+        nfcRing.userValues.uid = idStr;
         nfcRing.ui.displayPage("sweetSpot");
       } else {
         localStorage.setItem("dontAskSweetSpotAgain", true);
