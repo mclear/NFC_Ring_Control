@@ -13,17 +13,18 @@ nfcRing.userValues = { // stuff like what value we're going to write
       });
 
       setTimeout(function(){
-        var correctLocation = confirm(html10n.get('sweetSpot.looksGood'));
-        if(correctLocation){
-          localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
-
-          console.log("Sending ", centerX, centerY, device.model, " to Database");
-	  try{
-            nfcRing.heatmap.sendToParse(centerX, centerY, device.model);
-	  }catch(e){
-            nfcRing.ui.displayPage("index");
-	  }
-        }
+        confirm(html10n.get('sweetSpot.looksGood'), function(correctLocation){
+          if(correctLocation){
+            localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
+  
+            console.log("Sending ", centerX, centerY, device.model, " to Database");
+  	    try{
+              nfcRing.heatmap.sendToParse(centerX, centerY, device.model);
+            }catch(e){
+              nfcRing.ui.displayPage("index");
+            }
+          }
+        });
       }, 100);
 
     }, // Save the Local Sweet Spot location

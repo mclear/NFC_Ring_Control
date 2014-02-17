@@ -104,18 +104,17 @@ nfcRing.ui = {
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
         alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
       } else {
-        var shareLocation = confirm(html10n.get("sweetSpot.askToShare"), false, html10n.get("sweetSpot.done"));
+        confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
+          console.log("Share location response", shareLocation);
+          if (shareLocation) {
+            console.log("Set localstorage item dont ask sweet spot again");
+            localStorage.setItem("dontAskSweetSpotAgain", true);
+            nfcRing.ui.displayPage("sweetSpot");
+          } else {
+            localStorage.setItem("dontAskSweetSpotAgain", true);
+          }
+        }, false, html10n.get("sweetSpot.done"));
       }
-
-      console.log("Share location response", shareLocation);
-      if (shareLocation) {
-        console.log("Set localstorage item dont ask sweet spot again");
-        localStorage.setItem("dontAskSweetSpotAgain", true);
-        nfcRing.ui.displayPage("sweetSpot");
-      } else {
-        localStorage.setItem("dontAskSweetSpotAgain", true);
-      }
-
     });
 
     $('body').on('click', '#settingsBtn', function(){
@@ -207,18 +206,23 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#clearSweetSpot', function(){
-      if(confirm(html10n.get("sweetSpot.areYouSureSS"), false, html10n.get("sweetSpot.areYouSure"))){
-        console.log("clearing sweet spot history");
-        localStorage.setItem("dontAskSweetSpotAgain", false);
-        localStorage.setItem("sweetSpotLocation", false);
-      }
+      confirm(html10n.get("sweetSpot.areYouSureSS"), function(confirmed){
+        if(confirmed){
+          console.log("clearing sweet spot history");
+          localStorage.setItem("dontAskSweetSpotAgain", false);
+          localStorage.setItem("sweetSpotLocation", false);
+        }
+      }, html10n.get("sweetSpot.areYouSure"));
     });
 
     $('body').on('click', '#clearPreviousActions', function(){
-      if(confirm(html10n.get("sweetSpot.areYouSureActions"), html10n.get("sweetSpot.areYouSure"))){
-        console.log("Clearing previous actions");
-        localStorage.setItem("actionHistory", "{}");
-      }
+      confirm(html10n.get("sweetSpot.areYouSureActions"), function(confirmed){
+        if(confirmed){
+          console.log("Clearing previous actions");
+          localStorage.setItem("actionHistory", "{}");
+          $('#history-list').html("");
+        }
+      }, html10n.get("sweetSpot.areYouSure"));
     });
 
     $('body').on('click', '#viewHistory', function(e) {
