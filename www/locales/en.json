@@ -1,5 +1,7 @@
 {
   "en":{
+    "index.wantHelp":"Want some help?",
+    "index.wantHelpLong":"It looks like this is the first time you have used the NFC Ring Control app, would you like some help?",
     "index.whatDoYouWantToDoToday":"What do you want to do today?",
     "index.create":"Create",
     "index.createDescription":"Write a new action to your ring",
@@ -12,10 +14,10 @@
     "index.settingsDescriptionMore":"Configure your App",
     "index.register":"Register",
     "index.registerDescription":"Register your NFC Ring and Obtain your NFC Ring Unlock App Code",
-    "index.registerDescriptionMore":"Register your NFC Ring and Obtain your NFC Ring Unlock App Code",
+    "index.registerDescriptionMore":"Want your NFC Ring Unlock App Code?  Use this page!",
     "index.feedback":"Feedback",
     "index.feedbackDescription":"Love something or want to change something? Let us know",
-    "index.feedbackDescriptionMore":"Love something or want to change something? Let us know",
+    "index.feedbackDescriptionMore":"We'd love to hear if you love or hate something, please do let us know!",
     "context.recentActions":"View your recent actions",
     "context.history":"History",
     "action.whatDoYouWantYourRingToDo":"What do you want your Ring to do?",

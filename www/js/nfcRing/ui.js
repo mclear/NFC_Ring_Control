@@ -1,4 +1,19 @@
 nfcRing.ui = {
+  firstRun: function(){
+    if(device.model === "browser"){
+      var wantHelp = confirm(html10n.get("index.wantHelpLong"), html10n.get("index.wantHelp"));
+      nfcRing.ui.firstRunConfirm(wantHelp);
+    }else{
+      var wantHelp = confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
+    }
+  },
+
+  firstRunConfirm: function(wantHelp){
+    if(wantHelp){
+      introJs().start();
+    }
+  },
+ 
   addActions: function(){
     // Load each action icon and text
     $.each(nfcRing.actions, function (key, action) {
@@ -296,9 +311,9 @@ nfcRing.ui = {
       // Clear history so back button on home page always leaves the app
       console.log("Cleared app history");
       history.go(-(history.length - 9999));
-      document.addEventListener("backbutton", nfcRing.handleBack, true);
+      document.addEventListener("backbutton", nfcRing.ui.handleBack, true);
     } else {
-      document.addEventListener("backbutton", nfcRing.handleBack, false);
+      document.addEventListener("backbutton", nfcRing.ui.handleBack, false);
       nfcRing.ui.history.pop(); // drop the last item from the history array
       nfcRing.ui.displayPage(nfcRing.ui.history[nfcRing.ui.history.length-1]); // display the previous page
     }
@@ -308,9 +323,6 @@ nfcRing.ui = {
   },
 
   prepareWritePage: function(eventType){
-    // Begin listening for nfc events
-    nfcRing.nfcEvent.init();
-
     nfcRing.userValues.activity = eventType;
     
     if(eventType === "write" && device.model == "browser"){

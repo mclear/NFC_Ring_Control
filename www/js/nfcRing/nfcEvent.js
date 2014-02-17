@@ -1,14 +1,15 @@
 nfcRing.nfcEvent = {
   init: function(){
+
     if (typeof nfc === 'undefined') return false;
     if (device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
       console.log("NFC Found, adding listener");
       // Android requires both listeners -- It then choses which event to fire
       // Because we currently only support Android and WP we don't need to wrap this in an If
-/*
+
       nfc.addTagDiscoveredListener(function (nfcEvent) {
         console.log("NFC Event, IE tag or ring introduced to the app");
-        nfcRing.nfcEvent.readOrWrite(nfcEvent);
+        // nfcRing.nfcEvent.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -16,9 +17,7 @@ nfcRing.nfcEvent = {
         alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
-*/
       nfc.addNdefListener(function (nfcEvent) {
-        console.log("RING EVENT BEGINS");
         nfcRing.nfcEvent.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC NDEF");
       }, function () {
@@ -31,8 +30,10 @@ nfcRing.nfcEvent = {
     } else {
       console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
+
   }, // create Event listeners
   readOrWrite: function(nfcEvent){ // Should we read or write to an NFC Event?
+    console.log("Read or write event");
     $('#message').hide(); // hide help message
     if (nfcRing.userValues.toWrite) {
       console.log("Doing write event", nfcEvent);

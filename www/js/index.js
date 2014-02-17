@@ -6,21 +6,20 @@ var app = {
     document.addEventListener('deviceready', this.deviceready, false);
   },
   deviceready: function () {
-    // Remove read from windows phone, it's far too buggy
+    // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
+    alert = navigator.notification.alert;
+    prompt = navigator.notification.prompt;
+    confirm = navigator.notification.confirm;
+
+    // Begin listening for NFC Tags
+    nfcRing.nfcEvent.init();
+
     if (device.platform == "Win32NT") {
       $('#read').hide();
       $('.win32').show(); // Note to Designer, by default this needs to be hidden
     }
 
-    // See http://docs.phonegap.com/en/edge/cordova_events_events.md.html#backbutton
+    // Handle back events
     nfcRing.ui.handleBack();
-
-    // Windows Phone doesn't support reading MIME types..  I mean, really..  *Sigh
-    if (device.platform == "Win32NT") {
-    }
-
-    // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
-    alert = navigator.notification.alert;
-    prompt = navigator.notification.prompt;
   }
 };
