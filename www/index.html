@@ -16,12 +16,14 @@
   <script type="text/javascript" src="js/nfcRing/registration.js"></script>
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/html10n.js"></script>
+  <script type="text/javascript" src="js/intro.js"></script>
   <script type="text/javascript" src="js/fastclick.js"></script>
   <script type="text/javascript" src="js/timeago.js"></script>
   <script type="text/javascript" src="js/magpop.js"></script>
 
   <link rel="localizations" type="application/l10n+json" href="locales.json">
   <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
+  <link rel="stylesheet" type="text/css" href="css/introjs.css" />
   <title>NFC Ring Control App</title>
 </head>
 <body>
@@ -63,8 +65,8 @@
   <div class="count"></div>
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
   <ul class="link-list">
-    <li><a id="actionBtn" class="icon icon-plus">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
-    <li><a id="readBtn" class="icon icon-eye">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
+    <li><a id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
+    <li><a id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
     <li><a id="settingsBtn" class="icon icon-settings">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
     <li><a id="registerBtn" class="icon icon-settings">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
     <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
@@ -128,7 +130,9 @@
 
 <script id="settings" type="x-handlebars-template">
   <header id="header">
-    <div id="title"></div>
+    <div id="title">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
   </header>
   <h2>{{html10n "index.settings"}}</h2>
   <ul class="link-list">
@@ -188,6 +192,9 @@ nfcRing.ui.domListenersInit();
 if(typeof cordova !== 'undefined'){
   app.initialize();
 }else{
+ // TEMP TODO CAKE
+introJs().start();
+
   console.log("This is not running as a Cordova app, we will fake cordova");
   device = {};
   device.platform = "browser";
