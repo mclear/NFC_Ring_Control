@@ -39,7 +39,7 @@ nfcRing.ui = {
 
     // In the browser when we use the back button it doesn't fire the handleBack or whatever so sometimes we have to catch it
     $(window).on('hashchange', function() {
-      if(window.location.hash.split("#")[1] !== nfcRing.location){
+      if(window.location.hash.split("#")[1] !== nfcRing.userValues.location){
         nfcRing.ui.displayPage(window.location.hash.split("#")[1]);
         // I don't like these bits..  We'd be better off using .emit / .on
         console.log(window.location.hash.split("#")[1]);
@@ -71,13 +71,6 @@ nfcRing.ui = {
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
       nfcRing.ui.prepareWritePage("register");
-
-      // NOTE: we shouldn't provide the keys for this publicly!
-      // We wait for an NFC Event, on NFC Event we check the UID of the Ring VS the UID of the Ring in our sweet Spot Store
-      // If the UID of the Ring in our Sweet Spot Store exists we provide a screen were the user can type in an email addy
-      // On submit of the email addy we tell the user their passwd and that they are ready to verify the NFC ring Unlock app
-      // Alternatively we could email the user a password and tell them we emailed you your password..
-
     });
 
     $('body').on('click', '#simulateRead', function(){
@@ -280,8 +273,12 @@ nfcRing.ui = {
   },
 
   displayPage: function(page){ // Display a page
-    console.log("Location", nfcRing.location);
-    if(nfcRing.location !== "#writeRing"){
+    if(!page){
+      history.go(-(history.length - 1));
+      return false;
+    }
+    console.log("Location", nfcRing.userValues.location);
+    if(nfcRing.userValues.location !== "#writeRing"){
       $('#heatMap').css("opacity","0");
     }else{
       $('#heatMap').css("opacity","0.8");
@@ -290,7 +287,7 @@ nfcRing.ui = {
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
     nfcRing.ui.history.push(page); // Write the this page to the history stack
-    nfcRing.location = page;
+    nfcRing.userValues.location = page;
     var source = $('#'+page).html();
     var context = $('#contextContent').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
@@ -307,18 +304,15 @@ nfcRing.ui = {
 
     nfcRing.userValues.activity = false;
 
-    if (nfcRing.location == "index") {
-      // Clear history so back button on home page always leaves the app
-      console.log("Cleared app history");
-      history.go(-(history.length - 9999));
-      document.addEventListener("backbutton", nfcRing.ui.handleBack, true);
-    } else {
-      document.addEventListener("backbutton", nfcRing.ui.handleBack, false);
+    console.log("handling back");
+
+    if (nfcRing.userValues.location === "index") {
+      // Leave the app, this will prolly break Windows Phone
+      navigator.app.exitApp();
+    }else{
       nfcRing.ui.history.pop(); // drop the last item from the history array
       nfcRing.ui.displayPage(nfcRing.ui.history[nfcRing.ui.history.length-1]); // display the previous page
     }
-
-    // NOTE this is a bit more tricky in a single page app because you have to remember an array of what page you were on..
 
   },
 

@@ -9,7 +9,7 @@ nfcRing.nfcEvent = {
 
       nfc.addTagDiscoveredListener(function (nfcEvent) {
         console.log("NFC Event, IE tag or ring introduced to the app");
-        // nfcRing.nfcEvent.readOrWrite(nfcEvent);
+        nfcRing.nfcEvent.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -33,14 +33,29 @@ nfcRing.nfcEvent = {
 
   }, // create Event listeners
   readOrWrite: function(nfcEvent){ // Should we read or write to an NFC Event?
-    console.log("Read or write event");
+    console.log("Read or write event", nfcEvent, nfcRing.userValues.activity);
     $('#message').hide(); // hide help message
-    if (nfcRing.userValues.toWrite) {
+
+    if(nfcRing.userValues.activity == "write"){
       console.log("Doing write event", nfcEvent);
       nfcRing.nfcEvent.write(nfcEvent);
       $('#writeRing').show();
-    } else {
+    }
+
+    if(nfcRing.userValues.activity == "read"){
       nfcRing.nfcEvent.read(nfcEvent);
+    }
+
+    if(nfcRing.userValues.activity == "register"){
+      console.log("nfcEvent", nfcEvent);
+      nfcRing.userValues.uid = nfcEvent.tag.id.join(",");
+      nfcRing.registration.isValidUid(function(isValid){
+        if(isValid){
+          nfcRing.ui.displayPage("register");
+        }else{
+          alert("NOT NFC RING");
+        }
+      });
     }
   },
   write: function(nfcEvent){ // Write an NFC NDEf record

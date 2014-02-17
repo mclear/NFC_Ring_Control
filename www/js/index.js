@@ -20,6 +20,6 @@ var app = {
     }
 
     // Handle back events
-    nfcRing.ui.handleBack();
+    document.addEventListener("backbutton", nfcRing.ui.handleBack, false);
   }
 };
