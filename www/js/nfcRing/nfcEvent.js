@@ -122,6 +122,7 @@ nfcRing.nfcEvent = {
     });
   }, 
   read: function(nfcEvent){ // Read an NFC NDEF record
+    navigator.notification.vibrate(100);
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
     console.log("Reading", nfcEvent);

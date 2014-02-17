@@ -4,12 +4,13 @@ nfcRing.ui = {
       var wantHelp = confirm(html10n.get("index.wantHelpLong"), html10n.get("index.wantHelp"));
       nfcRing.ui.firstRunConfirm(wantHelp);
     }else{
+      // CAKE TO DO USE ASYNC
       var wantHelp = confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
     }
   },
 
   firstRunConfirm: function(wantHelp){
-    if(wantHelp){
+    if(wantHelp === 1){
       introJs().start();
     }
   },
@@ -106,14 +107,14 @@ nfcRing.ui = {
       } else {
         confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
           console.log("Share location response", shareLocation);
-          if (shareLocation) {
+          if (shareLocation === 1) {
             console.log("Set localstorage item dont ask sweet spot again");
             localStorage.setItem("dontAskSweetSpotAgain", true);
             nfcRing.ui.displayPage("sweetSpot");
           } else {
             localStorage.setItem("dontAskSweetSpotAgain", true);
           }
-        }, false, html10n.get("sweetSpot.done"));
+        }, false);
       }
     });
 
@@ -207,7 +208,7 @@ nfcRing.ui = {
 
     $('body').on('click', '#clearSweetSpot', function(){
       confirm(html10n.get("sweetSpot.areYouSureSS"), function(confirmed){
-        if(confirmed){
+        if(confirmed === 1){
           console.log("clearing sweet spot history");
           localStorage.setItem("dontAskSweetSpotAgain", false);
           localStorage.setItem("sweetSpotLocation", false);
@@ -217,7 +218,7 @@ nfcRing.ui = {
 
     $('body').on('click', '#clearPreviousActions', function(){
       confirm(html10n.get("sweetSpot.areYouSureActions"), function(confirmed){
-        if(confirmed){
+        if(confirmed === 1){
           console.log("Clearing previous actions");
           localStorage.setItem("actionHistory", "{}");
           $('#history-list').html("");
@@ -233,6 +234,7 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#sweetSpotBtn', function(){
+      $('body').removeClass('context-open');
       console.log("Showing sweet spot location page");
       nfcRing.ui.displayPage("sweetSpot");
     });

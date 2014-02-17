@@ -14,7 +14,8 @@ nfcRing.userValues = { // stuff like what value we're going to write
 
       setTimeout(function(){
         confirm(html10n.get('sweetSpot.looksGood'), function(correctLocation){
-          if(correctLocation){
+          console.log("correctLocation", correctLocation);
+          if(correctLocation === 1){
             localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
   
             console.log("Sending ", centerX, centerY, device.model, " to Database");
