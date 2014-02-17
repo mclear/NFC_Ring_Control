@@ -1,10 +1,10 @@
 nfcRing.ui = {
   firstRun: function(){
     if(device.model === "browser"){
+      // CAKE TO DO USE ASYNC -- See https://gist.github.com/EionRobb/9059612
       var wantHelp = confirm(html10n.get("index.wantHelpLong"), html10n.get("index.wantHelp"));
       nfcRing.ui.firstRunConfirm(wantHelp);
     }else{
-      // CAKE TO DO USE ASYNC
       var wantHelp = confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
     }
   },
@@ -39,11 +39,13 @@ nfcRing.ui = {
   domListenersInit: function(){
 
     // In the browser when we use the back button it doesn't fire the handleBack or whatever so sometimes we have to catch it
+    // None fo this shit seems to work..
     $(window).on('hashchange', function() {
       if(window.location.hash.split("#")[1] !== nfcRing.userValues.location){
         nfcRing.ui.displayPage(window.location.hash.split("#")[1]);
         // I don't like these bits..  We'd be better off using .emit / .on
         console.log(window.location.hash.split("#")[1]);
+/*
         if(window.location.hash.split("#")[1] == "action"){
           console.log("Adding actions");
           nfcRing.ui.addActions();
@@ -51,6 +53,7 @@ nfcRing.ui = {
         if(window.location.hash.split("#")[1] == "option"){
           $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
         }
+*/
       }
     });
 
@@ -58,7 +61,7 @@ nfcRing.ui = {
 
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
-      nfcRing.ui.addActions();
+//      nfcRing.ui.addActions();
     });
 
     $('body').on('click', '#readBtn', function(){
@@ -292,7 +295,11 @@ nfcRing.ui = {
     $('#back-btn').remove();
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
-    nfcRing.ui.history.push(page); // Write the this page to the history stack
+
+    // never allow the app to get stuck in a loop on pages..
+    if(nfcRing.ui.history[nfcRing.ui.history.length-1] !== page){
+      nfcRing.ui.history.push(page); // Write the this page to the history stack
+    }
     nfcRing.userValues.location = page;
     var source = $('#'+page).html();
     var context = $('#contextContent').html(); // always include context nav on every page :)
@@ -301,6 +308,13 @@ nfcRing.ui = {
     $("#mainContents").html(template());
     $("#context").html(context()); // TODO fix me at the moment taking up most of the UI
     // console.log("Writing ", source, " to #container");
+    if(page === "action"){
+      console.log("Rendering actions");
+      nfcRing.ui.addActions();
+    }
+    if(page === "option"){
+      $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
+    }
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
