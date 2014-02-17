@@ -21,6 +21,9 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
+    <feature name="AppVersion">
+        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
+    </feature>
     <name>NFC Ring Control</name>
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
