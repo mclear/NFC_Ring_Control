@@ -4,8 +4,10 @@ nfcRing.nfcEvent = {
       console.log("NFC Found, adding listener");
       // Android requires both listeners -- It then choses which event to fire
       // Because we currently only support Android and WP we don't need to wrap this in an If
+/*
       nfc.addTagDiscoveredListener(function (nfcEvent) {
-        nfcRing.readOrWrite(nfcEvent);
+        console.log("NFC Event, IE tag or ring introduced to the app");
+        nfcRing.nfcEvent.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -13,9 +15,10 @@ nfcRing.nfcEvent = {
         alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
-
+*/
       nfc.addNdefListener(function (nfcEvent) {
-        nfcRing.readOrWrite(nfcEvent);
+        console.log("RING EVENT BEGINS");
+        nfcRing.nfcEvent.readOrWrite(nfcEvent);
         console.log("Attempting to bind to NFC NDEF");
       }, function () {
         console.log("Success.  Listening for rings NDEF records..");
@@ -32,17 +35,17 @@ nfcRing.nfcEvent = {
     $('#message').hide(); // hide help message
     if (nfcRing.userValues.toWrite) {
       console.log("Doing write event", nfcEvent);
-      nfcRing.write(nfcEvent);
+      nfcRing.nfcEvent.write(nfcEvent);
       $('#writeRing').show();
     } else {
-      nfcRing.read(nfcEvent);
+      nfcRing.nfcEvent.read(nfcEvent);
     }
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
     // If the string is a valid URL
-    var isURL = nfcRing.validURL(nfcRing.userValues.toWrite);
+    var isURL = nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite);
 
     if (isURL) {
       console.log("URL Record");
@@ -87,7 +90,7 @@ nfcRing.nfcEvent = {
       // This may seem crazy but WP needs to continue to call this but we should wait two seconds
       if (device.platform === "Win32NT") {
         setTimeout(function () {
-          nfcRing.write(false)
+          nfcRing.nfcEvent.write(false)
         }, 2000);
       }else{
         $('#needHelp').hide(); // dont hide this on win32 but do if there is a write event on any other device
@@ -97,7 +100,7 @@ nfcRing.nfcEvent = {
       console.log("Inlay write failed");
       // This may seem crazy but WP needs to continue to call this..
       if (device.platform === "Win32NT") {
-        nfcRing.write(false)
+        nfcRing.nfcEvent.write(false)
       }
     });
   }, 

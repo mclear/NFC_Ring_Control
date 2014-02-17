@@ -47,6 +47,7 @@ nfcRing.ui = {
 
     $('body').on('click', '#readBtn', function(){
       nfcRing.heatmap.init();
+      nfcRing.userValues.toWrite = false;
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
       nfcRing.ui.prepareWritePage("read");
     });
@@ -307,6 +308,9 @@ nfcRing.ui = {
   },
 
   prepareWritePage: function(eventType){
+    // Begin listening for nfc events
+    nfcRing.nfcEvent.init();
+
     nfcRing.userValues.activity = eventType;
     
     if(eventType === "write" && device.model == "browser"){

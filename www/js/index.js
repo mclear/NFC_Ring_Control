@@ -22,8 +22,5 @@ var app = {
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
-
-    nfcRing.nfcEvent.init();
-
   }
 };
