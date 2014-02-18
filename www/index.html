@@ -198,6 +198,20 @@ if(typeof cordova !== 'undefined'){
   device = {};
   device.platform = "browser";
   device.model = "browser";
+  /*
+  navigator.notification = {
+    confirm: function (message, confirmCallback, title, buttonLabels) {
+      setTimeout(function (){
+        if (window.confirm(message)) {
+          confirmCallback(1);
+        }
+        else{
+          confirmCallback(2);
+        }
+      }, 0);
+    }
+  };
+  */
 }
 </script>
 </body>

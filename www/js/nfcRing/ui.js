@@ -1,7 +1,6 @@
 nfcRing.ui = {
   firstRun: function(){
-    console.log("um");
-    confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
+    navigator.notification.confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
   },
 
   firstRunConfirm: function(wantHelp){
@@ -102,7 +101,7 @@ nfcRing.ui = {
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
         alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
       } else {
-        confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
+        navigator.notification.confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
           console.log("Share location response", shareLocation);
           if (shareLocation === 1) {
             console.log("Set localstorage item dont ask sweet spot again");
@@ -203,7 +202,7 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#clearSweetSpot', function(){
-      confirm(html10n.get("sweetSpot.areYouSureSS"), function(confirmed){
+      navigator.notification.confirm(html10n.get("sweetSpot.areYouSureSS"), function(confirmed){
         if(confirmed === 1){
           console.log("clearing sweet spot history");
           localStorage.setItem("dontAskSweetSpotAgain", false);
@@ -213,7 +212,7 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#clearPreviousActions', function(){
-      confirm(html10n.get("sweetSpot.areYouSureActions"), function(confirmed){
+      navigator.notification.confirm(html10n.get("sweetSpot.areYouSureActions"), function(confirmed){
         if(confirmed === 1){
           console.log("Clearing previous actions");
           localStorage.setItem("actionHistory", "{}");

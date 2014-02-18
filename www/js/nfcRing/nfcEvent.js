@@ -82,7 +82,7 @@ nfcRing.nfcEvent = {
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
         alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
       } else {
-        confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
+        navigator.notification.confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
           console.log("Share location response", shareLocation);
           if (shareLocation === 1) {
             console.log("Set localstorage item dont ask sweet spot again");
