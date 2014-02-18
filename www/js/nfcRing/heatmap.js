@@ -101,8 +101,7 @@ nfcRing.heatmap = {
     var testObject = new TestObject();
     testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.uid}, {
       success: function(object) {
-        // TODO: i18n me
-        alert(html10n.get("sweetSpot.yay"));
+        alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
         nfcRing.ui.displayPage("index"); // Return user back to start page
       },
       failure: function(e){

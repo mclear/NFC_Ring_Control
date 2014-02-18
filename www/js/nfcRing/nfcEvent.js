@@ -82,26 +82,26 @@ nfcRing.nfcEvent = {
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
         alert(html10n.get("writeRing.ready"), false, html10n.get("writeRing.woohoo"));
       } else {
-        var shareLocation = confirm(html10n.get("sweetSpot.askToShare"), false, html10n.get("sweetSpot.done"));
-      }
-
-      console.log("Share location response", shareLocation);
-      if (shareLocation) {
-        console.log("Set localstorage item dont ask sweet spot again");
-        localStorage.setItem("dontAskSweetSpotAgain", true);
-        console.log("nfcEvent", nfcEvent)
-        if (!nfcEvent) nfcEvent = {}; // Hack as WP8 doesn't pass event always
-        if (!nfcEvent.tag) nfcEvent.tag = {}; // Continued Hack
-        if (nfcEvent.tag.id) {
-          var idStr = nfcEvent.tag.id.join(",");
-        } else {
-          var idStr = "false";
-        }
-        // Why do I need ID?
-        nfcRing.userValues.uid = idStr;
-        nfcRing.ui.displayPage("sweetSpot");
-      } else {
-        localStorage.setItem("dontAskSweetSpotAgain", true);
+        confirm(html10n.get("sweetSpot.askToShare"), function(shareLocation){
+          console.log("Share location response", shareLocation);
+          if (shareLocation === 1) {
+            console.log("Set localstorage item dont ask sweet spot again");
+            localStorage.setItem("dontAskSweetSpotAgain", true);
+            console.log("nfcEvent", nfcEvent)
+            if (!nfcEvent) nfcEvent = {}; // Hack as WP8 doesn't pass event always
+            if (!nfcEvent.tag) nfcEvent.tag = {}; // Continued Hack
+            if (nfcEvent.tag.id) {
+              var idStr = nfcEvent.tag.id.join(",");
+            } else {
+              var idStr = "false";
+            }
+            // Why do I need ID?
+            nfcRing.userValues.uid = idStr;
+            nfcRing.ui.displayPage("sweetSpot");
+          } else {
+            localStorage.setItem("dontAskSweetSpotAgain", true);
+          }
+        }, html10n.get("sweetSpot.done")); 
       }
 
       // This may seem crazy but WP needs to continue to call this but we should wait two seconds

@@ -199,14 +199,6 @@ if(typeof cordova !== 'undefined'){
   device.platform = "browser";
   device.model = "browser";
 }
-
-if(localStorage.getItem("firstRunCompleted") !== "true" ){
-  // Show a first run dialog
-  nfcRing.ui.firstRun();
-
-  // If it was the first run we can save this and never do this event again
-  localStorage.setItem("firstRunCompleted", true);
-}
 </script>
 </body>
 </html>

@@ -1,12 +1,7 @@
 nfcRing.ui = {
   firstRun: function(){
-    if(device.model === "browser"){
-      // CAKE TO DO USE ASYNC -- See https://gist.github.com/EionRobb/9059612
-      var wantHelp = confirm(html10n.get("index.wantHelpLong"), html10n.get("index.wantHelp"));
-      nfcRing.ui.firstRunConfirm(wantHelp);
-    }else{
-      var wantHelp = confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
-    }
+    console.log("um");
+    confirm(html10n.get("index.wantHelpLong"), nfcRing.ui.firstRunConfirm, html10n.get("index.wantHelp"));
   },
 
   firstRunConfirm: function(wantHelp){
@@ -286,6 +281,7 @@ nfcRing.ui = {
       history.go(-(history.length - 1));
       return false;
     }
+
     console.log("Location", nfcRing.userValues.location);
     if(nfcRing.userValues.location !== "#writeRing"){
       $('#heatMap').css("opacity","0");
@@ -315,6 +311,18 @@ nfcRing.ui = {
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
     }
+    setTimeout(function(){
+      if(page === "index"){
+        if(localStorage.getItem("firstRunCompleted") !== "true" ){
+          // Show a first run dialog
+          nfcRing.ui.firstRun();
+  
+          // If it was the first run we can save this and never do this event again
+          localStorage.setItem("firstRunCompleted", true);
+        }
+      }
+    },200); 
+
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
