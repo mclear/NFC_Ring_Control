@@ -56,7 +56,6 @@ nfcRing.ui = {
 
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
-//      nfcRing.ui.addActions();
     });
 
     $('body').on('click', '#readBtn', function(){
@@ -178,9 +177,8 @@ nfcRing.ui = {
       nfcRing.userValues.action = key.toLowerCase();;
       $('.optionName').html('<h2>' + label + '</h2>');
       /*
-      // $('#optionInput').attr("placeholder", actions[key].placeHolder);
-      // $('form > label').text(actions[key].optionText);
-      
+        $('#optionInput').attr("placeholder", actions[key].placeHolder);
+        $('form > label').text(actions[key].optionText);
       */
     });
 
@@ -308,9 +306,15 @@ nfcRing.ui = {
       console.log("Rendering actions");
       nfcRing.ui.addActions();
     }
+
+    if(nfcRing.userValues.activity === "register" && nfcRing.userValues.location === "writeRing"){
+      nfcRing.ui.prepareWritePage("register");
+    }
+
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
     }
+
     setTimeout(function(){
       if(page === "index"){
         if(localStorage.getItem("firstRunCompleted") !== "true" ){
@@ -329,12 +333,9 @@ nfcRing.ui = {
   }, 
 
   handleBack: function(){  // Init the Back Button event handlers
-
-    nfcRing.userValues.activity = false;
-
     console.log("handling back");
-
     if (nfcRing.userValues.location === "index") {
+      nfcRing.userValues.activity = false;
       // Leave the app, this will prolly break Windows Phone
       navigator.app.exitApp();
     }else{
