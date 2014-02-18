@@ -9,7 +9,7 @@ nfcRing.nfcEvent = {
 
       nfc.addTagDiscoveredListener(function (nfcEvent) {
         console.log("NFC Event, IE tag or ring introduced to the app");
-        nfcRing.nfcEvent.readOrWrite(nfcEvent);
+        nfcRing.nfcEvent.readOrWrite(nfcEvent, "notNDEF");
         console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -18,7 +18,7 @@ nfcRing.nfcEvent = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
       nfc.addNdefListener(function (nfcEvent) {
-        nfcRing.nfcEvent.readOrWrite(nfcEvent);
+        nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
         console.log("Attempting to bind to NFC NDEF");
       }, function () {
         console.log("Success.  Listening for rings NDEF records..");
@@ -32,8 +32,8 @@ nfcRing.nfcEvent = {
     }
 
   }, // create Event listeners
-  readOrWrite: function(nfcEvent){ // Should we read or write to an NFC Event?
-    console.log("Read or write event", nfcEvent, nfcRing.userValues.activity);
+  readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
+    console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
     $('#message').hide(); // hide help message
 
     if(nfcRing.userValues.activity == "write"){
@@ -126,11 +126,31 @@ nfcRing.nfcEvent = {
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
     console.log("Reading", nfcEvent);
+    var record = nfcEvent;
     var ring = nfcEvent.tag;
+    var record = nfcEvent.tag.ndefMessage[0];
+    var recordType = nfc.bytesToString(record.type);
+
+    if (recordType === "T") {
+      var langCodeLength = record.payload[0],
+      text = record.payload.slice((1 + langCodeLength), record.payload.length);
+      payload = nfc.bytesToString(text);
+    } else if (recordType === "U") {
+      console.log("URL");
+      var identifierCode = record.payload.shift(),
+      uri =  nfc.bytesToString(record.payload);
+      if (identifierCode !== 0) {
+        console.log("WARNING: uri needs to be decoded");
+      }
+      payload = uri;
+    } else {
+        // kludge assume we can treat as String
+        payload = nfc.bytesToString(record.payload); 
+    }
+
     if(ring.ndefMessage){
-      ringData = nfc.bytesToString(ring.ndefMessage[0].payload); // TODO make this less fragile 
-      console.log(ringData, false, "Ring contents:");
-      alert(ringData, false, html10n.get("readRing.contents"));
+      console.log(payload, false, "Ring contents:");
+      alert(payload, false, html10n.get("readRing.contents"));
     }else{
       alert("No NDEF data found", false, "Unable to read");
     }
