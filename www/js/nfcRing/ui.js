@@ -246,9 +246,8 @@ nfcRing.ui = {
 
     // click action for previously historical actions
     $('body').on('click', '#history li > .historical', function(){
-      // $('#action').hide();
       $('body').toggleClass('show-history').toggleClass('context-open');
-      var action = $(this).data("action");
+      var action = $(this).find("div").text();
       nfcRing.userValues.toWrite = action;
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing");

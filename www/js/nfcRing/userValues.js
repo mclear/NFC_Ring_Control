@@ -36,9 +36,10 @@ nfcRing.userValues = { // stuff like what value we're going to write
 
     set: function(){ // Store the event in the actionHistory
       var actionHistory = JSON.parse(localStorage.getItem("actionHistory") || "{}");
-//      if(ts) delete nfcRing.actionHistory[ts]; // Deletes previous record of this action
       console.log("Previous action History", actionHistory, "pushing ", nfcRing.userValues.toWrite);
       var ts = new Date().getTime();
+
+      // Escape nfcRing.userValues.toWrite value
       actionHistory[ts] = nfcRing.userValues.toWrite;
       console.log("obj historY", ts, actionHistory);
       actionHistory = JSON.stringify(actionHistory);
@@ -56,8 +57,8 @@ nfcRing.userValues = { // stuff like what value we're going to write
         var action = this[key];
         key = parseInt(key);
         var ts = new Date(key).toISOString();
-        // TODO i18n me!
-        $('#history ul').append('<li><a data-key="'+key+'" data-action="'+action+'" class="historical">' + action + '<span>Action created/used <em class="timeago" title="'+ts+'"></span></span></a></em>');
+        $('#history ul').append('<li><a data-key="'+key+'" class="historical"><div id="'+key+'"></div><span>Action created/used <em class="timeago" title="'+ts+'"></em></span></a></li>');
+        $('#'+key).text(action);
       });
     },
 
