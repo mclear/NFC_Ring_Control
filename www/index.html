@@ -1,45 +1,217 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name = "format-detection" content = "telephone=no"/>
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-	<link rel="stylesheet" type="text/css" href="css/nfcringapp.min.css" />
-	<title>NFC Ring App</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name = "format-detection" content = "telephone=no"/>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <script type="text/javascript">var nfcRing = {}</script>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+  <script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
+  <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
+  <script type="text/javascript" src="js/heatmap.js"></script>
+  <script type="text/javascript" src="js/nfcRing/actions.js"></script>
+  <script type="text/javascript" src="js/nfcRing/heatmap.js"></script>
+  <script type="text/javascript" src="js/nfcRing/nfcEvent.js"></script>
+  <script type="text/javascript" src="js/nfcRing/ui.js"></script>
+  <script type="text/javascript" src="js/nfcRing/userValues.js"></script>
+  <script type="text/javascript" src="js/nfcRing/registration.js"></script>
+  <script type="text/javascript" src="js/handlebars.js"></script>
+  <script type="text/javascript" src="js/html10n.js"></script>
+  <script type="text/javascript" src="js/intro.js"></script>
+  <script type="text/javascript" src="js/fastclick.js"></script>
+  <script type="text/javascript" src="js/timeago.js"></script>
+  <script type="text/javascript" src="js/magpop.js"></script>
+  <script type="text/javascript" src="js/parseDetails.js"></script>
+
+
+  <link rel="localizations" type="application/l10n+json" href="locales.json">
+  <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
+  <link rel="stylesheet" type="text/css" href="css/introjs.css" />
+  <title>NFC Ring Control App</title>
 </head>
 <body>
 
-<div class="container">
-	<div class="mainContents">
-
-		<div id="landing" class="landing">
-			<header id="header">
-				<div id="logo"><img src="img/nfcring-logo.png"></div>
-			</header>
-		  <div class="count"></div>
-		  <h2>What do you want to do today?</h2>
-		  <ul class="link-list">
-		    <li><a href="createAction.html" id="createNew" class="icon icon-plus">Create<span> Write a new action to your ring</span></a></li>
-				<!-- <li><button type="button" id="scan" class="icon icon-facebook">Scan QR Code from my computer</button></li> -->
-		    <li><a href="readAction.html" id="read" class="icon icon-eye">Read<span> See what's on your ring</span></a></li>
-        <li><a href="mailto:support@nfcring.com" id="read" class="icon icon-envelop">Feedback<span> Love something or want to change something?  Let us know</span></a></li>
-		  </ul>
-		</div>
-
-	</div>
+<div id="heatMap"></div>
+<div id="container" class="container">
+  <div id="mainContents"></div>
+  <div id="context"></div>
+  <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
 </div>
+<script id="contextContent" type="x-handlebars-template">
+  <div id="context-nav">
+    <div id="options-list">
+      <h3>Options</h3>
+      <ul>
+        <li><a href="#" id="viewHistory">{{html10n "context.recentActions"}}</a></li>
+        <li><a href="#" id="clearPreviousActions">{{html10n "settings.previousActionsDescription"}}</a></li>
+        <li><a href="#" id="clearSweetSpot">{{html10n "settings.clearMySweetSpotDescription"}}</a></li>
+        <li><a href="#" id="sweetSpotBtn">{{html10n "settings.mySweetSpotDescription"}}</a></li>
+      </ul>
+      <div id="geninfo">
+        <p id="model">{{html10n "settings.phoneModel"}}: <span id="modelName"></span</p>
+        <p id="version">{{html10n "settings.version"}}: <span id="versionNumber"></span></p>
+      </div>
+    </div>
+    <div id="history">
+      <h3>{{html10n "context.history"}}</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+</script>
 
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script id="index" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
+  <div class="count"></div>
+  <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
+  <ul class="link-list">
+    <li><a id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
+    <li><a id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
+    <li><a id="settingsBtn" class="icon icon-settings" data-step="3" data-intro="{{html10n "index.settingsDescriptionMore"}}">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
+    <li><a id="registerBtn" class="icon icon-settings" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
+    <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop" data-step="5" data-intro="{{html10n "index.feedbackDescriptionMore"}}">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
+
+  </ul>
+</script>
+
+<script id="action" class="step action" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
+  <h2 class=>{{html10n "action.whatDoYouWantYourRingToDo"}}</h2>
+  <div class="actionContents">
+    <div class="ringActions">
+      <ul id="ringActions" class="link-list"></ul>
+    </div>
+  </div>
+</script>
+
+<script id="option" class="step option" type="x-handlebars-template">
+  <header id="header">
+    <div id="title"></div>
+  </header>
+  <div class="actionName optionName"></div>
+  <div class="actionContents">
+    <form id="optionForm">
+      <label for="optionInput"></label>
+      <input name="option" id="optionInput" type="text">
+      <input type="hidden" id="actionHidden" name="action">
+      <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+    </form>
+  </div>
+</script>
+
+<script id="writeRing" class="step writeRing" type="x-handlebars-template">
+  <header id="header">
+    <div id="title"></div>
+  </header>
+  <div class="actionName" id="writeRingTitle">
+  </div>
+  <ul class="link-list bottom">
+    <li><a id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
+  </ul>
+  <div id="needHelp"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
+  <div id="helpContents" class="white-popup mfp-hide">
+    <h3 class="icon icon-support">{{html10n "help.helpTips"}}</h3>
+    <ul>
+      <li>{{html10n "help.facing"}}</li>
+      <li>{{html10n "help.cases"}}</li>
+      <li>{{html10n "help.volume"}}</li>
+      <li>{{html10n "help.on"}}</li>
+      <li>{{html10n "help.slowly"}}</li>
+      <li>{{html10n "help.another"}}</li>
+      <li class="win32">{{html10n "help.winPhone"}}</li>
+    </ul>
+    <button class="button" id="helpClose">{{html10n "help.gotIt"}}</button>
+  </div>
+</script>
+
+<script id="settings" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
+  <h2>{{html10n "index.settings"}}</h2>
+  <ul class="link-list">
+    <li><a id="clearSweetSpot" class="icon icon-settings">{{html10n "settings.clearMySweetSpot"}}<span>{{html10n "settings.clearMySweetSpotDescription"}}</span></a></li>
+    <li><a id="clearPreviousActions" class="icon icon-settings">{{html10n "settings.previousActions"}}<span>{{html10n "settings.previousActionsDescription"}}</span></a></li>
+    <li><a id="sweetSpotBtn" class="icon icon-settings">{{html10n "settings.mySweetSpotDescription"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></a></li>
+
+  </ul>
+  <div id="geninfo">
+    <p id="model">{{html10n "settings.phoneModel"}}: <span id="modelName"></span</p>
+    <p id="version">{{html10n "settings.version"}}: <span id="versionNumber"></span></p>
+  </div>
+</div>
+</script>
+
+<script id="sweetSpot" type="x-handlebars-template">
+  <div id="sweetSpotOverlay">
+    <header id="header">
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </header>
+
+    <div id="landing" class="landing">
+    <div class="count"></div>
+      <h2 class="actionName">{{html10n "sweetSpot.pressTheScreen"}}</h2>
+    </div>
+  </div>
+  <div id="bubble"></div>
+</script>
+
+<script id="register" type="x-handlebars-template">
+  <header id="header">
+    <div id="logo"><img src="img/nfcring-logo.png"></div>
+  </header>
+
+  <h2 class="actionName">{{html10n "register.title"}}</h2>
+  <form id="registerEmail">
+    <h2>{{html10n "register.emailTitle"}}</h2>
+    <input type="email" class='textInput' id="emailInput">
+    <h2>{{html10n "register.passwordTitle"}}</h2>
+    <input type="password" class='textInput' id="passwordInput">
+    <h2>{{html10n "register.passwordAgainTitle"}}</h2>
+    <input type="password" class='textInput' id="passwordAgainInput">
+    <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+  </form>    
+</script>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-
 <script type="text/javascript">
-// Set the location to the index page
-nfcRing.location = "index";
+nfcRing.userValues.location = "index"
 // Initialize the page
-app.initialize();
-</script>
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
+nfcRing.ui.domListenersInit();
 
+if(typeof cordova !== 'undefined'){
+  console.log("initializing app");
+  app.initialize();
+}else{
+  console.log("This is not running as a Cordova app, we will fake cordova");
+  device = {};
+  device.platform = "browser";
+  device.model = "browser";
+
+  navigator.notification = {
+    confirm: function (message, confirmCallback, title, buttonLabels) {
+      setTimeout(function (){
+        if (window.confirm(message)) {
+          confirmCallback(1);
+        }
+        else{
+          confirmCallback(2);
+        }
+      }, 0);
+    }
+  };
+}
+</script>
 </body>
 </html>

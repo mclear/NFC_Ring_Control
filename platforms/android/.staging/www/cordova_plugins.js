@@ -32,6 +32,13 @@ module.exports = [
         "file": "plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js",
         "id": "com.chariotsolutions.nfc.plugin.NFC",
         "runs": true
+    },
+    {
+        "file": "plugins/uk.co.whiteoctober.cordova.AppVersion/www/AppVersionPlugin.js",
+        "id": "uk.co.whiteoctober.cordova.AppVersion.AppVersionPlugin",
+        "clobbers": [
+            "cordova.getAppVersion"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -40,7 +47,8 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.2.5",
     "org.apache.cordova.vibration": "0.3.6",
     "org.apache.cordova.device": "0.2.7",
-    "com.chariotsolutions.nfc.plugin": "0.4.7"
+    "com.chariotsolutions.nfc.plugin": "0.4.7",
+    "uk.co.whiteoctober.cordova.AppVersion": "0.1.3"
 }
 // BOTTOM OF METADATA
 });
