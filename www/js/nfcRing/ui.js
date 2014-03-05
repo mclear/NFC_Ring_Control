@@ -12,7 +12,6 @@ nfcRing.ui = {
   addActions: function(){
     // Load each action icon and text
     $.each(nfcRing.actions, function (key, action) {
-      console.log("action", action);
       if (!action.image) {
         action.image = key.toLowerCase() + ".png";
       }
