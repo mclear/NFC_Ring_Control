@@ -19,7 +19,7 @@ nfcRing.actions = {
       return this.prefix + option
     }
   },
-  website: {
+  link: {
     label: "Link",
     description: "Link to a web address",
     optionText: "What is the URL of the website?",

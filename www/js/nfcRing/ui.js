@@ -38,22 +38,23 @@ nfcRing.ui = {
         nfcRing.ui.displayPage(window.location.hash.split("#")[1]);
         // I don't like these bits..  We'd be better off using .emit / .on
         console.log(window.location.hash.split("#")[1]);
-/*
-        if(window.location.hash.split("#")[1] == "action"){
-          console.log("Adding actions");
-          nfcRing.ui.addActions();
-        }
-        if(window.location.hash.split("#")[1] == "option"){
-          $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
-        }
-*/
       }
+    });
+
+    // Swipe event
+    var element = document.getElementById('context');
+    var hammertime = Hammer(element).on("swiperight", function(event) {
+      $('body').removeClass('context-open');
     });
 
     nfcRing.ui.history = []; // Create blank history stack
 
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
+    });
+
+    $('body').on('click', '#mainContents, #heatMap', function(){
+      $('body').removeClass('context-open');
     });
 
     $('body').on('click', '#readBtn', function(){
@@ -272,6 +273,9 @@ nfcRing.ui = {
   },
 
   displayPage: function(page){ // Display a page
+    console.log("remove context open class");
+    $('body').removeClass('context-open'); // hide context menu
+
     if(!page){
       history.go(-(history.length - 1));
       return false;
@@ -330,6 +334,10 @@ nfcRing.ui = {
   }, 
 
   handleBack: function(){  // Init the Back Button event handlers
+    if($("body").hasClass("context-open")){
+      $("body").removeClass("context-open");
+      return;
+    }
     console.log("handling back");
     if (nfcRing.userValues.location === "index") {
       nfcRing.userValues.activity = false;

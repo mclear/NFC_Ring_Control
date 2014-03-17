@@ -62,7 +62,7 @@ nfcRing.nfcEvent = {
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
     // If the string is a valid URL
-    var isURL = nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite);
+    var isURL = nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite.trim());
 
     if (isURL) {
       console.log("URL Record");
