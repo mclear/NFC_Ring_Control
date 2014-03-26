@@ -1,5 +1,7 @@
 # Getting the development environment setup
 
+[Video showing this](https://www.youtube.com/watch?v=xirlKmCo7KA&list=UUdbzIfrpmzGCJ2j1LjqW9Gw)
+
 Prereq to build cordova = NodeJS, linux, Java, Ant, Android dev tools, git
 
 ```
