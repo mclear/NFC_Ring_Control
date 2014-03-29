@@ -1,7 +1,6 @@
 nfcRing.heatmap = {
   coOrds: {}, // The Co-Ordinates we have stored for this phone
   coOrdData: {
-    max: 10,
     data: []
   },
 
