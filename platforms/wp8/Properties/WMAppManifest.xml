@@ -4,7 +4,7 @@
     <Languages xmlns="">
         <Language code="en-US" />
     </Languages>
-    <App Author="NFC Ring Control author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone" Genre="apps.normal" ProductID="{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}" Publisher="NFC Ring Control" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="NFC Ring Control" Version="0.0.5" xmlns="">
+    <App Author="NFC Ring Control author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone" Genre="apps.normal" ProductID="{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}" Publisher="NFC Ring Control" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="NFC Ring Control" Version="0.1.0" xmlns="">
         <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
         <Capabilities>
             <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />

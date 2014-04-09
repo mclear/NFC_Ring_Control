@@ -221,126 +221,201 @@
         <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\config.xml" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\cordova.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\createAction.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\index.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\content.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\icons.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\mixins.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\nfcring-app.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\reset.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\less\vars.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\nfcringapp.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\nfcringapp.min.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\css\rung.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\icon.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\actionIcons.eot" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\android.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\blackberry.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\clone.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\cordova.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\loading.gif" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\nfcring-classic.jpg" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\nfcring-logo.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\phone-to-ring.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\img\windowsmobile.png" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\index.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\actions.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\heatmap.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\index.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\jquery-1.9.1.min.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\parse-1.2.9.min.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\js\parseDetails.js" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\readAction.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\scanQR.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www\shareLocation.html" />
-    </ItemGroup>
-    <ItemGroup>
         <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\Ndef.cs" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Plugins\com.chariotsolutions.nfc.plugin\NfcPlugin.cs" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />
+        <Content Include="www/config.xml" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\org.apache.cordova.vibration\www\vibration.js" />
+        <Content Include="www/cordova.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
+        <Content Include="www/cordova_plugins.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
+        <Content Include="www/css/.DS_Store" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www\cordova_plugins.js" />
+        <Content Include="www/css/index.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/introjs.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/content.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/icons.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/mixins.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/nfcring-app.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/reset.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/less/vars.less" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/nfcringapp.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/css/rung.css" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/actionIcons.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/android.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/cordova.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/loading.gif" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/nfcring-classic.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/nfcring-logo.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/phone-to-ring.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/windowsmobile.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/index.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/.DS_Store" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/fastclick.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/hammer.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/handlebars.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/heatmap.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/html10n.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/index.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/intro.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/jquery-1.9.1.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/magpop.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/actions.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/heatmap.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/nfcEvent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/registration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/ui.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/nfcRing/userValues.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/parse-1.2.9.min.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/parseDetails.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/js/timeago.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/br.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/de.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/en.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/es.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/fa.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/fi.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/fr.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/he.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/ko.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/lb.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/mk.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/oc.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/ru.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/sco.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/sv.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/tr.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/zh-hans.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.device/www/device.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.dialogs/www/notification.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/plugins/org.apache.cordova.vibration/www/vibration.js" />
     </ItemGroup>
 </Project>
