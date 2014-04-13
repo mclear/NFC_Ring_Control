@@ -3,6 +3,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name = "format-detection" content = "telephone=no"/>
+  
+  <script src="http://192.168.1.125:8080/target/target-script-min.js#anonymous"></script>
+  
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
   <script type="text/javascript">var nfcRing = {}</script>
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -35,11 +38,11 @@
 <div id="container" class="container">
   <div id="mainContents"></div>
   <div id="context"></div>
-  <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
 </div>
 <script id="contextContent" type="x-handlebars-template">
   <div id="context-nav">
     <div id="options-list">
+      <div id="nav-btn-close" class="menu-btn icon icon-close"></div>
       <h3>Options</h3>
       <ul>
         <li><a href="#" id="viewHistory">{{html10n "context.recentActions"}}</a></li>
@@ -53,6 +56,7 @@
       </div>
     </div>
     <div id="history">
+      <div id="back-btn" class="menu-btn icon icon-close"></div>
       <h3>{{html10n "context.history"}}</h3>
       <ul id="history-list"></ul>
     </div>
@@ -63,6 +67,7 @@
   <header id="header">
     <div id="title">
       <div id="logo"><img src="img/nfcring-logo.png"></div>
+      <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
     </div>
   </header>
   <div class="count"></div>
@@ -71,7 +76,7 @@
     <li><a id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
     <li><a id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
     <li><a id="settingsBtn" class="icon icon-settings" data-step="3" data-intro="{{html10n "index.settingsDescriptionMore"}}">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
-    <li><a id="registerBtn" class="icon icon-settings" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
+    <li><a id="registerBtn" class="icon icon-key" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
     <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop" data-step="5" data-intro="{{html10n "index.feedbackDescriptionMore"}}">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
 
   </ul>
@@ -80,6 +85,7 @@
 <script id="action" class="step action" type="x-handlebars-template">
   <header id="header">
     <div id="title">
+      <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
@@ -93,11 +99,14 @@
 
 <script id="option" class="step option" type="x-handlebars-template">
   <header id="header">
-    <div id="title"></div>
+    <div id="title">
+      <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
   </header>
   <div class="actionName optionName"></div>
   <div class="actionContents">
-    <form id="optionForm">
+    <form id="optionForm" class="centered">
       <label for="optionInput"></label>
       <input name="option" id="optionInput" type="text">
       <input type="hidden" id="actionHidden" name="action">
@@ -167,17 +176,18 @@
 
 <script id="register" type="x-handlebars-template">
   <header id="header">
+    <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
     <div id="logo"><img src="img/nfcring-logo.png"></div>
   </header>
 
   <h2 class="actionName">{{html10n "register.title"}}</h2>
-  <form id="registerEmail">
-    <h2>{{html10n "register.emailTitle"}}</h2>
-    <input type="email" class='textInput' id="emailInput">
-    <h2>{{html10n "register.passwordTitle"}}</h2>
-    <input type="password" class='textInput' id="passwordInput">
-    <h2>{{html10n "register.passwordAgainTitle"}}</h2>
-    <input type="password" class='textInput' id="passwordAgainInput">
+  <form id="registerEmail" class="centered">
+    <label for="registerEmail">{{html10n "register.emailTitle"}}</label>
+    <input type="email" class="textInput" id="emailInput" name="registerEmail">
+    <label for="registerPassword">{{html10n "register.passwordTitle"}}</label>
+    <input type="password" class="textInput" id="passwordInput" name="registerPassword">
+    <label for="registerPasswordConfirm">{{html10n "register.passwordAgainTitle"}}</label>
+    <input type="password" class="textInput" id="passwordAgainInput" name="registerPasswordConfirm">
     <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
   </form>    
 </script>

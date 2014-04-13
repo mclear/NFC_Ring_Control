@@ -225,6 +225,7 @@ nfcRing.ui = {
       console.log("Showing history");
       e.preventDefault();
       $('body').toggleClass('show-history');
+      $('#container > #trigger').append('<div id="back-btn" class="icon icon-back close-sub"></div>');
     });
 
     $('body').on('click', '#sweetSpotBtn', function(){
@@ -233,20 +234,17 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("sweetSpot");
     });
 
-    $('html').on('click', '#nav-btn', function() {
-      $('body').toggleClass('context-open');
-    });
-    
-    $('html').on('click', '#nav-btn-close', function() {
+    $('body').on('click', '#nav-btn', function() {
       $('body').toggleClass('context-open');
     });
 
-    $('html').on('click', '#back-btn', function() {
+    $('body').on('click', '#back-btn', function() {
+      $('#back-btn').remove();
       $('body').toggleClass('show-history');
     });
 
     // click action for previously historical actions
-    $('html').on('click', '#history li > .historical', function(){
+    $('body').on('click', '#history li > .historical', function(){
       $('body').toggleClass('show-history').toggleClass('context-open');
       var action = $(this).find("div").text();
       nfcRing.userValues.toWrite = action;
@@ -289,6 +287,7 @@ nfcRing.ui = {
     }else{
       $('#heatMap').css("opacity","0.8");
     }
+    $('#back-btn').remove();
     window.location.hash = '#'+page;
     console.log("Displaying page", page);
 

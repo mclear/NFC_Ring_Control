@@ -21,5 +21,8 @@ var app = {
 
     // Handle back events
     document.addEventListener("backbutton", nfcRing.ui.handleBack, false);
+
+    FastClick.attach(document.body);
+
   }
 };
