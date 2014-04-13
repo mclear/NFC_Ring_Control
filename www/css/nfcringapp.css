@@ -1025,7 +1025,7 @@ body.fillit {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #ebecec;
+  /*  	background:@grey; */
 }
 .container img {
   max-width: 100%;

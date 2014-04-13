@@ -1141,24 +1141,28 @@ actionName p {
   padding: 15px 2%;
   border: 1px solid #b8b8b8;
 }
-#optionForm label {
+form.centered label {
   font-size: 1.2em;
 }
-#optionForm #submit {
+form.centered #submit {
   width: 100%;
-  /*
-		&:after {
-			display: inline-block;
-			color: @orange;
-			font-size: 1.2em;
-			width:50px;
-			padding: 0;
-			vertical-align: middle;
-		}
-*/
 }
-#optionForm .icon-next:before {
+form.centered .icon-next:before {
   vertical-align: middle;
+}
+#registerEmail label {
+  font-size: 1.4em;
+  padding: 0 0 5px 0;
+}
+#registerEmail input.textInput {
+  display: block;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  font-size: 2em;
+  padding: 10px 2%;
+  border: 1px solid #b8b8b8;
+  text-align: center;
 }
 .count {
   display: none;
