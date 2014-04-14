@@ -236,9 +236,6 @@
         <Content Include="www/cordova_plugins.js" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www/css/.DS_Store" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www/css/index.css" />
     </ItemGroup>
     <ItemGroup>
@@ -266,10 +263,22 @@
         <Content Include="www/css/nfcringapp.css" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www/css/nfcringapp.min.css" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www/css/rung.css" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/img/actionIcons.eot" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/actionIcons.svg" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/actionIcons.ttf" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/img/actionIcons.woff" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/img/android.png" />
@@ -294,9 +303,6 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/index.html" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/js/.DS_Store" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/js/fastclick.js" />

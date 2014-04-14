@@ -14,30 +14,36 @@ nfcRing.heatmap = {
       }
 
       // Initialize the heatmap
-      var config = { // Our heatmap config
+      nfcRing.heatmap.config = { // Our heatmap config
         element: document.getElementById("heatMap"),
         radius: 30,
         opacity: 100
       }
 
+      nfcRing.heatmap.coOrdData = {};
+      nfcRing.heatmap.coOrdData.max = 20;
+      nfcRing.heatmap.coOrdData.data = [];
+
       $.each(nfcRing.heatmap.coOrds, function(k,v){
         var x = k.split(":")[0];
         var y = k.split(":")[1];
-        var coOrd = {
-          x: x,
-          y: y,
-          count: v*5
-        };
-
-        nfcRing.heatmap.coOrdData.data.push(coOrd);
-
+        x = Number(x);
+        y = Number(y);
+        if(x >= 0 && y >= 0){
+          var coOrd = {
+            x: x,
+            y: y,
+            count: v*10
+          };
+          nfcRing.heatmap.coOrdData.data.push(coOrd);
+        }
       });
 
-      console.log("initiating heatmap");
-      var heatmap = h337.create(config);
-      console.log("Writing data to heatmap", nfcRing.heatmap.coOrds, nfcRing.heatmap.coOrdData);
-      heatmap.store.setDataSet(nfcRing.heatmap.coOrdData);
-      console.log("Done writing data to the heatmap");
+      console.log("1. initiating heatmap");
+      window.hm = h337.create(nfcRing.heatmap.config);
+      console.log("2. Writing data to heatmap", nfcRing.heatmap.coOrdData);
+      window.hm.store.setDataSet(nfcRing.heatmap.coOrdData);
+      console.log("3. Done writing data to the heatmap");
     });
   }, 
 
@@ -72,7 +78,7 @@ nfcRing.heatmap = {
           if(results.length == 0){ // if there are no results
             console.log("no results from parse");
           }else{ // there are some heatmap results so let's draw em
-            console.log("Drawing heatmap");
+            console.log("0. Drawing heatmap");
             if($('#heatMap canvas').length < 1){
               nfcRing.heatmap.coOrds = coOrdinateCounter;
             }
