@@ -1240,8 +1240,8 @@ a.paddedIcon {
   top: 0;
   bottom: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  width:100%;
+  height:100%;
   z-index: 0;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
@@ -1254,6 +1254,14 @@ a.paddedIcon {
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+/*
+#heatmapArea{
+  position:absolute;
+  width:1000px;
+  height:1000px;
+  z-index:999;
+}
+*/
 .show-heatmap #heatMap {
   opacity: 1;
 }
