@@ -193,6 +193,7 @@ nfcRing.ui = {
     });
 
     $('body').on('submit', '#registerEmail', function(e){
+      e.preventDefault();
       // alert("This functionality is not ready yet..");
       if($('#passwordInput').val() === $('#passwordAgainInput').val()){
         nfcRing.registration.registerUser();
