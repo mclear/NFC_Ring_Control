@@ -34,6 +34,12 @@ nfcRing.nfcEvent = {
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
     console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
+
+    if(nfcRing.userValues.location !== "writeRing"){
+      console.log("We're not on a write or read page so do nothing");
+      return false;
+    }
+
     $('#message').hide(); // hide help message
 
     if(nfcRing.userValues.activity == "write"){
