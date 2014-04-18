@@ -1,4 +1,19 @@
 {
   "fr":"locales/fr.json", 
-  "en":"locales/en.json"
+  "en":"locales/en.json",
+  "br":"locales/br.json",
+  "de":"locales/de.json",
+  "es":"locales/es.json",
+  "fa":"locales/fa.json",
+  "fi":"locales/fi.json",
+  "he":"locales/he.json",
+  "ko":"locales/ko.json",
+  "lb":"locales/lb.json",
+  "mk":"locales/mk.json",
+  "oc":"locales/oc.json",
+  "ru":"locales/ru.json",
+  "sco":"locales/sco.json",
+  "sv":"locales/sv.json",
+  "tr":"locales/tr.json",
+  "zh-hans":"locales/zh-hans.json"
 }
