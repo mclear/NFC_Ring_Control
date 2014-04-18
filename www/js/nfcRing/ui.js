@@ -122,14 +122,22 @@ nfcRing.ui = {
       return (html10n != undefined ? html10n.get(str) : str);
     });
 
-    var language = document.cookie.match(/language=((\w{2,3})(-\w+)?)/);
+    // var language = document.cookie.match(/language=((\w{2,3})(-\w+)?)/);
+    var language = localStorage.getItem("language");
+
     if(!language) language = navigator.language;
     console.log("Setting language to ", language);
     nfcRing.userValues.language = language;
-    if(language) language = language[1];
+    $('.changeLanguage').val = language;
+    var languageName = $('#'+language).val();
+    // CAKE This is stil to do, we need the active language to be selected..
+
+    console.log("Setting language to ", language);
     html10n.bind('indexed', function() {
       html10n.localize([language, navigator.language, navigator.userLanguage, 'en'])
       console.log("language", language, navigator.language, navigator.userLanguage);
+      // $('.changeLanguage').html("Foo");
+      // $('.changeLanguage').html('<option value="'+language+'" id="'+language+'">'+languageName+'</option>') + $('.changeLanguage').html();
     })
     html10n.bind('localized', function(e) {
       console.log("Localized",e);
@@ -207,6 +215,7 @@ nfcRing.ui = {
     });
     $('body').on('change', '.changeLanguage', function(e){
       var language = e.target.value;
+      localStorage.setItem("language", language); // saves language
       console.log("change language to", language);
       html10n.localize(language);
     });
