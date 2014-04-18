@@ -123,14 +123,18 @@ nfcRing.ui = {
     });
 
     var language = document.cookie.match(/language=((\w{2,3})(-\w+)?)/);
+    if(!language) language = navigator.language;
+    console.log("Setting language to ", language);
+    nfcRing.userValues.language = language;
     if(language) language = language[1];
     html10n.bind('indexed', function() {
       html10n.localize([language, navigator.language, navigator.userLanguage, 'en'])
+      console.log("language", language, navigator.language, navigator.userLanguage);
     })
-    html10n.bind('localized', function() {
-      console.log("Localized");
-      document.documentElement.lang = html10n.getLanguage()
-      document.documentElement.dir = html10n.getDirection()
+    html10n.bind('localized', function(e) {
+      console.log("Localized",e);
+      document.documentElement.lang = html10n.getLanguage();
+      document.documentElement.dir = html10n.getDirection();
       nfcRing.ui.displayPage("index");
     });
 
@@ -200,6 +204,11 @@ nfcRing.ui = {
       }else{
         alert(html10n.get("register.passwordsDontMatch"));
       }
+    });
+    $('body').on('change', '.changeLanguage', function(e){
+      var language = e.target.value;
+      console.log("change language to", language);
+      html10n.localize(language);
     });
 
     $('body').on('click', '#clearSweetSpot', function(){
