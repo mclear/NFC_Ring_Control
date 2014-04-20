@@ -159,7 +159,6 @@ window.html10n = (function(window, document, undefined) {
   
   Loader.prototype.fetch = function(href, lang, cb) {
     var that = this
-    // console.log("href", href);
     if (this.cache[href]) {
       this.parse(lang, href, this.cache[href], cb)
       return;
@@ -176,7 +175,6 @@ window.html10n = (function(window, document, undefined) {
           var data = JSON.parse(xhr.responseText)
           that.cache[href] = data
           if(lang === "en"){
-            // console.log("Storing english, prolly the wrong place", data);
             window.entranslations = data; // this is bad.
           }
           // Pass on the contents for parsing
@@ -689,12 +687,9 @@ window.html10n = (function(window, document, undefined) {
    * @param langs An array of lang codes defining fallbacks
    */
   html10n.localize = function(langs) {
-    // console.log("localize");
     var that = this
     // if only one string => create an array
     if ('string' == typeof langs) langs = [langs]
-
-    // console.log("langs", langs);
 
     // Expand two-part locale specs
     var i=0
@@ -756,7 +751,6 @@ window.html10n = (function(window, document, undefined) {
   
   html10n.get = function(id, args) {
     var translations = html10n.translations
-    if(!translations) return consoleWarn('No translations available (yet)')
 
     // no translation so load english..
     if(!translations[id]){
@@ -767,10 +761,11 @@ window.html10n = (function(window, document, undefined) {
 
       // apply args
       str = substArguments(str, args);
-      // console.log("window.entrans", window.entranslations)
       consoleWarn('Unable to find string so used english string '+id);
       return str;
     }
+
+    if(!translations) return consoleWarn('No translations available (yet)')
     
     // apply macros
     var str = translations[id]

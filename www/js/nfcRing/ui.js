@@ -122,27 +122,26 @@ nfcRing.ui = {
       return (html10n != undefined ? html10n.get(str) : str);
     });
 
-    // var language = document.cookie.match(/language=((\w{2,3})(-\w+)?)/);
     var language = localStorage.getItem("language");
 
     if(!language) language = navigator.language;
     console.log("Setting language to ", language);
-    nfcRing.userValues.language = language;
-    $('.changeLanguage').val = language;
     var languageName = $('#'+language).val();
-    // CAKE This is stil to do, we need the active language to be selected..
 
     console.log("Setting language to ", language);
     html10n.bind('indexed', function() {
+      // we always localize to EN first so we have a cache of fallback strings..
+      html10n.localize("en");
       html10n.localize([language, navigator.language, navigator.userLanguage, 'en'])
       console.log("language", language, navigator.language, navigator.userLanguage);
-      // $('.changeLanguage').html("Foo");
-      // $('.changeLanguage').html('<option value="'+language+'" id="'+language+'">'+languageName+'</option>') + $('.changeLanguage').html();
+      nfcRing.userValues.language = language || navigator.language;
+      // $('.changeLanguage').val(nfcRing.userValues.language);
     })
     html10n.bind('localized', function(e) {
-      console.log("Localized",e);
       document.documentElement.lang = html10n.getLanguage();
       document.documentElement.dir = html10n.getDirection();
+      // nfcRing.userValues.language = language || navigator.language;
+      // $('.changeLanguage').val(nfcRing.userValues.language);
       nfcRing.ui.displayPage("index");
     });
 
@@ -334,6 +333,10 @@ nfcRing.ui = {
 
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
+    }
+ 
+    if(page === "settings"){
+      $('.changeLanguage').val(nfcRing.userValues.language);
     }
 
     setTimeout(function(){
