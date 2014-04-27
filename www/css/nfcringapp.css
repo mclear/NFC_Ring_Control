@@ -863,7 +863,8 @@ body.fillit {
   position: relative;
   z-index: 100;
 }
-#header #nav-btn {
+#header #nav-btn,
+#header #back-btn {
   height: 55px;
   width: 55px;
   position: absolute;
@@ -873,10 +874,16 @@ body.fillit {
   cursor: pointer;
   z-index: 99999;
 }
-#header #nav-btn:before {
+#header #nav-btn:before,
+#header #back-btn:before {
   color: #162132;
   vertical-align: middle;
   line-height: 55px;
+}
+#header #back-btn {
+  font-size: 2.8em;
+  right: auto;
+  left: 0;
 }
 #header #logo {
   padding: 15px 0 0 0;

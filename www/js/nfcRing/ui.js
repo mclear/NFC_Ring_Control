@@ -49,6 +49,10 @@ nfcRing.ui = {
 
     nfcRing.ui.history = []; // Create blank history stack
 
+    $('body').on('click', '.index', function(){
+      nfcRing.ui.displayPage("index");
+    });
+
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");
     });
