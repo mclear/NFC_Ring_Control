@@ -829,6 +829,7 @@ body.fillit {
 }
 .link-list li .changeLanguage {
   width: 100%;
+  max-width: 320px;
 }
 .link-list.bottom {
   position: absolute;
