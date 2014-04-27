@@ -20,7 +20,7 @@ nfcRing.ui = {
       if(!typeof action.descriptionI18n == 'object'){ // If it's an object the string value was missing so we return nada
          action.description = action.descriptionI18n;
       }
-      $('#ringActions').append('<li><a data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></a></li>');
+      $('#ringActions').append('<li><div data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></div></li>');
     });
 
   },
@@ -48,6 +48,10 @@ nfcRing.ui = {
     });
 
     nfcRing.ui.history = []; // Create blank history stack
+
+    $('body').on('click', '.index', function(){
+      nfcRing.ui.displayPage("index");
+    });
 
     $('body').on('click', '#actionBtn', function(){
       nfcRing.ui.displayPage("action");

@@ -23,7 +23,6 @@
   <script type="text/javascript" src="js/parseDetails.js"></script>
   <script type="text/javascript" src="js/hammer.min.js"></script>
 
-
   <link rel="localizations" type="application/l10n+json" href="locales.json">
   <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
   <link rel="stylesheet" type="text/css" href="css/introjs.css" />
@@ -70,19 +69,19 @@
   <div class="count"></div>
   <h2>{{html10n "index.whatDoYouWantToDoToday"}}</h2>
   <ul class="link-list">
-    <li><a id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></a></li>
-    <li><a id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></a></li>
-    <li><a id="settingsBtn" class="icon icon-settings" data-step="3" data-intro="{{html10n "index.settingsDescriptionMore"}}">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></a></li>
-    <li><a id="registerBtn" class="icon icon-key" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></a></li>
-    <li><a href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop" data-step="5" data-intro="{{html10n "index.feedbackDescriptionMore"}}">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></a></li>
-
+    <li><div id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></div></li>
+    <li><div id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></div></li>
+    <li><div id="settingsBtn" class="icon icon-settings" data-step="3" data-intro="{{html10n "index.settingsDescriptionMore"}}">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></div></li>
+    <li><div id="registerBtn" class="icon icon-key" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></div></li>
+    <li><div href="mailto:support@nfcring.com" id="feedbackBtn" class="icon icon-envelop" data-step="5" data-intro="{{html10n "index.feedbackDescriptionMore"}}">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></div></li>
   </ul>
 </script>
 
 <script id="action" class="step action" type="x-handlebars-template">
   <header id="header">
     <div id="title">
-      <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
+      <div id="back-btn" class="index icon icon-back"></div>
+      <div id="nav-btn" class="icon icon-settings selected"></div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
@@ -97,7 +96,7 @@
 <script id="option" class="step option" type="x-handlebars-template">
   <header id="header">
     <div id="title">
-      <div id="trigger"><div id="nav-btn" class="icon icon-settings selected"></div></div>
+      <div id="nav-btn" class="icon icon-settings selected"></div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
@@ -119,7 +118,7 @@
   <div class="actionName" id="writeRingTitle">
   </div>
   <ul class="link-list bottom">
-    <li><a id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</a></li>
+    <li><div id="finish" class="icon icon-exit">{{html10n "writeRing.finish"}}</div></li>
   </ul>
   <div id="needHelp"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
   <div id="helpContents" class="white-popup mfp-hide">
@@ -140,18 +139,19 @@
 <script id="settings" type="x-handlebars-template">
   <header id="header">
     <div id="title">
+      <div id="back-btn" class="index icon icon-back"></div>
       <div id="logo"><img src="img/nfcring-logo.png"></div>
     </div>
   </header>
   <h2>{{html10n "index.settings"}}</h2>
   <ul class="link-list">
-    <li><a id="clearSweetSpot" class="icon icon-settings">{{html10n "settings.clearMySweetSpot"}}<span>{{html10n "settings.clearMySweetSpotDescription"}}</span></a></li>
-    <li><a id="clearPreviousActions" class="icon icon-settings">{{html10n "settings.previousActions"}}<span>{{html10n "settings.previousActionsDescription"}}</span></a></li>
-    <li><a id="sweetSpotBtn" class="icon icon-settings">{{html10n "settings.mySweetSpotDescription"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></a></li>
-    <li><a id="changeLanguage" class="icon icon-settings">
+    <li><div id="clearSweetSpot" class="icon icon-remove">{{html10n "settings.clearMySweetSpot"}}<span>{{html10n "settings.clearMySweetSpotDescription"}}</span></div></li>
+    <li><div id="clearPreviousActions" class="icon icon-remove">{{html10n "settings.previousActions"}}<span>{{html10n "settings.previousActionsDescription"}}</span></div></li>
+    <li><div id="sweetSpotBtn" class="icon icon-download">{{html10n "settings.mySweetSpotDescription"}}<span>{{html10n "settings.mySweetSpotDescription"}}</span></div></li>
+    <li><div id="changeLanguage" class="icon icon-earth">
       {{html10n "settings.changeLanguage"}}
-      <p>
       <select class="changeLanguage">
+<!--         <option value="" disabled selected>Select</option> -->
         <option value="en">English</option>
         <option value="fr">Français</option>
         <option value="br">Breton</option>
@@ -170,9 +170,7 @@
         <option value="tr">Türk</option>
         <option value="zh-hans">大陆简体</option>
       </select>
-      </p>
-    </a></li>
-
+    </div></li>
   </ul>
   <div id="geninfo">
     <p id="model">{{html10n "settings.phoneModel"}}: <span id="modelName"></span</p>
