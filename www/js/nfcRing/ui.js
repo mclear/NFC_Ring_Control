@@ -223,7 +223,8 @@ nfcRing.ui = {
       html10n.localize(language);
     });
 
-    $('body').on('click', '#clearSweetSpot', function(){
+    $('body').on('click', '#clearSweetSpot', function(e){
+      e.preventDefault();
       navigator.notification.confirm(html10n.get("sweetSpot.areYouSureSS"), function(confirmed){
         if(confirmed === 1){
           console.log("clearing sweet spot history");
@@ -233,7 +234,8 @@ nfcRing.ui = {
       }, html10n.get("sweetSpot.areYouSure"));
     });
 
-    $('body').on('click', '#clearPreviousActions', function(){
+    $('body').on('click', '#clearPreviousActions', function(e){
+      e.preventDefault();
       navigator.notification.confirm(html10n.get("sweetSpot.areYouSureActions"), function(confirmed){
         if(confirmed === 1){
           console.log("Clearing previous actions");
@@ -249,7 +251,8 @@ nfcRing.ui = {
       $('body').toggleClass('show-history');
     });
 
-    $('body').on('click', '#sweetSpotBtn', function(){
+    $('body').on('click', '#sweetSpotBtn', function(e){
+      e.preventDefault();
       $('body').removeClass('context-open');
       console.log("Showing sweet spot location page");
       nfcRing.ui.displayPage("sweetSpot");
