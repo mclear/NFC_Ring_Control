@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.borismus.webintent" version="3.0.0">
+    <name>WebIntent</name>
+    <description>WebIntent lets you create a first class Android applications in JavaScript.</description>
+    <license>MIT</license>
+    <keywords>android, WebIntent, Intent, Activity</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/webintent.js" name="WebIntent">
+        <clobbers target="CDV.WebIntent" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WebIntent" >
+                <param name="android-package" value="com.borismus.webintent.WebIntent" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/WebIntent.java" target-dir="src/com/borismus/webintent" />
+    </platform>
+
+</plugin>

@@ -6,6 +6,7 @@ var app = {
     document.addEventListener('deviceready', this.deviceready, false);
   },
   deviceready: function () {
+
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
     alert = navigator.notification.alert;
     prompt = navigator.notification.prompt;
@@ -24,5 +25,31 @@ var app = {
 
     FastClick.attach(document.body);
 
+    if(typeof cordova !== 'undefined'){
+      console.log("Checking for intent");
+      CDV.WEBINTENT.hasExtra(CDV.WEBINTENT.EXTRA_TEXT,
+        function(hasExtra) {
+          if(hasExtra){
+            console.log("Intent passed, handling that way");
+            CDV.WEBINTENT.getExtra(CDV.WEBINTENT.EXTRA_TEXT, function(value) {
+              if(!value) value = "http://nfcring.com/getStarted";
+              console.log("Intent value is ", value);
+              nfcRing.userValues.activity = "write";
+              nfcRing.userValues.intentSet = true;
+              nfcRing.userValues.toWrite = value;
+              setTimeout(function(){
+                nfcRing.heatmap.init();
+                nfcRing.ui.displayPage("writeRing");
+                nfcRing.ui.prepareWritePage("write");
+              }, 2000);
+            }, function(){
+              console.log("ERROR XVMA123");
+            });
+          }
+        }, function() {
+          console.log("ERROR XVMA172");
+        }
+      );
+    }
   }
 };
