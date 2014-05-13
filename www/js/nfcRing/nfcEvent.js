@@ -10,7 +10,6 @@ nfcRing.nfcEvent = {
       nfc.addTagDiscoveredListener(function (nfcEvent) {
         console.log("NFC Event, IE tag or ring introduced to the app");
         nfcRing.nfcEvent.readOrWrite(nfcEvent, "notNDEF");
-        console.log("Attempting to bind to NFC TAG");
       }, function () {
         console.log("Success.  Listening for rings..");
       }, function () {
@@ -18,8 +17,8 @@ nfcRing.nfcEvent = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
       nfc.addNdefListener(function (nfcEvent) {
+        console.log("read NDEF value from tag!");
         nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
-        console.log("Attempting to bind to NFC NDEF");
       }, function () {
         console.log("Success.  Listening for rings NDEF records..");
       }, function () {

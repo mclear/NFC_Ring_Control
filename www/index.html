@@ -239,6 +239,21 @@ if(typeof cordova !== 'undefined'){
       }, 0);
     }
   };
+
+  var intent = nfcRing.ui.paramFromURL("intent");
+  if(intent){
+    var value = intent;
+    console.log("simulating intent", intent);
+    // No cordova so doing a fake write through desktop..
+    nfcRing.userValues.activity = "write";
+    nfcRing.userValues.intentSet = true;
+    nfcRing.userValues.toWrite = value;
+    setTimeout(function(){
+      nfcRing.heatmap.init();
+      nfcRing.ui.displayPage("writeRing");
+      nfcRing.ui.prepareWritePage("write");
+    }, 2000);
+  }
 }
 </script>
 </body>

@@ -146,7 +146,7 @@ nfcRing.ui = {
       document.documentElement.dir = html10n.getDirection();
       // nfcRing.userValues.language = language || navigator.language;
       // $('.changeLanguage').val(nfcRing.userValues.language);
-      nfcRing.ui.displayPage("index");
+      if(!nfcRing.userValues.intentSet) nfcRing.ui.displayPage("index");
     });
 
     FastClick.attach(document.body); // What does this do?
@@ -381,6 +381,7 @@ nfcRing.ui = {
   },
 
   prepareWritePage: function(eventType){
+    console.log("preparing write page", device, eventType, nfcRing.userValues);
     nfcRing.userValues.activity = eventType;
     
     if(eventType === "write" && device.model == "browser"){
