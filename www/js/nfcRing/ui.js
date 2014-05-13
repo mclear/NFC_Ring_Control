@@ -146,7 +146,25 @@ nfcRing.ui = {
       document.documentElement.dir = html10n.getDirection();
       // nfcRing.userValues.language = language || navigator.language;
       // $('.changeLanguage').val(nfcRing.userValues.language);
-      nfcRing.ui.displayPage("index");
+
+      var intentSet = false;
+      if(typeof cordova !== 'undefined'){
+        CDV.WEBINTENT.hasExtra(CDV.WEBINTENT.EXTRA_TEXT, 
+          function(value) {
+          intentSet = true;
+          // displaying write page
+          nfcRing.userValues.toWrite = value;
+          nfcRing.heatmap.init();
+          nfcRing.ui.displayPage("writeRing");
+          nfcRing.ui.prepareWritePage("write");
+
+          nfcRing.ui.displayPage("write");
+        }, function() {
+          // Something really bad happened.
+        });
+      }
+      if(!intentSet) nfcRing.ui.displayPage("index");
+ 
     });
 
     FastClick.attach(document.body); // What does this do?

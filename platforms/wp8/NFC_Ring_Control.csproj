@@ -242,28 +242,7 @@
         <Content Include="www/css/introjs.css" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www/css/less/content.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/icons.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/mixins.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/nfcring-app.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/reset.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/vars.less" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www/css/nfcringapp.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/nfcringapp.min.css" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/css/rung.css" />
@@ -423,5 +402,23 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/plugins/org.apache.cordova.vibration/www/vibration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.vibration\www\vibration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.borismus.webintent\www\webintent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova_plugins.js" />
     </ItemGroup>
 </Project>

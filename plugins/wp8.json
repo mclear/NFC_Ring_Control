@@ -4,18 +4,42 @@
         "uninstalled": []
     },
     "config_munge": {
-        "config.xml": {
-            "/*": {
-                "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>": 1,
-                "<feature name=\"Vibration\"><param name=\"wp-package\" value=\"Vibration\" /></feature>": 1,
-                "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>": 1,
-                "<feature name=\"NfcPlugin\"><param name=\"wp-package\" value=\"NfcPlugin\" /></feature>": 1
-            }
-        },
-        "Properties/WMAppManifest.xml": {
-            "/Deployment/App/Capabilities": {
-                "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />": 1,
-                "<Capability Name=\"ID_CAP_PROXIMITY\" />": 1
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"wp-package\" value=\"Vibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NfcPlugin\"><param name=\"wp-package\" value=\"NfcPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_PROXIMITY\" />",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },
@@ -30,6 +54,9 @@
             "PACKAGE_NAME": "{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}"
         },
         "com.chariotsolutions.nfc.plugin": {
+            "PACKAGE_NAME": "{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}"
+        },
+        "com.borismus.webintent": {
             "PACKAGE_NAME": "{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}"
         }
     },
