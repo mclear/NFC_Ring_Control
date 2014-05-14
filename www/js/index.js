@@ -25,6 +25,7 @@ var app = {
 
     FastClick.attach(document.body);
 
+    // BELOW NEEDS A REFACTOR
     if(typeof cordova !== 'undefined'){
       console.log("Checking for intent");
       CDV.WEBINTENT.hasExtra(CDV.WEBINTENT.EXTRA_TEXT,
@@ -41,7 +42,7 @@ var app = {
                 nfcRing.heatmap.init();
                 nfcRing.ui.displayPage("writeRing");
                 nfcRing.ui.prepareWritePage("write");
-              }, 2000);
+              }, 500);
             }, function(){
               console.log("ERROR XVMA123");
             });
@@ -51,5 +52,18 @@ var app = {
         }
       );
     }
+
+    CDV.WEBINTENT.onNewIntent(function(intent, test) {
+
+      console.log("new intent event detected", intent, test);
+
+      CDV.WEBINTENT.hasExtra(CDV.WEBINTENT.EXTRA_TEXT,
+        function(hasExtra) {
+          if(hasExtra){
+            console.log("Intent passed, handling that way");
+          }
+      });
+
+    });
   }
 };
