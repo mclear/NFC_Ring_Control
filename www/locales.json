@@ -8,9 +8,9 @@
   "fa":"locales/fa.json",
   "fi":"locales/fi.json",
   "he":"locales/he.json",
-  "hrx","locales/hrx.json",
+  "hrx":"locales/hrx.json",
   "it":"locales/it.json",
-  "lt","locales/lt.json",
+  "lt":"locales/lt.json",
   "ko":"locales/ko.json",
   "lb":"locales/lb.json",
   "mk":"locales/mk.json",
@@ -19,6 +19,6 @@
   "sco":"locales/sco.json",
   "sv":"locales/sv.json",
   "tr":"locales/tr.json",
-  "uk","locales/uk.json",
+  "uk":"locales/uk.json",
   "zh-hans":"locales/zh-hans.json"
 }
