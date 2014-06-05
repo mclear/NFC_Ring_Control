@@ -220,6 +220,7 @@ nfcRing.ui = {
       var language = e.target.value;
       localStorage.setItem("language", language); // saves language
       console.log("change language to", language);
+      nfcRing.userValues.language = language;
       html10n.localize(language);
     });
 
@@ -343,6 +344,7 @@ nfcRing.ui = {
     }
  
     if(page === "settings"){
+      console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
     }
 
