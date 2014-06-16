@@ -119,7 +119,8 @@ nfcRing.nfcEvent = {
       }
 
     }, function (reason) {
-      console.log("Inlay write failed");
+      alert(reason, false, html10n.get("writeRing.fail"));
+      console.log("Inlay write failed", reason);
       // This may seem crazy but WP needs to continue to call this..
       if (device.platform === "Win32NT") {
         nfcRing.nfcEvent.write(false)
