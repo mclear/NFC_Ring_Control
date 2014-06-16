@@ -81,6 +81,7 @@ nfcRing.heatmap = {
             console.log("0. Drawing heatmap");
             if($('#heatMap canvas').length < 1){
               nfcRing.heatmap.coOrds = coOrdinateCounter;
+              localStorage.setItem("heatMapCache", JSON.stringify(nfcRing.heatmap.coOrds));
             }
             // nfcRing.drawHeatMap();
             callback();
@@ -88,7 +89,17 @@ nfcRing.heatmap = {
         },
         failure: function(){
           // fires on failure to connect
+          cachedCoOrds = localStorage.getItem("heatMapCache");
+          nfcRing.heatmap.coOrds = JSON.parse(nfcRing.heatmap.coOrds);
           $('#writeRingTitle').html(html10n.get('sweetSpot.unableToConnect'));
+          callback();
+        },
+        error: function(){
+          // fires on failure to connect
+          cachedCoOrds = localStorage.getItem("heatMapCache");
+          nfcRing.heatmap.coOrds = JSON.parse(nfcRing.heatmap.coOrds);
+          // $('#writeRingTitle').html(html10n.get('sweetSpot.unableToConnect'));
+          callback();
         }
       });
     }catch(e){
