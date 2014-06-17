@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"Ronel1"
 		]
 	},
 	"index.wantHelp": "נחוצה לך עזרה?",
@@ -19,6 +20,7 @@
 	"readRing.contents": "תוכן הטבעת:",
 	"settings.version": "גרסה",
 	"settings.phoneModel": "דגם הטלפון",
+	"settings.changeLanguage": "\nשינוי App שפה",
 	"help.gotIt": "בסדר, הבנתי",
 	"actions.twitter.name": "טוויטר",
 	"actions.twitter.description": "קישור למשתמש טוויטר",
