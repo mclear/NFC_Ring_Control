@@ -99,7 +99,7 @@ nfcRing.ui = {
       $('#needHelp').hide();
       ringData = "http://whatever.com";
       console.log("Simulating Write");
- 
+
       var dontAskSweetSpotAgain = localStorage.getItem("dontAskSweetSpotAgain");
 
       if (dontAskSweetSpotAgain === "true") { // we should ask for the sweet spot
@@ -188,12 +188,14 @@ nfcRing.ui = {
          var label = nfcRing.actions[key.toLowerCase()].optionText;
       }
       nfcRing.userValues.optionTitle = label;
-      nfcRing.userValues.action = key.toLowerCase();;
+      nfcRing.userValues.action = key.toLowerCase();
+      if(key.toLowerCase() === "link"){
+        console.log("Setting nfcRing.userValues.isUrl to true");
+        nfcRing.userValues.isUrl = true;
+      }else{
+        nfcRing.userValues.isUrl = false;
+      }
       $('.optionName').html('<h2>' + label + '</h2>');
-      /*
-        $('#optionInput').attr("placeholder", actions[key].placeHolder);
-        $('form > label').text(actions[key].optionText);
-      */
     });
 
     $('body').on('submit', '#optionForm', function(e){
