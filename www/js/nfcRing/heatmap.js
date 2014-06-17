@@ -84,11 +84,19 @@ nfcRing.heatmap = {
         console.log("0. Drawing heatmap");
         if($('#heatMap canvas').length < 1){
           nfcRing.heatmap.coOrds = coOrdinateCounter;
+          localStorage.setItem("heatMapCache", JSON.stringify(nfcRing.heatmap.coOrds));
         }
         // nfcRing.drawHeatMap();
         callback();
       }
 
+    }).fail(function(){
+      console.log("Attempting to load data from cache");
+      var cachedCoOrds = localStorage.getItem("heatMapCache");
+      if(cachedCoOrds){
+        nfcRing.heatmap.coOrds = JSON.parse(cachedCoOrds);
+        callback();      
+      }
     });
   },
 
