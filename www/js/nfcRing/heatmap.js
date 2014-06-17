@@ -66,10 +66,15 @@ nfcRing.heatmap = {
       results = JSON.parse(results);
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
-        var x = object.x;
-        var y = object.y;
+        var x = object.x; // 1
+        var y = object.y; // 2
+
         // Turns it into a counted set of objects instead of single objects
-        coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
+        if(coOrdinateCounter[x+":"+y]){ // If this coOrdinateCounter exists add to it
+          coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] + 1;
+        }else{
+          coOrdinateCounter[x+":"+y] = 1;
+        }
       }
       console.log("Got results from database", coOrdinateCounter);
 
@@ -90,10 +95,11 @@ nfcRing.heatmap = {
   sendToRemote: function(x,y,model){
     console.log("Posting to remote");
     $.post("http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model+"&x="+x+"&y="+y).done(function(results){
-
       alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
       nfcRing.ui.displayPage("index"); // Return user back to start page
-
+    }).fail(function(){
+      alert("Failed to share sweet spot location :(  Check your Internet connectivity"); // TODO i18n me
+      nfcRing.ui.displayPage("index");
     });
   }
 }
