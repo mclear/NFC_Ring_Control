@@ -51,7 +51,7 @@ nfcRing.heatmap = {
 
   }, 
 
-  loadFromRemote: function(callback){ // Getting data from Parse..
+  loadFromRemote: function(callback){ // Getting data from Remote database..
 
     try{
       if(!device){return false;}
@@ -71,10 +71,10 @@ nfcRing.heatmap = {
         // Turns it into a counted set of objects instead of single objects
         coOrdinateCounter[x+":"+y] = coOrdinateCounter[x+":"+y] || 1;
       }
-      console.log("Got results from Parse", coOrdinateCounter);
+      console.log("Got results from database", coOrdinateCounter);
 
       if(results.length == 0){ // if there are no results
-        console.log("no results from parse");
+        console.log("no results from database");
       }else{ // there are some heatmap results so let's draw em
         console.log("0. Drawing heatmap");
         if($('#heatMap canvas').length < 1){
@@ -87,19 +87,13 @@ nfcRing.heatmap = {
     });
   },
 
-  sendToParse: function(x,y,phoneModel){
-    parseInitSS();
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-    testObject.save({x: x, y: y, model: phoneModel, guid: nfcRing.userValues.uid}, {
-      success: function(object) {
-        alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
-        nfcRing.ui.displayPage("index"); // Return user back to start page
-      },
-      failure: function(e){
-        // TODO: i18n me
-        alert("Unable to share details with others, is your Internet enabled?")
-      }
+  sendToRemote: function(x,y,model){
+    console.log("Posting to remote");
+    $.post("http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model+"&x="+x+"&y="+y).done(function(results){
+
+      alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
+      nfcRing.ui.displayPage("index"); // Return user back to start page
+
     });
   }
 }
