@@ -122,6 +122,10 @@ nfcRing.ui = {
       nfcRing.ui.displayPage("settings");
     });
 
+    $('body').on('click', '#feedbackBtn', function(){
+      window.location.href = "mailto:support@nfcring.com";
+    });
+
     Handlebars.registerHelper('html10n', function(str,a){
       return (html10n != undefined ? html10n.get(str) : str);
     });
