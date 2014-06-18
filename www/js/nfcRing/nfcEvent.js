@@ -66,8 +66,8 @@ nfcRing.nfcEvent = {
   write: function(nfcEvent){ // Write an NFC NDEf record
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
-    // If the string is a valid URL
-    var isURL = nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite.trim());
+    var isURL = nfcRing.userValues.isUrl || nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite.trim());
+    console.log("isURL", isURL);
 
     if (isURL) {
       console.log("URL Record");
