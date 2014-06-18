@@ -20,7 +20,7 @@ nfcRing.userValues = { // stuff like what value we're going to write
   
             console.log("Sending ", centerX, centerY, device.model, " to Database");
   	    try{
-              nfcRing.heatmap.sendToParse(centerX, centerY, device.model);
+              nfcRing.heatmap.sendToRemote(centerX, centerY, device.model);
             }catch(e){
               nfcRing.ui.displayPage("index");
             }
