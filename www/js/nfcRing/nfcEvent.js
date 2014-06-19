@@ -53,6 +53,8 @@ nfcRing.nfcEvent = {
 
     if(nfcRing.userValues.activity == "register"){
       console.log("nfcEvent", nfcEvent);
+      nfcRing.userValues.tagSize = nfcEvent.tag.maxSize || nfcEvent.tag.freeSpaceSize; // saves the size
+      localStorage.setItem("tagSize", nfcRing.userValues.tagSize);
       nfcRing.userValues.uid = nfcEvent.tag.id.join(",");
       nfcRing.registration.isValidUid(function(isValid){
         if(isValid){

@@ -29,7 +29,7 @@ nfcRing.registration = {
         }
       });
     }catch(e){
-      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but $
+      // Windows Phone wont do the Parse XHR request and fails on access is denied, this should be handled by the Parse API but it isn't
       if(device.platform === "Win32NT"){
         $('#writeRingTitle').html("Windows Phone is unable to handle registrations at this time");
         console.log("Unable to process Parse on WP");
