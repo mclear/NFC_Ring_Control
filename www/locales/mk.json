@@ -30,6 +30,7 @@
 	"writeRing.noNFC": "Можноста за NFC не работи. Дали е овозможен во уредот?",
 	"writeRing.woohoo": "Одлично!",
 	"writeRing.ready": "Прстенот е спремен",
+	"writeRing.fail": "Не можам да запишам во прстенот",
 	"readRing.contents": "Содржина на прстенот:",
 	"settings.clearMySweetSpot": "Мое осетливо место",
 	"settings.clearMySweetSpotDescription": "Избриши го складираното осетливо место",

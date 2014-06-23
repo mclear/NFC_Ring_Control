@@ -3,7 +3,8 @@
 		"authors": [
 			"Comodin",
 			"Jopparn",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Lokal Profil"
 		]
 	},
 	"index.wantHelp": "Vill du ha lite hjälp?",
@@ -31,7 +32,8 @@
 	"writeRing.finish": "Slutför",
 	"writeRing.noNFC": "NFC-funktionaliteten fungerar inte. Är NFC aktiverat på din enhet?",
 	"writeRing.woohoo": "Jippi!",
-	"writeRing.ready": "Din ring är nu redo",
+	"writeRing.ready": "Din NFC-ring är nu redo",
+	"writeRing.fail": "Kan inte skriva till din NFC-Ring",
 	"readRing.contents": "Ringens innehåll:",
 	"settings.clearMySweetSpot": "Mitt favoritställe",
 	"settings.clearMySweetSpotDescription": "Ta bort mitt lagrade favoritställe",
