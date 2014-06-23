@@ -131,6 +131,8 @@ nfcRing.ui = {
     });
 
     var language = localStorage.getItem("language");
+    nfcRing.userValues.tagSize = localStorage.getItem("tagSize") || 137;
+
 
     if(!language) language = navigator.language;
     console.log("Setting language to ", language);
@@ -200,6 +202,19 @@ nfcRing.ui = {
         nfcRing.userValues.isUrl = false;
       }
       $('.optionName').html('<h2>' + label + '</h2>');
+    });
+
+    $('body').on('change, keyup', '#optionInput', function(e){
+      var inputSize = $('#optionInput').val().length;
+      var tagSize = nfcRing.userValues.tagSize;
+      console.log("inputSize", inputSize, "tagSize", tagSize);
+      if(inputSize >= tagSize){
+        console.log("displaying warning because too much data is attempting to be written to me");
+        nfcRing.ui.dataSizeTooBig(true);
+      }else{
+        console.log("data should fit fine on the tag");
+        nfcRing.ui.dataSizeTooBig(false);
+      }
     });
 
     $('body').on('submit', '#optionForm', function(e){
@@ -419,5 +434,13 @@ nfcRing.ui = {
     var results = regex.exec( window.location.href );
     if( results == null ) return "";
     else return results[1];
+  },
+
+  dataSizeTooBig: function(wontFit){
+    if(wontFit){
+      $('.dataWontFit').show();
+    }else{
+      $('.dataWontFit').hide();
+    }
   }
 }
