@@ -204,17 +204,19 @@ nfcRing.ui = {
       $('.optionName').html('<h2>' + label + '</h2>');
     });
 
-    $('body').on('change, keyup', '#optionInput', function(e){
-      var inputSize = $('#optionInput').val().length;
-      var tagSize = nfcRing.userValues.tagSize;
-      console.log("inputSize", inputSize, "tagSize", tagSize);
-      if(inputSize >= tagSize){
-        console.log("displaying warning because too much data is attempting to be written to me");
-        nfcRing.ui.dataSizeTooBig(true);
-      }else{
-        console.log("data should fit fine on the tag");
-        nfcRing.ui.dataSizeTooBig(false);
-      }
+    $('body').on('change, keyup, paste', '#optionInput', function(e){
+      setTimeout(function () { // Ghetto hack because paste event fires on paste not after paste
+        var inputSize = $('#optionInput').val().length;
+        var tagSize = nfcRing.userValues.tagSize;
+        console.log("inputSize", inputSize, "tagSize", tagSize);
+        if(inputSize >= tagSize){
+          console.log("displaying warning because too much data is attempting to be written to me");
+          nfcRing.ui.dataSizeTooBig(true);
+        }else{
+          console.log("data should fit fine on the tag");
+          nfcRing.ui.dataSizeTooBig(false);
+        }
+      }, 100);
     });
 
     $('body').on('submit', '#optionForm', function(e){
