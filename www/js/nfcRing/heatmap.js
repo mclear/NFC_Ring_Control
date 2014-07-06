@@ -101,12 +101,18 @@ nfcRing.heatmap = {
   },
 
   sendToRemote: function(x,y,model){
-    console.log("Posting to remote");
-    $.post("http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model+"&x="+x+"&y="+y).done(function(results){
+    console.log("Posting to remote", x, y, model);
+    var data = {
+      "x": x,
+      "y": y,
+      "model": model
+    }
+    $.post("http://sweetspot.nfcring.com/api/v1/sweetspot", data, function(results){
+      console.log("Success posting to remote");
       alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
-      nfcRing.ui.displayPage("index"); // Return user back to start page
+      nfcRing.ui.displayPage("index");
     }).fail(function(){
-      alert("Failed to share sweet spot location :(  Check your Internet connectivity"); // TODO i18n me
+      alert("Failed to share sweet spot location :(  Check your Internet connectivity"); 
       nfcRing.ui.displayPage("index");
     });
   }

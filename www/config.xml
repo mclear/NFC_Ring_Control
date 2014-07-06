@@ -12,4 +12,5 @@
     <content src="index.html" />
     <access origin="http://127.0.0.1*" />
     <access origin="https://parse.com" subdomains="true"/> <!-- allow parse stuff -->    
+    <access origin="http://sweetspot.nfcring.com*" />
 </widget>
