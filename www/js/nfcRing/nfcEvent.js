@@ -17,8 +17,10 @@ nfcRing.nfcEvent = {
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
       nfc.addNdefListener(function (nfcEvent) {
-        console.log("read NDEF value from tag!");
+        console.log("Beginning of NFC Ndef event");
+        console.log("reading NDEF value from tag!", nfcEvent);
         nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
+        console.log("end of NDEF value tag event");
       }, function () {
         console.log("Success.  Listening for rings NDEF records..");
       }, function () {
@@ -33,14 +35,12 @@ nfcRing.nfcEvent = {
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
     console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
-
     if(nfcRing.userValues.location !== "writeRing"){
       console.log("We're not on a write or read page so do nothing");
       return false;
     }
 
     $('#message').hide(); // hide help message
-
     if(nfcRing.userValues.activity == "write"){
       console.log("Doing write event", nfcEvent);
       nfcRing.nfcEvent.write(nfcEvent);
@@ -66,11 +66,16 @@ nfcRing.nfcEvent = {
     }
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
+    console.log("Clearing help Timeout");
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
-    var isURL = nfcRing.userValues.isUrl || nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite.trim());
+    console.log("Write values are", nfcRing.userValues.toWrite);
+    console.log("nfcRing.userValues.isUrl", nfcRing.userValues.isUrl);
+    var trimmedToWrite = nfcRing.userValues.toWrite.trim();
+    console.log("TrimmedToWrite", trimmedToWrite);
+    var isValidURL = nfcRing.nfcEvent.isValidURL(trimmedToWrite);
+    var isURL = nfcRing.userValues.isUrl || isValidURL;
     console.log("isURL", isURL);
-
     if (isURL) {
       console.log("URL Record");
       var ndefRecord = ndef.uriRecord(nfcRing.userValues.toWrite); // Creates a URI record
@@ -119,8 +124,8 @@ nfcRing.nfcEvent = {
       }else{
         $('#needHelp').hide(); // dont hide this on win32 but do if there is a write event on any other device
       }
-
     }, function (reason) {
+      console.log("Writing failed!", reason);
       alert(reason, false, html10n.get("writeRing.fail"));
       console.log("Inlay write failed", reason);
       // This may seem crazy but WP needs to continue to call this..
@@ -164,16 +169,18 @@ nfcRing.nfcEvent = {
     }
   },
   isValidURL: function(url){ // Is NFC NDEF Record a Valid URL
-    var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-    if (!pattern.test(url)) {
-      return false;
-    } else {
-      return true;
-    }    
+    // borrowed with great pride from http://stackoverflow.com/questions/1701898/how-to-detect-whether-a-string-is-in-url-format-using-javascript after many others failed..
+    var strRegex = "^((https|http|ftp|rtsp|mms)?://)"
+        + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@
+        + "(([0-9]{1,3}\.){3}[0-9]{1,3}" // IP形式的URL- 199.194.52.184
+        + "|" // 允许IP和DOMAIN（域名）
+        + "([0-9a-z_!~*'()-]+\.)*" // 域名- www.
+        + "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\." // 二级域名
+        + "[a-z]{2,6})" // first level domain- .com or .museum
+        + "(:[0-9]{1,4})?" // 端口- :80
+        + "((/?)|" // a slash isn't required if there is no file name
+        + "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$";
+    var re=new RegExp(strRegex);
+    return re.test(url);
   }
 }

@@ -427,6 +427,7 @@ nfcRing.ui = {
       console.log("Showing Help Message");
       nfcRing.ui.showNeedHelp()
     },5000);
+    console.log("Done preparing write page");
   },
 
   paramFromURL: function(name){
