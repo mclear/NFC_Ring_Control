@@ -71,13 +71,23 @@ nfcRing.nfcEvent = {
     $('#needHelp').hide();
     console.log("Write values are", nfcRing.userValues.toWrite);
     console.log("nfcRing.userValues.isUrl", nfcRing.userValues.isUrl);
-    var trimmedToWrite = nfcRing.userValues.toWrite.trim();
-    console.log("TrimmedToWrite", trimmedToWrite);
-    var isValidURL = nfcRing.nfcEvent.isValidURL(trimmedToWrite);
-    var isURL = nfcRing.userValues.isUrl || isValidURL;
+    // var trimmedToWrite = nfcRing.userValues.toWrite.trim();
+    // console.log("TrimmedToWrite", trimmedToWrite);
+    // var isValidURL = nfcRing.nfcEvent.isValidURL(trimmedToWrite);
+    // Below seems a bit pointless
+    var isURL = nfcRing.userValues.isUrl;
     console.log("isURL", isURL);
     if (isURL) {
       console.log("URL Record");
+
+      // does the uri have http as the first 4 characters?
+      console.log("First 4 letters of userValue", nfcRing.userValues.toWrite.substring(0,4));
+      if(nfcRing.userValues.toWrite.substring(0,4) !== "http"){
+        // Note on the gruonds of security: prefixing with http is fine for now, however https is prefered however
+        // sites IE beta.etherpad.org should redirect to https on the server.
+        console.log("URL did not begin with http so prefixing http://");
+        nfcRing.userValues.toWrite = "http://"+nfcRing.userValues.toWrite;
+      }
       var ndefRecord = ndef.uriRecord(nfcRing.userValues.toWrite); // Creates a URI record
     } else {
       console.log("Text record");

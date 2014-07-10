@@ -195,11 +195,16 @@ nfcRing.ui = {
       }
       nfcRing.userValues.optionTitle = label;
       nfcRing.userValues.action = key.toLowerCase();
+      nfcRing.userValues.isUrl = false;
       if(key.toLowerCase() === "link"){
         console.log("Setting nfcRing.userValues.isUrl to true");
         nfcRing.userValues.isUrl = true;
-      }else{
-        nfcRing.userValues.isUrl = false;
+      }
+      if(nfcRing.actions[key.toLowerCase()].prefix){
+        // If the prefix has a http in then make it a url
+        if(nfcRing.actions[key.toLowerCase()].prefix.substring(0,4) === "http"){
+          nfcRing.userValues.isUrl = true;
+        }
       }
       $('.optionName').html('<h2>' + label + '</h2>');
     });
