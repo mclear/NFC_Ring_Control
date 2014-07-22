@@ -248,22 +248,7 @@
         <Content Include="www/css/less/icons.less" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="www/css/less/mixins.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/nfcring-app.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/reset.less" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/less/vars.less" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="www/css/nfcringapp.css" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="www/css/nfcringapp.min.css" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/css/rung.css" />
@@ -359,10 +344,19 @@
         <Content Include="www/js/timeago.js" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www/locales/bn.json" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www/locales/br.json" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www/locales/da.json" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www/locales/de.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/diq.json" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/locales/en.json" />
@@ -383,13 +377,28 @@
         <Content Include="www/locales/he.json" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www/locales/hrx.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/it.json" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www/locales/ko.json" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/locales/lb.json" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www/locales/lrc.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/lt.json" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www/locales/mk.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/nl.json" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/locales/oc.json" />
@@ -405,6 +414,9 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/locales/tr.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www/locales/uk.json" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/locales/zh-hans.json" />
@@ -423,5 +435,23 @@
     </ItemGroup>
     <ItemGroup>
         <Content Include="www/plugins/org.apache.cordova.vibration/www/vibration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.vibration\www\vibration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.borismus.webintent\www\webintent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova_plugins.js" />
     </ItemGroup>
 </Project>

@@ -348,9 +348,11 @@ nfcRing.ui = {
 
     // never allow the app to get stuck in a loop on pages..
     if(nfcRing.ui.history[nfcRing.ui.history.length-1] !== page){
+      console.log("Wrote page to history stage");
       nfcRing.ui.history.push(page); // Write the this page to the history stack
     }
     nfcRing.userValues.location = page;
+    console.log("page", page);
     var source = $('#'+page).html();
     var context = $('#contextContent').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
@@ -364,6 +366,7 @@ nfcRing.ui = {
     }
 
     if(nfcRing.userValues.activity === "register" && nfcRing.userValues.location === "writeRing"){
+      console.log("Displaying register page");
       nfcRing.ui.prepareWritePage("register");
     }
 
@@ -387,7 +390,6 @@ nfcRing.ui = {
         }
       }
     },200); 
-
     nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings

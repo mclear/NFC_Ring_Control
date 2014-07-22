@@ -31,6 +31,9 @@
         },
         "com.chariotsolutions.nfc.plugin": {
             "PACKAGE_NAME": "{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}"
+        },
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "{FCD3F66F-785C-41C3-86F2-E57FEFD5F8F4}"
         }
     },
     "dependent_plugins": {}

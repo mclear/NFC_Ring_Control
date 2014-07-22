@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.mclear.nfcringpro" version="0.1.15" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <access origin="*" />
     <feature name="Notification">
         <param name="wp-package" value="Notification" />
@@ -23,6 +23,6 @@
     <preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="http://127.0.0.1*" />
-    <access origin="http://parse.com" subdomains="true" />
     <access origin="https://parse.com" subdomains="true" />
+    <access origin="http://sweetspot.nfcring.com*" />
 </widget>

@@ -35,12 +35,14 @@ nfcRing.nfcEvent = {
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
     console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
+
     if(nfcRing.userValues.location !== "writeRing"){
       console.log("We're not on a write or read page so do nothing");
       return false;
     }
 
     $('#message').hide(); // hide help message
+
     if(nfcRing.userValues.activity == "write"){
       console.log("Doing write event", nfcEvent);
       nfcRing.nfcEvent.write(nfcEvent);
@@ -65,27 +67,15 @@ nfcRing.nfcEvent = {
       });
     }
   },
+
   write: function(nfcEvent){ // Write an NFC NDEf record
-    console.log("Clearing help Timeout");
     clearTimeout(nfcRing.ui.helpTimeout);
     $('#needHelp').hide();
-    console.log("Write values are", nfcRing.userValues.toWrite);
-    console.log("nfcRing.userValues.isUrl", nfcRing.userValues.isUrl);
-
-    var isURL = nfcRing.userValues.isUrl;
-
+    var isURL = nfcRing.userValues.isUrl || nfcRing.nfcEvent.isValidURL(nfcRing.userValues.toWrite.trim());
     console.log("isURL", isURL);
+
     if (isURL) {
       console.log("URL Record");
-
-      // does the uri have http as the first 4 characters?
-      console.log("First 4 letters of userValue", nfcRing.userValues.toWrite.substring(0,4));
-      if(nfcRing.userValues.toWrite.substring(0,4) !== "http"){
-        // Note on the gruonds of security: prefixing with http is fine for now, however https is prefered however
-        // sites IE beta.etherpad.org should redirect to https on the server.
-        console.log("URL did not begin with http so prefixing http://");
-        nfcRing.userValues.toWrite = "http://"+nfcRing.userValues.toWrite;
-      }
       var ndefRecord = ndef.uriRecord(nfcRing.userValues.toWrite); // Creates a URI record
     } else {
       console.log("Text record");
@@ -132,6 +122,7 @@ nfcRing.nfcEvent = {
       }else{
         $('#needHelp').hide(); // dont hide this on win32 but do if there is a write event on any other device
       }
+
     }, function (reason) {
       console.log("Writing failed!", reason);
       alert(reason, false, html10n.get("writeRing.fail"));
@@ -177,18 +168,16 @@ nfcRing.nfcEvent = {
     }
   },
   isValidURL: function(url){ // Is NFC NDEF Record a Valid URL
-    // borrowed with great pride from http://stackoverflow.com/questions/1701898/how-to-detect-whether-a-string-is-in-url-format-using-javascript after many others failed..
-    var strRegex = "^((https|http|ftp|rtsp|mms)?://)"
-        + "?(([0-9a-z_!~*'().&=+$%-]+: )?[0-9a-z_!~*'().&=+$%-]+@)?" //ftp的user@
-        + "(([0-9]{1,3}\.){3}[0-9]{1,3}" // IP形式的URL- 199.194.52.184
-        + "|" // 允许IP和DOMAIN（域名）
-        + "([0-9a-z_!~*'()-]+\.)*" // 域名- www.
-        + "([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\." // 二级域名
-        + "[a-z]{2,6})" // first level domain- .com or .museum
-        + "(:[0-9]{1,4})?" // 端口- :80
-        + "((/?)|" // a slash isn't required if there is no file name
-        + "(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$";
-    var re=new RegExp(strRegex);
-    return re.test(url);
+    var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+    if (!pattern.test(url)) {
+      return false;
+    } else {
+      return true;
+    }    
   }
 }
