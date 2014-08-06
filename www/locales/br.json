@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gwenn-Ael"
+			"Gwenn-Ael",
+			"Fohanno"
 		]
 	},
 	"index.wantHelp": "C'hoant ho peus skoazell ?",
@@ -39,6 +40,7 @@
 	"settings.previousActionsDescription": "Goullonderiñ roll-istor ma oberoù a-raok",
 	"settings.version": "Stumm",
 	"settings.phoneModel": "Patrom pellgomz",
+	"settings.changeLanguage": "Cheñch yezh an arload",
 	"help.helpTips": "Tunioù skoazell",
 	"help.facing": "Taolit pled emañ al lodenn livet n'eo ket e metal stok-ha-stok hag a-dal da gein hoc'h ardivink",
 	"help.cases": "Lemel holl voestoù hoc'h ardivink",

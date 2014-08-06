@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"A1",
-			"Andriykopanytsia"
+			"Andriykopanytsia",
+			"Base"
 		]
 	},
 	"index.wantHelp": "Потрібна допомога?",
@@ -30,7 +31,7 @@
 	"writeRing.finish": "Завершити",
 	"writeRing.noNFC": "Не працює функціонал NFC. Він увімкнений на вашому пристрої?",
 	"writeRing.woohoo": "Ура!",
-	"writeRing.ready": "Кільце тепер готове",
+	"writeRing.ready": "Ваше NFC-кільце тепер готове",
 	"readRing.contents": "Вміст кільця:",
 	"settings.clearMySweetSpot": "Моя активна зона",
 	"settings.clearMySweetSpotDescription": "Очистити збережене розташування активної зони",

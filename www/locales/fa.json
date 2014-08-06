@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ebraminio"
+			"Ebraminio",
+			"Reza1615"
 		]
 	},
 	"index.wantHelp": "کمک می‌خواهید؟",
@@ -29,7 +30,8 @@
 	"writeRing.finish": "پایان",
 	"writeRing.noNFC": "قابلیت ان‌اف‌سی کار نمی‌کند. آیا ان‌اف‌سی در دستگاه شما فعال شده‌است؟",
 	"writeRing.woohoo": "ایول!",
-	"writeRing.ready": "حلقهٔ شما آماده است",
+	"writeRing.ready": "حلقهٔ ان اف سی شما آماده است",
+	"writeRing.fail": "قادر به نوشتن به حلقه NFC نیست",
 	"readRing.contents": "محتویات حلقه:",
 	"settings.clearMySweetSpot": "نقظهٔ شیرین من",
 	"settings.clearMySweetSpotDescription": "پاک‌کردن نقاط شیرین ذخیره شدهٔ من",
@@ -39,6 +41,7 @@
 	"settings.previousActionsDescription": "پاک‌کردن تاریخچهٔ اعمال پیشین من",
 	"settings.version": "نسخه",
 	"settings.phoneModel": "مدل گوشی",
+	"settings.changeLanguage": "تغییر زبان نرم‌افزار",
 	"help.helpTips": "نکات راهنمایی",
 	"help.facing": "مطمئن شوید قسمت رنگ‌شده و غیر آهنی حقله اتصال دارد و رو به پشت دستگاه شما است",
 	"help.cases": "حذف هرگونه موردی از دستگاه شما",
