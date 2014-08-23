@@ -29,6 +29,7 @@ nfcRing.vcard.found = function(contacts){
 
 // takes in contact card from cordova and builds vcard format
 nfcRing.vcard.build = function(contact){
+  alert("Built vcard, still need to do functionality to write it");
   console.log("Contact", contact);
   var vcard = 'BEGIN:VCARD\n' +
     'VERSION:2.1\n' +
