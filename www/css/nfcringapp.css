@@ -1781,3 +1781,13 @@ img.mfp-img {
   color: #9F6000;
   background-color: #FEEFB3;  
 }
+.contact{
+  background-color:#fff;
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  line-height: 48px;
+  font-size: 32px;
+  text-align: center;
+}

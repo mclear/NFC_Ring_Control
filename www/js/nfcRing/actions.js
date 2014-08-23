@@ -1,4 +1,10 @@
 nfcRing.actions = {
+  person: { 
+    label: "person",
+    description: "Create a vCard to share a persons contact details",
+    optionText: "Whos contact details do you want to share?",
+    placeHolder: "John Smith"
+  },
   twitter: {
     label: "Twitter",
     description: "Link to a Twitter user",

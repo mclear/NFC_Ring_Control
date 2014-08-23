@@ -152,7 +152,7 @@ nfcRing.ui = {
       document.documentElement.dir = html10n.getDirection();
       // nfcRing.userValues.language = language || navigator.language;
       // $('.changeLanguage').val(nfcRing.userValues.language);
-      if(!nfcRing.userValues.intentSet) nfcRing.ui.displayPage("index");
+      if(!nfcRing.userValues.intent) nfcRing.ui.displayPage("index");
     });
 
     FastClick.attach(document.body); // What does this do?
@@ -196,6 +196,13 @@ nfcRing.ui = {
       nfcRing.userValues.optionTitle = label;
       nfcRing.userValues.action = key.toLowerCase();
       nfcRing.userValues.isUrl = false;
+      console.log("key", key);
+      if(key.toLowerCase() === "person"){
+        console.log("VCard so adding autocomplete class");
+        $('#optionInput').addClass("autocomplete");
+      }else{
+        $('#optionInput').removeClass("autocomplete");
+      }
       if(key.toLowerCase() === "link"){
         console.log("Setting nfcRing.userValues.isUrl to true");
         nfcRing.userValues.isUrl = true;
@@ -315,6 +322,27 @@ nfcRing.ui = {
 
     $('body').on('click', '#sweetSpotOverlay', function(e){
       nfcRing.userValues.localSweetSpot.set(e);
+    });
+
+    $('body').on('keyup', '.autocomplete', function(){
+      var searchTerm = $('.autocomplete').val();
+      if(searchTerm.length < 3) return;
+      console.log("Searching for ", searchTerm);
+      nfcRing.vcard.search(searchTerm);
+    });
+
+    $('body').on("click", ".contact", function(e){
+      console.log("ID", e.target.id);
+      var contactObj = nfcRing.vcard.cache[e.target.id];
+      var vcard = nfcRing.vcard.build(contactObj);
+alert("Built vcard");
+      if(vcard){
+        nfcRing.vcard.vcard = vcard;
+        var record = ndef.mimeMediaRecord('text/x-vCard', nfc.stringToBytes(nfcRing.vcard.vcard));
+        alert("ready to write Vcard");
+      }else{
+        alert("Failed to create VCard");
+      }
     });
 
   },

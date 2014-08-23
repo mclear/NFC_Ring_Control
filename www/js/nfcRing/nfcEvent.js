@@ -1,6 +1,37 @@
 nfcRing.nfcEvent = {
   init: function(){
 
+      // BELOW NEEDS A REFACTOR
+      if(typeof cordova !== 'undefined'){
+        console.log("Checking for intent");
+        window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT,
+          function(hasExtra) {
+            if(hasExtra){
+              app.intentEvent()
+            }
+          }, function() {
+            console.log("ERROR XVMA172");
+          }
+        );
+      }
+
+      window.plugins.webintent.onNewIntent(function() {
+        console.log("new intent event detected");
+        try{
+          window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT,
+            function(hasExtra) {
+              if(hasExtra){
+                console.log("Intent passed, handling that way");
+                app.intentEvent();
+              }
+            }
+          );
+        }catch(e){
+          console.log("error getting value");
+        }
+      });
+
+
     if (typeof nfc === 'undefined') return false;
     if (device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
       console.log("NFC Found, adding listener");
@@ -8,7 +39,7 @@ nfcRing.nfcEvent = {
       // Because we currently only support Android and WP we don't need to wrap this in an If
 
       nfc.addTagDiscoveredListener(function (nfcEvent) {
-        console.log("NFC Event, IE tag or ring introduced to the app");
+//        alert("NFC Event, IE tag or ring introduced to the app");
         nfcRing.nfcEvent.readOrWrite(nfcEvent, "notNDEF");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -16,6 +47,7 @@ nfcRing.nfcEvent = {
         alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
+
       nfc.addNdefListener(function (nfcEvent) {
         console.log("Beginning of NFC Ndef event");
         console.log("reading NDEF value from tag!", nfcEvent);
@@ -34,12 +66,14 @@ nfcRing.nfcEvent = {
 
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
-    console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
+    // console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
+    alert(nfcRing.userValues.location); // This is index and that's wrong!!
     if(nfcRing.userValues.location !== "writeRing"){
       console.log("We're not on a write or read page so do nothing");
       return false;
     }
 
+    alert(2);
     $('#message').hide(); // hide help message
     if(nfcRing.userValues.activity == "write"){
       console.log("Doing write event", nfcEvent);
@@ -52,6 +86,7 @@ nfcRing.nfcEvent = {
     }
 
     if(nfcRing.userValues.activity == "register"){
+
       console.log("nfcEvent", nfcEvent);
       nfcRing.userValues.tagSize = nfcEvent.tag.maxSize || nfcEvent.tag.freeSpaceSize; // saves the size
       localStorage.setItem("tagSize", nfcRing.userValues.tagSize);
@@ -64,6 +99,7 @@ nfcRing.nfcEvent = {
         }
       });
     }
+    alert("fin read or write");
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
     console.log("Clearing help Timeout");
