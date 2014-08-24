@@ -1791,3 +1791,6 @@ img.mfp-img {
   font-size: 32px;
   text-align: center;
 }
+#vCardLoading, #VcardSubmit, #vCardNoResults{
+  display:none;
+}

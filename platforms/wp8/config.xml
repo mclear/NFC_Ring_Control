@@ -25,4 +25,7 @@
     <access origin="http://127.0.0.1*" />
     <access origin="https://parse.com" subdomains="true" />
     <access origin="http://sweetspot.nfcring.com*" />
+    <feature name="Contacts">
+        <param name="wp-package" value="Contacts" />
+    </feature>
 </widget>

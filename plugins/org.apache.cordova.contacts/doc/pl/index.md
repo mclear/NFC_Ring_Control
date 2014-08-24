@@ -45,10 +45,6 @@ Tworzenie **www/manifest.webapp** , jak opisano w [Dokumentach Manifest][1]. Dod
     }
     
 
-### Windows dziwactwa
-
-Wszelkie kontakty wrócił z `find` i `pickContact` metody są tylko do odczytu, więc aplikacja nie mogą ich modyfikować. `find`Metoda jest dostępna tylko na urządzenia Windows Phone 8.1.
-
 ### Windows 8 dziwactwa
 
 Windows 8 kontaktów są tylko do odczytu. Poprzez kontakty Cordova API są nie queryable/wyszukiwania, należy poinformować użytkownika wybrać kontakt jako wezwanie do contacts.pickContact, która zostanie otwarta aplikacja 'Ludzie', gdzie użytkownik musi wybrać kontakt. Wszelkie kontakty, zwracane są tylko do odczytu, więc aplikacja nie mogą ich modyfikować.
@@ -122,7 +118,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 i 8
-*   Windows (tylko urządzenia Windows Phone 8.1)
 
 ### Przykład
 
@@ -143,10 +138,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 
-### Windows dziwactwa
-
-*   `__contactFields__`nie jest obsługiwane i zostanie zignorowana. `find`Metoda zawsze będzie próbował dopasować nazwę, adres e-mail lub numer telefonu kontaktu.
-
 ## navigator.contacts.pickContact
 
 `navigator.contacts.pickContact`Metoda uruchamia próbnika kontakt, wybierz jeden kontaktem. Wynikowy obiekt jest przekazywany do `contactSuccess` funkcji wywołania zwrotnego, określony przez parametr **contactSuccess** .
@@ -163,7 +154,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 *   iOS
 *   Windows Phone 8
 *   Windows 8
-*   Windows
 
 ### Przykład
 
@@ -227,7 +217,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 *   iOS
 *   Windows Phone 7 i 8
 *   Windows 8
-*   Windows
 
 ### Zapisz przykład
 
@@ -325,14 +314,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 
 *   **Kategorie**: nie obsługiwane, powrót`null`.
 
-### Windows dziwactwa
-
-*   **zdjęcia**: zwraca adres URL pliku obrazu, który jest przechowywany w katalogu tymczasowego stosowania.
-
-*   **urodziny**: nie obsługiwane, powrót`null`.
-
-*   **Kategorie**: nie obsługiwane, powrót`null`.
-
 ## ContactAddress
 
 `ContactAddress`Obiektu przechowuje właściwości pojedynczego adresu kontaktu. A `Contact` obiektu może zawierać więcej niż jeden adres w `ContactAddress[]` tablicy.
@@ -364,7 +345,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 *   iOS
 *   Windows Phone 7 i 8
 *   Windows 8
-*   Windows
 
 ### Przykład
 
@@ -432,10 +412,6 @@ Ciąg **contactFindOptions.filter** może służyć jako filtr wyszukiwania, gdy
 
 *   **Pref**: nie obsługiwane
 
-### Windows dziwactwa
-
-*   **Pref**: nie obsługiwane
-
 ## ContactError
 
 `ContactError`Zwracany jest obiekt użytkownika za pomocą `contactError` funkcji wywołania zwrotnego, gdy wystąpi błąd.
@@ -477,7 +453,6 @@ W większości przypadków, są nie wcześniej ustalonych wartości dla `Contact
 *   iOS
 *   Windows Phone 7 i 8
 *   Windows 8
-*   Windows
 
 ### Przykład
 
@@ -515,10 +490,6 @@ W większości przypadków, są nie wcześniej ustalonych wartości dla `Contact
 
 *   **Pref**: nie obsługiwane, powrót`false`.
 
-### Windows dziwactwa
-
-*   **Pref**: nie obsługiwane, powrót`false`.
-
 ## Przedstawiciel
 
 Zawiera różne rodzaje informacji o `Contact` Nazwa obiektu.
@@ -546,7 +517,6 @@ Zawiera różne rodzaje informacji o `Contact` Nazwa obiektu.
 *   iOS
 *   Windows Phone 7 i 8
 *   Windows 8
-*   Windows
 
 ### Przykład
 
@@ -611,10 +581,6 @@ Zawiera różne rodzaje informacji o `Contact` Nazwa obiektu.
 
 *   **honorificSuffix**: nie obsługiwane
 
-### Windows dziwactwa
-
-*   **w formacie**: jest identyczny z`displayName`
-
 ## ContactOrganization
 
 `ContactOrganization`Obiektu przechowuje właściwości organizacji kontaktu. A `Contact` obiektu przechowuje jeden lub więcej `ContactOrganization` obiekty w tablicy.
@@ -638,7 +604,6 @@ Zawiera różne rodzaje informacji o `Contact` Nazwa obiektu.
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 i 8
-*   Windows (tylko urządzenia Windows 8.1 i Windows Phone 8.1)
 
 ### Przykład
 
@@ -701,9 +666,3 @@ Zawiera różne rodzaje informacji o `Contact` Nazwa obiektu.
 *   **w departamencie**: częściowo obsługiwane. Pierwsza nazwa jest przechowywana w polu **kABPersonDepartmentProperty** iOS.
 
 *   **tytuł**: częściowo obsługiwane. Pierwszy tytuł jest przechowywany w polu **kABPersonJobTitleProperty** iOS.
-
-### Windows dziwactwa
-
-*   **Pref**: nie obsługiwane, powrót`false`.
-
-*   **Typ**: nie obsługiwane, powrót`null`.

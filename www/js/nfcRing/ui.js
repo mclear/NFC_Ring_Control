@@ -198,6 +198,7 @@ nfcRing.ui = {
       if(key.toLowerCase() === "person"){
         console.log("VCard so adding autocomplete class");
         $('#optionInput').addClass("autocomplete");
+        $('.icon-next').hide();
       }else{
         $('#optionInput').removeClass("autocomplete");
       }

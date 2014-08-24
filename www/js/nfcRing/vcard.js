@@ -3,18 +3,26 @@ nfcRing.vcard.cache = {};
 
 // Search for a contact
 nfcRing.vcard.search = function(name){
-  $('#vCardResults').html("Loading contacts...");
+  $('#vCardResults').html(""); // Clear the results
+  $('#vCardLoading').show(); // Show the loading screen
+  $('#vCardNoResults').hide(); // Hide the vCardNoResults
   var options = new ContactFindOptions();
   options.filter = name;
   options.multiple = true;
-  var fields = "*"; // Gets all the user data
+  var fields = ["*"]; // Gets all the user data
   navigator.contacts.find(fields, nfcRing.vcard.found, nfcRing.vcard.error, options);
 }
 
 // When a contact is found write it to the UI
 nfcRing.vcard.found = function(contacts){
-  $('#vCardResults').html("");
-  console.log(contacts);
+  $('#vCardLoading').hide();
+  console.log("Contact found", contacts);
+  if(contacts.length === 0){ // If no contacts were found.
+    $('#vCardResults').html("");
+    $('#vCardNoResults').show();
+  }else{
+    $('#vCardNoResults').hide();
+  }
   var i = 0;
   $.each(contacts, function(k,person){
     if(person.displayName && person.id){
@@ -37,7 +45,6 @@ nfcRing.vcard.showFields = function(personId){
 
 // takes in contact card from cordova and builds vcard format
 nfcRing.vcard.build = function(contact){
-  alert("Built vcard, still need to do functionality to write it");
   console.log("Contact", contact);
   var vcard = 'BEGIN:VCARD\n' +
     'VERSION:2.1\n' +

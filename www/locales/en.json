@@ -86,5 +86,7 @@
   "register.passwordTitle":"Password:",
   "register.passwordAgainTitle":"Password again:",
   "register.passwordsDontMatch":"Passwords don't match",
-  "register.success":"Registration successful, You can now use your username/password to verify the NFC Ring Unlock App"
+  "register.success":"Registration successful, You can now use your username/password to verify the NFC Ring Unlock App",
+  "vcard.loading":"Loading Contacts",
+  "vcard.noResults":"No Contacts Found"
 }
