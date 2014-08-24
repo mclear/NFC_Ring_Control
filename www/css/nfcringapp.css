@@ -1781,6 +1781,13 @@ img.mfp-img {
   color: #9F6000;
   background-color: #FEEFB3;  
 }
+.dataWontFitUpgrade{
+  display:none;
+  padding:10px;
+  margin:10px;
+  color: #9F6000;
+  background-color: #FEEFB3;  
+}
 .contact{
   background-color:#fff;
   display: block;

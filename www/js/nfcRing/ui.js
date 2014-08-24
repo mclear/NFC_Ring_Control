@@ -189,13 +189,15 @@ nfcRing.ui = {
       if(!typeof labelI18n == 'object'){ // If it's an object the string value was missing so we return nada
          var label = action.labelI18n;
       }else{
+         console.log("lower case label", key);
+         console.log("actions", nfcRing.actions);
          var label = nfcRing.actions[key.toLowerCase()].optionText;
       }
       nfcRing.userValues.optionTitle = label;
       nfcRing.userValues.action = key.toLowerCase();
       nfcRing.userValues.isUrl = false;
       console.log("key", key);
-      if(key.toLowerCase() === "person"){
+      if(key.toLowerCase() === "vcard"){
         console.log("VCard so adding autocomplete class");
         $('#optionInput').addClass("autocomplete");
         $('.icon-next').hide();
@@ -221,14 +223,42 @@ nfcRing.ui = {
         var tagSize = nfcRing.userValues.tagSize;
         console.log("inputSize", inputSize, "tagSize", tagSize);
         if(inputSize >= tagSize){
-          console.log("displaying warning because too much data is attempting to be written to me");
-          nfcRing.ui.dataSizeTooBig(true);
+          if(tagSize >= nfcRing.maxSize){
+            console.log("displaying warning because too much data is attempting to be written to me");
+            nfcRing.ui.dataSizeTooBig(true);
+            nfcRing.ui.dataSizeTooBigUpgrade(false);
+          }else{
+            console.log("telling user to upgrade their ring as a better one exists");
+            nfcRing.ui.dataSizeTooBigUpgrade(true);
+          }
         }else{
           console.log("data should fit fine on the tag");
           nfcRing.ui.dataSizeTooBig(false);
+          nfcRing.ui.dataSizeTooBigUpgrade(false);
         }
       }, 100);
     });
+
+    $('body').on('click', '.vCardCheckbox', function(e){
+      var input = nfcRing.vcard.build();
+      var inputSize = input.length;
+      var tagSize = nfcRing.userValues.tagSize;
+      console.log("inputSize", inputSize, "tagSize", tagSize);
+      if(inputSize >= tagSize){
+        if(tagSize >= nfcRing.maxSize){
+         console.log("displaying warning because too much data is attempting to be written to me");
+          nfcRing.ui.dataSizeTooBig(true);
+        }else{
+          console.log("telling user to upgrade their ring as a better one exists");
+          nfcRing.ui.dataSizeTooBigUpgrade(true);
+        }
+      }else{
+        console.log("data should fit fine on the tag");
+        nfcRing.ui.dataSizeTooBig(false);
+        nfcRing.ui.dataSizeTooBigUpgrade(false);
+      }
+    });
+
 
     $('body').on('submit', '#optionForm', function(e){
       e.preventDefault();
@@ -492,5 +522,14 @@ nfcRing.ui = {
     }else{
       $('.dataWontFit').hide();
     }
+  },
+
+  dataSizeTooBigUpgrade: function(wontFit){
+    if(wontFit){
+      $('.dataWontFitUpgrade').show();
+    }else{
+      $('.dataWontFitUpgrade').hide();
+    }
   }
+
 }
