@@ -4,94 +4,49 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {
-            "res/xml/config.xml": {
-                "parents": {
-                    "/widget": [
-                        {
-                            "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.chariotsolutions.nfc.plugin.NfcPlugin\" /></feature>",
-                            "count": 1
-                        }
-                    ],
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
+        "res/xml/config.xml": {
+            "/*": {
+                "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>": 1,
+                "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>": 1,
+                "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>": 1,
+                "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>": 1,
+                "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>": 1,
+                "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>": 1
             },
-            "AndroidManifest.xml": {
-                "parents": {
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.NFC\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.nfc\" android:required=\"false\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
-                            "count": 1
-                        }
-                    ]
-                }
+            "/widget": {
+                "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.chariotsolutions.nfc.plugin.NfcPlugin\" /></feature>": 1
+            }
+        },
+        "AndroidManifest.xml": {
+            "/manifest": {
+                "<uses-permission android:name=\"android.permission.NFC\" />": 1,
+                "<uses-feature android:name=\"android.hardware.nfc\" android:required=\"false\" />": 1,
+                "<uses-permission android:name=\"android.permission.VIBRATE\" />": 1
+            },
+            "/*": {
+                "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />": 1,
+                "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />": 1,
+                "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />": 1
             }
         }
     },
     "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "com.chariotsolutions.nfc.plugin": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "com.chariotsolutions.nfc.plugin": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
         "uk.co.whiteoctober.cordova.AppVersion": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "com.borismus.webintent": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.contacts": {

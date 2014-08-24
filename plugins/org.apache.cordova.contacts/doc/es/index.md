@@ -45,10 +45,6 @@ Crear **www/manifest.webapp** como se describe en [Manifestar Docs][1]. Agregar 
     }
     
 
-### Windows rarezas
-
-Cualquier contacto regresado de `find` y `pickContact` los métodos son readonly, así que su aplicación no puede modificarlos. `find`método disponible sólo en dispositivos Windows Phone 8.1.
-
 ### Rarezas de Windows 8
 
 Windows 8 contactos son de sólo lectura. Través de los contactos de la API de Córdoba no son consultables/búsqueda, se debe informar al usuario a buscar un contacto como una llamada a contacts.pickContact que se abrirá la aplicación 'Personas' donde el usuario debe elegir un contacto. Cualquier contacto volvió es readonly, su aplicación no puede modificarlos.
@@ -122,7 +118,6 @@ La cadena de **contactFindOptions.filter** puede ser usada como un filtro de bú
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 y 8
-*   Windows (sólo dispositivos Windows Phone 8.1)
 
 ### Ejemplo
 
@@ -143,10 +138,6 @@ La cadena de **contactFindOptions.filter** puede ser usada como un filtro de bú
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 
-### Windows rarezas
-
-*   `__contactFields__`No se admite y se ignorará. `find`método siempre tratará de coincidir con el nombre, dirección de correo electrónico o número de teléfono de un contacto.
-
 ## navigator.contacts.pickContact
 
 El `navigator.contacts.pickContact` método lanza el selector para seleccionar un único contacto contacto. El objeto resultante se pasa a la `contactSuccess` función de devolución de llamada especificada por el parámetro **contactSuccess** .
@@ -163,7 +154,6 @@ El `navigator.contacts.pickContact` método lanza el selector para seleccionar u
 *   iOS
 *   Windows Phone 8
 *   Windows 8
-*   Windows
 
 ### Ejemplo
 
@@ -227,7 +217,6 @@ El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser c
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
-*   Windows
 
 ### Salvar ejemplo
 
@@ -325,14 +314,6 @@ El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser c
 
 *   **categorías**: no soportado, regresando`null`.
 
-### Windows rarezas
-
-*   **fotos**: devuelve una dirección URL del archivo de la imagen, que se almacena en el directorio temporal de la aplicación.
-
-*   **cumpleaños**: no soportado, regresando`null`.
-
-*   **categorías**: no soportado, regresando`null`.
-
 ## ContactAddress
 
 El `ContactAddress` objeto almacena las propiedades de una única dirección de un contacto. A `Contact` objeto puede incluir más de una dirección en un `ContactAddress[]` matriz.
@@ -364,7 +345,6 @@ El `ContactAddress` objeto almacena las propiedades de una única dirección de 
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
-*   Windows
 
 ### Ejemplo
 
@@ -432,10 +412,6 @@ El `ContactAddress` objeto almacena las propiedades de una única dirección de 
 
 *   **Pref**: no se admite
 
-### Windows rarezas
-
-*   **Pref**: no se admite
-
 ## ContactError
 
 El `ContactError` objeto se devuelve al usuario a través de la `contactError` función de devolución de llamada cuando se produce un error.
@@ -477,7 +453,6 @@ En la mayoría de los casos, no existen previamente determinados valores para un
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
-*   Windows
 
 ### Ejemplo
 
@@ -515,10 +490,6 @@ En la mayoría de los casos, no existen previamente determinados valores para un
 
 *   **Pref**: no soportado, regresando`false`.
 
-### Windows rarezas
-
-*   **Pref**: no soportado, regresando`false`.
-
 ## ContactName
 
 Contiene diferentes tipos de información sobre un `Contact` nombre del objeto.
@@ -546,7 +517,6 @@ Contiene diferentes tipos de información sobre un `Contact` nombre del objeto.
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
-*   Windows
 
 ### Ejemplo
 
@@ -611,10 +581,6 @@ Contiene diferentes tipos de información sobre un `Contact` nombre del objeto.
 
 *   **honorificSuffix**: no se admite
 
-### Windows rarezas
-
-*   **formato**: es idéntica a`displayName`
-
 ## ContactOrganization
 
 El `ContactOrganization` objeto almacena las propiedades de organización de un contacto. A `Contact` objeto almacena uno o más `ContactOrganization` los objetos en una matriz.
@@ -638,7 +604,6 @@ El `ContactOrganization` objeto almacena las propiedades de organización de un 
 *   Firefox OS
 *   iOS
 *   Windows Phone 7 y 8
-*   Windows (sólo dispositivos Windows 8.1 y 8.1 de Windows Phone)
 
 ### Ejemplo
 
@@ -701,9 +666,3 @@ El `ContactOrganization` objeto almacena las propiedades de organización de un 
 *   **Departamento**: parcialmente soportado. El primer nombre de departamento se almacena en el campo de **kABPersonDepartmentProperty** de iOS.
 
 *   **título**: parcialmente soportado. El primer título se almacena en el campo de **kABPersonJobTitleProperty** de iOS.
-
-### Windows rarezas
-
-*   **Pref**: no soportado, regresando`false`.
-
-*   **tipo**: no soportado, regresando`null`.

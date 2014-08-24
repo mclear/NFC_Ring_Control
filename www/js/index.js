@@ -54,3 +54,7 @@ var app = {
     });
   }
 };
+
+window.onerror = function(e,f,g){
+   console.log("window.onerror ", e, f, g);
+};

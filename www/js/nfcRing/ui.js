@@ -198,6 +198,7 @@ nfcRing.ui = {
       if(key.toLowerCase() === "person"){
         console.log("VCard so adding autocomplete class");
         $('#optionInput').addClass("autocomplete");
+        $('.icon-next').hide();
       }else{
         $('#optionInput').removeClass("autocomplete");
       }
@@ -234,6 +235,16 @@ nfcRing.ui = {
       nfcRing.userValues.toWrite = nfcRing.actions[nfcRing.userValues.action].format($('#optionInput').val()); // gets the value to write
    
       nfcRing.userValues.history.set(); // saves it to history
+      console.log("Submitting a write value to the nfcRing object");
+      nfcRing.ui.displayPage("writeRing");
+      nfcRing.ui.prepareWritePage("write");
+      return false;
+    });
+
+    $('body').on('submit', '#vCardForm', function(e){
+      e.preventDefault();
+      nfcRing.userValues.toWrite = nfcRing.vcard.build();
+      nfcRing.userValues.history.set();
       console.log("Submitting a write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
       nfcRing.ui.prepareWritePage("write");
@@ -333,7 +344,7 @@ nfcRing.ui = {
       console.log("ID", e.target.id);
       var contactObj = nfcRing.vcard.cache[e.target.id];
       if(vcard){
-        nfcRing.userValues.toWrite = contactObj;
+        nfcRing.userValues.contactToWrite = contactObj;
         nfcRing.userValues.isVCard = true;
         console.log("Displaying vcard page");
         nfcRing.ui.displayPage("vcard");
@@ -402,6 +413,10 @@ nfcRing.ui = {
     if(page === "settings"){
       console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
+    }
+    
+    if(page === "vcard"){
+      nfcRing.vcard.showFields(); // Write the checkboxes and fields to the UI
     }
 
     setTimeout(function(){

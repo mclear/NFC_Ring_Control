@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--
-<script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
--->
+  <script src="http://10.0.0.12:8080/target/target-script-min.js#anonymous"></script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name = "format-detection" content = "telephone=no"/>
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
   <script type="text/javascript">var nfcRing = {}</script>
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
   <script type="text/javascript" src="js/heatmap.js"></script>
   <script type="text/javascript" src="js/nfcRing/actions.js"></script>
@@ -106,10 +104,12 @@
   </header>
   <div class="actionName optionName"></div>
   <div class="actionContents">
-    <form id="optionForm" class="centered">
+    <form id="vCardForm" class="centered">
       <label for="optionInput"></label>
       <input name="option" id="optionInput" type="text">
       <input type="hidden" id="actionHidden" name="action">
+      <div id="vCardLoading"><h2>{{html10n "vcard.loading"}}&nbsp;&nbsp;<img src="./img/loading.gif"></h2></div>
+      <div id="vCardNoResults"><h2>{{html10n "vcard.noResults"}}</h2></div>
       <div id="vCardResults"></div>
       <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
       <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
@@ -128,7 +128,7 @@
     <form id="vCardForm" class="centered">
       <div id="vCardData"></div>
       <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
-      <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+      <button type="submit" class="btn-link icon icon-next" id="vCardSubmit">{{html10n "option.next"}}</button>
     </form>
   </div>
 </script>

@@ -49,6 +49,16 @@
                     ]
                 }
             }
+        },
+        "config.xml": {
+            "/*": {
+                "<feature name=\"Contacts\"><param name=\"wp-package\" value=\"Contacts\" /></feature>": 1
+            }
+        },
+        "Properties/WMAppManifest.xml": {
+            "/Deployment/App/Capabilities": {
+                "<Capability Name=\"ID_CAP_CONTACTS\" />": 1
+            }
         }
     },
     "installed_plugins": {
