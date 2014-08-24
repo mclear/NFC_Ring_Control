@@ -51,6 +51,7 @@ nfcRing.vcard.build = function(){
   var contact = nfcRing.userValues.contactToWrite;
   console.log("Which properties should I write?");
   var props = $('.vCardCheckbox:checked');
+  console.log("props", props, "contact", contact);
 
   if(!props){
     alert("no properties selected, exiting");
@@ -70,9 +71,18 @@ nfcRing.vcard.build = function(){
       vCard += 'EMAIL;WORK:'+contact.emails[0].value+'\n';
     }
 
-    if(props[key].id === "telephone"){
+    if(props[key].id === "telephone" || props[key].id === "phoneNumbers"){
       vCard += 'TEL;'+contact.phoneNumbers[0].value+'\n';
     }
+
+    if(props[key].id === "addresses"){
+      var address = contact.addresses[0].formatted;
+      address = address.replace("\n", ";");
+      console.log("Address", address)
+      vCard += 'ADR;WORK:;;;'+address+'\n';
+    }
+   
+   
   });
 
   vCard += 'END:VCARD';
