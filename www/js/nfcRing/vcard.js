@@ -39,7 +39,7 @@ nfcRing.vcard.showFields = function(){
   $("#vCardData").html("");
   $.each(nfcRing.userValues.contactToWrite, function(key, value){
     if(nfcRing.userValues.contactToWrite[key]){
-      if(key !== "id" && key !== "rawId" && key !== "remove" && key !== "clone" && key !== "save" && key !== "photos"){
+      if(key !== "id" && key !== "rawId" && key !== "remove" && key !== "clone" && key !== "save" && key !== "photos" && key !== "displayName"){
         $("#vCardData").append("<div class='contactInfo'><label>" + key + "<input class='vCardCheckbox' type='checkbox' id='" + key + "' value='" + key + "' name='" + key + "'></label></div>");
       }
     }
@@ -47,19 +47,38 @@ nfcRing.vcard.showFields = function(){
 }
 
 // takes in contact card from cordova and builds vcard format
-nfcRing.vcard.build = function(contact){
-  console.log("Contact", contact);
-  var vcard = 'BEGIN:VCARD\n' +
-    'VERSION:2.1\n' +
-    'N:'+contact.name.familyName+';'+contact.name.givenName+';;;\n' +
-    'FN:'+contact.name.formatted+'\n' +
-    'EMAIL;WORK:'+contact.emails[0].value+'\n' +
-    'TEL;'+contact.phoneNumbers[0].value+'\n' +
-    'END:VCARD';
-  console.log("vcard", vcard);
-  nfcRing.userValues.toWrite = vcard;
+nfcRing.vcard.build = function(){
+  var contact = nfcRing.userValues.contactToWrite;
+  console.log("Which properties should I write?");
+  var props = $('.vCardCheckbox:checked');
+
+  if(!props){
+    alert("no properties selected, exiting");
+    return;
+  }
+
+  var vCard = 'BEGIN:VCARD\n' +
+   'VERSION:2.1\n';
+
+  $.each(props, function(key, value){
+    if(props[key].id === "name"){
+      vCard += 'N:'+contact.name.familyName+';'+contact.name.givenName+';;;\n' + 
+        'FN:'+contact.name.formatted+'\n';
+    }
+
+    if(props[key].id === "emails"){
+      vCard += 'EMAIL;WORK:'+contact.emails[0].value+'\n';
+    }
+
+    if(props[key].id === "telephone"){
+      vCard += 'TEL;'+contact.phoneNumbers[0].value+'\n';
+    }
+  });
+
+  vCard += 'END:VCARD';
+  console.log("vCard", vCard);
   nfcRing.userValues.isVCard = true;
-  return vcard;
+  return vCard;
 }
 
 nfcRing.vcard.error = function(e){

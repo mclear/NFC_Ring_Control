@@ -241,6 +241,16 @@ nfcRing.ui = {
       return false;
     });
 
+    $('body').on('submit', '#vCardForm', function(e){
+      e.preventDefault();
+      nfcRing.userValues.toWrite = nfcRing.vcard.build();
+      nfcRing.userValues.history.set();
+      console.log("Submitting a write value to the nfcRing object");
+      nfcRing.ui.displayPage("writeRing");
+      nfcRing.ui.prepareWritePage("write");
+      return false;
+    });
+
     $('body').on('submit', '#registerEmail', function(e){
       e.preventDefault();
       // alert("This functionality is not ready yet..");
