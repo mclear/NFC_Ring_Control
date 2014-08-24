@@ -39,7 +39,6 @@ nfcRing.nfcEvent = {
       // Because we currently only support Android and WP we don't need to wrap this in an If
 
       nfc.addTagDiscoveredListener(function (nfcEvent) {
-//        alert("NFC Event, IE tag or ring introduced to the app");
         nfcRing.nfcEvent.readOrWrite(nfcEvent, "notNDEF");
       }, function () {
         console.log("Success.  Listening for rings..");
@@ -67,13 +66,12 @@ nfcRing.nfcEvent = {
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
     // console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
-    alert(nfcRing.userValues.location); // This is index and that's wrong!!
+    // alert(nfcRing.userValues.location); // This is index and that's wrong!!
     if(nfcRing.userValues.location !== "writeRing"){
       console.log("We're not on a write or read page so do nothing");
       return false;
     }
 
-    alert(2);
     $('#message').hide(); // hide help message
     if(nfcRing.userValues.activity == "write"){
       console.log("Doing write event", nfcEvent);
@@ -99,7 +97,6 @@ nfcRing.nfcEvent = {
         }
       });
     }
-    alert("fin read or write");
   },
   write: function(nfcEvent){ // Write an NFC NDEf record
     console.log("Clearing help Timeout");
@@ -113,7 +110,6 @@ nfcRing.nfcEvent = {
     console.log("isURL", isURL);
     if (isURL) {
       console.log("URL Record");
-
       // does the uri have http as the first 4 characters?
       console.log("First 4 letters of userValue", nfcRing.userValues.toWrite.substring(0,4));
       if(nfcRing.userValues.toWrite.substring(0,4) !== "http"){
@@ -123,7 +119,13 @@ nfcRing.nfcEvent = {
         nfcRing.userValues.toWrite = "http://"+nfcRing.userValues.toWrite;
       }
       var ndefRecord = ndef.uriRecord(nfcRing.userValues.toWrite); // Creates a URI record
-    } else {
+    } 
+    else if(nfcRing.userValues.isVCard){
+      // VCard
+      console.log("Writing a vcard", nfcRing.userValues.toWrite);
+      var ndefRecord = ndef.mimeMediaRecord('text/x-vCard', nfc.stringToBytes(nfcRing.userValues.toWrite));
+    }
+    else {
       console.log("Text record");
       // The string must be a text record as that's the only other type we support
       var ndefRecord = ndef.textRecord(nfcRing.userValues.toWrite); // Creates a Text record

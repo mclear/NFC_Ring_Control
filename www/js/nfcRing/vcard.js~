@@ -7,7 +7,7 @@ nfcRing.vcard.search = function(name){
   var options = new ContactFindOptions();
   options.filter = name;
   options.multiple = true;
-  var fields = "*"; // Gets all the user data
+  var fields = ["displayName", "name", "emails", "phoneNumbers"];
   navigator.contacts.find(fields, nfcRing.vcard.found, nfcRing.vcard.error, options);
 }
 
@@ -27,14 +27,6 @@ nfcRing.vcard.found = function(contacts){
   });
 }
 
-nfcRing.vcard.showFields = function(personId){
-  var contact = nfcRing.vcard.cache[personId];
-  $.each(contact, function(key, value){
-    console.log("Display Name = " + contact.displayName);
-    $("vCardData").append("<label for='displayName' value='Display Name'><input type='checkbox' name='displayName' class='displayName'/>");
-  })
-}
-
 // takes in contact card from cordova and builds vcard format
 nfcRing.vcard.build = function(contact){
   alert("Built vcard, still need to do functionality to write it");
@@ -47,7 +39,6 @@ nfcRing.vcard.build = function(contact){
     'TEL;'+contact.phoneNumbers[0].value+'\n' +
     'END:VCARD';
   console.log("vcard", vcard);
-  nfcRing.userValues.toWrite = vcard;
   nfcRing.userValues.isVCard = true;
   return vcard;
 }

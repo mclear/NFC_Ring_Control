@@ -117,6 +117,23 @@
   </div>
 </script>
 
+<script id="vcard" class="step vcard" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="nav-btn" class="icon icon-settings selected"></div>
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
+  <div class="vCardContents">
+    <form id="vCardForm" class="centered">
+      <div id="vCardData"></div>
+      <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
+      <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+    </form>
+  </div>
+</script>
+
+
 <script id="writeRing" class="step writeRing" type="x-handlebars-template">
   <header id="header">
     <div id="title"></div>

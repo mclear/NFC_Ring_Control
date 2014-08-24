@@ -22,7 +22,6 @@ nfcRing.ui = {
       }
       $('#ringActions').append('<li><div data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></div></li>');
     });
-
   },
  
   showNeedHelp: function(){
@@ -30,7 +29,6 @@ nfcRing.ui = {
   }, // Shows the need help button
 
   domListenersInit: function(){
-
     // In the browser when we use the back button it doesn't fire the handleBack or whatever so sometimes we have to catch it
     // None fo this shit seems to work..
     $(window).on('hashchange', function() {
@@ -334,12 +332,11 @@ nfcRing.ui = {
     $('body').on("click", ".contact", function(e){
       console.log("ID", e.target.id);
       var contactObj = nfcRing.vcard.cache[e.target.id];
-      var vcard = nfcRing.vcard.build(contactObj);
-alert("Built vcard");
       if(vcard){
-        nfcRing.vcard.vcard = vcard;
-        var record = ndef.mimeMediaRecord('text/x-vCard', nfc.stringToBytes(nfcRing.vcard.vcard));
-        alert("ready to write Vcard");
+        nfcRing.userValues.toWrite = contactObj;
+        nfcRing.userValues.isVCard = true;
+        console.log("Displaying vcard page");
+        nfcRing.ui.displayPage("vcard");
       }else{
         alert("Failed to create VCard");
       }
