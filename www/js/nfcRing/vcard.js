@@ -6,11 +6,35 @@ nfcRing.vcard.search = function(name){
   $('#vCardResults').html(""); // Clear the results
   $('#vCardLoading').show(); // Show the loading screen
   $('#vCardNoResults').hide(); // Hide the vCardNoResults
-  var options = new ContactFindOptions();
-  options.filter = name;
-  options.multiple = true;
-  var fields = ["*"]; // Gets all the user data
-  navigator.contacts.find(fields, nfcRing.vcard.found, nfcRing.vcard.error, options);
+  if(device.platform === "browser"){
+    console.log("Simulating contact result as it's the browser");
+    nfcRing.vcard.found([
+      {
+        id: 1,
+        name: "Awesome guy",
+        displayName: "Testy McTesties",
+        emails: [
+          "john@mclear.co.uk", "chris@nfcring.com"
+        ],
+        addresses: [{
+          formatted: "my home"
+        }]
+      },
+      {
+        id: 2,
+        displayName: "Rob McTestingdom",
+        name: "Rob Mc",
+        pornStatus: "repair"
+        /* TODO -- Add support for further contact properties */
+      }
+    ]);
+  }else{
+    var options = new ContactFindOptions();
+    options.filter = name;
+    options.multiple = true;
+    var fields = ["*"]; // Gets all the user data
+    navigator.contacts.find(fields, nfcRing.vcard.found, nfcRing.vcard.error, options);
+  }
 }
 
 // When a contact is found write it to the UI
