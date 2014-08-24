@@ -334,7 +334,7 @@ nfcRing.ui = {
       console.log("ID", e.target.id);
       var contactObj = nfcRing.vcard.cache[e.target.id];
       if(vcard){
-        nfcRing.userValues.toWrite = contactObj;
+        nfcRing.userValues.contactToWrite = contactObj;
         nfcRing.userValues.isVCard = true;
         console.log("Displaying vcard page");
         nfcRing.ui.displayPage("vcard");
@@ -403,6 +403,10 @@ nfcRing.ui = {
     if(page === "settings"){
       console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
+    }
+    
+    if(page === "vcard"){
+      nfcRing.vcard.showFields(); // Write the checkboxes and fields to the UI
     }
 
     setTimeout(function(){

@@ -1794,3 +1794,40 @@ img.mfp-img {
 #vCardLoading, #VcardSubmit, #vCardNoResults{
   display:none;
 }
+.contactInfo{
+  font-size:28px;
+  margin: 20px 0 20px 0;
+}
+.contactInfo:nth-child(odd){
+  background: #CCC;
+}
+
+.contactInfo:nth-child(even){
+  background: #EBECEC;
+}
+
+.contactInfo > label {
+  display: block;
+  padding-left: 25px;
+  text-indent: -15px;
+  text-align:left;
+  
+}
+.vCardCheckbox {
+    float:right;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    margin-right:20px;
+    vertical-align: bottom;
+    position: relative;
+    top: 15px;
+    *overflow: hidden;
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
