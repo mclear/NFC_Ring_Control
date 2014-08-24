@@ -246,7 +246,7 @@ nfcRing.ui = {
       console.log("inputSize", inputSize, "tagSize", tagSize);
       if(inputSize >= tagSize){
         if(tagSize >= nfcRing.maxSize){
-         console.log("displaying warning because too much data is attempting to be written to me");
+          console.log("displaying warning because too much data is attempting to be written to me");
           nfcRing.ui.dataSizeTooBig(true);
         }else{
           console.log("telling user to upgrade their ring as a better one exists");
@@ -438,6 +438,10 @@ nfcRing.ui = {
 
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
+      if(nfcRing.userValues.isVCard){
+        $('#optionInput').addClass("autocomplete");
+        $('.icon-next').hide();
+      }
     }
  
     if(page === "settings"){

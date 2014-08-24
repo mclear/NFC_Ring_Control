@@ -62,10 +62,8 @@ nfcRing.heatmap = {
     var coOrdinateCounter = {};
     var model = device.model;
     var url = "http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model
-    console.warn("loading", url);
     $.getJSON(url).done(function(results){
       results = JSON.parse(results);
-      console.warn("results", results);
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
         var x = object.x; // 1
