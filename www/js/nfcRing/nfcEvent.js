@@ -60,7 +60,7 @@ nfcRing.nfcEvent = {
         if(isValid){
           nfcRing.ui.displayPage("register");
         }else{
-          alert("NOT NFC RING");
+          alert(html10n.get("register.notNFCRing"), false, html10n.get("register.notNFCRingTitle"));
         }
       });
     }
