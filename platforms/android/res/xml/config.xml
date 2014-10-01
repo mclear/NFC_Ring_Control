@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Hello Cordova</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <access origin="*" />
+<widget id="co.mclear.nfcringpro" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
@@ -24,6 +19,9 @@
     <feature name="AppVersion">
         <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
     </feature>
+    <feature name="WebIntent">
+        <param name="android-package" value="com.borismus.webintent.WebIntent" />
+    </feature>
     <name>NFC Ring Control</name>
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
@@ -33,7 +31,7 @@
     </author>
     <preference name="orientation" value="portrait" />
     <content src="index.html" />
-    <access origin="http://127.0.0.1*" />
-    <access origin="http://parse.com" subdomains="true" />
-    <access origin="https://parse.com" subdomains="true" />
+    <access origin="http://127.0.0.1" />
+    <access origin="https://*.parse.com" />
+    <access origin="http://sweetspot.nfcring.com" />
 </widget>
