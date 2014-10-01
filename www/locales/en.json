@@ -85,5 +85,7 @@
   "register.passwordsDontMatch":"Passwords don't match",
   "register.success":"Registration successful, You can now use your username/password to verify the NFC Ring Unlock App",
   "register.notNFCRingTitle":"Uh oh",
-  "register.notNFCRing":"This might not be a genuine NFC Ring, please try the other side of your Ring"
+  "register.notNFCRing":"This might not be a genuine NFC Ring, please try the other side of your Ring",
+  "register.resetPasswordPrompt":"You have already registered for an NFC Ring Unlock account so you don't need to do anything.  Would you like to Reset your password?",
+  "register.resetPasswordPromptTitle":"You are already registered"
 }

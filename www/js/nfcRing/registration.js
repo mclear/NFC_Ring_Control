@@ -37,6 +37,7 @@ nfcRing.registration = {
     }
   },
 
+
   registerUser: function(){
     parseInitUsers();
     var user = new Parse.User();
@@ -46,7 +47,7 @@ nfcRing.registration = {
     user.set("username", email);
     user.set("password", pwd);
     user.set("uid", nfcRing.userValues.uid);
-    
+
     user.signUp(null, {
       success: function(user) {
         alert(html10n.get("register.success"));
@@ -54,8 +55,19 @@ nfcRing.registration = {
       },
       error: function(user, error) {
         // Show the error message somewhere and let the user try again.
-        alert("Error: " + error.code + " " + error.message);
+        if(error.code === 202){
+          navigator.notification.confirm(html10n.get("register.resetPasswordPrompt"), nfcRing.registration.passwordResetConfirm, html10n.get("register.resetPasswordPromptTitle"));
+        }else{
+          alert("Error: " + error.code + " " + error.message);
+        }
       }
     });
+  },
+
+
+  passwordResetConfirm: function(wantToReset){
+    if(wantToReset === 1){
+      window.open('https://me.nfcring.com/validationCodeReset', '_system');
+    }
   }
 }

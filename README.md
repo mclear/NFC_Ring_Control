@@ -33,7 +33,7 @@ cordova run android
 ```
 Bump version number in www/config.xml and platforms/android/androidManifest.xml
 cordova build android --release
-cd platforms/android/bin
+cd platforms/android/ant-build
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/keystore NFCRingControl-release-unsigned.apk nfcring
 zipalign -v 4 NFCRingControl-release-unsigned.apk NFCRingControl.apk
 ```
