@@ -424,4 +424,22 @@
     <ItemGroup>
         <Content Include="www/plugins/org.apache.cordova.vibration/www/vibration.js" />
     </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.dialogs\www\notification.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.vibration\www\vibration.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\org.apache.cordova.device\www\device.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.chariotsolutions.nfc.plugin\www\phonegap-nfc.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\plugins\com.borismus.webintent\www\webintent.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="www\cordova_plugins.js" />
+    </ItemGroup>
 </Project>
