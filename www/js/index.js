@@ -4,12 +4,13 @@ var app = {
   },
   bind: function () {
     document.addEventListener('deviceready', this.deviceready, false);
-    document.addEventListener('resume', this.deviceready, false);
+    document.addEventListener('resume', this.resume, false);
   },
   resume: function () {
     // BELOW NEEDS A REFACTOR
+    console.log("RESUMING!");
     if(typeof cordova !== 'undefined'){
-      console.log("Checking for intent");
+      console.log("Checking for intent", webintent);
       webintent.hasExtra(webintent.EXTRA_TEXT,
         function(hasExtra) {
           if(hasExtra){
@@ -36,9 +37,7 @@ var app = {
     }
 
     webintent.onNewIntent(function(intent, test) {
-
       console.log("new intent event detected", intent, test);
-
       webintent.hasExtra(webintent.EXTRA_TEXT,
         function(hasExtra) {
           if(hasExtra){
@@ -48,8 +47,13 @@ var app = {
 
     });
 
+    //handle app invoke via activity
+    window.plugins.webintent.getUri(function(invokeUrl) {
+      console.log("[INTENT] handleAndroidOpen: " +  invokeUrl);
+    });
+
   },
-  
+
   deviceready: function () {
 
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
@@ -72,7 +76,7 @@ var app = {
 
     // BELOW NEEDS A REFACTOR
     if(typeof cordova !== 'undefined'){
-      console.log("Checking for intent");
+      console.log("Checking for intent", webintent);
       webintent.hasExtra(webintent.EXTRA_TEXT,
         function(hasExtra) {
           if(hasExtra){
@@ -110,5 +114,11 @@ var app = {
       });
 
     });
+
+    //handle app invoke via activity
+    window.plugins.webintent.getUri(function(invokeUrl) {
+      console.log("[INTENT] handleAndroidOpen: " +  invokeUrl);
+    });
+
   }
 };
