@@ -27,6 +27,7 @@
 	"context.history": "Storico",
 	"action.whatDoYouWantYourRingToDo": "Cosa vuoi che faccia il tuo anello?",
 	"option.next": "Successivo",
+	"option.dataWontFit": "Attenzione: auesta quantità di dati potrebbe non essere adatta sul tuo anello NFC",
 	"writeRing.finish": "Termina",
 	"writeRing.noNFC": "L'NFC non sembra funzionare. L'NFC è attivato sul tuo dispositivo?",
 	"writeRing.woohoo": "Uauh!",
@@ -88,5 +89,5 @@
 	"register.passwordTitle": "Password:",
 	"register.passwordAgainTitle": "Ripeti la password:",
 	"register.passwordsDontMatch": "Le password non coincidono",
-	"register.success": "Registrazione avvenuta con successo"
+	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione"
 }

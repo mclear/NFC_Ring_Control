@@ -26,6 +26,7 @@
 	"context.history": "Historia",
 	"action.whatDoYouWantYourRingToDo": "Mitä haluat sormuksesi tekevän?",
 	"option.next": "Seuraava",
+	"option.dataWontFit": "Varoitus: Tämä ei välttämättä mahdu NFC-sormukseesi",
 	"writeRing.finish": "Valmis",
 	"writeRing.noNFC": "NFC-toiminto ei toimi. Onko NFC aktivoitu laitteessasi?",
 	"writeRing.woohoo": "Jippii!",

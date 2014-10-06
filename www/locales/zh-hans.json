@@ -26,6 +26,7 @@
 	"context.history": "历史",
 	"action.whatDoYouWantYourRingToDo": "您希望您的戒指做什么？",
 	"option.next": "下一步",
+	"option.dataWontFit": "警告：数据的此数量可能不会触发您的NFC戒指",
 	"writeRing.finish": "完成",
 	"writeRing.noNFC": "NFC功能无法工作。您是否在您的设备上启用了NFC？",
 	"writeRing.woohoo": "给力！",
@@ -87,5 +88,5 @@
 	"register.passwordTitle": "密码：",
 	"register.passwordAgainTitle": "确认密码：",
 	"register.passwordsDontMatch": "两次密码不一致",
-	"register.success": "注册完成"
+	"register.success": "注册完成，您现在可以使用您的用户名/密码验证NFC戒指解锁应用程序"
 }

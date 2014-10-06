@@ -26,6 +26,7 @@
 	"context.history": "Историја",
 	"action.whatDoYouWantYourRingToDo": "Што сакате да прави прстенот?",
 	"option.next": "Следно",
+	"option.dataWontFit": "Предупредување: Оваа количина на податоци може да не ја собере на вашиот NFC-прстен",
 	"writeRing.finish": "Готово",
 	"writeRing.noNFC": "Можноста за NFC не работи. Дали е овозможен во уредот?",
 	"writeRing.woohoo": "Одлично!",
@@ -87,5 +88,5 @@
 	"register.passwordTitle": "Лозинка:",
 	"register.passwordAgainTitle": "Пак лозинката:",
 	"register.passwordsDontMatch": "Лозинките не се совпаѓаат",
-	"register.success": "Регистрацијата е успешна"
+	"register.success": "Регистрацијата е успешна Сега можете да ги употребите корисничкото име и лозинката за да го заверите прилогот за отклучување на NFC-прстенот"
 }

@@ -21,7 +21,7 @@
 	"option.next": "Seguent",
 	"writeRing.finish": "Acabar",
 	"writeRing.woohoo": "Bo !",
-	"writeRing.ready": "Vòstre anèl es d'ara enlà prèst",
+	"writeRing.ready": "Vòstre anèl NFC es d'ara enlà prèst",
 	"readRing.contents": "Contengut de l’anèl :",
 	"settings.clearMySweetSpot": "Mon punt ideal",
 	"settings.clearMySweetSpotDescription": "Voidar l’emplaçament de mon punt ideal enregistrat",
@@ -52,5 +52,5 @@
 	"register.passwordTitle": "Senhal :",
 	"register.passwordAgainTitle": "Picatz lo senhal tornarmai :",
 	"register.passwordsDontMatch": "Los senhals correspondon pas",
-	"register.success": "Inscripcion capitada"
+	"register.success": "Inscripcion capitada ; ara podètz utilizar vòstre nom d’utilizaire/senhal per verificar l’aplicacion de desvarrolhatge de l’Anèl NFC"
 }

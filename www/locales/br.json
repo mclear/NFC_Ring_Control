@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Gwenn-Ael",
-			"Fohanno"
+			"Fohanno",
+			"Fulup"
 		]
 	},
-	"index.wantHelp": "C'hoant ho peus skoazell ?",
+	"index.wantHelp": "Un tamm skoazell marteze ?",
 	"index.wantHelpLong": "Ar wech kentañ eo, war a seblant, emaoc'h oc'h implijout an arload Kontroll ar Walenn NFC. C'hoant ho peus skoazell ?",
 	"index.whatDoYouWantToDoToday": "Petra hoc'h eus c'hoant d'ober hiziv ?",
 	"index.create": "Krouiñ",
@@ -27,10 +28,12 @@
 	"context.history": "Istor",
 	"action.whatDoYouWantYourRingToDo": "Petra ho peus c'hoant e rafe ho kwalenn ?",
 	"option.next": "War-lerc'h",
+	"option.dataWontFit": "Diwallit : ar c'hemetad roadennoù a c'hallfe chom hep derc'hel war ho kwalenn NFC.",
 	"writeRing.finish": "Echuiñ",
 	"writeRing.noNFC": "Ned a ket an arc'hweladur NFC en-dro. Ha gweredekaet eo bet hoc'h ardivink",
 	"writeRing.woohoo": "Waouuuu !",
 	"writeRing.ready": "Prest eo ho kwalenn hiviziken",
+	"writeRing.fail": "N'haller ket skrivañ war ho kwalenn NFC",
 	"readRing.contents": "Endalc'had ar walenn :",
 	"settings.clearMySweetSpot": "Ho pik peurvat",
 	"settings.clearMySweetSpotDescription": "Goullonderiñ lec'h ma fik peurvat enrollet",
@@ -87,5 +90,5 @@
 	"register.passwordTitle": "Ger-tremen :",
 	"register.passwordAgainTitle": "Adskrivañ ar ger-tremen :",
 	"register.passwordsDontMatch": "Ar gerioù-tremen ne glotont ket an eil gant egile",
-	"register.success": "Enskrivadur deuet-brav"
+	"register.success": "Enskrivadur deuet-brav. Gallout a reot bremañ implijout hoc'h anv implijer/ho ker-tremen evit gwiriañ arload dibrennañ ar walenn NFC"
 }

@@ -3,7 +3,8 @@
 		"authors": [
 			"A1",
 			"Andriykopanytsia",
-			"Base"
+			"Base",
+			"Olvin"
 		]
 	},
 	"index.wantHelp": "Потрібна допомога?",
@@ -28,10 +29,12 @@
 	"context.history": "Історія",
 	"action.whatDoYouWantYourRingToDo": "Що ви хочете, щоб робило ваше кільце?",
 	"option.next": "Далі",
+	"option.dataWontFit": "Попередження: Такий обсяг даних може не вміститися на ваш NFC Ring",
 	"writeRing.finish": "Завершити",
 	"writeRing.noNFC": "Не працює функціонал NFC. Він увімкнений на вашому пристрої?",
 	"writeRing.woohoo": "Ура!",
 	"writeRing.ready": "Ваше NFC-кільце тепер готове",
+	"writeRing.fail": "Неможливо записати ваш NFC Ring",
 	"readRing.contents": "Вміст кільця:",
 	"settings.clearMySweetSpot": "Моя активна зона",
 	"settings.clearMySweetSpotDescription": "Очистити збережене розташування активної зони",
@@ -41,6 +44,7 @@
 	"settings.previousActionsDescription": "Очистити історію моїх попередніх дій",
 	"settings.version": "Версія",
 	"settings.phoneModel": "Модель телефону",
+	"settings.changeLanguage": "Змінити мову застосунку",
 	"help.helpTips": "Підказки",
 	"help.facing": "Переконайтеся, що кольорова, неметалічна частина кільця звернена до задньої сторони вашого пристрою і стосується її.",
 	"help.cases": "Зніміть чохол з вашого пристрою",
@@ -87,5 +91,5 @@
 	"register.passwordTitle": "Пароль:",
 	"register.passwordAgainTitle": "Пароль ще раз:",
 	"register.passwordsDontMatch": "Паролі не збігаються",
-	"register.success": "Успішна реєстрація"
+	"register.success": "Реєстрація успішна. Тепер Ви можете застосувати ваші логін/пароль для перевірки застосунку NFC Ring Unlock"
 }

@@ -26,6 +26,7 @@
 	"context.history": "Historique",
 	"action.whatDoYouWantYourRingToDo": "Que voulez-vous que fasse votre anneau ?",
 	"option.next": "Suivant",
+	"option.dataWontFit": "Attention : Cette quantité de données pourrait ne pas tenir sur votre Anneau NFC",
 	"writeRing.finish": "Terminer",
 	"writeRing.noNFC": "La fonctionnalité NFC ne marche pas. NFC est-il activé sur votre appareil ?",
 	"writeRing.woohoo": "Wahou !",
@@ -87,5 +88,5 @@
 	"register.passwordTitle": "Mot de passe :",
 	"register.passwordAgainTitle": "Répétition du mot de passe :",
 	"register.passwordsDontMatch": "Les mots de passe ne correspondent pas",
-	"register.success": "Inscription réussie"
+	"register.success": "Inscription réussie ; vous pouvez maintenant utiliser votre nom d’utilisateur/mot de passe pour vérifier l’application de déverrouillage de l’Anneau NFC"
 }

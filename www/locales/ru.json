@@ -27,6 +27,7 @@
 	"context.history": "История",
 	"action.whatDoYouWantYourRingToDo": "Что вы хотите, чтобы делало ваше кольцо?",
 	"option.next": "Далее",
+	"option.dataWontFit": "Внимание: Такой объём данных может не поместиться на вашем NFC-кольце",
 	"writeRing.finish": "Завершить",
 	"writeRing.noNFC": "Не работает функционал NFC. Он включен на вашем устройстве?",
 	"writeRing.woohoo": "Класс!",
@@ -88,5 +89,5 @@
 	"register.passwordTitle": "Пароль:",
 	"register.passwordAgainTitle": "Пароль ещё раз:",
 	"register.passwordsDontMatch": "Пароли не совпадают",
-	"register.success": "Регистрация прошла успешно!"
+	"register.success": "Регистрация прошла успешно! Теперь вы можете использовать свои имя пользователя и пароль, чтобы проверить приложение NFC Ring Unlock"
 }
