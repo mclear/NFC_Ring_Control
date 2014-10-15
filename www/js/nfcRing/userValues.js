@@ -18,9 +18,9 @@ nfcRing.userValues = { // stuff like what value we're going to write
           if(correctLocation === 1){
             localStorage.setItem("sweetSpotLocation", JSON.stringify({x: centerX, y:centerY})); // store to localstorage
   
-            console.log("Sending ", centerX, centerY, device.model, window.innerWidth, window.innerHeight, " to Database");
+            console.log("Sending ", centerX, centerY, device.model, window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, " to Database");
   	    try{
-              nfcRing.heatmap.sendToRemote(centerX, centerY, device.model, window.innerWidth, window.innerHeight);
+              nfcRing.heatmap.sendToRemote(centerX, centerY, device.model, window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
             }catch(e){
               nfcRing.ui.displayPage("index");
             }
