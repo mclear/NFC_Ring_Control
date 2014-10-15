@@ -37,5 +37,6 @@
 /var/www/NFC_Ring_Control/platforms/android/ant-build/classes/com/chariotsolutions/nfc/plugin/NfcPlugin$1.class \
 /var/www/NFC_Ring_Control/platforms/android/ant-build/classes/com/chariotsolutions/nfc/plugin/NfcPlugin$6.class \
 /var/www/NFC_Ring_Control/platforms/android/ant-build/classes/com/chariotsolutions/nfc/plugin/Util.class \
+/var/www/NFC_Ring_Control/platforms/android/ant-build/classes/com/borismus/webintent/WebIntent.class \
 /var/www/NFC_Ring_Control/platforms/android/ant-build/classes/uk/co/whiteoctober/cordova/AppVersion.class \
 /var/www/NFC_Ring_Control/platforms/android/ant-build/dexedLibs/classes-b358d0845829b26915743d0bf327f057.jar \

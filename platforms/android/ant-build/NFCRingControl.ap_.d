@@ -16,6 +16,7 @@
 /var/www/NFC_Ring_Control/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /var/www/NFC_Ring_Control/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /var/www/NFC_Ring_Control/platforms/android/assets/www \
+/var/www/NFC_Ring_Control/platforms/android/assets/_where-is-www.txt \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/cordova.js \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/css \
@@ -42,10 +43,12 @@
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/oc.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/fi.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/uk.json \
+/var/www/NFC_Ring_Control/platforms/android/assets/www/locales/sk.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/nl.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/lb.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/ru.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/lrc.json \
+/var/www/NFC_Ring_Control/platforms/android/assets/www/locales/hu.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/es.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/be-tarask.json \
 /var/www/NFC_Ring_Control/platforms/android/assets/www/locales/bn.json \

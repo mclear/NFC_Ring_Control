@@ -1,0 +1,86 @@
+Useful Information For Submitting Bug Reports and Getting Help
+
+Current Node Version
+
+    v0.11.12
+
+
+Current Cordova CLI Version
+
+    3.4.0-0.1.3
+
+Current Config.xml
+
+    <?xml version='1.0' encoding='utf-8'?>
+<widget id="co.mclear.nfcringpro" version="0.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>NFC Ring Control</name>
+    <description>
+	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
+    </description>
+
+    <author href="http://nfcring.com" email="john@mclear.co">
+        NFC Ring Team
+    </author>
+    <preference name="orientation" value="portrait" />
+    <content src="index.html" />
+    <access origin="http://127.0.0.1" />
+    <access origin="https://*.parse.com"/> <!-- allow parse stuff -->    
+    <access origin="http://sweetspot.nfcring.com" />
+</widget>
+
+
+Currently Installed Platforms
+
+    
+
+    android
+
+    Available Android targets:
+----------
+id: 1 or "android-17"
+     Name: Android 4.2.2
+     Type: Platform
+     API level: 17
+     Revision: 2
+     Skins: WVGA800 (default), WVGA854, WXGA720, QVGA, WSVGA, WQVGA432, WQVGA400, HVGA, WXGA800, WXGA800-7in
+     ABIs : armeabi-v7a
+----------
+id: 2 or "Google Inc.:Google APIs:17"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 3
+     Description: Android + Google APIs
+     Based on Android 4.2.2 (API level 17)
+     Libraries:
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+     Skins: WQVGA400, WVGA854, WSVGA, WXGA800-7in, WXGA720, HVGA, WQVGA432, QVGA, WVGA800 (default), WXGA800
+     ABIs : armeabi-v7a
+----------
+id: 3 or "android-19"
+     Name: Android 4.4.2
+     Type: Platform
+     API level: 19
+     Revision: 2
+     Skins: WVGA800 (default), WVGA854, WXGA720, QVGA, WSVGA, WQVGA432, WQVGA400, HVGA, WXGA800, WXGA800-7in
+     ABIs : armeabi-v7a
+
+
+
+
+
+    wp8
+
+    
+
+
+
+
+Currently Installed Plugins
+
+    com.borismus.webintent,com.chariotsolutions.nfc.plugin,org.apache.cordova.device,org.apache.cordova.dialogs,org.apache.cordova.vibration,uk.co.whiteoctober.cordova.AppVersion
