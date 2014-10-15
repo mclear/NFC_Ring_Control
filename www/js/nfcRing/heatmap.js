@@ -100,7 +100,7 @@ nfcRing.heatmap = {
     });
   },
 
-  sendToRemote: function(x,y,model){
+  sendToRemote: function(x,y,model, maxX, maxY){
     console.log("Posting to remote", x, y, model, maxX, maxY);
     var data = {
       "x": x,
