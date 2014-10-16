@@ -16,9 +16,6 @@
     <feature name="AppVersion">
         <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
     </feature>
-    <feature name="WebIntent">
-        <param name="android-package" value="com.borismus.webintent.WebIntent" />
-    </feature>
     <name>NFC Ring Control</name>
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
@@ -32,4 +29,7 @@
     <access origin="http://10.0.0.12" />
     <access origin="https://*.parse.com" />
     <access origin="http://sweetspot.nfcring.com" />
+    <feature name="WebIntent">
+        <param name="android-package" value="com.borismus.webintent.WebIntent" />
+    </feature>
 </widget>
