@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Gaoxuewei"
 		]
 	},
 	"index.wantHelp": "需要帮助？",
@@ -88,5 +89,9 @@
 	"register.passwordTitle": "密码：",
 	"register.passwordAgainTitle": "确认密码：",
 	"register.passwordsDontMatch": "两次密码不一致",
-	"register.success": "注册完成，您现在可以使用您的用户名/密码验证NFC戒指解锁应用程序"
+	"register.success": "注册完成，您现在可以使用您的用户名/密码验证NFC戒指解锁应用程序",
+	"register.notNFCRingTitle": "呃哦！",
+	"register.notNFCRing": "这可能不是正版NFC戒指，请尝试您戒指的另一面",
+	"register.resetPasswordPrompt": "您已经注册了 NFC Ring Unlock帐户，所以不需要做任何事情。您想要重置您的密码吗？",
+	"register.resetPasswordPromptTitle": "您已经注册"
 }

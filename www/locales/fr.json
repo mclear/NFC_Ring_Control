@@ -88,5 +88,9 @@
 	"register.passwordTitle": "Mot de passe :",
 	"register.passwordAgainTitle": "Répétition du mot de passe :",
 	"register.passwordsDontMatch": "Les mots de passe ne correspondent pas",
-	"register.success": "Inscription réussie ; vous pouvez maintenant utiliser votre nom d’utilisateur/mot de passe pour vérifier l’application de déverrouillage de l’Anneau NFC"
+	"register.success": "Inscription réussie ; vous pouvez maintenant utiliser votre nom d’utilisateur/mot de passe pour vérifier l’application de déverrouillage de l’Anneau NFC",
+	"register.notNFCRingTitle": "Oh oh",
+	"register.notNFCRing": "Ce pourrait ne pas être un Anneau NFC, veuillez essayer l’autre côté de votre anneau",
+	"register.resetPasswordPrompt": "Vous vous êtes déjà inscrit pour un compte de déverrouillage d’un Anneau NFC, donc vous n’avez rien d’autre à faire. Voulez-vous réinitialiser votre mot de passe ?",
+	"register.resetPasswordPromptTitle": "Vous êtes déjà inscrit"
 }

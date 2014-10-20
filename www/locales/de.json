@@ -88,5 +88,9 @@
 	"register.passwordTitle": "Passwort:",
 	"register.passwordAgainTitle": "Passwort (erneut):",
 	"register.passwordsDontMatch": "Die Passwörter stimmen nicht überein",
-	"register.success": "Registrierung erfolgreich. Du kannst jetzt deinen Benutzernamen und dein Passwort verwenden, um die NFC-Ring-Freigabe-App zu verifizieren."
+	"register.success": "Registrierung erfolgreich. Du kannst jetzt deinen Benutzernamen und dein Passwort verwenden, um die NFC-Ring-Freigabe-App zu verifizieren.",
+	"register.notNFCRingTitle": "Hoppla",
+	"register.notNFCRing": "Dies könnte kein echter NFC-Ring sein. Bitte versuche die andere Seite deines Rings.",
+	"register.resetPasswordPrompt": "Du bist bereits für ein NFC-Ring-Entsperr-Konto registriert. Du musst nichts machen. Möchtest du dein Passwort zurücksetzen?",
+	"register.resetPasswordPromptTitle": "Du bist bereits registriert"
 }

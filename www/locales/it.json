@@ -89,5 +89,7 @@
 	"register.passwordTitle": "Password:",
 	"register.passwordAgainTitle": "Ripeti la password:",
 	"register.passwordsDontMatch": "Le password non coincidono",
-	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione"
+	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione",
+	"register.notNFCRingTitle": "Oops",
+	"register.resetPasswordPromptTitle": "Sei già registrato"
 }

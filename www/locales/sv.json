@@ -91,5 +91,9 @@
 	"register.passwordTitle": "Lösenord:",
 	"register.passwordAgainTitle": "Lösenord igen:",
 	"register.passwordsDontMatch": "Lösenorden stämmer inte överens",
-	"register.success": "Registrering genomförd. Du kan nu använda ditt användarnamn och lösenord för att verifiera upplåsningsappen för NFC-Ring"
+	"register.success": "Registrering genomförd. Du kan nu använda ditt användarnamn och lösenord för att verifiera upplåsningsappen för NFC-Ring",
+	"register.notNFCRingTitle": "Hoppsan",
+	"register.notNFCRing": "Detta kanske inte är en äkta NFC-Ring, vänligen prova den andra sidan av din Ring",
+	"register.resetPasswordPrompt": "Du har redan dig för ett NFC-Ring-Upplåsningskonto och behöver därför inte föra någonting. Vill du Återställa ditt lösenord?",
+	"register.resetPasswordPromptTitle": "Du är redan registrerad"
 }

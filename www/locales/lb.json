@@ -38,5 +38,6 @@
 	"register.emailTitle": "E-Mail-Adress:",
 	"register.passwordTitle": "Passwuert:",
 	"register.passwordAgainTitle": "Passwuert confirméieren:",
-	"register.passwordsDontMatch": "D'Passwierder sinn net déi selwecht"
+	"register.passwordsDontMatch": "D'Passwierder sinn net déi selwecht",
+	"register.resetPasswordPromptTitle": "Dir sidd schonn ugemellt"
 }

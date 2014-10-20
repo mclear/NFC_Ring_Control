@@ -3,7 +3,8 @@
 		"authors": [
 			"Article1",
 			"Mavrikant",
-			"Cagrix"
+			"Cagrix",
+			"Sayginer"
 		]
 	},
 	"index.wantHelp": "Herhangi bir yardım ister misiniz?",
@@ -55,5 +56,6 @@
 	"register.passwordTitle": "Parola:",
 	"register.passwordAgainTitle": "Tekrar şifre",
 	"register.passwordsDontMatch": "Parolalar birbiriyle uyuşmuyor.",
-	"register.success": "Kayıt başarılı"
+	"register.success": "Kayıt başarılı",
+	"register.resetPasswordPromptTitle": "Zaten kayıtlısınız"
 }

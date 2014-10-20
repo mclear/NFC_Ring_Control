@@ -91,5 +91,9 @@
 	"register.passwordTitle": "Contraseña:",
 	"register.passwordAgainTitle": "Repite la contraseña:",
 	"register.passwordsDontMatch": "Las contraseñas no coinciden",
-	"register.success": "Registro exitoso. Ahora puedes utilizar tu nombre de usuario/contraseña para verificar la aplicación de desbloqueo de anillo NFC"
+	"register.success": "Registro exitoso. Ahora puedes utilizar tu nombre de usuario/contraseña para verificar la aplicación de desbloqueo de anillo NFC",
+	"register.notNFCRingTitle": "Oh oh",
+	"register.notNFCRing": "Esto podría no ser un verdadero anillo NFC. Intente el otro lado de su anillo",
+	"register.resetPasswordPrompt": "Ya se registró para una cuenta de desbloqueo de anillo NFC, así que no necesita hacer nada. ¿Quiere restablecer su contraseña?",
+	"register.resetPasswordPromptTitle": "Ya estás registrado"
 }
