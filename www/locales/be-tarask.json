@@ -86,5 +86,7 @@
 	"register.emailTitle": "Адрас электроннай пошты:",
 	"register.title": "Зарэгіструйце вашае кальцо",
 	"register.passwordTitle": "Пароль:",
-	"register.passwordAgainTitle": "Пароль яшчэ раз:"
+	"register.passwordAgainTitle": "Пароль яшчэ раз:",
+	"register.passwordsDontMatch": "Паролі не супадаюць",
+	"register.success": "Рэгістрацыя пасьпяховая. Цяпер вы можаце выкарыстаць вашыя імя карыстальніка і пароль, каб праверыць праграму NFC Ring Unlock"
 }
