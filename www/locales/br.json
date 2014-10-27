@@ -90,5 +90,9 @@
 	"register.passwordTitle": "Ger-tremen :",
 	"register.passwordAgainTitle": "Adskrivañ ar ger-tremen :",
 	"register.passwordsDontMatch": "Ar gerioù-tremen ne glotont ket an eil gant egile",
-	"register.success": "Enskrivadur deuet-brav. Gallout a reot bremañ implijout hoc'h anv implijer/ho ker-tremen evit gwiriañ arload dibrennañ ar walenn NFC"
+	"register.success": "Enskrivadur deuet-brav. Gallout a reot bremañ implijout hoc'h anv implijer/ho ker-tremen evit gwiriañ arload dibrennañ ar walenn NFC",
+	"register.notNFCRingTitle": "O !",
+	"register.notNFCRing": "N'eo ket ur walenn NFC marteze, klaskit dre an tu all eus ho kwalenn, mar plij.",
+	"register.resetPasswordPrompt": "Enskrivet oc'h en ur gont diskoilhañ ur Walenn NFC dija hag e-se n'ho peus netra all d'ober. Ha c'hoant ho peus da adderaouekaat ho ker-tremen ?",
+	"register.resetPasswordPromptTitle": "Enrollet oc'h dija"
 }

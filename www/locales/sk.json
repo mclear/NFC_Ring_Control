@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jaroslav.micek"
+			"Jaroslav.micek",
+			"Kusavica"
 		]
 	},
 	"index.wantHelp": "Chcete nejakú pomoc?",
@@ -88,5 +89,6 @@
 	"register.passwordTitle": "Heslo:",
 	"register.passwordAgainTitle": "Zopakovať heslo:",
 	"register.passwordsDontMatch": "Heslá sa nezhodujú",
-	"register.success": "Registrácia úspešná. Môžete používať Vaše prihlasovacie meno/heslo pre overenie odomknutia aplikácie NFC prsteňa"
+	"register.success": "Registrácia úspešná. Môžete používať Vaše prihlasovacie meno/heslo pre overenie odomknutia aplikácie NFC prsteňa",
+	"register.resetPasswordPromptTitle": "Už ste zaregistrovaní"
 }

@@ -88,5 +88,9 @@
 	"register.passwordTitle": "Пароль:",
 	"register.passwordAgainTitle": "Пароль яшчэ раз:",
 	"register.passwordsDontMatch": "Паролі не супадаюць",
-	"register.success": "Рэгістрацыя пасьпяховая. Цяпер вы можаце выкарыстаць вашыя імя карыстальніка і пароль, каб праверыць праграму NFC Ring Unlock"
+	"register.success": "Рэгістрацыя пасьпяховая. Цяпер вы можаце выкарыстаць вашыя імя карыстальніка і пароль, каб праверыць праграму NFC Ring Unlock",
+	"register.notNFCRingTitle": "Вой-вой!",
+	"register.notNFCRing": "Магчыма, гэта несапраўднае NFC-кальцо, калі ласка, паспрабуйце павярнуць яго іншым бокам",
+	"register.resetPasswordPrompt": "Вы ўжо маеце зарэгістраваны рахунак для NFC Ring Unlock, таму вам ня трэба нічога больш рабіць. Ці жадаеце вы скінуць пароль?",
+	"register.resetPasswordPromptTitle": "Вы ўжо зарэгістраваныя"
 }
