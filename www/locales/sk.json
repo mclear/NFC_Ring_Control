@@ -90,5 +90,8 @@
 	"register.passwordAgainTitle": "Zopakovať heslo:",
 	"register.passwordsDontMatch": "Heslá sa nezhodujú",
 	"register.success": "Registrácia úspešná. Môžete používať Vaše prihlasovacie meno/heslo pre overenie odomknutia aplikácie NFC prsteňa",
+	"register.notNFCRingTitle": "Och nie!",
+	"register.notNFCRing": "Toto asi nieje originálny NFC prsteň, prosím skúste druhú stranu prsteňa",
+	"register.resetPasswordPrompt": "Už ste sa registrovali na odomknutie NFC prsteňa takže už nepotrebujete nič robiť. Chcete nastaviť nové heslo?",
 	"register.resetPasswordPromptTitle": "Už ste zaregistrovaní"
 }
