@@ -4,7 +4,8 @@
 			"A1",
 			"Andriykopanytsia",
 			"Base",
-			"Olvin"
+			"Olvin",
+			"Ypryima"
 		]
 	},
 	"index.wantHelp": "Потрібна допомога?",
@@ -91,5 +92,9 @@
 	"register.passwordTitle": "Пароль:",
 	"register.passwordAgainTitle": "Пароль ще раз:",
 	"register.passwordsDontMatch": "Паролі не збігаються",
-	"register.success": "Реєстрація успішна. Тепер Ви можете застосувати ваші логін/пароль для перевірки застосунку NFC Ring Unlock"
+	"register.success": "Реєстрація успішна. Тепер Ви можете застосувати ваші логін/пароль для перевірки застосунку NFC Ring Unlock",
+	"register.notNFCRingTitle": "Ой-ой!",
+	"register.notNFCRing": "Це не може бути справжньої NFC Ring, будь ласка, спробуйте іншій стороні кільця",
+	"register.resetPasswordPrompt": "Ви вже зареєструвалися для NFC-кільце розблокування облікового запису, тому вам не потрібно нічого робити. Чи хотіли б ви, щоб скинути пароль?",
+	"register.resetPasswordPromptTitle": "Ви вже зареєстровані"
 }

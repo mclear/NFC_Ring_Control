@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khaled"
+		]
+	},
+	"index.wantHelp": "تريد بعض المساعدة؟",
+	"index.wantHelpLong": "يبدو ان هذه هي تجربتك الأولى في استخدام NFC Ring Control app. هل تريد بعض المساعدة؟",
+	"index.whatDoYouWantToDoToday": "ماذا تريد ان تفعل اليوم؟",
+	"index.create": "أنشئ",
+	"index.createDescription": "اكتب حدث جديد في نطاقك",
+	"index.createDescriptionMore": "استخد هذه الصفحة لكتابة محتوى او حدث جديد في نطاقك ان اف اس.   ستحتاج لمعرفة ما الذي تريد كتابته كـ وصلة و وسوف تحتاج نطاقك أن اف سي",
+	"index.read": "اقرأ",
+	"index.readDescription": "شاهد ماذا يوجد في نطاقك",
+	"index.readDescriptionMore": "تريد معرفة ماذا يوجد في نطاقك مسبقا؟ استخدم هذا الخيار.",
+	"index.settings": "إعدادات",
+	"index.settingsDescription": "اعداد تطبيقك",
+	"index.settingsDescriptionMore": "اعداد تطبيقك",
+	"index.register": "افتح حسابًا",
+	"index.feedback": "رأيك",
+	"index.feedbackDescription": "اتحب شيئا او تريد تغير شيئا؟ اعلمنا بذلك",
+	"index.feedbackDescriptionMore": "نحن نريد ان نسمع منك ان كنت قد احببت او كرهت شيئا. رجاءا اعلمنا بذلك.",
+	"context.recentActions": "اعرض احدث الاحداث",
+	"context.history": "تاريخ",
+	"action.whatDoYouWantYourRingToDo": "ماذا تريد نطاقك ليفعل؟",
+	"option.next": "التالي",
+	"writeRing.finish": "أنهي",
+	"writeRing.woohoo": "روعة!",
+	"readRing.contents": "محتويات النطاق:",
+	"settings.clearMySweetSpot": "مكاني المفضل",
+	"settings.clearMySweetSpotDescription": "احذف محفوظات مكاني المفضل",
+	"settings.mySweetSpot": "مكاني المفضل",
+	"settings.mySweetSpotDescription": "اعد ادخال موقع مكاني المفضل",
+	"settings.previousActions": "احداثي المفضلة",
+	"settings.version": "نسخة",
+	"settings.phoneModel": "موديل الهاتف",
+	"settings.changeLanguage": "تغيير لغة التطبيق",
+	"help.helpTips": "نصائح للمساعدة",
+	"register.resetPasswordPromptTitle": "انت مسجل مسبقا"
+}

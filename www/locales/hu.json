@@ -88,5 +88,9 @@
 	"register.passwordTitle": "Jelszó:",
 	"register.passwordAgainTitle": "Jelszó újra:",
 	"register.passwordsDontMatch": "A jelszavak nem egyeznek",
-	"register.success": "A regisztráció sikeres, most már használhatod a felhasználónév/jelszó párodat az NFC Ring Unlock App megerősítéséhez"
+	"register.success": "A regisztráció sikeres, most már használhatod a felhasználónév/jelszó párodat az NFC Ring Unlock App megerősítéséhez",
+	"register.notNFCRingTitle": "O-óóó",
+	"register.notNFCRing": "Nem biztos, hogy ez egy eredeti NFC gyűrű, kérlek, próbáld ki a gyűrű másik oldalát",
+	"register.resetPasswordPrompt": "Már regisztráltál az NFC gyűrű feloldó fiókban, nem kell tenned semmit. Szeretnéd visszaállítani a jelszavadat?",
+	"register.resetPasswordPromptTitle": "Már regisztráltál"
 }
