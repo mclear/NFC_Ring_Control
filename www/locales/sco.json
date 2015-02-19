@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"John Reid"
+			"John Reid",
+			"AmaryllisGardener"
 		]
 	},
 	"index.wantHelp": "Want some heelp?",
@@ -26,6 +27,7 @@
 	"context.history": "Histerie",
 	"action.whatDoYouWantYourRingToDo": "Whit dae ye want yer ring tae dae?",
 	"option.next": "Nex",
+	"option.dataWontFit": "Wairnin: This amoont o data micht nae fit on yer NFC Ring",
 	"writeRing.finish": "Finish",
 	"writeRing.noNFC": "NFC functionalitie isna wairkin. Is NFC enabled oan yer device?",
 	"writeRing.woohoo": "Woohoo!",
@@ -40,6 +42,7 @@
 	"settings.previousActionsDescription": "Clear ma preveeis action histerie",
 	"settings.version": "Version",
 	"settings.phoneModel": "Phane model",
+	"settings.changeLanguage": "Chynge App Leid",
 	"help.helpTips": "Heelp tips",
 	"help.facing": "Mak sair that the coloored, non metal pairt o the ring is tichin n facing the back o yer device",
 	"help.cases": "Remuiv onie cases fae yer device",
@@ -86,5 +89,9 @@
 	"register.passwordTitle": "Passwaird:",
 	"register.passwordAgainTitle": "Passwaird again:",
 	"register.passwordsDontMatch": "Passwairds dinna match",
-	"register.success": "Registration successfu"
+	"register.success": "Registration successfu, Ye can nou uise yer uisername/passwird tae verify the NFC Ring Onlock App",
+	"register.notNFCRingTitle": "Uh oh",
+	"register.notNFCRing": "This micht nae be a genuine NFC Ring, please try the ither side o yer Ring",
+	"register.resetPasswordPrompt": "Ye hae already registered for an NFC Ring Unlock accoont so ye dinna need tae dae onything.  Would ye lik tae Reset yer passwird?",
+	"register.resetPasswordPromptTitle": "Ye are already registered"
 }

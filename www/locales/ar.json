@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Khaled",
-			"Test Create account"
+			"Test Create account",
+			"Meno25"
 		]
 	},
 	"index.wantHelp": "تريد بعض المساعدة؟",
@@ -54,7 +55,7 @@
 	"actions.text.optionText": "ما هو النص الخاص بك؟",
 	"sweetSpot.showHelp": "إظهار المساعدة",
 	"sweetSpot.done": "تم. شكراً لك!",
-	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أمر ال",
+	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أوامرك السابقة؟",
 	"register.emailTitle": "عنوان البريد الإلكتروني:",
 	"register.passwordTitle": "كلمة المرور:",
 	"register.passwordAgainTitle": "تكرار كلمة المرور:",
