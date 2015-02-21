@@ -7,13 +7,15 @@
         "files": {
             "res/xml/config.xml": {
                 "parents": {
-                    "/widget": [
-                        {
-                            "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.chariotsolutions.nfc.plugin.NfcPlugin\" /></feature>",
-                            "count": 1
-                        }
-                    ],
                     "/*": [
+                        {
+                            "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
@@ -23,15 +25,13 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
                             "count": 1
-                        },
+                        }
+                    ],
+                    "/widget": [
                         {
-                            "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
+                            "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.chariotsolutions.nfc.plugin.NfcPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -41,15 +41,15 @@
                 "parents": {
                     "/manifest": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.NFC\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.nfc\" android:required=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ]
@@ -58,22 +58,22 @@
         }
     },
     "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "com.chariotsolutions.nfc.plugin": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "com.chariotsolutions.nfc.plugin": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
         "uk.co.whiteoctober.cordova.AppVersion": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "com.borismus.webintent": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },
