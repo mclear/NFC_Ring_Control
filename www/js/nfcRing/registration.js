@@ -47,6 +47,7 @@ nfcRing.registration = {
     user.set("username", email);
     user.set("password", pwd);
     user.set("uid", nfcRing.userValues.uid);
+    user.set("email", email);
 
     user.signUp(null, {
       success: function(user) {
