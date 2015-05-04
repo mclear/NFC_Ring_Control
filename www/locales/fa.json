@@ -3,7 +3,8 @@
 		"authors": [
 			"Ebraminio",
 			"Reza1615",
-			"Arash.pt"
+			"Arash.pt",
+			"Mjbmr"
 		]
 	},
 	"index.wantHelp": "کمک می‌خواهید؟",
@@ -85,7 +86,7 @@
 	"sweetSpot.done": "انجام شد. ممنون!",
 	"sweetSpot.areYouSureSS": "برای پاک‌کردن داده‌های نقطهٔ شیرین خود مطمئنید؟",
 	"sweetSpot.areYouSureActions": "برای روشن‌شدن اقدامات قبلی خود مطمئنید؟",
-	"register.emailTitle": "نشانی رایانامه:",
+	"register.emailTitle": "آدرس ایمیل:",
 	"register.title": "ثبت نام حلقهٔ خود",
 	"register.passwordTitle": "گذرواژه:",
 	"register.passwordAgainTitle": "دوباره گذرواژه:",

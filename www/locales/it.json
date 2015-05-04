@@ -91,5 +91,7 @@
 	"register.passwordsDontMatch": "Le password non coincidono",
 	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione",
 	"register.notNFCRingTitle": "Oops",
+	"register.notNFCRing": "Questo potrebbe non essere un vero e proprio anello NFC, prova l'altro lato dell'anello",
+	"register.resetPasswordPrompt": "Hai già registrato un'utenza NFC Ring Unlock quindi non devi fare nulla. Vuoi reimpostare la tua password?",
 	"register.resetPasswordPromptTitle": "Sei già registrato"
 }

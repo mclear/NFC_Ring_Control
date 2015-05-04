@@ -57,7 +57,7 @@
 	"actions.youtube.description": "Liên kết đến một video hoặc kênh",
 	"actions.youtube.optionText": "YouTube Video hoặc kênh YouTube của bạn là gì?",
 	"actions.text.name": "Văn bản",
-	"actions.text.description": "Viết văn bản arbitary chẳng hạn như một khóa Bitcoin công khai.",
+	"actions.text.description": "Viết văn bản tùy ý chẳng hạn như một khóa Bitcoin công khai.",
 	"actions.text.optionText": "Văn bản của bạn là gì?",
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Liên kết đến một Etherpad",
