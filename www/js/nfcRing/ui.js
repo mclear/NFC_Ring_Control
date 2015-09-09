@@ -380,7 +380,7 @@ nfcRing.ui = {
       if(nfcRing.vcard){
         nfcRing.userValues.contactToWrite = contactObj;
         console.log("WTF THIS IS A VCARD");
-        // nfcRing.userValues.isVCard = true;
+        nfcRing.userValues.isVCard = true;
         console.log("Displaying vcard page");
         nfcRing.ui.displayPage("vcard");
       }else{

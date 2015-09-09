@@ -112,7 +112,7 @@ nfcRing.vcard.build = function(){
   vCard += 'END:VCARD';
   console.log("vCard", vCard);
   console.log("I AM HERE FOR SOME REASON!");
-  // nfcRing.userValues.isVCard = true;
+  nfcRing.userValues.isVCard = true;
   return vCard;
 }
 

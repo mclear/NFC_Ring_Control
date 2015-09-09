@@ -13,6 +13,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
                             "count": 1
                         },
@@ -22,10 +26,6 @@
                         },
                         {
                             "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
                         {
@@ -82,6 +82,9 @@
         "com.chariotsolutions.nfc.plugin": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
         "org.apache.cordova.contacts": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
@@ -89,9 +92,6 @@
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.vibration": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "uk.co.whiteoctober.cordova.appversion": {
