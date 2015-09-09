@@ -19,13 +19,6 @@
             "path": "/tmp/org.apache.cordova.contacts/package"
         }
     },
-    "org.apache.cordova.device": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/apache/cordova-plugin-device.git",
-            "subdir": "."
-        }
-    },
     "org.apache.cordova.dialogs": {
         "source": {
             "type": "local",
@@ -37,5 +30,23 @@
             "type": "local",
             "path": "/var/folders/rx/thy3s4654s9bf7rcfh6_gdnm0000gn/T/org.apache.cordova.vibration/package"
         }
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "uk.co.whiteoctober.cordova.appversion": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/whiteoctober/cordova-plugin-app-version.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

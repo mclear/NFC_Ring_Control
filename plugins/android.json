@@ -17,15 +17,19 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
                             "count": 1
                         }
                     ],
@@ -81,13 +85,16 @@
         "org.apache.cordova.contacts": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
         "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "uk.co.whiteoctober.cordova.appversion": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },

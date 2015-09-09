@@ -386,12 +386,14 @@ nfcRing.ui = {
   },
 
   updateVersion: function(){ // show Version number on the page
-    if(device.platform === "browser"){
-      $('#versionNumber').text("N/A");
-    }else{
-      cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+    if(device){
+      if(device.platform === "browser"){
+        $('#versionNumber').text("N/A");
+      }else{
+        cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+      }
+      $('#modelName').text(device.model);
     }
-    $('#modelName').text(device.model);
   },
 
   displayPage: function(page){ // Display a page
@@ -464,7 +466,7 @@ nfcRing.ui = {
         }
       }
     },200); 
-    nfcRing.ui.updateVersion();
+    // nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
   }, 
