@@ -6,7 +6,6 @@ var app = {
     document.addEventListener('deviceready', this.deviceready, false);
     document.addEventListener('resume', this.resume, false);
   },
-<<<<<<< HEAD
   deviceready: function () {
 
     // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
@@ -27,7 +26,11 @@ var app = {
 
     FastClick.attach(document.body);
 
-  },
+  }
+
+  /*
+  ,
+
   intentEvent: function() {
     // alert("Intent passed, handling that way");
     window.plugins.webintent.getExtra(window.plugins.webintent.EXTRA_TEXT, function(value) {
@@ -53,7 +56,10 @@ var app = {
 
     }, function(){
       console.log("ERROR XVMA123");
-=======
+    });
+  },
+
+
   webintentListener: function () {
     if(typeof cordova !== 'undefined'){
       console.log("Checking for intent", webintent);
@@ -94,38 +100,14 @@ var app = {
     //handle app invoke via activity
     window.plugins.webintent.getUri(function(invokeUrl) {
       console.log("[INTENT] handleAndroidOpen: " +  invokeUrl);
->>>>>>> b12dcbde699aa38cfe62bf20ccb5a316da76f07e
     });
   },
   resume: function () {
     console.log("Resuming");
     app.webintentListener();
-  },
-
-  deviceready: function () {
-
-    // See http://docs.phonegap.com/en/edge/cordova_notification_notification.md.html#Notification
-    alert = navigator.notification.alert;
-    prompt = navigator.notification.prompt;
-    confirm = navigator.notification.confirm;
-
-    // Begin listening for NFC Tags
-    nfcRing.nfcEvent.init();
-
-    if (device.platform == "Win32NT") {
-      $('#read').hide();
-      $('.win32').show(); // Note to Designer, by default this needs to be hidden
-    }
-
-    // Handle back events
-    document.addEventListener("backbutton", nfcRing.ui.handleBack, false);
-
-    FastClick.attach(document.body);
-
-    // Check to see if intent is available
-    app.webintentListener();
-
   }
+  */
+
 };
 
 window.onerror = function(e,f,g){
