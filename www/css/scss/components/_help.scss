@@ -1,0 +1,50 @@
+#needHelp {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #162132;
+  z-index: 999;
+}
+#needHelp p {
+  color: #ffffff;
+  padding: 15px 10px;
+  margin: 0;
+}
+#needHelp p a {
+  color: #e63712;
+  cursor: pointer;
+  text-decoration: none;
+}
+#helpContents {
+  position: relative;
+  background: #ffffff;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+#helpContents h3 {
+  margin: 0 0 15px 0;
+  padding: 0;
+  text-align: center;
+}
+#helpContents h3:before {
+  margin-right: 5px;
+}
+#helpContents ul {
+  margin: 0 0 10px 10px;
+  padding: 0;
+}
+#helpContents ul li {
+  font-size: 1.3em;
+  margin: 0 0 8px 0;
+}
+#helpContents #helpClose {
+  font-size: 1.4em;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 0 10px 0;
+}

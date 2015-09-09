@@ -1,0 +1,38 @@
+#heatMap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -ms-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.show-heatmap #heatMap {
+  opacity: 1;
+}
+#bubble {
+  position: absolute;
+  display: none;
+  height: 30px;
+  width: 30px;
+  background-color: #e63712;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 15px 7px #e63712;
+  -moz-box-shadow: 0 0 15px 7px #e63712;
+  box-shadow: 0 0 15px 7px #e63712;
+  z-index: 100000000;
+}
+
+#sweetSpotOverlay{
+  height:100%;
+}

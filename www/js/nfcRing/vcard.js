@@ -48,10 +48,11 @@ nfcRing.vcard.found = function(contacts){
     $('#vCardNoResults').hide();
   }
   var i = 0;
+  $('#vCardResults').append('<ul></ul>');
   $.each(contacts, function(k,person){
     if(person.displayName && person.id){
       if(i < 5){
-        $('#vCardResults').append("<div class='contact' id='"+person.id+"'>"+person.displayName+"</div>");
+        $('#vCardResults ul').append('<li class="contact" id="'+person.id+'">'+person.displayName+'</li>');
         nfcRing.vcard.cache[person.id] = person;
         i++;
       }
