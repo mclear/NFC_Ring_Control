@@ -466,7 +466,6 @@ nfcRing.ui = {
         }
       }
     },200); 
-    // nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
   }, 

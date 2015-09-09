@@ -27,6 +27,7 @@ var app = {
 
     FastClick.attach(document.body);
 
+    nfcRing.ui.updateVersion();
   },
 
   intentEvent: function() {
@@ -56,7 +57,6 @@ var app = {
       console.log("ERROR XVMA123");
     });
   },
-
 
   webintentListener: function () {
     if(typeof cordova !== 'undefined'){
