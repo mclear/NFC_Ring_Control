@@ -20,7 +20,7 @@ Obviously some changes need to be made to the below
 export JAVA_HOME='/usr/lib/jvm/java-6-openjdk/'
 export ANT_HOME=/usr/local/ant
 export PATH=$ANT_HOME:$PATH
-export ANDROID_HOME=/home/jose/Downloads/adt-bundle-linux-x86_64-20131030/sdk
+export ANDROID_HOME=/home/jose/Downloads/adt-bundle-linux-x86_64-20140702/sdk
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 ```
 
