@@ -88,13 +88,10 @@
   "register.passwordAgainTitle":"Password again:",
   "register.passwordsDontMatch":"Passwords don't match",
   "register.success":"Registration successful, You can now use your username/password to verify the NFC Ring Unlock App",
-<<<<<<< HEAD
   "vcard.loading":"Loading Contacts",
-  "vcard.noResults":"No Contacts Found"
-=======
+  "vcard.noResults":"No Contacts Found",
   "register.notNFCRingTitle":"Uh oh",
   "register.notNFCRing":"This might not be a genuine NFC Ring, please try the other side of your Ring",
   "register.resetPasswordPrompt":"You have already registered for an NFC Ring Unlock account so you don't need to do anything.  Would you like to Reset your password?",
   "register.resetPasswordPromptTitle":"You are already registered"
->>>>>>> b12dcbde699aa38cfe62bf20ccb5a316da76f07e
 }

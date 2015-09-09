@@ -26,10 +26,7 @@ var app = {
 
     FastClick.attach(document.body);
 
-  }
-
-  /*
-  ,
+  },
 
   intentEvent: function() {
     // alert("Intent passed, handling that way");
@@ -106,7 +103,6 @@ var app = {
     console.log("Resuming");
     app.webintentListener();
   }
-  */
 
 };
 
