@@ -15,4 +15,12 @@
     <access origin="https://*.parse.com" />
     <access origin="https://*.nfcring.com" />
     <access origin="http://*.nfcring.com" />
+
+<platform name="android">
+    <icon src="res/icon/android/mdpi.png" density="mdpi" />
+    <icon src="res/icon/android/hdpi.png" density="hdpi" />
+    <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
+</platform>
+
 </widget>
+
