@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bonevarluri"
+		]
+	},
+	"index.wantHelp": "یه قری کمک نمی های؟",
+	"index.whatDoYouWantToDoToday": "سی امرو میهای چی بکی؟",
+	"index.create": "راس كردن",
+	"index.createDescription": "یه گل کارکردن سی حلقه تو بنیسید",
+	"index.read": "حنن",
+	"index.register": "ثوت نام کردن",
+	"index.feedback": "بازحرد",
+	"context.history": "ويرگار",
+	"option.next": "نها",
+	"writeRing.finish": "تموم بین",
+	"writeRing.woohoo": "بوم هی",
+	"settings.version": "نسقه",
+	"settings.phoneModel": "مدل گوشی",
+	"help.gotIt": "خوئه، گرتم",
+	"actions.twitter.name": "توییتر",
+	"actions.twitter.description": "هوم پیوند د کارور توییتر",
+	"actions.twitter.optionText": "نوم کاروری توییترتو چینه؟",
+	"actions.facebook.name": "فیس بوک",
+	"actions.facebook.description": "هوم پیوند د کارور فیسبوک",
+	"actions.link.name": "هوم پیوند",
+	"actions.youtube.name": "یوتویوب",
+	"actions.text.name": "متن",
+	"actions.text.optionText": "یه متن شمانه؟",
+	"sweetSpot.showHelp": "نشو دئن هومیاری",
+	"sweetSpot.done": "انجوم بی منمون!",
+	"register.emailTitle": "نشونی ايميل:",
+	"register.passwordTitle": "پاسورد:",
+	"register.passwordAgainTitle": "پاسورد هنی:",
+	"register.passwordsDontMatch": "رمز یکی نئ",
+	"register.success": "ثوت نام وا خوش سرانجومی بی"
+}
