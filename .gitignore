@@ -3,3 +3,4 @@ bin
 gen
 www/js/parseDetails.js
 parseDetails.js*
+platforms/*
