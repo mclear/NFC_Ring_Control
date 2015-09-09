@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Article1",
-			"Mavrikant"
+			"Mavrikant",
+			"Cagrix",
+			"Sayginer"
 		]
 	},
 	"index.wantHelp": "Herhangi bir yardım ister misiniz?",
@@ -20,9 +22,11 @@
 	"action.whatDoYouWantYourRingToDo": "Yüzüğün için neler istiyorsun?",
 	"option.next": "Sonraki",
 	"writeRing.finish": "Bitiş",
+	"writeRing.noNFC": "NFC işlevi çalışmıyor. NFC cihazınızda etkin mi?",
 	"writeRing.woohoo": "Vuuhuu!",
 	"writeRing.ready": "Yüzük artık hazır",
 	"readRing.contents": "Yüzük içeriği:",
+	"settings.previousActions": "Önceki eylemlerim",
 	"settings.previousActionsDescription": "Benim bir önceki eylemler geçmişimi temizle.",
 	"settings.version": "Versiyon",
 	"settings.phoneModel": "Telefon modeli",
@@ -52,5 +56,6 @@
 	"register.passwordTitle": "Parola:",
 	"register.passwordAgainTitle": "Tekrar şifre",
 	"register.passwordsDontMatch": "Parolalar birbiriyle uyuşmuyor.",
-	"register.success": "Kayıt başarılı"
+	"register.success": "Kayıt başarılı",
+	"register.resetPasswordPromptTitle": "Zaten kayıtlısınız"
 }

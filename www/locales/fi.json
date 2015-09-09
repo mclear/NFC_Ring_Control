@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Peter22FIN"
+			"Peter22FIN",
+			"McSalama"
 		]
 	},
 	"index.wantHelp": "Tarvitsetko apua?",
@@ -26,10 +27,12 @@
 	"context.history": "Historia",
 	"action.whatDoYouWantYourRingToDo": "Mitä haluat sormuksesi tekevän?",
 	"option.next": "Seuraava",
+	"option.dataWontFit": "Varoitus: Tämä ei välttämättä mahdu NFC-sormukseesi",
 	"writeRing.finish": "Valmis",
 	"writeRing.noNFC": "NFC-toiminto ei toimi. Onko NFC aktivoitu laitteessasi?",
 	"writeRing.woohoo": "Jippii!",
-	"writeRing.ready": "Sormuksesi on nyt valmis",
+	"writeRing.ready": "NFC-sormuksesi on nyt valmis",
+	"writeRing.fail": "NFC-sormukseen kirjoitus epäonnistui",
 	"readRing.contents": "Sormuksen sisältö:",
 	"settings.clearMySweetSpot": "Minun ideaali kohta.",
 	"settings.mySweetSpot": "Minun ideaali kohta.",

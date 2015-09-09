@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
-			"Ronel1"
+			"Ronel1",
+			"Guycn2"
 		]
 	},
 	"index.wantHelp": "נחוצה לך עזרה?",
@@ -37,5 +38,7 @@
 	"register.passwordTitle": "ססמה:",
 	"register.passwordAgainTitle": "ססמה שוב:",
 	"register.passwordsDontMatch": "הססמאות אינן תואמות",
-	"register.success": "הרישום הצליח"
+	"register.success": "הרישום הצליח",
+	"register.notNFCRingTitle": "אבוי...",
+	"register.resetPasswordPromptTitle": "אתם כבר רשומים"
 }

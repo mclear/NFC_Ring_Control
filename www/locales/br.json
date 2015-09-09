@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gwenn-Ael"
+			"Gwenn-Ael",
+			"Fohanno",
+			"Fulup"
 		]
 	},
-	"index.wantHelp": "C'hoant ho peus skoazell ?",
+	"index.wantHelp": "Un tamm skoazell marteze ?",
 	"index.wantHelpLong": "Ar wech kentañ eo, war a seblant, emaoc'h oc'h implijout an arload Kontroll ar Walenn NFC. C'hoant ho peus skoazell ?",
 	"index.whatDoYouWantToDoToday": "Petra hoc'h eus c'hoant d'ober hiziv ?",
 	"index.create": "Krouiñ",
@@ -26,10 +28,12 @@
 	"context.history": "Istor",
 	"action.whatDoYouWantYourRingToDo": "Petra ho peus c'hoant e rafe ho kwalenn ?",
 	"option.next": "War-lerc'h",
+	"option.dataWontFit": "Diwallit : ar c'hemetad roadennoù a c'hallfe chom hep derc'hel war ho kwalenn NFC.",
 	"writeRing.finish": "Echuiñ",
 	"writeRing.noNFC": "Ned a ket an arc'hweladur NFC en-dro. Ha gweredekaet eo bet hoc'h ardivink",
 	"writeRing.woohoo": "Waouuuu !",
 	"writeRing.ready": "Prest eo ho kwalenn hiviziken",
+	"writeRing.fail": "N'haller ket skrivañ war ho kwalenn NFC",
 	"readRing.contents": "Endalc'had ar walenn :",
 	"settings.clearMySweetSpot": "Ho pik peurvat",
 	"settings.clearMySweetSpotDescription": "Goullonderiñ lec'h ma fik peurvat enrollet",
@@ -39,6 +43,7 @@
 	"settings.previousActionsDescription": "Goullonderiñ roll-istor ma oberoù a-raok",
 	"settings.version": "Stumm",
 	"settings.phoneModel": "Patrom pellgomz",
+	"settings.changeLanguage": "Cheñch yezh an arload",
 	"help.helpTips": "Tunioù skoazell",
 	"help.facing": "Taolit pled emañ al lodenn livet n'eo ket e metal stok-ha-stok hag a-dal da gein hoc'h ardivink",
 	"help.cases": "Lemel holl voestoù hoc'h ardivink",
@@ -85,5 +90,9 @@
 	"register.passwordTitle": "Ger-tremen :",
 	"register.passwordAgainTitle": "Adskrivañ ar ger-tremen :",
 	"register.passwordsDontMatch": "Ar gerioù-tremen ne glotont ket an eil gant egile",
-	"register.success": "Enskrivadur deuet-brav"
+	"register.success": "Enskrivadur deuet-brav. Gallout a reot bremañ implijout hoc'h anv implijer/ho ker-tremen evit gwiriañ arload dibrennañ ar walenn NFC",
+	"register.notNFCRingTitle": "O !",
+	"register.notNFCRing": "N'eo ket ur walenn NFC marteze, klaskit dre an tu all eus ho kwalenn, mar plij.",
+	"register.resetPasswordPrompt": "Enskrivet oc'h en ur gont diskoilhañ ur Walenn NFC dija hag e-se n'ho peus netra all d'ober. Ha c'hoant ho peus da adderaouekaat ho ker-tremen ?",
+	"register.resetPasswordPromptTitle": "Enrollet oc'h dija"
 }

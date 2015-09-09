@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gizmo"
+			"Gizmo",
+			"Thomsen"
 		]
 	},
 	"index.wantHelp": "Vil du have lidt hjælp?",
@@ -29,7 +30,7 @@
 	"writeRing.finish": "Finish",
 	"writeRing.noNFC": "NFC funktionalitet virker ikke. Er NFC aktiveret på enheden?",
 	"writeRing.woohoo": "Woohoo!",
-	"writeRing.ready": "Din ring er nu klar",
+	"writeRing.ready": "Din NFC ring er nu klar",
 	"readRing.contents": "Ring indhold:",
 	"settings.clearMySweetSpot": "Mit sweet spot",
 	"settings.clearMySweetSpotDescription": "Ryd min lagrede sweet spot placering",

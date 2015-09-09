@@ -29,6 +29,7 @@
 	"context.history": "Historik",
 	"action.whatDoYouWantYourRingToDo": "Vad vill du att din ring ska göra?",
 	"option.next": "Nästa",
+	"option.dataWontFit": "Varning: Denna mängd data kanske inte får plats på din NFC-Ring",
 	"writeRing.finish": "Slutför",
 	"writeRing.noNFC": "NFC-funktionaliteten fungerar inte. Är NFC aktiverat på din enhet?",
 	"writeRing.woohoo": "Jippi!",
@@ -90,5 +91,9 @@
 	"register.passwordTitle": "Lösenord:",
 	"register.passwordAgainTitle": "Lösenord igen:",
 	"register.passwordsDontMatch": "Lösenorden stämmer inte överens",
-	"register.success": "Registrering genomförd"
+	"register.success": "Registrering genomförd. Du kan nu använda ditt användarnamn och lösenord för att verifiera upplåsningsappen för NFC-Ring",
+	"register.notNFCRingTitle": "Hoppsan",
+	"register.notNFCRing": "Detta kanske inte är en äkta NFC-Ring, vänligen prova den andra sidan av din Ring",
+	"register.resetPasswordPrompt": "Du har redan dig för ett NFC-Ring-Upplåsningskonto och behöver därför inte föra någonting. Vill du Återställa ditt lösenord?",
+	"register.resetPasswordPromptTitle": "Du är redan registrerad"
 }
