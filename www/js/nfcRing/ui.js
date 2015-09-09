@@ -199,10 +199,13 @@ nfcRing.ui = {
       console.log("key", key);
       if(key.toLowerCase() === "vcard"){
         console.log("VCard so adding autocomplete class");
-        $('#optionInput').addClass("autocomplete");
+        $('#vcardInput').addClass("autocomplete");
         $('.icon-next').hide();
+        $("#optionForm").hide();
+        $("#vCardForm").show();
       }else{
-        $('#optionInput').removeClass("autocomplete");
+        $("#optionForm").show();
+        $("#vCardForm").hide();
       }
       if(key.toLowerCase() === "link"){
         console.log("Setting nfcRing.userValues.isUrl to true");
@@ -273,9 +276,10 @@ nfcRing.ui = {
 
     $('body').on('submit', '#vCardForm', function(e){
       e.preventDefault();
+      console.log("WTF VCARD FORM WAS SUBMITTED?!");
       nfcRing.userValues.toWrite = nfcRing.vcard.build();
       nfcRing.userValues.history.set();
-      console.log("Submitting a write value to the nfcRing object");
+      console.log("Submitting a VCARD write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
       nfcRing.ui.prepareWritePage("write");
       return false;
@@ -373,8 +377,9 @@ nfcRing.ui = {
     $('body').on("click", ".contact", function(e){
       console.log("ID", e.target.id);
       var contactObj = nfcRing.vcard.cache[e.target.id];
-      if(vcard){
+      if(nfcRing.vcard){
         nfcRing.userValues.contactToWrite = contactObj;
+        console.log("WTF THIS IS A VCARD");
         nfcRing.userValues.isVCard = true;
         console.log("Displaying vcard page");
         nfcRing.ui.displayPage("vcard");
@@ -416,7 +421,7 @@ nfcRing.ui = {
 
     // never allow the app to get stuck in a loop on pages..
     if(nfcRing.ui.history[nfcRing.ui.history.length-1] !== page){
-      console.log("Wrote page to history stage");
+      console.log("Wrote page to history stage", page);
       nfcRing.ui.history.push(page); // Write the this page to the history stack
     }
     nfcRing.userValues.location = page;
@@ -441,7 +446,7 @@ nfcRing.ui = {
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
       if(nfcRing.userValues.isVCard){
-        $('#optionInput').addClass("autocomplete");
+        $('#vcardInput').addClass("autocomplete");
         $('.icon-next').hide();
       }
     }

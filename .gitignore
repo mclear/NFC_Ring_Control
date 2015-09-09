@@ -5,3 +5,5 @@ gen
 www/js/parseDetails.js
 parseDetails.js*
 www/css/prepros.cfg
+platforms/*
+plugins/*
