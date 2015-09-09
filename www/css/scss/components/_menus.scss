@@ -1,0 +1,68 @@
+/* Generic list styling */
+.link-list {
+  border-top: 1px solid #b8b8b8;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.link-list li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #b8b8b8;
+  position: relative;
+}
+.link-list li div {
+  cursor: pointer;
+  display: block;
+  font-size: 2.6em;
+  padding: 20px 20px 20px 60px;
+  text-decoration: none;
+  color: #162132;
+}
+.link-list li div:before {
+  color: #e63712;
+  font-size: 1.2em;
+  width: 50px;
+  padding: 25px 0 0 0;
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+.link-list li div:hover {
+  border: 0;
+}
+.link-list li div span {
+  display: block;
+  font-size: 0.5em;
+  padding: 2px 0 0 0;
+}
+.link-list li .changeLanguage {
+  width: 100%;
+  max-width: 320px;
+}
+.link-list.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.link-list.bottom li {
+  text-align: center;
+}
+.link-list.bottom li div {
+  padding-left: 20px;
+}
+.link-list.bottom li div:before {
+  position: relative;
+  top: auto;
+  left: auto;
+  vertical-align: middle;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
