@@ -1,9 +1,9 @@
+*.DS_Store
 local.properties
 bin
 gen
 www/js/parseDetails.js
 parseDetails.js*
-platforms/android/assets/
-platforms/wp8/www/
-platforms/android/.staging
-platforms/android/ant-build
+www/css/prepros.cfg
+platforms/*
+plugins/*

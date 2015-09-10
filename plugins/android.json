@@ -17,6 +17,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
                         },
@@ -26,6 +30,10 @@
                         },
                         {
                             "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ],
@@ -52,6 +60,20 @@
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -64,7 +86,10 @@
         "com.chariotsolutions.nfc.plugin": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "org.apache.cordova.device": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "org.apache.cordova.contacts": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "org.apache.cordova.dialogs": {
@@ -73,7 +98,10 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "uk.co.whiteoctober.cordova.AppVersion": {
+        "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },

@@ -1,0 +1,88 @@
+.dataWontFit{
+  display:none;
+  padding:10px;
+  margin:10px;
+  color: #9F6000;
+  background-color: #FEEFB3;  
+}
+.dataWontFitUpgrade{
+  display:none;
+  padding:10px;
+  margin:10px;
+  color: #9F6000;
+  background-color: #FEEFB3;  
+}
+#vCardLoading, #VcardSubmit, #vCardNoResults{
+  display:none;
+}
+
+.vCardCheckbox {
+    float:right;
+    width: 20px;
+//     height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: 15px;
+    *overflow: hidden;
+    /* Double-sized Checkboxes */
+//    -ms-transform: scale(2); /* IE */
+//    -moz-transform: scale(2); /* FF */
+//    -webkit-transform: scale(2); /* Safari and Chrome */
+//    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
+
+#vCardForm {
+  .optionInput {
+    margin-bottom: 0;
+  }
+}
+
+#vCardResults {
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    
+    .contact{
+      background-color: $white;
+      border-bottom: 1px solid $mgrey;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 15px;
+      line-height: 48px;
+      font-size: 20px;
+      text-align: left;
+      
+      &:active,
+      &:focus {
+        background-color: $grey;
+      }
+    }
+  }
+}
+
+.vCardContents {
+  
+  #vCardData {
+    margin-bottom: 15px;
+  }
+ .contactInfo {
+   font-size: 20px;
+   line-height: 48px;
+   border-bottom: 1px solid $mgrey;
+   
+   &.selected {
+      background-color: $highlight-selected;
+   }
+
+    label {
+      display: block;
+//       padding-left: 25px;
+//       text-indent: -15px;
+      text-align:left;
+    }
+ } 
+}

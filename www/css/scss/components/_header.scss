@@ -1,0 +1,41 @@
+#header {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 900;
+}
+#header #title {
+  padding-bottom: 15px;
+  position: relative;
+  z-index: 100;
+}
+#header #nav-btn,
+#header #back-btn {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.6em;
+  cursor: pointer;
+  z-index: 99999;
+}
+#header #nav-btn:before,
+#header #back-btn:before {
+  color: #162132;
+  vertical-align: middle;
+  line-height: 55px;
+}
+#header #back-btn {
+  font-size: 2.8em;
+  right: auto;
+  left: 0;
+}
+#header #logo {
+  padding: 15px 0 0 0;
+  height: 40px;
+}
+#header #logo img {
+  display: inline-block;
+  max-width: 150px;
+}

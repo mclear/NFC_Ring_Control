@@ -1,0 +1,68 @@
+{
+    "com.borismus.webintent": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/peerigon/cordova-webintent.git",
+            "subdir": "."
+        }
+    },
+    "com.chariotsolutions.nfc.plugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/chariotsolutions/phonegap-nfc.git",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.contacts": {
+        "source": {
+            "type": "local",
+            "path": "/tmp/org.apache.cordova.contacts/package"
+        }
+    },
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/rx/thy3s4654s9bf7rcfh6_gdnm0000gn/T/org.apache.cordova.dialogs/package"
+        }
+    },
+    "org.apache.cordova.vibration": {
+        "source": {
+            "type": "local",
+            "path": "/var/folders/rx/thy3s4654s9bf7rcfh6_gdnm0000gn/T/org.apache.cordova.vibration/package"
+        }
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "uk.co.whiteoctober.cordova.appversion": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/whiteoctober/cordova-plugin-app-version.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
