@@ -65,11 +65,17 @@ nfcRing.vcard.showFields = function(){
   $.each(nfcRing.userValues.contactToWrite, function(key, value){
     if(nfcRing.userValues.contactToWrite[key]){
       if(key !== "id" && key !== "rawId" && key !== "remove" && key !== "clone" && key !== "save" && key !== "photos" && key !== "displayName"){
-        $("#vCardData").append("<div class='contactInfo'><label>" + key + "<input class='vCardCheckbox' type='checkbox' id='" + key + "' value='" + key + "' name='" + key + "'></label></div>");
+        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + key + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
       }
     }
-  })
+  });
 }
+
+/*
+$(document).on('click', '.contactInfo > label', function(){
+  $(this).closest('.contactInfo').toggleClass('selected');
+});
+*/
 
 // takes in contact card from cordova and builds vcard format
 nfcRing.vcard.build = function(){
@@ -87,6 +93,8 @@ nfcRing.vcard.build = function(){
    'VERSION:2.1\n';
 
   $.each(props, function(key, value){
+    
+    
     if(props[key].id === "name"){
       vCard += 'N:'+contact.name.familyName+';'+contact.name.givenName+';;;\n' + 
         'FN:'+contact.name.formatted+'\n';

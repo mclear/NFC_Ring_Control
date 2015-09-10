@@ -1,8 +1,11 @@
 #header {
+  max-width: 800px;
+  margin: 0 auto;
   width: 100%;
   z-index: 900;
 }
 #header #title {
+  padding-bottom: 15px;
   position: relative;
   z-index: 100;
 }

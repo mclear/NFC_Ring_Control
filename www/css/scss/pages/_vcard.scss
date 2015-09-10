@@ -12,67 +12,77 @@
   color: #9F6000;
   background-color: #FEEFB3;  
 }
-.contact{
-  background-color:#fff;
-  display: block;
-  max-width: 800px;
-  width: 100%;
-  margin: 20px auto;
-  line-height: 48px;
-  font-size: 32px;
-  text-align: center;
-}
 #vCardLoading, #VcardSubmit, #vCardNoResults{
   display:none;
 }
-.contactInfo{
-//   font-size:28px;
-  margin: 20px 0 20px 0;
-  
-  &:nth-child(odd){
-    background: #CCC;
-  }
-  
-  &:nth-child(even){
-    background: #EBECEC;
-  }
 
-}
-
-.contactInfo > label {
-  display: block;
-  padding-left: 25px;
-  text-indent: -15px;
-  text-align:left;
-  
-}
 .vCardCheckbox {
     float:right;
-    width: 13px;
-    height: 13px;
+    width: 20px;
+//     height: 13px;
     padding: 0;
     margin:0;
-    margin-right:20px;
     vertical-align: bottom;
     position: relative;
     top: 15px;
     *overflow: hidden;
     /* Double-sized Checkboxes */
-    -ms-transform: scale(2); /* IE */
-    -moz-transform: scale(2); /* FF */
-    -webkit-transform: scale(2); /* Safari and Chrome */
-    -o-transform: scale(2); /* Opera */
+//    -ms-transform: scale(2); /* IE */
+//    -moz-transform: scale(2); /* FF */
+//    -webkit-transform: scale(2); /* Safari and Chrome */
+//    -o-transform: scale(2); /* Opera */
     padding: 10px;
+}
+
+#vCardForm {
+  .optionInput {
+    margin-bottom: 0;
+  }
 }
 
 #vCardResults {
   ul {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     
-    li {
+    .contact{
+      background-color: $white;
+      border-bottom: 1px solid $mgrey;
+      display: block;
+      width: 100%;
       margin: 0;
-      padding: 0;
+      padding: 0 15px;
+      line-height: 48px;
+      font-size: 20px;
+      text-align: left;
+      
+      &:active,
+      &:focus {
+        background-color: $grey;
+      }
     }
   }
+}
+
+.vCardContents {
+  
+  #vCardData {
+    margin-bottom: 15px;
+  }
+ .contactInfo {
+   font-size: 20px;
+   line-height: 48px;
+   border-bottom: 1px solid $mgrey;
+   
+   &.selected {
+      background-color: $highlight-selected;
+   }
+
+    label {
+      display: block;
+//       padding-left: 25px;
+//       text-indent: -15px;
+      text-align:left;
+    }
+ } 
 }

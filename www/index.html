@@ -110,7 +110,7 @@ window.onerror = function(msg,url,line){
   <div class="actionContents">
     <form id="optionForm" class="centered">
       <label for="optionInput"></label>
-      <input name="option" id="optionInput" type="text">
+      <input name="option" id="optionInput" type="text" class="optionInput">
       <input type="hidden" id="actionHidden" name="action">
       <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
       <div class="dataWontFitUpgrade" id="dataWontFitUpgrade"><h2><a href="http://store.nfcring.com">{{html10n "option.dataWontFitUpgrade"}}</a></h2></div>
@@ -118,7 +118,7 @@ window.onerror = function(msg,url,line){
     </form>
     <form id="vCardForm" class="centered">
       <label for="optionInput"></label>
-      <input name="option" id="vcardInput" type="text">
+      <input name="option" id="vcardInput" type="text" class="optionInput">
       <input type="hidden" id="actionHidden" name="action">
       <div id="vCardLoading"><h2>{{html10n "vcard.loading"}}&nbsp;&nbsp;<img src="./img/loading.gif"></h2></div>
       <div id="vCardNoResults"><h2>{{html10n "vcard.noResults"}}</h2></div>
@@ -138,11 +138,11 @@ window.onerror = function(msg,url,line){
     </div>
   </header>
   <div class="vCardContents">
-    <form id="vCardForm" class="centered">
+    <form id="vCardForm">
       <div id="vCardData"></div>
       <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
       <div class="dataWontFitUpgrade" id="dataWontFitUpgrade"><h2><a href="http://store.nfcring.com">{{html10n "option.dataWontFitUpgrade"}}</a></h2></div>
-      <button type="submit" class="btn-link icon icon-next" id="vCardSubmit">{{html10n "option.next"}}</button>
+      <button type="submit" class="btn-link icon icon-next centered" id="vCardSubmit">{{html10n "option.next"}}</button>
     </form>
   </div>
 </script>
