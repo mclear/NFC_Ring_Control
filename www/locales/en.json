@@ -22,7 +22,7 @@
   "action.whatDoYouWantYourRingToDo":"What do you want your ring to do?",
   "option.next":"Next",
   "option.dataWontFit":"Warning: This amount of data might not fit on your NFC Ring",
-  "option.dataWontFitUpgrade":"Warning: This amount of data might not fit on your NFC Ring, upgrade your NFC Ring now for more space",
+  "option.dataWontFitUpgrade":"Warning: This amount of data might not fit on your NFC Ring. Upgrade your NFC Ring now for more space",
   "writeRing.finish":"Finish",
   "writeRing.noNFC":"NFC functionality is not working. Is NFC enabled on your device?",
   "writeRing.woohoo":"Woohoo!",
