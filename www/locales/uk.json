@@ -5,7 +5,8 @@
 			"Andriykopanytsia",
 			"Base",
 			"Olvin",
-			"Ypryima"
+			"Ypryima",
+			"Dars"
 		]
 	},
 	"index.wantHelp": "Потрібна допомога?",
@@ -31,6 +32,7 @@
 	"action.whatDoYouWantYourRingToDo": "Що ви хочете, щоб робило ваше кільце?",
 	"option.next": "Далі",
 	"option.dataWontFit": "Попередження: Такий обсяг даних може не вміститися на ваш NFC Ring",
+	"option.dataWontFitUpgrade": "Попередження: такий обсяг даних може не поміститися на вашому NFC каблучка. Для збільшення місця обновіть прошивку вашої каблучки",
 	"writeRing.finish": "Завершити",
 	"writeRing.noNFC": "Не працює функціонал NFC. Він увімкнений на вашому пристрої?",
 	"writeRing.woohoo": "Ура!",
@@ -55,6 +57,9 @@
 	"help.another": "Спробуйте інше NFC-пристрій, якщо воно у вас є",
 	"help.winPhone": "Windows Phone вимагає, щоб у NFC-кільця вже було посилання. Щоб виправити це, візьміть телефон на Android або іншу програму і запишіть URL-адресу в ваш телефон. Після цього ви зможете використовувати програму управління NFC-кільцем для запису URL-адрес.",
 	"help.gotIt": "Гаразд, зрозуміло.",
+	"actions.vcard.name": "візитна картка",
+	"actions.vcard.description": "Створити візитну картку, щоб поділитися вашими контактними даними, або даними іншої людини",
+	"actions.vcard.optionText": "Ім'я:",
 	"actions.twitter.name": "Твіттер",
 	"actions.twitter.description": "Посилання на користувача Twitter",
 	"actions.twitter.optionText": "Яке ваше ім'я користувача Twitter?",
@@ -93,6 +98,8 @@
 	"register.passwordAgainTitle": "Пароль ще раз:",
 	"register.passwordsDontMatch": "Паролі не збігаються",
 	"register.success": "Реєстрація успішна. Тепер Ви можете застосувати ваші логін/пароль для перевірки застосунку NFC Ring Unlock",
+	"vcard.loading": "Завантаження контактів",
+	"vcard.noResults": "Не знайдено жодних контактів",
 	"register.notNFCRingTitle": "Ой-ой!",
 	"register.notNFCRing": "Це не може бути справжньої NFC Ring, будь ласка, спробуйте іншій стороні кільця",
 	"register.resetPasswordPrompt": "Ви вже зареєструвалися для NFC-кільце розблокування облікового запису, тому вам не потрібно нічого робити. Чи хотіли б ви, щоб скинути пароль?",

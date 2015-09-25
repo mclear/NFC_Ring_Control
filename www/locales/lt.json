@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Swanas",
-			"Aswanas"
+			"Aswanas",
+			"Zygimantus"
 		]
 	},
 	"index.wantHelp": "Reikia pagalbos?",
@@ -52,6 +53,8 @@
 	"help.another": "Jeigu turite, pabandykite su kitu NFC  prietaisu",
 	"help.winPhone": "\"Windows Phone\" reikalauja nuorodos į NFC Žiedą. Norėdami tai išspręsti paimkite \"Android\" telefoną ar kitą įrenginį ir parašykite nuorodą į savo telefoną, tada jūs galėsite naudoti NFC Žiedo kontrolės programą ir parašyti nuorodą",
 	"help.gotIt": "GERAI, supratau",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Vardas:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Nuoroda į Twitter vartotoją",
 	"actions.twitter.optionText": "Koks yra jūsų Twitter vartotojo vardas?",
@@ -90,6 +93,8 @@
 	"register.passwordAgainTitle": "Pakartokite slaptažodį:",
 	"register.passwordsDontMatch": "Slaptažodžiai nesutampa",
 	"register.success": "Registracija sėkminga, jūs dabar galite naudoti savo vartotojo vardą ir slaptažodį NFC Žiedo atrakinimo programos patikrinimui",
+	"vcard.loading": "Pakrovimo kontaktai",
+	"vcard.noResults": "Kontaktų nerasta",
 	"register.notNFCRingTitle": "Uh oh",
 	"register.notNFCRing": "Tai gali būti ne originalus NFC Žiedas, bandykite kitą  jūsų žiedo pusę",
 	"register.resetPasswordPrompt": "Jūs jau užsiregistravęs NFC Žiedas atrakinimo sąskaitą ir jums nereikia nieko daryti. Ar norite iš Naujo nustatyti slaptažodį?",

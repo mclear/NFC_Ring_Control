@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Laaknor"
+			"Laaknor",
+			"Tarjeimo"
 		]
 	},
 	"index.wantHelp": "Vil du ha litt hjelp?",
@@ -44,5 +45,7 @@
 	"settings.changeLanguage": "Endre appspråk",
 	"help.helpTips": "Hjelpetips",
 	"help.facing": "Sørg for at den fargede, ikke-metalliske delen av ringen berører mot baksiden av din enhet",
-	"help.volume": "Skru volumet opp"
+	"help.volume": "Skru volumet opp",
+	"actions.vcard.optionText": "Navn:",
+	"vcard.noResults": "Ingen kontakter funnet"
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"LorenzoM"
+			"LorenzoM",
+			"Macofe"
 		]
 	},
 	"index.wantHelp": "Hai bisogno di aiuto?",
@@ -52,6 +53,8 @@
 	"help.another": "Prova con un altro dispositivo NFC se ne hai uno",
 	"help.winPhone": "Windows Phone richiede che l'anello NFC abbia già un link memorizzato. Per risolvere il problema, usa un telefono Android o un'altra app per scrivere una URL sull'anello in questo modo sarai in grado di utilizzare l'applicazione NFC Ring per scrivere altre URL",
 	"help.gotIt": "OK, ho capito",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Nome:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Link ad un account Twitter",
 	"actions.twitter.optionText": "Qual è il tuo username di Twitter?",
@@ -90,6 +93,7 @@
 	"register.passwordAgainTitle": "Ripeti la password:",
 	"register.passwordsDontMatch": "Le password non coincidono",
 	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione",
+	"vcard.noResults": "Nessun contatto trovato",
 	"register.notNFCRingTitle": "Oops",
 	"register.notNFCRing": "Questo potrebbe non essere un vero e proprio anello NFC, prova l'altro lato dell'anello",
 	"register.resetPasswordPrompt": "Hai già registrato un'utenza NFC Ring Unlock quindi non devi fare nulla. Vuoi reimpostare la tua password?",
