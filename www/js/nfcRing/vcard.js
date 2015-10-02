@@ -8,6 +8,7 @@ nfcRing.vcard.search = function(name){
   $('#vCardNoResults').hide(); // Hide the vCardNoResults
   if(device.platform === "browser"){
     console.log("Simulating contact result as it's the browser");
+    // TODO, review this formatting..
     nfcRing.vcard.found([
       {
         id: 1,
@@ -65,18 +66,26 @@ nfcRing.vcard.showFields = function(){
   $.each(nfcRing.userValues.contactToWrite, function(key, value){
     if(nfcRing.userValues.contactToWrite[key]){
       if(key !== "id" && key !== "rawId" && key !== "remove" && key !== "clone" && key !== "save" && key !== "photos" && key !== "displayName"){
-        if(Array.isArray(value)){ // TODO, allow user to select a value
-          console.log("flattening array ", value);
-          value = value[0]; // Flatten arrays to single strings
+
+        var upperKey = capitalizeFirstLetter(key);
+
+        // TODO: There must be a better way to do this...
+        if(key === "name"){
+          value = value.formatted;
         }
-        if(typeof(value) === "object"){
-          console.log("I'm an object", value);
-          for (first in value){
-            value = value[first];
-            break; // TODO, allow user to select value
-          }
+        if(key === "emails"){
+          upperKey = "Email";
+          value = value[0].value;
         }
-        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + key + ': ' + value + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
+        if(key === "telephone" || key === "phoneNumbers"){
+          value = value[0].value;
+          upperKey = "Phone";
+        }
+        if(key === "addresses"){
+          value = value[0].formatted;
+        }
+
+        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + upperKey + ': ' + value + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
       }
     }
   });
@@ -138,4 +147,8 @@ nfcRing.vcard.build = function(){
 
 nfcRing.vcard.error = function(e){
   console.error("vCard Error", e);
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
