@@ -92,7 +92,11 @@ nfcRing.vcard.showFields = function(){
           upperKey = "Phone";
         }
         if(key === "addresses"){
-          value = value[0].formatted;
+          upperKey = "Address";
+          value = value[0].formatted + "...";
+        }
+        if(typeof(value) === "object"){
+          value = "....";
         }
 
         $("#vCardData").append('<div class="contactInfo"><label class="centered">' + upperKey + ': ' + value + '<input class="vCardCheckbox" type="checkbox" checked="checked" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
