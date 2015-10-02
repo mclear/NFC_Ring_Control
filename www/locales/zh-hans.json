@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Gaoxuewei",
+			"Jiang123aa"
 		]
 	},
 	"index.wantHelp": "需要帮助？",
-	"index.wantHelpLong": "看起来您是第一次使用我们的NFC戒指控制程序。您需要一些帮助么？",
+	"index.wantHelpLong": "看起来您是第一次使用我们的NFC环控制程序。您需要一些帮助么？",
 	"index.whatDoYouWantToDoToday": "您今天想做些什么？",
 	"index.create": "创建",
 	"index.createDescription": "将一段新操作写入您的戒指",
@@ -26,6 +28,7 @@
 	"context.history": "历史",
 	"action.whatDoYouWantYourRingToDo": "您希望您的戒指做什么？",
 	"option.next": "下一步",
+	"option.dataWontFit": "警告：数据的此数量可能不会触发您的NFC戒指",
 	"writeRing.finish": "完成",
 	"writeRing.noNFC": "NFC功能无法工作。您是否在您的设备上启用了NFC？",
 	"writeRing.woohoo": "给力！",
@@ -50,6 +53,8 @@
 	"help.another": "尝试其他NFC设备，如果您有的话",
 	"help.winPhone": "Windows Phone需要NFC戒指已经拥有连接。要修复此问题，您需要配对一个Android设备或其他应用程序并将URL写入您的手机，之后您就可以使用NFC戒指控制程序写入URL",
 	"help.gotIt": "好的，我明白了",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "名称：",
 	"actions.twitter.name": "推特",
 	"actions.twitter.description": "链接到推特用户",
 	"actions.twitter.optionText": "您的推特用户名是什么？",
@@ -87,5 +92,11 @@
 	"register.passwordTitle": "密码：",
 	"register.passwordAgainTitle": "确认密码：",
 	"register.passwordsDontMatch": "两次密码不一致",
-	"register.success": "注册完成"
+	"register.success": "注册完成，您现在可以使用您的用户名/密码验证NFC戒指解锁应用程序",
+	"vcard.loading": "正在加载联络人",
+	"vcard.noResults": "找不到联络人",
+	"register.notNFCRingTitle": "呃哦！",
+	"register.notNFCRing": "这可能不是正版NFC戒指，请尝试您戒指的另一面",
+	"register.resetPasswordPrompt": "您已经注册了 NFC Ring Unlock帐户，所以不需要做任何事情。您想要重置您的密码吗？",
+	"register.resetPasswordPromptTitle": "您已经注册"
 }

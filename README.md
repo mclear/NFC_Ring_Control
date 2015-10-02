@@ -17,10 +17,10 @@ cordova plugin add org.apache.cordova.vibration
 Obviously some changes need to be made to the below
 
 ```
+export JAVA_HOME='/usr/lib/jvm/java-6-openjdk/'
 export ANT_HOME=/usr/local/ant
 export PATH=$ANT_HOME:$PATH
-
-export ANDROID_HOME=/home/jose/Downloads/adt-bundle-linux-x86_64-20131030/sdk
+export ANDROID_HOME=/home/jose/Downloads/adt-bundle-linux-x86_64-20140702/sdk
 export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 ```
 
@@ -33,7 +33,7 @@ cordova run android
 ```
 Bump version number in www/config.xml and platforms/android/androidManifest.xml
 cordova build android --release
-cd platforms/android/bin
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/keystore NFCRingControl-release-unsigned.apk nfcring
-zipalign -v 4 NFCRingControl-release-unsigned.apk NFCRingControl.apk
+cd platforms/android/build/outputs/apk
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/keystore android-release-unsigned.apk nfcring
+/home/jose/Downloads/android-sdk-linux/build-tools/23.0.1/zipalign -v 4 android-release-unsigned.apk ~/Desktop/NFCRingControl.apk
 ```

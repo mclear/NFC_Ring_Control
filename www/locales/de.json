@@ -26,6 +26,8 @@
 	"context.history": "Verlauf",
 	"action.whatDoYouWantYourRingToDo": "Was möchtest du mit deinem Ring machen?",
 	"option.next": "Nächste",
+	"option.dataWontFit": "Warnung: Diese Datenmenge passt möglicherweise nicht zu deinem NFC-Ring",
+	"option.dataWontFitUpgrade": "Warnung: Diese Datenmenge könnte nicht zu deinem NFC-Ring passen. Aktualisiere jetzt deinen NFC-Ring für mehr Speicherplatz.",
 	"writeRing.finish": "Beenden",
 	"writeRing.noNFC": "Die NFC-Funktionalität funktioniert nicht. Ist NFC auf deinem Gerät aktiviert?",
 	"writeRing.woohoo": "Hurra!",
@@ -50,6 +52,9 @@
 	"help.another": "Mit einem anderen NFC-Gerät versuchen, falls vorhanden",
 	"help.winPhone": "Windows Phone erfordert, dass der NFC-Ring bereits eine Verbindung hat. Um dieses Problem zu beheben, nimm einen Android-Telefonhörer oder eine andere App und schreibe eine URL an dein Telefon. Dann kannst du die NFC-Ring-Kontroll-App zum Schreiben einer URL verwenden.",
 	"help.gotIt": "OK, verstanden",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Erstelle eine vCard, um deine oder die Kontaktdetails eines anderen zu teilen.",
+	"actions.vcard.optionText": "Name:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Auf einen Twitter-Nutzer verlinken",
 	"actions.twitter.optionText": "Wie lautet dein Twitter-Nutzername?",
@@ -87,5 +92,11 @@
 	"register.passwordTitle": "Passwort:",
 	"register.passwordAgainTitle": "Passwort (erneut):",
 	"register.passwordsDontMatch": "Die Passwörter stimmen nicht überein",
-	"register.success": "Registrierung erfolgreich"
+	"register.success": "Registrierung erfolgreich. Du kannst jetzt deinen Benutzernamen und dein Passwort verwenden, um die NFC-Ring-Freigabe-App zu verifizieren.",
+	"vcard.loading": "Lade Kontakte",
+	"vcard.noResults": "Keine Kontakte gefunden",
+	"register.notNFCRingTitle": "Hoppla",
+	"register.notNFCRing": "Dies könnte kein echter NFC-Ring sein. Bitte versuche die andere Seite deines Rings.",
+	"register.resetPasswordPrompt": "Du bist bereits für ein NFC-Ring-Entsperr-Konto registriert. Du musst nichts machen. Möchtest du dein Passwort zurücksetzen?",
+	"register.resetPasswordPromptTitle": "Du bist bereits registriert"
 }

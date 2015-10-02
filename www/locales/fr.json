@@ -26,6 +26,8 @@
 	"context.history": "Historique",
 	"action.whatDoYouWantYourRingToDo": "Que voulez-vous que fasse votre anneau ?",
 	"option.next": "Suivant",
+	"option.dataWontFit": "Attention : Cette quantité de données pourrait ne pas tenir sur votre Anneau NFC",
+	"option.dataWontFitUpgrade": "Attention : Cette quantité de données peut ne pas tenir sur votre Anneau NFC. Mettez-le à jour maintenant pour avoir plus de place",
 	"writeRing.finish": "Terminer",
 	"writeRing.noNFC": "La fonctionnalité NFC ne marche pas. NFC est-il activé sur votre appareil ?",
 	"writeRing.woohoo": "Wahou !",
@@ -50,6 +52,9 @@
 	"help.another": "Essayez avec un autre appareil NFC si vous en avez un",
 	"help.winPhone": "Windows Phone a besoin que l’Anneau NFC ait déjà un lien dessus. Pour ce faire, prenez un combiné Android ou une autre application et écrivez une URL dans votre téléphone ; vous pourrez alors utiliser l’application de contrôle de l’Anneau NFC pour inscrire une URL.",
 	"help.gotIt": "OK, je l’ai",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Créer une vCard pour partager vos détails de contact ou ceux de quelqu’un d’autre",
+	"actions.vcard.optionText": "Nom :",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Lien vers un utilisateur de Twitter",
 	"actions.twitter.optionText": "Quel est votre nom d’utilisateur Twitter ?",
@@ -87,5 +92,11 @@
 	"register.passwordTitle": "Mot de passe :",
 	"register.passwordAgainTitle": "Répétition du mot de passe :",
 	"register.passwordsDontMatch": "Les mots de passe ne correspondent pas",
-	"register.success": "Inscription réussie"
+	"register.success": "Inscription réussie ; vous pouvez maintenant utiliser votre nom d’utilisateur/mot de passe pour vérifier l’application de déverrouillage de l’Anneau NFC",
+	"vcard.loading": "Chargement des contacts",
+	"vcard.noResults": "Aucun contact trouvé",
+	"register.notNFCRingTitle": "Oh oh",
+	"register.notNFCRing": "Ce pourrait ne pas être un Anneau NFC, veuillez essayer l’autre côté de votre anneau",
+	"register.resetPasswordPrompt": "Vous vous êtes déjà inscrit pour un compte de déverrouillage d’un Anneau NFC, donc vous n’avez rien d’autre à faire. Voulez-vous réinitialiser votre mot de passe ?",
+	"register.resetPasswordPromptTitle": "Vous êtes déjà inscrit"
 }

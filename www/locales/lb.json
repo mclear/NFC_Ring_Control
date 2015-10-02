@@ -19,6 +19,8 @@
 	"settings.phoneModel": "Telefonsmodell",
 	"settings.changeLanguage": "Sprooch vun der App änneren",
 	"help.gotIt": "OK, ech hu verstan",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Numm:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Link op e Benotzer vun Twitter",
 	"actions.twitter.optionText": "Wéi ass Äre Benotzernumm op Twitter?",
@@ -38,5 +40,8 @@
 	"register.emailTitle": "E-Mail-Adress:",
 	"register.passwordTitle": "Passwuert:",
 	"register.passwordAgainTitle": "Passwuert confirméieren:",
-	"register.passwordsDontMatch": "D'Passwierder sinn net déi selwecht"
+	"register.passwordsDontMatch": "D'Passwierder sinn net déi selwecht",
+	"vcard.loading": "Kontakter lueden",
+	"vcard.noResults": "Keng Kontakter fonnt",
+	"register.resetPasswordPromptTitle": "Dir sidd schonn ugemellt"
 }

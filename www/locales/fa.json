@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Ebraminio",
-			"Reza1615"
+			"Reza1615",
+			"Arash.pt",
+			"Mjbmr"
 		]
 	},
 	"index.wantHelp": "کمک می‌خواهید؟",
@@ -27,6 +29,7 @@
 	"context.history": "تاریخچه",
 	"action.whatDoYouWantYourRingToDo": "می‌خواهید با حلقهٔ خودتان چه کنید؟",
 	"option.next": "بعدی",
+	"option.dataWontFit": "هشدار: این مقدار داده ها ممکن است به اندازهٔ حلقهٔ NFC شما نباشد",
 	"writeRing.finish": "پایان",
 	"writeRing.noNFC": "قابلیت ان‌اف‌سی کار نمی‌کند. آیا ان‌اف‌سی در دستگاه شما فعال شده‌است؟",
 	"writeRing.woohoo": "ایول!",
@@ -83,10 +86,14 @@
 	"sweetSpot.done": "انجام شد. ممنون!",
 	"sweetSpot.areYouSureSS": "برای پاک‌کردن داده‌های نقطهٔ شیرین خود مطمئنید؟",
 	"sweetSpot.areYouSureActions": "برای روشن‌شدن اقدامات قبلی خود مطمئنید؟",
-	"register.emailTitle": "نشانی رایانامه:",
+	"register.emailTitle": "آدرس ایمیل:",
 	"register.title": "ثبت نام حلقهٔ خود",
 	"register.passwordTitle": "گذرواژه:",
 	"register.passwordAgainTitle": "دوباره گذرواژه:",
 	"register.passwordsDontMatch": "گذرواژه‌ها مطابقت ندارند",
-	"register.success": "ثبت نام موفق‌آمیر بود"
+	"register.success": "ثبت نام موفق‌آمیر بود، هم‌اکنون شما می‌توانید از نام کاربر/گذرواژه برای باز کردن بازهٔ NFC قفل نرم‌افزار استفاده کنید",
+	"register.notNFCRingTitle": "اوه اوه!",
+	"register.notNFCRing": "ممکن است این حلقهٔ اصلی NFC نباشد. لطفاً از سمت دیگر حلقه استفاده کنید",
+	"register.resetPasswordPrompt": "شما برای کاربری حلقهٔ بدون قفل NFC ثبت نام کرده‌اید بنابریان نیاز به هیچ کاری نیست. آیا قصد بازگردانی گذرواژه‌تان را دارید؟",
+	"register.resetPasswordPromptTitle": "الان شما ثبت نام شده‌اید"
 }

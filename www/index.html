@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+window.onerror = function(msg,url,line){
+  console.log('window.onerror :',msg,url,line);
+}; 
+</script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name = "format-detection" content = "telephone=no"/>
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
   <script type="text/javascript">var nfcRing = {}</script>
-  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/parse-1.2.9.min.js"></script>
   <script type="text/javascript" src="js/heatmap.js"></script>
   <script type="text/javascript" src="js/nfcRing/actions.js"></script>
@@ -14,6 +19,7 @@
   <script type="text/javascript" src="js/nfcRing/ui.js"></script>
   <script type="text/javascript" src="js/nfcRing/userValues.js"></script>
   <script type="text/javascript" src="js/nfcRing/registration.js"></script>
+  <script type="text/javascript" src="js/nfcRing/vcard.js"></script>
   <script type="text/javascript" src="js/handlebars.js"></script>
   <script type="text/javascript" src="js/html10n.js"></script>
   <script type="text/javascript" src="js/intro.js"></script>
@@ -24,7 +30,7 @@
   <script type="text/javascript" src="js/hammer.min.js"></script>
 
   <link rel="localizations" type="application/l10n+json" href="locales.json">
-  <link rel="stylesheet" type="text/css" href="css/nfcringapp.css" />
+  <link rel="stylesheet" type="text/css" href="css/nfcringapp2.css" />
   <link rel="stylesheet" type="text/css" href="css/introjs.css" />
   <title>NFC Ring Control App</title>
 </head>
@@ -104,13 +110,43 @@
   <div class="actionContents">
     <form id="optionForm" class="centered">
       <label for="optionInput"></label>
-      <input name="option" id="optionInput" type="text">
+      <input name="option" id="optionInput" type="text" class="optionInput">
       <input type="hidden" id="actionHidden" name="action">
       <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
+      <div class="dataWontFitUpgrade" id="dataWontFitUpgrade"><h2><a href="http://store.nfcring.com">{{html10n "option.dataWontFitUpgrade"}}</a></h2></div>
+      <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
+    </form>
+    <form id="vCardForm" class="centered">
+      <label for="optionInput"></label>
+      <input name="option" id="vcardInput" type="text" class="optionInput">
+      <input type="hidden" id="actionHidden" name="action">
+      <div id="vCardLoading"><h2>{{html10n "vcard.loading"}}&nbsp;&nbsp;<img src="./img/loading.gif"></h2></div>
+      <div id="vCardNoResults"><h2>{{html10n "vcard.noResults"}}</h2></div>
+      <div id="vCardResults"></div>
+      <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
+      <div class="dataWontFitUpgrade" id="dataWontFitUpgrade"><h2><a href="http://store.nfcring.com">{{html10n "option.dataWontFitUpgrade"}}</a></h2></div>
       <button type="submit" class="btn-link icon icon-next" id="submit">{{html10n "option.next"}}</button>
     </form>
   </div>
 </script>
+
+<script id="vcard" class="step vcard" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">
+      <div id="nav-btn" class="icon icon-settings selected"></div>
+      <div id="logo"><img src="img/nfcring-logo.png"></div>
+    </div>
+  </header>
+  <div class="vCardContents">
+    <form id="vCardForm">
+      <div id="vCardData"></div>
+      <div class="dataWontFit" id="dataWontFit"><h2>{{html10n "option.dataWontFit"}}</h2></div>
+      <div class="dataWontFitUpgrade" id="dataWontFitUpgrade"><h2><a href="http://store.nfcring.com">{{html10n "option.dataWontFitUpgrade"}}</a></h2></div>
+      <button type="submit" class="btn-link icon icon-next centered" id="vCardSubmit">{{html10n "option.next"}}</button>
+    </form>
+  </div>
+</script>
+
 
 <script id="writeRing" class="step writeRing" type="x-handlebars-template">
   <header id="header">
@@ -219,6 +255,7 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
+nfcRing.maxSize = 850;
 nfcRing.userValues.location = "index"
 // Initialize the page
 nfcRing.ui.domListenersInit();
@@ -251,7 +288,7 @@ if(typeof cordova !== 'undefined'){
     console.log("simulating intent", intent);
     // No cordova so doing a fake write through desktop..
     nfcRing.userValues.activity = "write";
-    nfcRing.userValues.intentSet = true;
+    nfcRing.userValues.intent = true;
     nfcRing.userValues.toWrite = value;
     setTimeout(function(){
       nfcRing.heatmap.init();

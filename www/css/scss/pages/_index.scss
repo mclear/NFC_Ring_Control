@@ -1,0 +1,123 @@
+
+/* Index Page */
+#landing h2 {
+  font-size: 2em;
+}
+#writeRing img {
+  max-width: 70%;
+}
+#writeRing .link-list {
+  text-align: center;
+}
+#writeRing .link-list li a {
+  padding-left: 0;
+}
+#writeRing .link-list li a:before {
+  left: auto;
+  position: relative;
+  vertical-align: middle;
+}
+/* Program ring area */
+.optionInput {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  font-size: 2.8em;
+  padding: 15px 2%;
+  border: 1px solid #b8b8b8;
+}
+form.centered label {
+  font-size: 1.2em;
+}
+form.centered #submit {
+  width: 100%;
+}
+form.centered .icon-next:before {
+  vertical-align: middle;
+}
+#registerEmail label {
+  font-size: 1.4em;
+  padding: 0 0 5px 0;
+}
+#registerEmail input.textInput {
+  display: block;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  font-size: 2em;
+  padding: 10px 2%;
+  border: 1px solid #b8b8b8;
+  text-align: center;
+}
+.count {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+#scan {
+  height: 40px;
+}
+.obviousButton {
+  width: 80%;
+  height: 80px;
+}
+.platforms {
+  padding-top: 20px;
+  text-align: center;
+}
+#qrCode {
+  text-align: center;
+  margin: 50px;
+}
+.back {
+  display: none !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.next {
+  float: right;
+}
+a.paddedIcon > img {
+  padding-bottom: 10px;
+}
+a.paddedIcon {
+  display: inline-block;
+  width: 125px;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  border: 1px solid #fff;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+  opacity: .98;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  display: none;
+}
+#androidInfo,
+#windowsMobileInfo,
+#blackBerryInfo {
+  display: none;
+}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+a.paddedIcon {
+  padding: 5px;
+}
+#option,
+#writeRing {
+  display: none;
+}

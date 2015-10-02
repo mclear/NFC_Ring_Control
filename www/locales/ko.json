@@ -2,7 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Hym411",
-			"아라"
+			"아라",
+			"Revi",
+			"Twotwo2019",
+			"SeoJeongHo"
 		]
 	},
 	"index.wantHelp": "도움이 필요하신가요?",
@@ -27,10 +30,12 @@
 	"context.history": "역사",
 	"action.whatDoYouWantYourRingToDo": "당신의 링이 무엇을 하기를 원하는가요?",
 	"option.next": "다음",
+	"option.dataWontFit": "경고: 이 용량의 데이터는 당신의 NFC 링에 적합하지 않을 수 있습니다",
 	"writeRing.finish": "완료",
 	"writeRing.noNFC": "NFC 기능이 작동하지 않습니다. 기기에 NFC가 활성화되어 있습니까?",
 	"writeRing.woohoo": "유후!",
-	"writeRing.ready": "당신의 링이 이제 준비되었습니다",
+	"writeRing.ready": "당신의 NFC 링이 이제 준비되었습니다",
+	"writeRing.fail": "NFC 링에 쓸 수 없습니다",
 	"readRing.contents": "링 내용:",
 	"settings.clearMySweetSpot": "내 달콤한 자리",
 	"settings.clearMySweetSpotDescription": "내 저장된 달콤한 자리 위치 지우기",
@@ -84,5 +89,7 @@
 	"register.passwordTitle": "비밀번호:",
 	"register.passwordAgainTitle": "비밀번호 다시 입력:",
 	"register.passwordsDontMatch": "비밀번호가 일치하지 않습니다",
-	"register.success": "등록 성공"
+	"register.success": "등록 성공. 당신은 이제 NFC 링 해제 앱을 확인하기 위해 당신의 사용자명/비밀번호를 쓸 수 있습니다.",
+	"register.notNFCRingTitle": "어 이런",
+	"register.resetPasswordPromptTitle": "이미 등록되어 있습니다."
 }

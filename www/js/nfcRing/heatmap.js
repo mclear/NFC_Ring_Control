@@ -61,8 +61,8 @@ nfcRing.heatmap = {
 
     var coOrdinateCounter = {};
     var model = device.model;
-
-    $.getJSON("http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model).done(function(results){
+    var url = "http://sweetspot.nfcring.com/api/v1/sweetspot?model="+model
+    $.getJSON(url).done(function(results){
       results = JSON.parse(results);
       for (var i = 0; i < results.length; i++) { 
         var object = results[i];
@@ -100,14 +100,16 @@ nfcRing.heatmap = {
     });
   },
 
-  sendToRemote: function(x,y,model){
-    console.log("Posting to remote", x, y, model);
+  sendToRemote: function(x,y,model, maxX, maxY){
+    console.log("Posting to remote", x, y, model, maxX, maxY);
     var data = {
       "x": x,
       "y": y,
-      "model": model
+      "model": model,
+      "maxX": maxX,
+      "maxY": maxY
     }
-    $.post("http://sweetspot.nfcring.com/api/v1/sweetspot", data, function(results){
+    $.post("http://sweetspot.nfcring.com/api/v2/sweetspot", data, function(results){
       console.log("Success posting to remote");
       alert(html10n.get("sweetSpot.yay"), false, html10n.get("sweetSpot.done"));
       nfcRing.ui.displayPage("index");

@@ -22,7 +22,6 @@ nfcRing.ui = {
       }
       $('#ringActions').append('<li><div data-key="'+action.title+'" class="action icon icon-'+ action.label.toLowerCase() +'">' + action.label + '<span>' + action.description + '</span></div></li>');
     });
-
   },
  
   showNeedHelp: function(){
@@ -30,7 +29,6 @@ nfcRing.ui = {
   }, // Shows the need help button
 
   domListenersInit: function(){
-
     // In the browser when we use the back button it doesn't fire the handleBack or whatever so sometimes we have to catch it
     // None fo this shit seems to work..
     $(window).on('hashchange', function() {
@@ -152,7 +150,7 @@ nfcRing.ui = {
       document.documentElement.dir = html10n.getDirection();
       // nfcRing.userValues.language = language || navigator.language;
       // $('.changeLanguage').val(nfcRing.userValues.language);
-      if(!nfcRing.userValues.intentSet) nfcRing.ui.displayPage("index");
+      if(!nfcRing.userValues.intent) nfcRing.ui.displayPage("index");
     });
 
     FastClick.attach(document.body); // What does this do?
@@ -191,11 +189,24 @@ nfcRing.ui = {
       if(!typeof labelI18n == 'object'){ // If it's an object the string value was missing so we return nada
          var label = action.labelI18n;
       }else{
+         console.log("lower case label", key);
+         console.log("actions", nfcRing.actions);
          var label = nfcRing.actions[key.toLowerCase()].optionText;
       }
       nfcRing.userValues.optionTitle = label;
       nfcRing.userValues.action = key.toLowerCase();
       nfcRing.userValues.isUrl = false;
+      console.log("key", key);
+      if(key.toLowerCase() === "vcard"){
+        console.log("VCard so adding autocomplete class");
+        $('#vcardInput').addClass("autocomplete");
+        $('.icon-next').hide();
+        $("#optionForm").hide();
+        $("#vCardForm").show();
+      }else{
+        $("#optionForm").show();
+        $("#vCardForm").hide();
+      }
       if(key.toLowerCase() === "link"){
         console.log("Setting nfcRing.userValues.isUrl to true");
         nfcRing.userValues.isUrl = true;
@@ -215,14 +226,42 @@ nfcRing.ui = {
         var tagSize = nfcRing.userValues.tagSize;
         console.log("inputSize", inputSize, "tagSize", tagSize);
         if(inputSize >= tagSize){
-          console.log("displaying warning because too much data is attempting to be written to me");
-          nfcRing.ui.dataSizeTooBig(true);
+          if(tagSize >= nfcRing.maxSize){
+            console.log("displaying warning because too much data is attempting to be written to me");
+            nfcRing.ui.dataSizeTooBig(true);
+            nfcRing.ui.dataSizeTooBigUpgrade(false);
+          }else{
+            console.log("telling user to upgrade their ring as a better one exists");
+            nfcRing.ui.dataSizeTooBigUpgrade(true);
+          }
         }else{
           console.log("data should fit fine on the tag");
           nfcRing.ui.dataSizeTooBig(false);
+          nfcRing.ui.dataSizeTooBigUpgrade(false);
         }
       }, 100);
     });
+
+    $('body').on('click', '.vCardCheckbox', function(e){
+      var input = nfcRing.vcard.build();
+      var inputSize = input.length;
+      var tagSize = nfcRing.userValues.tagSize;
+      console.log("inputSize", inputSize, "tagSize", tagSize);
+      if(inputSize >= tagSize){
+        if(tagSize >= nfcRing.maxSize){
+          console.log("displaying warning because too much data is attempting to be written to me");
+          nfcRing.ui.dataSizeTooBig(true);
+        }else{
+          console.log("telling user to upgrade their ring as a better one exists");
+          nfcRing.ui.dataSizeTooBigUpgrade(true);
+        }
+      }else{
+        console.log("data should fit fine on the tag");
+        nfcRing.ui.dataSizeTooBig(false);
+        nfcRing.ui.dataSizeTooBigUpgrade(false);
+      }
+    });
+
 
     $('body').on('submit', '#optionForm', function(e){
       e.preventDefault();
@@ -230,6 +269,17 @@ nfcRing.ui = {
    
       nfcRing.userValues.history.set(); // saves it to history
       console.log("Submitting a write value to the nfcRing object");
+      nfcRing.ui.displayPage("writeRing");
+      nfcRing.ui.prepareWritePage("write");
+      return false;
+    });
+
+    $('body').on('submit', '#vCardForm', function(e){
+      e.preventDefault();
+      console.log("WTF VCARD FORM WAS SUBMITTED?!");
+      nfcRing.userValues.toWrite = nfcRing.vcard.build();
+      nfcRing.userValues.history.set();
+      console.log("Submitting a VCARD write value to the nfcRing object");
       nfcRing.ui.displayPage("writeRing");
       nfcRing.ui.prepareWritePage("write");
       return false;
@@ -317,15 +367,38 @@ nfcRing.ui = {
       nfcRing.userValues.localSweetSpot.set(e);
     });
 
+    $('body').on('keyup', '.autocomplete', function(){
+      var searchTerm = $('.autocomplete').val();
+      if(searchTerm.length < 3) return;
+      console.log("Searching for ", searchTerm);
+      nfcRing.vcard.search(searchTerm);
+    });
+
+    $('body').on("click", ".contact", function(e){
+      console.log("ID", e.target.id);
+      var contactObj = nfcRing.vcard.cache[e.target.id];
+      if(nfcRing.vcard){
+        nfcRing.userValues.contactToWrite = contactObj;
+        console.log("WTF THIS IS A VCARD");
+        nfcRing.userValues.isVCard = true;
+        console.log("Displaying vcard page");
+        nfcRing.ui.displayPage("vcard");
+      }else{
+        alert("Failed to create VCard");
+      }
+    });
+
   },
 
   updateVersion: function(){ // show Version number on the page
-    if(device.platform === "browser"){
-      $('#versionNumber').text("N/A");
-    }else{
-      cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+    if(device){
+      if(device.platform === "browser"){
+        $('#versionNumber').text("N/A");
+      }else{
+        cordova.getAppVersion().then(function (version) { $('#versionNumber').text(version); });
+      }
+      $('#modelName').text(device.model);
     }
-    $('#modelName').text(device.model);
   },
 
   displayPage: function(page){ // Display a page
@@ -348,9 +421,11 @@ nfcRing.ui = {
 
     // never allow the app to get stuck in a loop on pages..
     if(nfcRing.ui.history[nfcRing.ui.history.length-1] !== page){
+      console.log("Wrote page to history stage", page);
       nfcRing.ui.history.push(page); // Write the this page to the history stack
     }
     nfcRing.userValues.location = page;
+    console.log("page", page);
     var source = $('#'+page).html();
     var context = $('#contextContent').html(); // always include context nav on every page :)
     var template = Handlebars.compile(source);
@@ -364,16 +439,26 @@ nfcRing.ui = {
     }
 
     if(nfcRing.userValues.activity === "register" && nfcRing.userValues.location === "writeRing"){
+      console.log("Displaying register page");
       nfcRing.ui.prepareWritePage("register");
     }
 
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
+      if(nfcRing.userValues.isVCard){
+        $('#vcardInput').addClass("autocomplete");
+        $('.icon-next').hide();
+        $('#optionForm').hide();
+      }
     }
  
     if(page === "settings"){
       console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
+    }
+    
+    if(page === "vcard"){
+      nfcRing.vcard.showFields(); // Write the checkboxes and fields to the UI
     }
 
     setTimeout(function(){
@@ -387,8 +472,6 @@ nfcRing.ui = {
         }
       }
     },200); 
-
-    nfcRing.ui.updateVersion();
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
   }, 
@@ -450,5 +533,14 @@ nfcRing.ui = {
     }else{
       $('.dataWontFit').hide();
     }
+  },
+
+  dataSizeTooBigUpgrade: function(wontFit){
+    if(wontFit){
+      $('.dataWontFitUpgrade').show();
+    }else{
+      $('.dataWontFitUpgrade').hide();
+    }
   }
+
 }
