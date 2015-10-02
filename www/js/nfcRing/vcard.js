@@ -53,9 +53,19 @@ nfcRing.vcard.found = function(contacts){
   $.each(contacts, function(k,person){
     if(person.displayName && person.id){
       if(i < 5){
-        $('#vCardResults ul').append('<li class="contact" id="'+person.id+'">'+person.displayName+'</li>');
-        nfcRing.vcard.cache[person.id] = person;
-        i++;
+        var displayItems = "";
+        if(person.emails && person.emails.length > 0){
+          displayItems += "e";
+        }
+        if(person.phoneNumbers && person.phoneNumbers.length >0){
+          displayItems += "t";
+        }
+        // Ensure we're not writing the same object ot the page again..
+        if( $('#'+person.id).length === 0){
+          $('#vCardResults ul').append('<li class="contact" id="'+person.id+'">'+person.displayName+'<span class="contactDetails">'+displayItems+'</span></li>');
+          nfcRing.vcard.cache[person.id] = person;
+          i++;
+        }
       }
     }
   });

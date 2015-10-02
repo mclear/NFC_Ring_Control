@@ -1842,3 +1842,6 @@ img.mfp-img {
     -o-transform: scale(2); /* Opera */
     padding: 10px;
 }
+.contactDetails{
+  float:right;
+}
