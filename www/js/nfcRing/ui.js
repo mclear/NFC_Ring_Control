@@ -448,6 +448,7 @@ nfcRing.ui = {
       if(nfcRing.userValues.isVCard){
         $('#vcardInput').addClass("autocomplete");
         $('.icon-next').hide();
+        $('#optionForm').hide();
       }
     }
  
