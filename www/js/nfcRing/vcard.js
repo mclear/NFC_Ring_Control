@@ -95,7 +95,7 @@ nfcRing.vcard.showFields = function(){
           value = value[0].formatted;
         }
 
-        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + upperKey + ': ' + value + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
+        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + upperKey + ': ' + value + '<input class="vCardCheckbox" type="checkbox" checked="checked" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
       }
     }
   });
