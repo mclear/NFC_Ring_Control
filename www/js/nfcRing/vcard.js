@@ -65,7 +65,18 @@ nfcRing.vcard.showFields = function(){
   $.each(nfcRing.userValues.contactToWrite, function(key, value){
     if(nfcRing.userValues.contactToWrite[key]){
       if(key !== "id" && key !== "rawId" && key !== "remove" && key !== "clone" && key !== "save" && key !== "photos" && key !== "displayName"){
-        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + key + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
+        if(Array.isArray(value)){ // TODO, allow user to select a value
+          console.log("flattening array ", value);
+          value = value[0]; // Flatten arrays to single strings
+        }
+        if(typeof(value) === "object"){
+          console.log("I'm an object", value);
+          for (first in value){
+            value = value[first];
+            break; // TODO, allow user to select value
+          }
+        }
+        $("#vCardData").append('<div class="contactInfo"><label class="centered">' + key + ': ' + value + '<input class="vCardCheckbox" type="checkbox" id="' + key + '" value="' + key + '" name="' + key + '"></label></div>');
       }
     }
   });
