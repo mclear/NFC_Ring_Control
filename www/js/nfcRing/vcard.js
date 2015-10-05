@@ -17,6 +17,9 @@ nfcRing.vcard.search = function(name){
         emails: [
           "john@mclear.co.uk", "chris@nfcring.com"
         ],
+        phoneNumbers: [
+          "07977654356","075358765336"
+        ],
         addresses: [{
           formatted: "my home"
         }]
@@ -53,16 +56,22 @@ nfcRing.vcard.found = function(contacts){
   $.each(contacts, function(k,person){
     if(person.displayName && person.id){
       if(i < 10){
-        var displayItems = "";
+        var displayItems = [];
         if(person.emails && person.emails.length > 0){
-          displayItems += "e";
+          displayItems.push("envelop");
         }
         if(person.phoneNumbers && person.phoneNumbers.length >0){
-          displayItems += "t";
+          displayItems.push("phone");
         }
+        
+        var displayItemsString = '';
+        $.each(displayItems, function(k,v) {
+          displayItemsString += '<i class="icon icon-'+v+'"></i>';
+        })
+        
         // Ensure we're not writing the same object ot the page again..
         if( $('#'+person.id).length === 0){
-          $('#vCardResults ul').append('<li class="contact" id="'+person.id+'">'+person.displayName+'<span class="contactDetails">'+displayItems+'</span></li>');
+          $('#vCardResults ul').append('<li class="contact" id="'+person.id+'">'+person.displayName+ '<span class="indicators">' + displayItemsString+'</span></li>');
           nfcRing.vcard.cache[person.id] = person;
           i++;
         }
