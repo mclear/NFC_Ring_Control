@@ -21,6 +21,11 @@
     <icon src="res/icon/android/hdpi.png" density="hdpi" />
     <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
 </platform>
+<platform name="wp8">
+    <icon src="res/icon/wp8/icon.png" width="99" height="99" />
+    <!-- tile image -->
+    <icon src="res/icon/wp8/background.png" width="159" height="159" />
+</platform>
 
 </widget>
 
