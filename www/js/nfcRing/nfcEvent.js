@@ -1,4 +1,4 @@
-nfcRing.nfcEvent = {
+﻿nfcRing.nfcEvent = {
   init: function(){
 
       // BELOW NEEDS A REFACTOR
@@ -33,6 +33,7 @@ nfcRing.nfcEvent = {
 
 
     if (typeof nfc === 'undefined') return false;
+
     if (device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
       console.log("NFC Found, adding listener");
       // Android requires both listeners -- It then choses which event to fire
@@ -46,22 +47,19 @@ nfcRing.nfcEvent = {
         alert(html10n.get("writeRing.noNFC"));
         $('#createNew, #read, #scan').attr('disabled', 'disabled');
       });
-
-      nfc.addNdefListener(function (nfcEvent) {
-        console.log("Beginning of NFC Ndef event");
-        console.log("reading NDEF value from tag!", nfcEvent);
-        nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
-        console.log("end of NDEF value tag event");
-      }, function () {
-        console.log("Success.  Listening for rings NDEF records..");
-      }, function () {
-        alert(html10n.get("writeRing.noNFC"));
-        $('#createNew, #read, #scan').attr('disabled', 'disabled');
-      });
-
-    } else {
-      console.log("NO NFC, SOMETHING IS WRONG HERE");
     }
+
+    nfc.addNdefListener(function (nfcEvent) {
+      console.log("Beginning of NFC Ndef event");
+      console.log("reading NDEF value from tag!", nfcEvent);
+      nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
+      console.log("end of NDEF value tag event");
+    }, function () {
+      console.log("Success.  Listening for rings NDEF records..");
+    }, function () {
+      alert(html10n.get("writeRing.noNFC"));
+      $('#createNew, #read, #scan').attr('disabled', 'disabled');
+    });
 
   }, // create Event listeners
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
