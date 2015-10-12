@@ -139,7 +139,7 @@ nfcRing.vcard.build = function(){
     
     
     if(props[key].id === "name"){
-      vCard += 'N:'+contact.name.familyName+';'+contact.name.givenName+';;;\n' + 
+      vCard += 'N:'+contact.name.familyName+';'+contact.name.givenName+';\n' + 
         'FN:'+contact.name.formatted+'\n';
     }
 
@@ -148,14 +148,14 @@ nfcRing.vcard.build = function(){
     }
 
     if(props[key].id === "telephone" || props[key].id === "phoneNumbers"){
-      vCard += 'TEL;'+contact.phoneNumbers[0].value+'\n';
+      vCard += 'TEL:'+contact.phoneNumbers[0].value+'\n';
     }
 
     if(props[key].id === "addresses"){
       var address = contact.addresses[0].formatted;
       address = address.replace("\n", ";");
       console.log("Address", address)
-      vCard += 'ADR;WORK:;;;'+address+'\n';
+      vCard += 'ADR;WORK:'+address+'\n';
     }
    
    
