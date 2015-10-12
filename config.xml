@@ -23,8 +23,8 @@
 </platform>
 <platform name="wp8">
     <icon src="res/icon/wp8/icon.png" width="99" height="99" />
-    <!-- tile image -->
     <icon src="res/icon/wp8/background.png" width="159" height="159" />
+    <splash src="res/screen/wp8/splash.jpg" width="768" height="1280"/>
 </platform>
 
 </widget>
