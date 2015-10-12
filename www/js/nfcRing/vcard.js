@@ -52,7 +52,7 @@ nfcRing.vcard.found = function(contacts){
     $('#vCardNoResults').hide();
   }
   var i = 0;
-  $('#vCardResults').append('<ul></ul>');
+  $('#vCardResults').html('<ul></ul>');
   $.each(contacts, function(k,person){
     if(person.displayName && person.id){
       if(i < 10){
