@@ -200,6 +200,11 @@ nfcRing.ui = {
       if(key.toLowerCase() === "vcard"){
         console.log("VCard so adding autocomplete class");
         $('#vcardInput').addClass("autocomplete");
+        $('#vcardInput').on("keypress", function(e){
+          if(e.which == 13){
+            return false;
+          }
+        });
         $('.icon-next').hide();
         $("#optionForm").hide();
         $("#vCardForm").show();
@@ -447,6 +452,11 @@ nfcRing.ui = {
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
       if(nfcRing.userValues.isVCard){
         $('#vcardInput').addClass("autocomplete");
+        $('#vcardInput').on("keypress", function(e){
+          if(e.which == 13){
+            return false;
+          }
+        });
         $('.icon-next').hide();
         $('#optionForm').hide();
       }
