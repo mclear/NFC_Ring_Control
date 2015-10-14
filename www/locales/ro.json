@@ -1,18 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"ImGelu"
+			"ImGelu",
+			"Minisarm",
+			"Wintereu"
 		]
 	},
-	"index.wantHelp": "Ai nevoie de ajutor?",
-	"index.wantHelpLong": "Se pare că aceasta este prima dată când folosești NFC Ring Control. Ai nevoie de ajutor?",
-	"index.whatDoYouWantToDoToday": "Ce vrei să faci azi?",
+	"index.wantHelp": "Doriți puțin ajutor?",
+	"index.wantHelpLong": "Se pare că aceasta este prima dată când folosiți NFC Ring Control. Doriți puțin ajutor?",
+	"index.whatDoYouWantToDoToday": "Ce doriți să faceți astăzi?",
 	"index.create": "Creează",
-	"index.createDescription": "Scrie o nouă acțiune în inelul tău",
+	"index.createDescription": "Scrie o nouă acțiune în inelul dumneavoastră",
 	"index.read": "Citește",
 	"index.settings": "Setări",
 	"index.settingsDescription": "Configurează-ți aplicația",
-	"index.settingsDescriptionMore": "Configurează-ți aplicația.",
+	"index.settingsDescriptionMore": "Configurați-vă aplicația.",
 	"index.register": "Întregistrează-te",
 	"index.feedback": "Păreri",
 	"context.history": "Istoric",

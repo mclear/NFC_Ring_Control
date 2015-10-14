@@ -5,7 +5,8 @@
 			"아라",
 			"Revi",
 			"Twotwo2019",
-			"SeoJeongHo"
+			"SeoJeongHo",
+			"Hwangjy9"
 		]
 	},
 	"index.wantHelp": "도움이 필요하신가요?",
@@ -54,6 +55,7 @@
 	"help.slowly": "당신의 링을 천천히 기기 뒤로 움직이십시오",
 	"help.another": "다른 NFC 기기가 있다면 시도",
 	"help.gotIt": "알겠습니다",
+	"actions.vcard.optionText": "이름:",
 	"actions.twitter.name": "트위터",
 	"actions.twitter.description": "트위터 계정과 연결",
 	"actions.twitter.optionText": "트위터 ID가 무엇입니까?",

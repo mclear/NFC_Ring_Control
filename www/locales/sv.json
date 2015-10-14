@@ -55,6 +55,8 @@
 	"help.another": "Försök med en annan NFC-enhet om du har någon",
 	"help.winPhone": "Windows Phone kräver att NFC-ringen redan har en länk sparad. Använd en Androidenhet eller en annan app för att skriva en URL till ringen. Därefter kommer du att kunna använda kontrollappen för NFC-ringen till att skriva en URL.",
 	"help.gotIt": "Okej, jag förstår",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Skapa ett vCard för att dela dina eller andras kontaktuppgifter",
 	"actions.vcard.optionText": "Namn:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Länka till en Twitter-användare",
