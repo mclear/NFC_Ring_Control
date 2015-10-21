@@ -1,3 +1,20 @@
+# What is this?
+This is the NFC Ring Control App.  This repository contains the source code for our Android, Windows Phone and Blackberry app.  
+
+This app enables you to Read from and Write to your NFC Ring, create links to your favorite social network profile or read your current NFC Ring.
+
+The NFC Ring app has built in support for Facebook, Twitter, generic website links, Etherpad and Youtube.
+
+You can use the app to write any link you want, such as your own blog or a news page. Simply choose your link and hold your rings public inlay to the sweet spot on your phone or tablet.
+
+NFC Ring Control is Open source software. The Source code is available at https://github.com/mclear/NFC_Ring_Control
+
+Our Community maintains a Q&A at https://github.com/mclear/NFC_Ring_Control/wiki
+
+Please post any issues on our bugtracker: https://github.com/mclear/NFC_Ring_Control/issues/new
+
+Please post bug reports before posting any negative reviews, our community works hard to maintain this software, we appreciate the feedback and your assistance.
+
 # Getting the development environment setup
 
 [6 Minute long video showing how to get started](https://www.youtube.com/watch?v=xirlKmCo7KA&list=UUdbzIfrpmzGCJ2j1LjqW9Gw) also shows how to add a new action.
