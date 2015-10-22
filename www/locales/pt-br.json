@@ -3,7 +3,8 @@
 		"authors": [
 			"Luckas",
 			"Macofe",
-			"Rodrigo codignoli"
+			"Rodrigo codignoli",
+			"Almondega"
 		]
 	},
 	"index.wantHelp": "Precisa de ajuda?",
@@ -29,6 +30,7 @@
 	"action.whatDoYouWantYourRingToDo": "O que você quer que o seu anel NFC faça?",
 	"option.next": "Proximo",
 	"option.dataWontFit": "Aviso: esta quantidade de daods pode não caber em seu anel NFC",
+	"option.dataWontFitUpgrade": "Atenção: esta quantidade de dados pode não ser suportada pelo seu NFC Ring. Atualize seu NFC Ring para ter mais espaço",
 	"writeRing.finish": "Finalizar",
 	"writeRing.noNFC": "A função NFC não esta funcionando. O NFC do seu dispositivo esta abilitado?",
 	"writeRing.woohoo": "Woohoo!",
@@ -53,6 +55,9 @@
 	"help.another": "TEnte com outro dispositivo NFC se você tiver",
 	"help.winPhone": "Windows Phone requer que o anel NFC ja tenham um link. Para arrumar isso pegue algum dispositivo android o outro aplicativo e escreva uma URL para o seu celular, então você podera usar o aplicatido de controle do anel NFC para escrever uma URL",
 	"help.gotIt": "Entendido",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Crie um vCard para compartilhar seus detalhes de contato ou de outra pessoa",
+	"actions.vcard.optionText": "Nome:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Link para um usuário do Twitter",
 	"actions.twitter.optionText": "Qual é o seu nome de usuario do Twitter?",
@@ -91,6 +96,8 @@
 	"register.passwordAgainTitle": "Senha novamente:",
 	"register.passwordsDontMatch": "as senhas não coincidem",
 	"register.success": "Registro feito com sucesso, Você agora pode usar seu nome de usúario/senha para verificar o aplicativo de desbloqueio do anel NFC.",
+	"vcard.loading": "Contatos carregados",
+	"vcard.noResults": "Nenhum contato encontrado",
 	"register.notNFCRingTitle": "Uh oh",
 	"register.notNFCRing": "Este pode não ser um anel NFC Genuino, por favor tente o outro lado do seu anel",
 	"register.resetPasswordPrompt": "Você ja se registrou para uma conta de desbloqueio do anel NFC, então você não tem que fazer mais nada. Você quer resetar sua senha?",
