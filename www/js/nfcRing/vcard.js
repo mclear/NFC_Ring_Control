@@ -24,7 +24,8 @@ nfcRing.vcard.search = function(name){
           { value: "075358765336", type: "mobile"},
         ],
         addresses: [{
-          formatted: "my home"
+          formatted: "my work",
+          type: "work",
         }]
       },
       {
@@ -33,7 +34,24 @@ nfcRing.vcard.search = function(name){
         name: { familyName: "Mc", givenName: "Rob", formatted: "Rob Mc" },
         pornStatus: "repair"
         /* TODO -- Add support for further contact properties */
-      }
+      },
+      {
+        id: 3,
+        name: { familyName: "Smith", givenName: "John", formatted: "John Smith" },
+        displayName: "John 'Test' Smith",
+        emails: [
+          { value: "john@smith.invalid", type: "home", pref: true },
+          { value: "john@home.invalid", type: "work" },
+        ],
+        phoneNumbers: [
+          { value: "0123456789", type: "home"},
+          { value: "07977654356", type: "mobile"},
+        ],
+        addresses: [{
+          formatted: "my home",
+          type: "home",
+        }]
+      },
     ]);
   }else{
     var options = new ContactFindOptions();
@@ -147,18 +165,30 @@ nfcRing.vcard.build = function(){
     }
 
     if(props[key].id === "emails"){
-      vCard += 'EMAIL;WORK:'+contact.emails[0].value+'\n';
+      var emailType = '';
+      if (contact.emails[0].type) {
+        emailType = ';' + contact.emails[0].type.toUpperCase();
+      }
+      vCard += 'EMAIL' + emailType + ':'+contact.emails[0].value+'\n';
     }
 
     if(props[key].id === "telephone" || props[key].id === "phoneNumbers"){
-      vCard += 'TEL:'+contact.phoneNumbers[0].value+'\n';
+      var phoneType = '';
+      if (contact.phoneNumbers[0].type) {
+        phoneType = ';' + contact.phoneNumbers[0].type.toUpperCase();
+      }
+      vCard += 'TEL' + phoneType + ':'+contact.phoneNumbers[0].value+'\n';
     }
 
     if(props[key].id === "addresses"){
       var address = contact.addresses[0].formatted;
       address = address.replace("\n", ";");
-      console.log("Address", address)
-      vCard += 'ADR;WORK:'+address+'\n';
+      console.log("Address", address);
+      var addressType = '';
+      if (contact.addresses[0].type) {
+        addressType = ';' + contact.addresses[0].type.toUpperCase();
+      }
+      vCard += 'ADR' + addressType + ':'+address+'\n';
     }
    
    
