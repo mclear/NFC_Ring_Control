@@ -8,17 +8,20 @@ nfcRing.vcard.search = function(name){
   $('#vCardNoResults').hide(); // Hide the vCardNoResults
   if(device.platform === "browser"){
     console.log("Simulating contact result as it's the browser");
-    // TODO, review this formatting..
+    // Contact fields based on https://www.npmjs.com/package/cordova-plugin-contacts#contact
+    //But with being lazy and not creating properly typed objects, just the necessary fields
     nfcRing.vcard.found([
       {
         id: 1,
-        name: "Awesome guy",
+        name: { familyName: "Guy", givenName: "Awesome", formatted: "Awesome Guy" },
         displayName: "Testy McTesties",
         emails: [
-          "john@mclear.co.uk", "chris@nfcring.com"
+          { value: "john@mclear.co.uk", type: "work", pref: true },
+          { value: "john@home.invalid", type: "home" },
         ],
         phoneNumbers: [
-          "07977654356","075358765336"
+          { value: "07977654356", type: "mobile"},
+          { value: "075358765336", type: "mobile"},
         ],
         addresses: [{
           formatted: "my home"
@@ -27,7 +30,7 @@ nfcRing.vcard.search = function(name){
       {
         id: 2,
         displayName: "Rob McTestingdom",
-        name: "Rob Mc",
+        name: { familyName: "Mc", givenName: "Rob", formatted: "Rob Mc" },
         pornStatus: "repair"
         /* TODO -- Add support for further contact properties */
       }
