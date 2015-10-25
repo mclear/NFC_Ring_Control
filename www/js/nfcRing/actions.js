@@ -20,7 +20,7 @@ nfcRing.actions = {
   vcard: { 
     label: "vCard",
     description: "Create a vCard to share yours or someone elses contact details",
-    optionText: "Search self or contact by name",
+    optionText: "Search for your contact by name",
     placeHolder: "John Smith"
   },
   twitter: {
