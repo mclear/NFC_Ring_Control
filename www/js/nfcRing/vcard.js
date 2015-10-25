@@ -8,29 +8,50 @@ nfcRing.vcard.search = function(name){
   $('#vCardNoResults').hide(); // Hide the vCardNoResults
   if(device.platform === "browser"){
     console.log("Simulating contact result as it's the browser");
-    // TODO, review this formatting..
+    // Contact fields based on https://www.npmjs.com/package/cordova-plugin-contacts#contact
+    //But with being lazy and not creating properly typed objects, just the necessary fields
     nfcRing.vcard.found([
       {
         id: 1,
-        name: "Awesome guy",
+        name: { familyName: "Guy", givenName: "Awesome", formatted: "Awesome Guy" },
         displayName: "Testy McTesties",
         emails: [
-          "john@mclear.co.uk", "chris@nfcring.com"
+          { value: "john@mclear.co.uk", type: "work", pref: true },
+          { value: "john@home.invalid", type: "home" },
         ],
         phoneNumbers: [
-          "07977654356","075358765336"
+          { value: "07977654356", type: "mobile"},
+          { value: "075358765336", type: "mobile"},
         ],
         addresses: [{
-          formatted: "my home"
+          formatted: "my work",
+          type: "work",
         }]
       },
       {
         id: 2,
         displayName: "Rob McTestingdom",
-        name: "Rob Mc",
+        name: { familyName: "Mc", givenName: "Rob", formatted: "Rob Mc" },
         pornStatus: "repair"
         /* TODO -- Add support for further contact properties */
-      }
+      },
+      {
+        id: 3,
+        name: { familyName: "Smith", givenName: "John", formatted: "John Smith" },
+        displayName: "John 'Test' Smith",
+        emails: [
+          { value: "john@smith.invalid", type: "home", pref: true },
+          { value: "john@home.invalid", type: "work" },
+        ],
+        phoneNumbers: [
+          { value: "0123456789", type: "home"},
+          { value: "07977654356", type: "mobile"},
+        ],
+        addresses: [{
+          formatted: "my home",
+          type: "home",
+        }]
+      },
     ]);
   }else{
     var options = new ContactFindOptions();
@@ -144,18 +165,30 @@ nfcRing.vcard.build = function(){
     }
 
     if(props[key].id === "emails"){
-      vCard += 'EMAIL;WORK:'+contact.emails[0].value+'\n';
+      var emailType = '';
+      if (contact.emails[0].type) {
+        emailType = ';' + contact.emails[0].type.toUpperCase();
+      }
+      vCard += 'EMAIL' + emailType + ':'+contact.emails[0].value+'\n';
     }
 
     if(props[key].id === "telephone" || props[key].id === "phoneNumbers"){
-      vCard += 'TEL:'+contact.phoneNumbers[0].value+'\n';
+      var phoneType = '';
+      if (contact.phoneNumbers[0].type) {
+        phoneType = ';' + contact.phoneNumbers[0].type.toUpperCase();
+      }
+      vCard += 'TEL' + phoneType + ':'+contact.phoneNumbers[0].value+'\n';
     }
 
     if(props[key].id === "addresses"){
       var address = contact.addresses[0].formatted;
       address = address.replace("\n", ";");
-      console.log("Address", address)
-      vCard += 'ADR;WORK:'+address+'\n';
+      console.log("Address", address);
+      var addressType = '';
+      if (contact.addresses[0].type) {
+        addressType = ';' + contact.addresses[0].type.toUpperCase();
+      }
+      vCard += 'ADR' + addressType + ':'+address+'\n';
     }
    
    
