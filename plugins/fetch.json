@@ -64,5 +64,29 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "phonegap-nfc": {
+        "source": {
+            "type": "registry",
+            "id": "phonegap-nfc"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-contacts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-vibration": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-vibration"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
