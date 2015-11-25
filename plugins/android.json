@@ -10,9 +10,6 @@
         "com.borismus.webintent": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "com.chariotsolutions.nfc.plugin": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
@@ -26,6 +23,9 @@
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "uk.co.whiteoctober.cordova.appversion": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "phonegap-nfc": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },
