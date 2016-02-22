@@ -44,6 +44,8 @@
 	"help.cases": "Suprimir totes los bostièrs de vòstre aparelh",
 	"help.volume": "Aumentatz lo volum de vòstre aparelh",
 	"help.gotIt": "D'acòdi, l'ai",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Nom :",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Ligam cap a un utilizaire de Twitter",
 	"actions.twitter.optionText": "Qual es vòstre nom d’utilizaire Twitter ?",
@@ -67,6 +69,8 @@
 	"register.passwordAgainTitle": "Picatz lo senhal tornarmai :",
 	"register.passwordsDontMatch": "Los senhals correspondon pas",
 	"register.success": "Inscripcion capitada ; ara podètz utilizar vòstre nom d’utilizaire/senhal per verificar l’aplicacion de desvarrolhatge de l’Anèl NFC",
+	"vcard.loading": "Cargament dels contactes",
+	"vcard.noResults": "Cap de contacte pas trobat",
 	"register.notNFCRingTitle": "Oh oh",
 	"register.resetPasswordPromptTitle": "Sètz ja inscrich"
 }
