@@ -92,7 +92,7 @@
 	"register.passwordTitle": "密码：",
 	"register.passwordAgainTitle": "确认密码：",
 	"register.passwordsDontMatch": "两次密码不一致",
-	"register.success": "注册完成，您现在可以使用您的用户名/密码验证NFC戒指解锁应用程序",
+	"register.success": "注册完成。您现在可以使用您的用户名和密码验证NFC戒指解锁应用程序",
 	"vcard.loading": "正在加载联络人",
 	"vcard.noResults": "找不到联络人",
 	"register.notNFCRingTitle": "呃哦！",
