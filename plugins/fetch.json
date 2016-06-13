@@ -6,13 +6,6 @@
             "subdir": "."
         }
     },
-    "com.chariotsolutions.nfc.plugin": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/chariotsolutions/phonegap-nfc.git",
-            "subdir": "."
-        }
-    },
     "org.apache.cordova.contacts": {
         "source": {
             "type": "local",
@@ -61,6 +54,30 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-contacts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-vibration": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-vibration"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-nfc": {
+        "source": {
+            "type": "registry",
+            "id": "phonegap-nfc"
         },
         "is_top_level": true,
         "variables": {}

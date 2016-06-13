@@ -1,61 +1,42 @@
 ﻿nfcRing.nfcEvent = {
   init: function(){
 
-      // BELOW NEEDS A REFACTOR
-      if(typeof cordova !== 'undefined'){
-        console.log("Checking for intent");
+    // BELOW NEEDS A REFACTOR
+    if(typeof cordova !== 'undefined'){
+      console.log("Checking for intent");
+      window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT,
+        function(hasExtra) {
+          if(hasExtra){
+            app.intentEvent()
+          }
+        }, function() {
+          console.log("ERROR XVMA172");
+        }
+      );
+    }
+
+    window.plugins.webintent.onNewIntent(function() {
+      console.log("new intent event detected");
+      try{
         window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT,
           function(hasExtra) {
             if(hasExtra){
-              app.intentEvent()
+              console.log("Intent passed, handling that way");
+              app.intentEvent();
             }
-          }, function() {
-            console.log("ERROR XVMA172");
           }
         );
+      }catch(e){
+        console.log("error getting value");
       }
-
-      window.plugins.webintent.onNewIntent(function() {
-        console.log("new intent event detected");
-        try{
-          window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT,
-            function(hasExtra) {
-              if(hasExtra){
-                console.log("Intent passed, handling that way");
-                app.intentEvent();
-              }
-            }
-          );
-        }catch(e){
-          console.log("error getting value");
-        }
-      });
-
+    });
 
     if (typeof nfc === 'undefined') return false;
 
-    if (device.platform !== "Win32NT") { // win 32s listener imlpementation is TERRIBLE, DO NOT USE
-      console.log("NFC Found, adding listener");
-      // Android requires both listeners -- It then choses which event to fire
-      // Because we currently only support Android and WP we don't need to wrap this in an If
-
-      nfc.addTagDiscoveredListener(function (nfcEvent) {
-        nfcRing.nfcEvent.readOrWrite(nfcEvent, "notNDEF");
-      }, function () {
-        console.log("Success.  Listening for rings..");
-      }, function () {
-        alert(html10n.get("writeRing.noNFC"));
-        $('#createNew, #read, #scan').attr('disabled', 'disabled');
-      });
-    }
-
-    nfc.addNdefListener(function (nfcEvent) {
-      console.log("Beginning of NFC Ndef event");
-      console.log("reading NDEF value from tag!", nfcEvent);
+    nfc.addTagDiscoveredListener(function (nfcEvent) {
       nfcRing.nfcEvent.readOrWrite(nfcEvent, "ndef");
-      console.log("end of NDEF value tag event");
     }, function () {
-      console.log("Success.  Listening for rings NDEF records..");
+      console.log("Success.  Listening for rings..");
     }, function () {
       alert(html10n.get("writeRing.noNFC"));
       $('#createNew, #read, #scan').attr('disabled', 'disabled');
