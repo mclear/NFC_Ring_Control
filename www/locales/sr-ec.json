@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Milicevic01",
-			"Srdjan m"
+			"Srdjan m",
+			"Сербијана"
 		]
 	},
 	"index.wantHelp": "Требате ли помоћ?",
@@ -84,7 +85,7 @@
 	"sweetSpot.done": "Урађено. Хвала вам!",
 	"sweetSpot.areYouSureSS": "Да ли сте сигурни да желите очистити податке о златној тачки?",
 	"sweetSpot.areYouSureActions": "Да ли сте сигурни да желите очистити претходне радње?",
-	"register.emailTitle": "Адреса е-поште:",
+	"register.emailTitle": "Имејл адреса:",
 	"register.title": "Региструјте свој прстен",
 	"register.passwordTitle": "Лозинка:",
 	"register.passwordAgainTitle": "Поново упишите лозинку:",

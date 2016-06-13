@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"عثمان خان شاہ"
+			"عثمان خان شاہ",
+			"Obaid Raza",
+			"محمد افضل"
 		]
 	},
+	"index.wantHelp": "کچھ مدد چاہتے ہیں؟",
+	"index.wantHelpLong": "ایسا لگتا ہے کہ آپ پہلی مرتبہ این ایف سی رنگ کنٹرول ایپ استعمال کر رہے ہیں۔کیا آپ کچھ مدد لینا چاہیں گے؟",
+	"index.whatDoYouWantToDoToday": "آج آپ کیا کرنا چاہتے ہیں؟",
 	"index.create": "تخلیق کریں",
 	"index.createDescription": "اپنے رنگ کو ایک نیا ایکشن لکھئے",
 	"index.read": "پڑھئیے",
@@ -17,7 +22,11 @@
 	"option.next": "اگلا",
 	"writeRing.finish": "مکمل",
 	"writeRing.woohoo": "ووہوو!",
+	"writeRing.ready": "آپ کا این ایف سی رنھ اب تیار ہے",
+	"writeRing.fail": "آپ کے این ایف سی کو لکھنے سے قاصر ہے",
+	"readRing.contents": "رنگ کا مواد",
 	"settings.clearMySweetSpot": "میرا پیارا سپاٹ",
+	"settings.clearMySweetSpotDescription": "Clear my stored sweet spot location",
 	"settings.mySweetSpot": "میرا پیارا سپاٹ",
 	"settings.previousActions": "میرے سابقہ اقدامات",
 	"settings.previousActionsDescription": "میرے سابقہ اقدامات کا تاریخچہ صاف کریں",
@@ -27,6 +36,7 @@
 	"help.helpTips": "امدادی مشورے",
 	"help.volume": "اپنے ڈیوائس کی والیم تیز کرو",
 	"help.gotIt": "ٹھیک ہے، مجھے یاد ہوگیا",
+	"actions.vcard.optionText": "نام:",
 	"actions.twitter.name": "ٹویٹر",
 	"actions.twitter.description": "ٹویٹر صارف سے ربط",
 	"actions.twitter.optionText": "آپ کا ٹویٹر صارف نام کیا ہے؟",

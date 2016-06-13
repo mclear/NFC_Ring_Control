@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"index.wantHelp": "مرسته غواړئ؟",
+	"index.whatDoYouWantToDoToday": "نن څه غواړې چې وکړې؟",
+	"index.create": "جوړول",
+	"index.createDescription": "خپلې کړۍ کې يوه نوې چاره ليکل",
+	"index.read": "لوستل",
+	"index.readDescription": "وگورئ چې کړۍ کې مو څه دي",
+	"index.settings": "امستنې",
+	"index.register": "نومليکل",
+	"context.history": "پېښليک",
+	"option.next": "راتلونکی",
+	"writeRing.finish": "پای",
+	"writeRing.woohoo": "اوهوو!",
+	"writeRing.ready": "ستاسې اېن اېف سي کړۍ اوس چمتو ده",
+	"settings.version": "بڼه",
+	"settings.phoneModel": "ټيليفون مخبېلگه",
+	"settings.changeLanguage": "د کاريال ژبه بدلول",
+	"help.helpTips": "د لارښود مشورې",
+	"help.gotIt": "ښه، وپوهېدم",
+	"actions.vcard.optionText": "نوم:",
+	"actions.twitter.name": "ټوېټر",
+	"actions.twitter.description": "د ټوېټر يو کارن ته تړنه",
+	"actions.twitter.optionText": "ستاسې د ټوېټر کارن نوم څه دی؟",
+	"actions.facebook.name": "فېسبوک",
+	"actions.facebook.description": "د فېسبوک يو مخ ته تړنه",
+	"actions.facebook.optionText": "ستاسې د فېسبوک مخ انټرنټي پته څه ده؟",
+	"actions.link.name": "تړنه",
+	"actions.youtube.name": "يوټيوب",
+	"actions.text.name": "متن",
+	"sweetSpot.showHelp": "لارښود ښکاره کول",
+	"sweetSpot.done": "ترسره شو. له تاسې مننه!",
+	"register.emailTitle": "برېښليک پته:",
+	"register.title": "د خپلې کړۍ نومليکنه",
+	"register.passwordTitle": "پټنوم:",
+	"register.passwordAgainTitle": "پټنوم يو ځل بيا:",
+	"register.passwordsDontMatch": "پټنومونه مو سره ورته نه دي",
+	"register.success": "نومليکنه مو بريالۍ شوه، د NFC کړۍ خلاسولو کاريال د تاييد لپاره تاسې خپل کارن-نوم/پټنوم کارولی شئ."
+}
