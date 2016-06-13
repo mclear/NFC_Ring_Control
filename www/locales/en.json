@@ -11,9 +11,6 @@
   "index.settings":"Settings",
   "index.settingsDescription":"Configure your app",
   "index.settingsDescriptionMore":"Configure your app.",
-  "index.register":"Register",
-  "index.registerDescription":"Register your NFC Ring and obtain your NFC Ring unlock app code",
-  "index.registerDescriptionMore":"Want your NFC Ring unlock app code? Use this page!",
   "index.feedback":"Feedback",
   "index.feedbackDescription":"Love something or want to change something? Let us know",
   "index.feedbackDescriptionMore":"We'd love to hear if you love or hate something. Please do let us know!",
@@ -82,16 +79,6 @@
   "sweetSpot.done":"Done. Thank you!",
   "sweetSpot.areYouSureSS":"Are you sure you want to clear your sweet spot data?",
   "sweetSpot.areYouSureActions":"Are you sure you want to clear your previous actions?",
-  "register.emailTitle":"Email address:",
-  "register.title":"Register your ring",
-  "register.passwordTitle":"Password:",
-  "register.passwordAgainTitle":"Password again:",
-  "register.passwordsDontMatch":"Passwords don't match",
-  "register.success":"Registration successful. You can now use your username and password to verify the NFC Ring Unlock app",
   "vcard.loading":"Loading contacts",
-  "vcard.noResults":"No contacts found",
-  "register.notNFCRingTitle":"Uh oh",
-  "register.notNFCRing":"This might not be a genuine NFC Ring. Please try the other side of your ring",
-  "register.resetPasswordPrompt":"You have already registered for an NFC Ring Unlock account so you don't need to do anything.  Would you like to reset your password?",
-  "register.resetPasswordPromptTitle":"You are already registered"
+  "vcard.noResults":"No contacts found"
 }
