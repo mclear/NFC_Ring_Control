@@ -17,9 +17,6 @@
 	"index.settings": "Indstillinger",
 	"index.settingsDescription": "Konfigurer din app",
 	"index.settingsDescriptionMore": "Konfigurer din app.",
-	"index.register": "Registrer",
-	"index.registerDescription": "Registrere din NFC Ring og få din NFC Ring app oplåsningskode",
-	"index.registerDescriptionMore": "Ønsker du din NFC Ring app oplåsningskode? Brug denne side!",
 	"index.feedback": "Feedback",
 	"index.feedbackDescription": "Elsker noget eller ønsker at ændre noget? Lad os vide",
 	"index.feedbackDescriptionMore": "Vi ville elske at høre hvis du elsker eller hader noget. Så lad os vide!",
@@ -80,11 +77,5 @@
 	"sweetSpot.askToShare": "Din ring er klar. Ønsker du at være awesome og hjælpe andre ved at dele sweet spot placeringen for denne telefonmodel?",
 	"sweetSpot.done": "Færdig. Tak skal du have!",
 	"sweetSpot.areYouSureSS": "Er du sikker på du ønsker at slette dit sweet spot data?",
-	"sweetSpot.areYouSureActions": "Er du sikker på du vil slette din tidligere handlinger?",
-	"register.emailTitle": "E-mailadresse:",
-	"register.title": "Registrere din ring",
-	"register.passwordTitle": "Adgangskode:",
-	"register.passwordAgainTitle": "Adgangskode igen:",
-	"register.passwordsDontMatch": "Adgangskoderne er ikke ens",
-	"register.success": "Registrering vellykket"
+	"sweetSpot.areYouSureActions": "Er du sikker på du vil slette din tidligere handlinger?"
 }

@@ -17,9 +17,6 @@
 	"index.settings": "Nastavenia",
 	"index.settingsDescription": "Nastavenie Vašej aplikácie",
 	"index.settingsDescriptionMore": "Nastaviť Vašu aplikáciu.",
-	"index.register": "Registrovať",
-	"index.registerDescription": "Registrovať Váš NFC prsteň a obdržať Váš kód na odomknutie aplikácie pre NFC prsteň",
-	"index.registerDescriptionMore": "Chcete kód na odomknutie aplikácie pre Váš NFC prsteň? Použite túto stránku!",
 	"index.feedback": "Spätná väzba",
 	"index.feedbackDescription": "Chceli by ste niečo nové alebo by ste chceli niečo zmeniť? Dajte nám vedieť",
 	"index.feedbackDescriptionMore": "Radi by sme sa do Vás dozvedeli čo sa Vám páči a čo sa Vám nepáči.",
@@ -83,15 +80,5 @@
 	"sweetSpot.askToShare": "Váš prsteň je pripravený. Chceli by ste byť taký/á úžasný/á a podeliť sa s ostatnými o umiestnenie sweet spot pre model Vášho telefónu?",
 	"sweetSpot.done": "Hotovo. Ďakujeme!",
 	"sweetSpot.areYouSureSS": "Naozaj chcete vymazať údaje sweet spot?",
-	"sweetSpot.areYouSureActions": "Naozaj chcete vymazať vaše predchádzajúce akcie?",
-	"register.emailTitle": "Emailová adresa:",
-	"register.title": "Zaregistrujte svoj prsteň",
-	"register.passwordTitle": "Heslo:",
-	"register.passwordAgainTitle": "Zopakovať heslo:",
-	"register.passwordsDontMatch": "Heslá sa nezhodujú",
-	"register.success": "Registrácia úspešná. Môžete používať Vaše prihlasovacie meno/heslo pre overenie odomknutia aplikácie NFC prsteňa",
-	"register.notNFCRingTitle": "Och nie!",
-	"register.notNFCRing": "Toto asi nieje originálny NFC prsteň, prosím skúste druhú stranu prsteňa",
-	"register.resetPasswordPrompt": "Už ste sa registrovali na odomknutie NFC prsteňa takže už nepotrebujete nič robiť. Chcete nastaviť nové heslo?",
-	"register.resetPasswordPromptTitle": "Už ste zaregistrovaní"
+	"sweetSpot.areYouSureActions": "Naozaj chcete vymazať vaše predchádzajúce akcie?"
 }

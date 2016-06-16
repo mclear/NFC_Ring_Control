@@ -19,9 +19,6 @@
 	"index.settings": "Configurações",
 	"index.settingsDescription": "Configure o seu aplicativo.",
 	"index.settingsDescriptionMore": "Configure o seu aplicativo.",
-	"index.register": "Registrar",
-	"index.registerDescription": "Registre o sue anel NFC e obtenha o seu codigo de desbloqueio para o aplicativo do anel.",
-	"index.registerDescriptionMore": "Quer o seu codigo de desbloqueio para o aplicativo do anel NFC? Use esta pagina!",
 	"index.feedback": "Comentários",
 	"index.feedbackDescription": "Gosta de algo ou que mudar algumka coisa? Deixe-nos saber",
 	"index.feedbackDescriptionMore": "Gostariamos de saber se você gosta ou odeia algo. Por favor conte-nos!",
@@ -90,16 +87,6 @@
 	"sweetSpot.done": "Feito. Obrigado!",
 	"sweetSpot.areYouSureSS": "Você tem certeza que quer apagar os dados de localização do ponto doce?",
 	"sweetSpot.areYouSureActions": "Você tem certeza que quer apagar as ações anteriores?",
-	"register.emailTitle": "Endereço de email:",
-	"register.title": "Registre seu anel",
-	"register.passwordTitle": "Senha:",
-	"register.passwordAgainTitle": "Senha novamente:",
-	"register.passwordsDontMatch": "as senhas não coincidem",
-	"register.success": "Registro feito com sucesso, Você agora pode usar seu nome de usúario/senha para verificar o aplicativo de desbloqueio do anel NFC.",
 	"vcard.loading": "Contatos carregados",
-	"vcard.noResults": "Nenhum contato encontrado",
-	"register.notNFCRingTitle": "Uh oh",
-	"register.notNFCRing": "Este pode não ser um anel NFC Genuino, por favor tente o outro lado do seu anel",
-	"register.resetPasswordPrompt": "Você ja se registrou para uma conta de desbloqueio do anel NFC, então você não tem que fazer mais nada. Você quer resetar sua senha?",
-	"register.resetPasswordPromptTitle": "Você ja esta registrado"
+	"vcard.noResults": "Nenhum contato encontrado"
 }

@@ -19,9 +19,6 @@
 	"index.settings": "Көйләүҙәр",
 	"index.settingsDescription": "Ҡушымтағыҙҙы көйләгеҙ",
 	"index.settingsDescriptionMore": "Ҡушымтағыҙҙы көйләгеҙ.",
-	"index.register": "Теркәлеү",
-	"index.registerDescription": "NFC-түңәрәкте теркәп, һеҙҙең NFC-түңәрәкте ҡамауҙан сығарырға",
-	"index.registerDescriptionMore": "NFC-түңәрәк ҡушымтаһын ҡамауҙан сығарыу өсөн ошо битте ҡулланығыҙ",
 	"index.feedback": "Кире бәйләнеш",
 	"index.feedbackDescription": "Нимәлер оҡшаны йәки үҙгәртергә теләйһегеҙме? Беҙгә хәбәр итегеҙ",
 	"index.feedbackDescriptionMore": "Нимәлер оҡшаһа, йәки үҙгәртергә теләһәгеҙ, беҙҙең белгебеҙ килә. Беҙгә хәбәр итегеҙ!",
@@ -77,12 +74,6 @@
 	"sweetSpot.done": "Әҙер. Рәхмәт!",
 	"sweetSpot.areYouSureSS": "Һеҙ ысынлап та һуңғы эҙләү һорауы тарихын юйырға теләйһегеҙме?",
 	"sweetSpot.areYouSureActions": "Һеҙ ысынлап та һуңғы эҙләү һорауы тарихын юйырға теләйһегеҙме?",
-	"register.emailTitle": "Электрон почта адресығыҙ:",
-	"register.passwordTitle": "Серһүҙ:",
-	"register.passwordAgainTitle": "Серһүҙҙе ҡабатлағыҙ",
-	"register.passwordsDontMatch": "Серһүҙ тура килмәй",
 	"vcard.loading": "Контакттарҙы күсереү",
-	"vcard.noResults": "Контакттар табылманы",
-	"register.notNFCRingTitle": "Ай-ай!",
-	"register.resetPasswordPromptTitle": "Һеҙ теркәлгәнһегеҙ"
+	"vcard.noResults": "Контакттар табылманы"
 }

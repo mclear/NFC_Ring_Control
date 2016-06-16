@@ -16,9 +16,6 @@
 	"index.settings": "Einstellungen",
 	"index.settingsDescription": "App konfiguriere",
 	"index.settingsDescriptionMore": "App konfiguriere.",
-	"index.register": "Registriere",
-	"index.registerDescription": "Registrier deine NFC-Ring und erhall dein NFC-Ring-Freigäb-App-Code",
-	"index.registerDescriptionMore": "Möchst du dein NFC-Ring-Freigä-App-Code? Verwenne die Seit!",
 	"index.feedback": "Rückmeldung",
 	"index.feedbackDescription": "Liebst du etwas orrer möchst du etwas ännre? Loss das uns norre wisse",
 	"index.feedbackDescriptionMore": "Mir tärre gern höre, obs du etwas gern host orrer obs du etwas hasse tust. Bittschön loss es uns wisse!",
@@ -79,11 +76,5 @@
 	"sweetSpot.askToShare": "Dein Ring ist fertich. Möchst du so freindlich sin um annre dorrich das Telen von der Position von der ideal Punkte für das Telefonmodell hellfe?",
 	"sweetSpot.done": "Erledicht. Dankschön!",
 	"sweetSpot.areYouSureSS": "Bist du sicher, dass du dein Idealer-Punkt-Date abwische möchst?",
-	"sweetSpot.areYouSureActions": "Bist du sicher, dass du deine letzte Aktione abwische möchst?",
-	"register.emailTitle": "E-Mail-Adress:",
-	"register.title": "Dein Ring registriere",
-	"register.passwordTitle": "Passwort:",
-	"register.passwordAgainTitle": "Passwort (wieder erneit):",
-	"register.passwordsDontMatch": "Die Passwörter stimmen nicht überein",
-	"register.success": "Registrierung erfollichreich"
+	"sweetSpot.areYouSureActions": "Bist du sicher, dass du deine letzte Aktione abwische möchst?"
 }

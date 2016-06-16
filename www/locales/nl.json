@@ -21,9 +21,6 @@
 	"index.settings": "Instellingen",
 	"index.settingsDescription": "Appinstellingen",
 	"index.settingsDescriptionMore": "Maak instellingen voor uw app.",
-	"index.register": "Registreren",
-	"index.registerDescription": "Registreer uw NFC-ring en krijg een \"NFC Ring unlock app\"-code",
-	"index.registerDescriptionMore": "Wilt u een \"NFC Ring unlock app\"-code? Gebruik deze pagina!",
 	"index.feedback": "Terugkoppeling",
 	"index.feedbackDescription": "Vind u iets geweldig of wilt u iets anders zien? Laat het ons weten",
 	"index.feedbackDescriptionMore": "We horen graag wat u geweldig of verschrikkelijk vindt. Laat het ons alstublieft weten!",
@@ -92,16 +89,6 @@
 	"sweetSpot.done": "Gedaan. Bedankt!",
 	"sweetSpot.areYouSureSS": "Weet u zeker dat u de gegevens voor de ideale plaats wilt wissen?",
 	"sweetSpot.areYouSureActions": "Weet u zeker dat u uw vorige handelingen wilt wissen?",
-	"register.emailTitle": "E-mailadres:",
-	"register.title": "Registreer uw ring",
-	"register.passwordTitle": "Wachtwoord:",
-	"register.passwordAgainTitle": "Wachtwoord opnieuw:",
-	"register.passwordsDontMatch": "Wachtwoorden komen niet overeen",
-	"register.success": "Registratie uitgevoerd. U kunt nu uw gebruikersnaam en wachtwoord gebruiken om de NFC Ring Unlock app verifiëren.",
 	"vcard.loading": "Contacten aan het laden",
-	"vcard.noResults": "Geen contacten gevonden",
-	"register.notNFCRingTitle": "O, nee",
-	"register.notNFCRing": "Dit is mogelijk geen echte NFC-ring. Probeer de andere kant van uw ring.",
-	"register.resetPasswordPrompt": "U hebt zich al geregistreerd voor een NFC Ring Unlock-gebruiker, dus u hoeft niets te doen. Wilt u uw wachtwoord opnieuw instellen?",
-	"register.resetPasswordPromptTitle": "U bent al geregistreerd"
+	"vcard.noResults": "Geen contacten gevonden"
 }

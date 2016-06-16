@@ -19,9 +19,6 @@
 	"index.settings": "Inställningar",
 	"index.settingsDescription": "Konfigurera din app",
 	"index.settingsDescriptionMore": "Konfigurera din app.",
-	"index.register": "Registrera",
-	"index.registerDescription": "Registrera din NFC-Ring och få din upplåsningskod till appen NFC-Ring.",
-	"index.registerDescriptionMore": "Vill du ha din upplåsningkod till appen NFC-Ring? Använd denna sida!",
 	"index.feedback": "Återkoppling",
 	"index.feedbackDescription": "Gillar du någonting eller vill ändra någonting? Låt oss veta",
 	"index.feedbackDescriptionMore": "Vi vill gärna höra om du älskar eller hatar något. Vänligen låt oss veta!",
@@ -90,16 +87,6 @@
 	"sweetSpot.done": "Klar. Tack!",
 	"sweetSpot.areYouSureSS": "Är du säker på att du vill rensa data om ditt favoritställe?",
 	"sweetSpot.areYouSureActions": "Är du säker på att du vill rensa dina tidigare åtgärder?",
-	"register.emailTitle": "E-postadress:",
-	"register.title": "Registrera din ring",
-	"register.passwordTitle": "Lösenord:",
-	"register.passwordAgainTitle": "Lösenord igen:",
-	"register.passwordsDontMatch": "Lösenorden stämmer inte överens",
-	"register.success": "Registrering genomförd. Du kan nu använda ditt användarnamn och lösenord för att verifiera upplåsningsappen för NFC-Ring",
 	"vcard.loading": "Läser in kontakter",
-	"vcard.noResults": "Inga kontakter hittades",
-	"register.notNFCRingTitle": "Hoppsan",
-	"register.notNFCRing": "Detta kanske inte är en äkta NFC-Ring, vänligen prova den andra sidan av din Ring",
-	"register.resetPasswordPrompt": "Du har redan dig för ett NFC-Ring-Upplåsningskonto och behöver därför inte föra någonting. Vill du Återställa ditt lösenord?",
-	"register.resetPasswordPromptTitle": "Du är redan registrerad"
+	"vcard.noResults": "Inga kontakter hittades"
 }

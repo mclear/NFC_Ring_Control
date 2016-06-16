@@ -8,7 +8,6 @@
 	"index.whatDoYouWantToDoToday": "Wat wëllt Dir haut maachen?",
 	"index.read": "Liesen",
 	"index.settings": "Astellungen",
-	"index.register": "Umellen",
 	"index.feedback": "Feedback",
 	"context.recentActions": "Är rezent Aktioune weisen",
 	"option.next": "Weider",
@@ -37,11 +36,6 @@
 	"sweetSpot.showHelp": "Hëllef weisen",
 	"sweetSpot.done": "Fäerdeg. Merci!",
 	"sweetSpot.areYouSureActions": "Sidd Dir sécher datt dir Är vireg Aktioune läsche wëllt?",
-	"register.emailTitle": "E-Mail-Adress:",
-	"register.passwordTitle": "Passwuert:",
-	"register.passwordAgainTitle": "Passwuert confirméieren:",
-	"register.passwordsDontMatch": "D'Passwierder sinn net déi selwecht",
 	"vcard.loading": "Kontakter lueden",
-	"vcard.noResults": "Keng Kontakter fonnt",
-	"register.resetPasswordPromptTitle": "Dir sidd schonn ugemellt"
+	"vcard.noResults": "Keng Kontakter fonnt"
 }

@@ -16,9 +16,6 @@
 	"index.settings": "Pengaturan",
 	"index.settingsDescription": "Konfigurasi aplikasi anda",
 	"index.settingsDescriptionMore": "Konfigurasi aplikasi anda.",
-	"index.register": "Daftar",
-	"index.registerDescription": "Daftarkan NFC Ring dan dapatkan kunci aplikasi kode NFC Ring anda",
-	"index.registerDescriptionMore": "ingin kunci aplikasi kode NFC Ring anda? Gunakan halaman ini!",
 	"index.feedback": "Umpan balik",
 	"index.feedbackDescription": "Mencintai sesuatu atau ingin mengubah sesuatu? Beritahu kami",
 	"index.feedbackDescriptionMore": "Kami akan senang mendengar jika anda menyukai atau membenci sesuatu. Harap biarkan kami tahu!",
@@ -71,14 +68,5 @@
 	"sweetSpot.yay": "Hore! Ini bekerja. Terima kasih untuk menjadi luar biasa.",
 	"sweetSpot.showHelp": "Tampilkan bantuan",
 	"sweetSpot.done": "Selesai. Terimakasih!",
-	"sweetSpot.areYouSureActions": "Apakah anda yakin ingin menghapus tindakan anda sebelumnya?",
-	"register.emailTitle": "Alamat surel:",
-	"register.title": "Daftarka lingkaran anda",
-	"register.passwordTitle": "Kata sandi:",
-	"register.passwordAgainTitle": "Kata sndi lagi:",
-	"register.passwordsDontMatch": "Kata sandi tidak cocok",
-	"register.success": "Pendaftaran berhasil, anda sekarang dapat menggunakan nama pengguna / kata sandi untuk memverifikasi NFC Ring aktifkan App",
-	"register.notNFCRingTitle": "Uh oh",
-	"register.resetPasswordPrompt": "Anda telah terdaftar untuk akun NFC ring. Buka sehingga anda tidak perlu melakukan apa-apa. Apakah anda ingin mengatur ulang kata sandi anda?",
-	"register.resetPasswordPromptTitle": "Anda sudah terdaftar"
+	"sweetSpot.areYouSureActions": "Apakah anda yakin ingin menghapus tindakan anda sebelumnya?"
 }

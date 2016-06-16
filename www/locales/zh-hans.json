@@ -18,9 +18,6 @@
 	"index.settings": "设置",
 	"index.settingsDescription": "配置您的应用程序",
 	"index.settingsDescriptionMore": "配置您的应用程序。",
-	"index.register": "注册",
-	"index.registerDescription": "注册您的NFC戒指并获取您的NFC戒指解锁程序码",
-	"index.registerDescriptionMore": "希望您的NFC戒指解锁app代码？请猛戳此页面！",
 	"index.feedback": "反馈",
 	"index.feedbackDescription": "喜欢什么或希望改变什么？请让我们知道",
 	"index.feedbackDescriptionMore": "我们需要了解您喜欢或讨厌什么。请让我们知道！",
@@ -89,16 +86,6 @@
 	"sweetSpot.done": "完成。感谢您！",
 	"sweetSpot.areYouSureSS": "您确信要清空您的甜蜜点数据？",
 	"sweetSpot.areYouSureActions": "您确信要清空您之前的操作？",
-	"register.emailTitle": "邮件地址：",
-	"register.title": "注册您的戒指",
-	"register.passwordTitle": "密码：",
-	"register.passwordAgainTitle": "确认密码：",
-	"register.passwordsDontMatch": "两次密码不一致",
-	"register.success": "注册完成。您现在可以使用您的用户名和密码验证NFC戒指解锁应用程序",
 	"vcard.loading": "正在加载联络人",
-	"vcard.noResults": "找不到联络人",
-	"register.notNFCRingTitle": "呃哦！",
-	"register.notNFCRing": "这可能不是正版NFC戒指，请尝试您戒指的另一面",
-	"register.resetPasswordPrompt": "您已注册NFC戒指解锁账户，因此您不需要做任何事情。您需要重置您的密码么？",
-	"register.resetPasswordPromptTitle": "您已经注册"
+	"vcard.noResults": "找不到联络人"
 }

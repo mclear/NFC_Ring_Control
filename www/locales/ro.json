@@ -15,7 +15,6 @@
 	"index.settings": "Setări",
 	"index.settingsDescription": "Configurează-ți aplicația",
 	"index.settingsDescriptionMore": "Configurați-vă aplicația.",
-	"index.register": "Întregistrează-te",
 	"index.feedback": "Păreri",
 	"context.history": "Istoric",
 	"option.next": "Următorul",
@@ -41,11 +40,5 @@
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Legătura la un Etherpad",
 	"sweetSpot.showHelp": "Arată ajutor",
-	"sweetSpot.done": "Gata. Îți mulțumim!",
-	"register.emailTitle": "Adresa de e-mail:",
-	"register.passwordTitle": "Parola:",
-	"register.passwordAgainTitle": "Parola din nou:",
-	"register.passwordsDontMatch": "Parolele nu se potrivesc",
-	"register.notNFCRingTitle": "Oh nu",
-	"register.resetPasswordPromptTitle": "Ești deja înregistrat"
+	"sweetSpot.done": "Gata. Îți mulțumim!"
 }

@@ -18,9 +18,6 @@
 	"index.settings": "Nustatymai",
 	"index.settingsDescription": "Konfigūruoti jūsų programą",
 	"index.settingsDescriptionMore": "Konfigūruoti programą.",
-	"index.register": "Registruotis",
-	"index.registerDescription": "Užregistruokite savo NFC žiedą ir gaukite jūsų NFC žiedo programos atrakinimo kodą",
-	"index.registerDescriptionMore": "Norite gauti jūsų NFC žiedo programos atrakinimo kodą? Eikite į šį puslapį!",
 	"index.feedback": "Atsiliepimai",
 	"index.feedbackDescription": "Kas nors patinka ar norite ką nors keisti? Praneškite mums",
 	"index.feedbackDescriptionMore": "Mes norėtume žinoti,ar jums kažkas patinka ar nepatinka. Praneškite mums!",
@@ -89,16 +86,6 @@
 	"sweetSpot.done": "Atlikta. Ačiū!",
 	"sweetSpot.areYouSureSS": "Ar esate tikri, kad norite ištrinti savo saldaus taško duomenis?",
 	"sweetSpot.areYouSureActions": "Ar tikrai norite išvalyti savo ankstesnius veiksmus?",
-	"register.emailTitle": "Jūsų el. pašto adresas:",
-	"register.title": "Užsiregistruokite jūsų žiedą",
-	"register.passwordTitle": "Slaptažodis:",
-	"register.passwordAgainTitle": "Pakartokite slaptažodį:",
-	"register.passwordsDontMatch": "Slaptažodžiai nesutampa",
-	"register.success": "Registracija sėkminga, jūs dabar galite naudoti savo vartotojo vardą ir slaptažodį NFC Žiedo atrakinimo programos patikrinimui",
 	"vcard.loading": "Pakrovimo kontaktai",
-	"vcard.noResults": "Kontaktų nerasta",
-	"register.notNFCRingTitle": "Uh oh",
-	"register.notNFCRing": "Tai gali būti ne originalus NFC Žiedas, bandykite kitą  jūsų žiedo pusę",
-	"register.resetPasswordPrompt": "Jūs jau užsiregistravęs NFC Žiedas atrakinimo sąskaitą ir jums nereikia nieko daryti. Ar norite iš Naujo nustatyti slaptažodį?",
-	"register.resetPasswordPromptTitle": "Jūs jau esate registruotas"
+	"vcard.noResults": "Kontaktų nerasta"
 }

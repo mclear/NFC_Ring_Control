@@ -16,9 +16,6 @@
 	"index.settings": "Enschtällonge",
 	"index.settingsDescription": "Donn Ding Äpp enschtälle",
 	"index.settingsDescriptionMore": "Donn Ding Äpp enschtälle",
-	"index.register": "Aanmälde",
-	"index.registerDescription": "Don Dinge HFC-Reng aanmälde un donn Der Dinge Kood för der NCF-Reng opzemaache holle",
-	"index.registerDescriptionMore": "Wells De Dinge Kood för der NCF-Reng opzemaache holle?",
 	"index.feedback": "Rökmäldong",
 	"index.feedbackDescription": "Jevällt Der jädd udder wells De jäd jeändert han? Lohß ed ons weße.",
 	"index.feedbackDescriptionMore": "Wer hüre jähn, wat jevällt un wat nit jevällt. Sar-et ons!",
@@ -74,16 +71,6 @@
 	"sweetSpot.showHelp": "Hölp aanzeije",
 	"sweetSpot.done": "Jedonn. Häzlejjen Dank!",
 	"sweetSpot.areYouSureActions": "Well De verhaftesch Ding verjange Akßjuhne fott schmiiße?",
-	"register.emailTitle": "De Adräß för de <i lang=\"en\">e-mail</i>",
-	"register.title": "Don Dinge Reng aanmällde",
-	"register.passwordTitle": "Paßwoot:",
-	"register.passwordAgainTitle": "Norrens dat Paßwoot:",
-	"register.passwordsDontMatch": "De Paßwööter paße nit zersamme.",
-	"register.success": "De Aamäldong hät jeflupp. Do kann jäz Dinge Metmaacher_Nahme un Ding Paßwood bruche, öm Ding Äpp för et Freijävve vun \n<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Near Field Communication\">NFC</i>-Reng ze bruche. <!--  https://translatewiki.net/wiki/Thread:Support/About_NFCRingControl:Register.success/ksh -->",
 	"vcard.loading": "Ben Kuntakte aam lahde",
-	"vcard.noResults": "Kein Kuntakte jefonge",
-	"register.notNFCRingTitle": "Dä!",
-	"register.notNFCRing": "Dat heh künnt jaa keine ääschte <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Near Field Communication\">NFC</i>-Reng sin — bess esu johd un versöhk de annder Sigg vun Dingem Reng.",
-	"register.resetPasswordPrompt": "Do häs Desch ald aanjemälldt för en Äpp för de <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Near Field Communication \">NFC</i>-Reng fei ze jävve, dröm bruchs De nix wigger ze don. Welss De Ding Paßwoot neu säze?",
-	"register.resetPasswordPromptTitle": "Do bes ald aanjemäldt."
+	"vcard.noResults": "Kein Kuntakte jefonge"
 }

@@ -18,9 +18,6 @@
 	"index.settings": "Innstillinger",
 	"index.settingsDescription": "Konfigurer din app",
 	"index.settingsDescriptionMore": "Konfigurer din app.",
-	"index.register": "Registrer",
-	"index.registerDescription": "Registrer din NFC ring og få din NFC ring opplåsningskode",
-	"index.registerDescriptionMore": "Vil du ha din NFC ring opplåsningskode? Bruk denne siden!",
 	"index.feedback": "Tilbakemelding",
 	"index.feedbackDescription": "Liker du noe, eller ønsker du å endre på noe? Fortell det til oss",
 	"index.feedbackDescriptionMore": "Vi vil gjerne høre hva du liker eller hater. La oss vite det!",
@@ -78,8 +75,5 @@
 	"sweetSpot.pressTheScreen": "Trykk på skjermen på posisjonen der ringen din ble registrert.",
 	"sweetSpot.holdRingToPhoneByDot": "Hold ringen på baksiden av telefonen din på den posisjonen indikert av de fargede dottene.",
 	"sweetSpot.noDataYet": "Det virker som vårt fantastiske fellesskap ikke har laget \"sweet-spottet\" for telefonen din ennå.",
-	"vcard.noResults": "Ingen kontakter funnet",
-	"register.notNFCRingTitle": "Oisan",
-	"register.notNFCRing": "Dette kan være en uekte NFC Ring. Prøv den andre siden av ringen din",
-	"register.resetPasswordPromptTitle": "Du er allerede registrert"
+	"vcard.noResults": "Ingen kontakter funnet"
 }

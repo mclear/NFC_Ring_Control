@@ -13,7 +13,6 @@
 	"index.read": "Luve",
 	"index.readDescription": "Kačo midä on sinun kolčas",
 	"index.settings": "Azetukset",
-	"index.register": "Registru",
 	"index.feedback": "Mielipideh",
 	"index.feedbackDescription": "Ongo mitah mieldy myö libo tahtozitgo muuttua midätah? Sanele meile",
 	"index.feedbackDescriptionMore": "Myö tahtozimmo tiediä ku suvainnet libo vihannet midätah. Ole hyvä, sanele meile!",
@@ -41,12 +40,5 @@
 	"actions.text.name": "Tekstu",
 	"actions.text.optionText": "Mibo on sinun tekstu?",
 	"actions.etherpad.name": "Etherpad",
-	"sweetSpot.done": "Valmis. Passibo!",
-	"register.emailTitle": "Sähköpoštuadressu:",
-	"register.title": "Registriiruiče sinun kolču",
-	"register.passwordTitle": "Peittosana:",
-	"register.passwordAgainTitle": "Syötä peittosana vie kerdu:",
-	"register.passwordsDontMatch": "Peittosanat ei olla yhtenjyttymät",
-	"register.success": "Olet jo registriiruinnuhes",
-	"register.notNFCRingTitle": "A-voi-voi"
+	"sweetSpot.done": "Valmis. Passibo!"
 }

@@ -16,9 +16,6 @@
 	"index.settings": "Einstellungen",
 	"index.settingsDescription": "App konfigurieren",
 	"index.settingsDescriptionMore": "App konfigurieren.",
-	"index.register": "Registrieren",
-	"index.registerDescription": "Registriere deinen NFC-Ring und erhalte deinen NFC-Ring-Freigabe-App-Code",
-	"index.registerDescriptionMore": "Möchtest du deinen NFC-Ring-Freigabe-App-Code? Verwende diese Seite!",
 	"index.feedback": "Rückmeldung",
 	"index.feedbackDescription": "Liebst du etwas oder möchtest du etwas ändern? Lass es uns wissen",
 	"index.feedbackDescriptionMore": "Wir würden gerne hören, ob du etwas magst oder hasst. Bitte lass es uns wissen!",
@@ -87,16 +84,6 @@
 	"sweetSpot.done": "Erledigt. Vielen Dank!",
 	"sweetSpot.areYouSureSS": "Bist du sicher, dass du deine Idealer-Punkt-Daten löschen möchtest?",
 	"sweetSpot.areYouSureActions": "Bist du sicher, dass du deine letzten Aktionen löschen möchtest?",
-	"register.emailTitle": "E-Mail-Adresse:",
-	"register.title": "Deinen Ring registrieren",
-	"register.passwordTitle": "Passwort:",
-	"register.passwordAgainTitle": "Passwort (erneut):",
-	"register.passwordsDontMatch": "Die Passwörter stimmen nicht überein",
-	"register.success": "Registrierung erfolgreich. Du kannst jetzt deinen Benutzernamen und dein Passwort verwenden, um die NFC-Ring-Freigabe-App zu verifizieren.",
 	"vcard.loading": "Lade Kontakte",
-	"vcard.noResults": "Keine Kontakte gefunden",
-	"register.notNFCRingTitle": "Hoppla",
-	"register.notNFCRing": "Dies könnte kein echter NFC-Ring sein. Bitte versuche die andere Seite deines Rings.",
-	"register.resetPasswordPrompt": "Du bist bereits für ein NFC-Ring-Entsperr-Konto registriert. Du musst nichts machen. Möchtest du dein Passwort zurücksetzen?",
-	"register.resetPasswordPromptTitle": "Du bist bereits registriert"
+	"vcard.noResults": "Keine Kontakte gefunden"
 }

@@ -18,9 +18,6 @@
 	"index.settings": "Подешавања",
 	"index.settingsDescription": "Конфигуришите своју апликацију",
 	"index.settingsDescriptionMore": "Конфигуришите своју апликацију.",
-	"index.register": "Регистрација",
-	"index.registerDescription": "Региструјте свој NFC прстен како бисте добили код за откључавање апликације за NFC прстен",
-	"index.registerDescriptionMore": "Желите свој код за откључавање NFC прстена? Користите ову страницу!",
 	"index.feedback": "Повратне информације",
 	"index.feedbackDescription": "Нешто вам се свиђа или желите нешто да промените? Реците нам",
 	"index.feedbackDescriptionMore": "Волели бисмо знати шта вам се свиђа, а шта не. Молимо да нам кажете!",
@@ -84,15 +81,5 @@
 	"sweetSpot.askToShare": "Ваш прстен је спреман. Желите ли да будете феноменални и да помогнете другима деливши златну тачку за овај модел телефона?",
 	"sweetSpot.done": "Урађено. Хвала вам!",
 	"sweetSpot.areYouSureSS": "Да ли сте сигурни да желите очистити податке о златној тачки?",
-	"sweetSpot.areYouSureActions": "Да ли сте сигурни да желите очистити претходне радње?",
-	"register.emailTitle": "Имејл адреса:",
-	"register.title": "Региструјте свој прстен",
-	"register.passwordTitle": "Лозинка:",
-	"register.passwordAgainTitle": "Поново упишите лозинку:",
-	"register.passwordsDontMatch": "Лозинке се не поклапају",
-	"register.success": "Регистрација успешна. Можете користити своје корисничко име/лозинку да бисте потврдили апликацију за откључавање NFC прстена",
-	"register.notNFCRingTitle": "Опа",
-	"register.notNFCRing": "Могуће је да ово није прави NFC прстен. Молимо да покушате другу страну свог прстена",
-	"register.resetPasswordPrompt": "Већ сте се регистровали за откључавање NFC прстена, тако да не морате ништа да радите. Желите ли да ресетујете своју шифру?",
-	"register.resetPasswordPromptTitle": "Већ сте регистровани"
+	"sweetSpot.areYouSureActions": "Да ли сте сигурни да желите очистити претходне радње?"
 }

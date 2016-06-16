@@ -17,7 +17,6 @@
 	"index.settings": "সেটিংস",
 	"index.settingsDescription": "আপনার অ্যাপ কনফিগার করুন",
 	"index.settingsDescriptionMore": "আপনার অ্যাপ কনফিগার করুন",
-	"index.register": "নিবন্ধন",
 	"index.feedback": "প্রতিক্রিয়া",
 	"context.recentActions": "আপনার সাম্প্রতিক কর্ম দেখুন",
 	"context.history": "ইতিহাস",
@@ -47,14 +46,6 @@
 	"sweetSpot.yay": "হ্যাঁ! এটা কাজ করেছে। আপনাকে অসংখ্য ধন্যবাদ।",
 	"sweetSpot.showHelp": "সাহায্য দেখাও",
 	"sweetSpot.done": "হয়েছে। আপনাকে ধন্যবাদ।",
-	"register.emailTitle": "ইমেইল ঠিকানা:",
-	"register.title": "আপনার রিং নিবন্ধন করুন",
-	"register.passwordTitle": "পাসওয়ার্ড:",
-	"register.passwordAgainTitle": "পাসওয়ার্ড আবারও প্রবেশ করান:",
-	"register.passwordsDontMatch": "পাসওয়ার্ড মেলেনি",
-	"register.success": "নিবন্ধীকরণ সফল। এখন আপনি অ্যাপ্লিকেশন যাচাই করার জন্য আপনার ব্যবহারকারী নাম এবং পাসওয়ার্ড ব্যবহার করতে পারেন",
 	"vcard.loading": "পরিচিতি লোড করা হচ্ছে",
-	"vcard.noResults": "কোনো পরিচিতি পাওয়া যায়নি",
-	"register.notNFCRingTitle": "ওহো",
-	"register.resetPasswordPromptTitle": "আপনি ইতোমধ্যে নিবন্ধিত"
+	"vcard.noResults": "কোনো পরিচিতি পাওয়া যায়নি"
 }

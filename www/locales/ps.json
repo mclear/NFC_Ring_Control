@@ -11,7 +11,6 @@
 	"index.read": "لوستل",
 	"index.readDescription": "وگورئ چې کړۍ کې مو څه دي",
 	"index.settings": "امستنې",
-	"index.register": "نومليکل",
 	"context.history": "پېښليک",
 	"option.next": "راتلونکی",
 	"writeRing.finish": "پای",
@@ -33,11 +32,5 @@
 	"actions.youtube.name": "يوټيوب",
 	"actions.text.name": "متن",
 	"sweetSpot.showHelp": "لارښود ښکاره کول",
-	"sweetSpot.done": "ترسره شو. له تاسې مننه!",
-	"register.emailTitle": "برېښليک پته:",
-	"register.title": "د خپلې کړۍ نومليکنه",
-	"register.passwordTitle": "پټنوم:",
-	"register.passwordAgainTitle": "پټنوم يو ځل بيا:",
-	"register.passwordsDontMatch": "پټنومونه مو سره ورته نه دي",
-	"register.success": "نومليکنه مو بريالۍ شوه، د NFC کړۍ خلاسولو کاريال د تاييد لپاره تاسې خپل کارن-نوم/پټنوم کارولی شئ."
+	"sweetSpot.done": "ترسره شو. له تاسې مننه!"
 }

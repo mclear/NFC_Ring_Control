@@ -14,9 +14,6 @@
 	"index.settings": "Paramètres",
 	"index.settingsDescription": "Configurar vòstra aplicacion",
 	"index.settingsDescriptionMore": "Configurar vòstra aplicacion.",
-	"index.register": "S'inscriure",
-	"index.registerDescription": "Inscriure vòstre Anèl NFC e obténer vòstre còdi aplicatiu de desblocatge de l’Anèl NFC",
-	"index.registerDescriptionMore": "Volètz vòstre còdi aplicatiu de desblocatge de l’Anèl NFC ? Utilizatz aquesta pagina !",
 	"index.feedback": "Vejaire",
 	"index.feedbackDescription": "Vos agradariá quicòm o volètz cambiar quicòm ? Fasètz-lo-nos saber",
 	"index.feedbackDescriptionMore": "Nos agrada de saber se presatz o detestatz quicòm. Fasètz-lo-nos saber !",
@@ -63,14 +60,6 @@
 	"actions.etherpad.optionText": "Quina es l’URL de vòstre document ?",
 	"sweetSpot.showHelp": "Afichar l’ajuda",
 	"sweetSpot.done": "Es fait. Mercé !",
-	"register.emailTitle": "Adreça electronica :",
-	"register.title": "Inscriure vòstre anèl",
-	"register.passwordTitle": "Senhal :",
-	"register.passwordAgainTitle": "Picatz lo senhal tornarmai :",
-	"register.passwordsDontMatch": "Los senhals correspondon pas",
-	"register.success": "Inscripcion capitada ; ara podètz utilizar vòstre nom d’utilizaire/senhal per verificar l’aplicacion de desverrolhatge de l’Anèl NFC",
 	"vcard.loading": "Cargament dels contactes",
-	"vcard.noResults": "Cap de contacte pas trobat",
-	"register.notNFCRingTitle": "Oh oh",
-	"register.resetPasswordPromptTitle": "Sètz ja inscrit"
+	"vcard.noResults": "Cap de contacte pas trobat"
 }

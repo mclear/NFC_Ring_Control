@@ -14,7 +14,6 @@
 	"index.read": "پڑھئیے",
 	"index.readDescription": "دیکھئے آپ کے رنگ پہ کیا ہے",
 	"index.settings": "ترتیبات",
-	"index.register": "رجسٹر",
 	"index.feedback": "آپ کی رائے",
 	"context.recentActions": "اپنے حالیہ ایکشن دکھائے",
 	"context.history": "تاریخ",
@@ -48,11 +47,5 @@
 	"actions.youtube.name": "یوٹیوب",
 	"actions.text.name": "ٹیکسٹ",
 	"actions.text.optionText": "آپ کا ٹکسٹ کیا ہے؟",
-	"actions.etherpad.optionText": "آپ کا پیڈ یو آر ایل کیا ہے؟",
-	"register.emailTitle": "برقی ڈاک پتہ:",
-	"register.passwordTitle": "کلمۂ شناخت:",
-	"register.passwordAgainTitle": "ٍدوبارہ کلمہ شناخت:",
-	"register.passwordsDontMatch": "کلمہ شناخت مناسب نہیں",
-	"register.notNFCRingTitle": "ارے ارے",
-	"register.resetPasswordPromptTitle": "آپ پہلے سے رجسٹرڈ ہیں"
+	"actions.etherpad.optionText": "آپ کا پیڈ یو آر ایل کیا ہے؟"
 }

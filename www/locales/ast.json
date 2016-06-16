@@ -16,9 +16,6 @@
 	"index.settings": "Configuración",
 	"index.settingsDescription": "Configura la app",
 	"index.settingsDescriptionMore": "Configura la app.",
-	"index.register": "Rexistrase",
-	"index.registerDescription": "Rexistra'l to aniellu NFC y consigui'l códigu de desbloquéu de la app NFC Ring",
-	"index.registerDescriptionMore": "¿Quies el códigu de desbloquéu de la app NFC Ring? ¡Usa esta páxina!",
 	"index.feedback": "La to opinión",
 	"index.feedbackDescription": "¿Préstate daqué o quies cambiar daqué? Cuéntanoslo",
 	"index.feedbackDescriptionMore": "Prestaríaos saber si te gusta o odies daqué. ¡Cuéntanoslo!",
@@ -63,11 +60,5 @@
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Enllaz a un videu o una canal",
 	"actions.youtube.optionText": "¿Cuál ye'l to videu o canal de Youtube?",
-	"actions.text.name": "Testu",
-	"register.emailTitle": "Corréu electrónicu:",
-	"register.title": "Rexistra'l to aniellu",
-	"register.passwordTitle": "Contraseña:",
-	"register.passwordAgainTitle": "Repiti la contraseña:",
-	"register.passwordsDontMatch": "Les contraseñes nun casen",
-	"register.success": "Rexistru correutu, agora pues usar el nome d'usuariu y contraseña pa comprobar la app Desbloquéu d'aniellu NFC"
+	"actions.text.name": "Testu"
 }

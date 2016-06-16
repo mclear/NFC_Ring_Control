@@ -16,9 +16,6 @@
 	"index.settings": "Paramètres",
 	"index.settingsDescription": "Configurer votre application",
 	"index.settingsDescriptionMore": "Configurer votre application.",
-	"index.register": "S’inscrire",
-	"index.registerDescription": "Inscrire votre Anneau NFC et obtenir votre code applicatif de déblocage de l’Anneau NFC",
-	"index.registerDescriptionMore": "Vous souhaitez votre code applicatif de déblocage de l’Anneau NFC ? Utilisez cette page !",
 	"index.feedback": "Commentaire",
 	"index.feedbackDescription": "Vous aimez quelque chose ou voulez changer quelque chose ? Faites-le nous savoir",
 	"index.feedbackDescriptionMore": "Nous aimons savoir si vous aimez ou détestez quelque chose. Faites-le nous savoir !",
@@ -87,16 +84,6 @@
 	"sweetSpot.done": "C’est fait. Merci !",
 	"sweetSpot.areYouSureSS": "Êtes-vous sûr de vouloir vider vos données de point idéal ?",
 	"sweetSpot.areYouSureActions": "Êtes-vous sûr de vouloir vider vos actions précédentes ?",
-	"register.emailTitle": "Adresse électronique :",
-	"register.title": "Inscrire votre anneau",
-	"register.passwordTitle": "Mot de passe :",
-	"register.passwordAgainTitle": "Répétition du mot de passe :",
-	"register.passwordsDontMatch": "Les mots de passe ne correspondent pas",
-	"register.success": "Inscription réussie ; vous pouvez maintenant utiliser votre nom d’utilisateur/mot de passe pour vérifier l’application de déverrouillage de l’Anneau NFC",
 	"vcard.loading": "Chargement des contacts",
-	"vcard.noResults": "Aucun contact trouvé",
-	"register.notNFCRingTitle": "Oh oh",
-	"register.notNFCRing": "Ce pourrait ne pas être un Anneau NFC, veuillez essayer l’autre côté de votre anneau",
-	"register.resetPasswordPrompt": "Vous vous êtes déjà inscrit pour un compte de déverrouillage d’un Anneau NFC, donc vous n’avez rien d’autre à faire. Voulez-vous réinitialiser votre mot de passe ?",
-	"register.resetPasswordPromptTitle": "Vous êtes déjà inscrit"
+	"vcard.noResults": "Aucun contact trouvé"
 }

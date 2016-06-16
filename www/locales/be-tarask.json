@@ -16,9 +16,6 @@
 	"index.settings": "Налады",
 	"index.settingsDescription": "Наладка вашай праграмы",
 	"index.settingsDescriptionMore": "Наладзьце вашую праграму.",
-	"index.register": "Рэгістрацыя",
-	"index.registerDescription": "Зарэгіструйце вашае NFC-кальцо і атрымайце код разблякаваньня праграмы для вашага NFC-кальца",
-	"index.registerDescriptionMore": "Хочаце атрымаць код разблякаваньня праграмы для вашага NFC-кальца? Скарыстайцеся гэтай старонкай!",
 	"index.feedback": "Водгук",
 	"index.feedbackDescription": "Нешта падабаецца або жадаеце штосьці зьмяніць? Дайце нам ведаць",
 	"index.feedbackDescriptionMore": "Мы хацелі б ведаць, падабаецца вам штосьці або нешта раздражняе. Калі ласка, дайце нам ведаць!",
@@ -87,16 +84,6 @@
 	"sweetSpot.done": "Зроблена. Дзякуй!",
 	"sweetSpot.areYouSureSS": "Ці ўпэўненыя вы, што хочаце ачысьціць зьвесткі пра вашую актыўную зону?",
 	"sweetSpot.areYouSureActions": "Вы ўпэўненыя, што хочаце сьцерці вашыя ранейшыя дзеяньні?",
-	"register.emailTitle": "Адрас электроннай пошты:",
-	"register.title": "Зарэгіструйце вашае кальцо",
-	"register.passwordTitle": "Пароль:",
-	"register.passwordAgainTitle": "Пароль яшчэ раз:",
-	"register.passwordsDontMatch": "Паролі не супадаюць",
-	"register.success": "Рэгістрацыя пасьпяховая. Цяпер вы можаце выкарыстаць вашыя імя карыстальніка і пароль, каб праверыць праграму NFC Ring Unlock",
 	"vcard.loading": "Загрузка кантактаў",
-	"vcard.noResults": "Кантакты ня знойдзеныя",
-	"register.notNFCRingTitle": "Вой-вой!",
-	"register.notNFCRing": "Магчыма, гэта несапраўднае NFC-кальцо, калі ласка, паспрабуйце павярнуць яго іншым бокам",
-	"register.resetPasswordPrompt": "Вы ўжо маеце зарэгістраваны рахунак для NFC Ring Unlock, таму вам ня трэба нічога больш рабіць. Ці жадаеце вы скінуць пароль?",
-	"register.resetPasswordPromptTitle": "Вы ўжо зарэгістраваныя"
+	"vcard.noResults": "Кантакты ня знойдзеныя"
 }

@@ -19,9 +19,6 @@
 	"index.settings": "Nastavení",
 	"index.settingsDescription": "Nastavení vaší aplikace",
 	"index.settingsDescriptionMore": "Nastavení vaší aplikace.",
-	"index.register": "Registrovat",
-	"index.registerDescription": "Zaregistrujte si svůj NFC prsten a získejte kód pro odemčení aplikace",
-	"index.registerDescriptionMore": "Chcete svůj kód pro odemčení aplikace ? Použijte tuto stránku!",
 	"index.feedback": "Zpětná vazba",
 	"index.feedbackDescription": "Líbí se vám něco, nebo chcete něco změnit? Dejte nám vědět",
 	"index.feedbackDescriptionMore": "Rádi uslyšíme jestli něco milujete nebo nenávidíte. Prosím dejte nám vědět!",
@@ -78,15 +75,6 @@
 	"sweetSpot.done": "Hotovo. Děkujeme!",
 	"sweetSpot.areYouSureSS": "Jste si jisti, že chcete vymazat vaše sweet spot data?",
 	"sweetSpot.areYouSureActions": "Jste si jisti, že chcete vymazat vaše předchozí činnosti?",
-	"register.emailTitle": "E-mailová adresa:",
-	"register.title": "Zaregistrujte si svůj prsten",
-	"register.passwordTitle": "Heslo:",
-	"register.passwordAgainTitle": "Heslo znovu:",
-	"register.passwordsDontMatch": "Hesla se neshodují",
-	"register.success": "Registrace proběhla úspěšně. Můžete použít své přihlašovací jméno a heslo pro ověření, že byla aplikace NFC Prsten odemčena.",
 	"vcard.loading": "Načítání kontaktů",
-	"vcard.noResults": "Nenalezeny žádné kontakty",
-	"register.notNFCRingTitle": "Ale ne",
-	"register.notNFCRing": "Tohle možná není originální NFC prsten. Prosím, zkuste druhou stranu vašeho prstenu",
-	"register.resetPasswordPromptTitle": "Již jste registrovaní"
+	"vcard.noResults": "Nenalezeny žádné kontakty"
 }

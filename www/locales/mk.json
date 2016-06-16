@@ -16,9 +16,6 @@
 	"index.settings": "Нагодувања",
 	"index.settingsDescription": "Нагодувања на извршникот",
 	"index.settingsDescriptionMore": "Нагодувања на извршникот",
-	"index.register": "Регистрација",
-	"index.registerDescription": "Регистрирајте го вашиот NFC-прстен и ќе добиете шифра за да го отклучите извршникот",
-	"index.registerDescriptionMore": "Сакате шифра за да го отклучите извршникот за NFC-прстенот? Послужете се со оваа страница!",
 	"index.feedback": "Мислења",
 	"index.feedbackDescription": "Нешто ви се допаѓа или сакате да биде поинаку? Соопштете ни",
 	"index.feedbackDescriptionMore": "Би ни било драго да ни кажете што е добро, а што лошо. Ни треба вашето мислење!",
@@ -87,16 +84,6 @@
 	"sweetSpot.done": "Готово. Ви благодариме!",
 	"sweetSpot.areYouSureSS": "Дали сте сигурни дека сакате да ги избришете податоците за осетливото место?",
 	"sweetSpot.areYouSureActions": "Дали сте сигурни дека сакате да ги избришете вашите претходни дејства?",
-	"register.emailTitle": "Е-пошта:",
-	"register.title": "Регистрирајте го вашиот прстен",
-	"register.passwordTitle": "Лозинка:",
-	"register.passwordAgainTitle": "Пак лозинката:",
-	"register.passwordsDontMatch": "Лозинките не се совпаѓаат",
-	"register.success": "Регистрацијата е успешна Сега можете да ги употребите корисничкото име и лозинката за да го заверите извршникот за отклучување на NFC-прстенот",
 	"vcard.loading": "Ги вчитувам контактите",
-	"vcard.noResults": "Не пронајдов контакти",
-	"register.notNFCRingTitle": "Упс!",
-	"register.notNFCRing": "Ова може да не е вистински NFC-прстен. Обидете се со другата страна од прстенот.",
-	"register.resetPasswordPrompt": "Веќе се имате регистрирано сметка за отклучување на NFC-прстен. Повеќе не треба да правите ништо. Дали би сакале да ја смените лозинката?",
-	"register.resetPasswordPromptTitle": "Веќе сте регистрирани"
+	"vcard.noResults": "Не пронајдов контакти"
 }

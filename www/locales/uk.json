@@ -21,9 +21,6 @@
 	"index.settings": "Налаштування",
 	"index.settingsDescription": "Налаштування програми",
 	"index.settingsDescriptionMore": "Налаштуйте свою програму.",
-	"index.register": "Реєстрація",
-	"index.registerDescription": "Зареєструйте ваше NFC-кільце та отримайте код розблокування програми для вашого NFC-кільця",
-	"index.registerDescriptionMore": "Хочете отримати код розблокування програми для вашого NFC-кільця? Використовуйте цю сторінку!",
 	"index.feedback": "Зворотний зв'язок",
 	"index.feedbackDescription": "Сподобалося що-небудь або хочете щось змінити? Дайте нам знати",
 	"index.feedbackDescriptionMore": "Ми хотіли б дізнатися, якщо вам сподобалося-небудь або ви хочете щось змінити. Дайте нам знати про це!",
@@ -92,16 +89,6 @@
 	"sweetSpot.done": "Зроблено. Дякую!",
 	"sweetSpot.areYouSureSS": "Ви впевнені, що хочете очистити дані про вашу активну зону?",
 	"sweetSpot.areYouSureActions": "Ви впевнені, що хочете стерти ваші попередні дії?",
-	"register.emailTitle": "Адреса електронної пошти:",
-	"register.title": "Зареєструвати ваше кільце",
-	"register.passwordTitle": "Пароль:",
-	"register.passwordAgainTitle": "Пароль ще раз:",
-	"register.passwordsDontMatch": "Паролі не збігаються",
-	"register.success": "Реєстрація успішна. Тепер Ви можете застосувати ваші логін/пароль для перевірки застосунку NFC Ring Unlock",
 	"vcard.loading": "Завантаження контактів",
-	"vcard.noResults": "Не знайдено жодних контактів",
-	"register.notNFCRingTitle": "Ой-ой!",
-	"register.notNFCRing": "Це не може бути справжньої NFC Ring, будь ласка, спробуйте іншій стороні кільця",
-	"register.resetPasswordPrompt": "Ви вже зареєструвалися для NFC-кільце розблокування облікового запису, тому вам не потрібно нічого робити. Чи хотіли б ви, щоб скинути пароль?",
-	"register.resetPasswordPromptTitle": "Ви вже зареєстровані"
+	"vcard.noResults": "Не знайдено жодних контактів"
 }

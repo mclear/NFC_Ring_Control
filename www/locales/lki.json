@@ -17,9 +17,6 @@
 	"index.settings": "تنظیمۀل",
 	"index.settingsDescription": "پیکربندی برنامهٔ شما",
 	"index.settingsDescriptionMore": "پیکربندی برنامهٔ شما.",
-	"index.register": "نام نؤیسی کردن",
-	"index.registerDescription": "ثبت حلقهٔ ان‌اف‌سی‌تان و گرفتن کد قفل‌گشایی حلقهٔ ان‌اف‌سی‌تان",
-	"index.registerDescriptionMore": "رمز قفل‌گشایی حلقهٔ ان‌اف‌سی‌تان را می‌خواهید؟ از این صفحه استفاده کنید!",
 	"index.feedback": "بازخورد",
 	"index.feedbackDescription": "عاشق چیزی هستید یا می‌خواهد چیزی را عوض کنید؟ ما را مطلع کنید",
 	"index.feedbackDescriptionMore": "ما علاقه‌مند به شنیدن اینکه چیزی را دوست یا تنفر داشته باشید هستیم. لطفاً ما را مطلع کنید!",
@@ -84,15 +81,5 @@
 	"sweetSpot.askToShare": "جلقهٔ شما آماده است. می‌خواهد فوق‌العاده باشید و دیگران با به‌اشتراک گذاری نقطهٔ شیرین این دستگاه کمک کنید؟",
 	"sweetSpot.done": "انجام شد. ممنون!",
 	"sweetSpot.areYouSureSS": "برای پاک‌کردن داده‌های نقطهٔ شیرین خود مطمئنید؟",
-	"sweetSpot.areYouSureActions": "برای روشن‌شدن اقدامات قبلی خود مطمئنید؟",
-	"register.emailTitle": ":نیشانی ایمیل",
-	"register.title": "ثبت نام حلقهٔ خود",
-	"register.passwordTitle": ":رمز",
-	"register.passwordAgainTitle": "رمز دووآرۀ:",
-	"register.passwordsDontMatch": "گذرواژه‌ها مطابقت ندارند",
-	"register.success": "ثبت نام موفق‌آمیر بود، هم‌اکنون شما می‌توانید از نام کاربر/گذرواژه برای باز کردن بازهٔ NFC قفل نرم‌افزار استفاده کنید",
-	"register.notNFCRingTitle": "اوه اوه!",
-	"register.notNFCRing": "ممکن است این حلقهٔ اصلی NFC نباشد. لطفاً از سمت دیگر حلقه استفاده کنید",
-	"register.resetPasswordPrompt": "شما برای کاربری حلقهٔ بدون قفل NFC ثبت نام کرده‌اید بنابریان نیاز به هیچ کاری نیست. آیا قصد بازگردانی گذرواژه‌تان را دارید؟",
-	"register.resetPasswordPromptTitle": "الان شما ثبت نام شده‌اید"
+	"sweetSpot.areYouSureActions": "برای روشن‌شدن اقدامات قبلی خود مطمئنید؟"
 }

@@ -18,9 +18,6 @@
 	"index.settings": "Arventennoù",
 	"index.settingsDescription": "Kefluniañ hoc'h arload",
 	"index.settingsDescriptionMore": "Kefluniañ hoc'h arload.",
-	"index.register": "En em enskrivañ",
-	"index.registerDescription": "Enskrivañ ho Kwalenn NFC ha kaout ho kod arloañ evit diskoilhañ ar Walenn NFC",
-	"index.registerDescriptionMore": "C'hoant ho peus da gaout ho kod arloañ evit diskoilhañ ho Kwalenn NFC ? Implijit ar bajenn-mañ !",
 	"index.feedback": "Sonjoù",
 	"index.feedbackDescription": "Plijout a ra un dra bennak deoc'h pe c'hoant ho peus da cheñch un dra bennak ? En roit dimp da c'houzout ?",
 	"index.feedbackDescriptionMore": "Plijout a ra dimp gouzout ma plij un dra bennak deoc'h pe ma ne blij ket deoc'h. En roit dimp da c'houzout !",
@@ -89,16 +86,6 @@
 	"sweetSpot.done": "Graet eo. Trugarez !",
 	"sweetSpot.areYouSureSS": "Sur eo ho peus c'hoant da c'houllonderiñ roadennoù ho pik peurvat ?",
 	"sweetSpot.areYouSureActions": "Sur eo ho peus c'hoant da c'houllonderiñ hoc'h oberoù a-raok ?",
-	"register.emailTitle": "Chomlec'h postel :",
-	"register.title": "Enskrivañ ho kwalenn",
-	"register.passwordTitle": "Ger-tremen :",
-	"register.passwordAgainTitle": "Adskrivañ ar ger-tremen :",
-	"register.passwordsDontMatch": "Ar gerioù-tremen ne glotont ket an eil gant egile",
-	"register.success": "Enskrivadur deuet-brav. Gallout a reot bremañ implijout hoc'h anv implijer/ho ker-tremen evit gwiriañ arload dibrennañ ar walenn NFC",
 	"vcard.loading": "O pellgargañ darempredoù",
-	"vcard.noResults": "N'eus bet kavet darempred ebet",
-	"register.notNFCRingTitle": "O !",
-	"register.notNFCRing": "N'eo ket ur walenn NFC marteze, klaskit dre an tu all eus ho kwalenn, mar plij.",
-	"register.resetPasswordPrompt": "Enskrivet oc'h en ur gont diskoilhañ ur Walenn NFC dija hag e-se n'ho peus netra all d'ober. Ha c'hoant ho peus da adderaouekaat ho ker-tremen ?",
-	"register.resetPasswordPromptTitle": "Enrollet oc'h dija"
+	"vcard.noResults": "N'eus bet kavet darempred ebet"
 }

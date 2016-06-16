@@ -16,9 +16,6 @@
 	"index.settings": "Mpustazzioni",
 	"index.settingsDescription": "Cancia la cunfigurazzioni di l'applicazzioni",
 	"index.settingsDescriptionMore": "Cancia la cunfigurazzioni di l'applicazzioni.",
-	"index.register": "Riggistra",
-	"index.registerDescription": "Riggistra lu tò aneddu NFC p'ottèniri lu còdici di sbloccu pi l'app",
-	"index.registerDescriptionMore": "Voi lu còdici di sbloccu pi l'app NFC ring? Utilizzari sta pàggina!",
 	"index.feedback": "Cummenti",
 	"index.feedbackDescription": "Hai suggirimenti pi migghiurari l'applicazzioni? Fanni sapiri",
 	"index.feedbackDescriptionMore": "Ni piacissi sapiri si ami o odii quarchicosa. Fànnilu sapiri!",
@@ -87,16 +84,6 @@
 	"sweetSpot.done": "Fattu. Grazzi!",
 	"sweetSpot.areYouSureSS": "Sî sicuru di vuliri eliminari la pusizzioni mimurizzata dô \"puntu sinzìbbili\"?",
 	"sweetSpot.areYouSureActions": "Sî sicuru di vuliri eliminari la crunuluggìa di l'azzioni pricidenti?",
-	"register.emailTitle": "Nnirizzu email:",
-	"register.title": "Riggistra lu tò aneddu",
-	"register.passwordTitle": "Palora d'òrdini:",
-	"register.passwordAgainTitle": "Arripeti la palora d'òrdini:",
-	"register.passwordsDontMatch": "Li palori d'òrdini nun currispùnninu",
-	"register.success": "Riggistrazzioni avvinuta cu successu, ora poi usari lu tò nomu utenti/palora d'òrdini pi virificari l'applicazzioni",
 	"vcard.loading": "Carricannu cuntatti",
-	"vcard.noResults": "Nuddu cuntattu attruvatu",
-	"register.notNFCRingTitle": "Uups",
-	"register.notNFCRing": "Chistu putissi nun èssiri n'aneddu NFC veru e propiu, prova l'àutru latu di l'aneddu",
-	"register.resetPasswordPrompt": "Già riggistrasti n'utenza NFC Ring Unlock quinni nun hai a fari nenti. Voi reimpustari la tò palora d'òrdini?",
-	"register.resetPasswordPromptTitle": "Sî già riggistratu"
+	"vcard.noResults": "Nuddu cuntattu attruvatu"
 }

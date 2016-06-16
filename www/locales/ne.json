@@ -13,7 +13,6 @@
 	"index.settings": "सेटिङ्हरू",
 	"index.settingsDescription": "तपाईँको एप मिलाउनुहोस्",
 	"index.settingsDescriptionMore": "तपाईँको एप मिलाउनुहोस् ।",
-	"index.register": "दर्ता गर्ने",
 	"index.feedback": "प्रतिक्रिया",
 	"context.recentActions": "तपाईँका हालका क्रियाकलापहरू हेर्नुहोस्",
 	"context.history": "इतिहास",
@@ -49,12 +48,5 @@
 	"actions.etherpad.description": "इथरप्याडसम्मको लिङ्क",
 	"actions.etherpad.optionText": "तपाईँको प्याड युआरएल के हो ?",
 	"sweetSpot.showHelp": "सहायता देखाउने",
-	"sweetSpot.done": "सकियो । धन्यवाद!",
-	"register.emailTitle": "इमेल ठेगाना:",
-	"register.title": "तपाईँको रिङ्ग दर्ता गर्नुहोस्",
-	"register.passwordTitle": "पासवर्ड:",
-	"register.passwordAgainTitle": "फेरी पासवर्ड:",
-	"register.passwordsDontMatch": "पासवर्डहरू मिलेनन्",
-	"register.notNFCRingTitle": "ओ हो",
-	"register.resetPasswordPromptTitle": "तपाईँ पहिले नै दर्ता गरिसक्नु भएकोछ ।"
+	"sweetSpot.done": "सकियो । धन्यवाद!"
 }

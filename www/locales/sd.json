@@ -9,7 +9,6 @@
 	"index.create": "تخليق ڪريو",
 	"index.read": "پڙهو",
 	"index.settings": "ترتيبون",
-	"index.register": "رجسٽر ڪريو",
 	"index.feedback": "پذيرائي",
 	"index.feedbackDescription": "ڪا شيءِ پسند ڪريو ٿا يا ڪجھ تبديل ڪرڻ چاهيو ٿا؟ اسان کي ٻڌايو",
 	"context.recentActions": "پنهنجا تازا عمل ڏسو",
@@ -36,11 +35,6 @@
 	"actions.text.optionText": "توهان جو متن ڇا آهي؟",
 	"sweetSpot.showHelp": "مدد ڏيکاريو",
 	"sweetSpot.done": "ٿي ويو، توهان جي مهرباني!",
-	"register.emailTitle": "ايميل جو پتو:",
-	"register.passwordTitle": "ڳجھو لفظ:",
-	"register.passwordAgainTitle": "ٻيهر ڳجھو لفظ:",
-	"register.passwordsDontMatch": "غير درست ڳجھو لفظ",
 	"vcard.loading": "رابطا لوڊ ڪري رهيو آهي",
-	"vcard.noResults": "ڪي به رابطا نه لڌا",
-	"register.resetPasswordPromptTitle": "توهان اڳ ئي رجسٽر ٿيل آهيو"
+	"vcard.noResults": "ڪي به رابطا نه لڌا"
 }

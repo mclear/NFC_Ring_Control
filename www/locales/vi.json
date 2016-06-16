@@ -16,9 +16,6 @@
 	"index.settings": "Cài đặt",
 	"index.settingsDescription": "Cấu hình ứng dụng của bạn",
 	"index.settingsDescriptionMore": "Cấu hình ứng dụng của bạn.",
-	"index.register": "Đăng ký",
-	"index.registerDescription": "Đăng ký NFC Ring của bạn và dùng NFC Ring của bạn mở khóa code ứng dụng",
-	"index.registerDescriptionMore": "Muốn NFC Ring của bạn mở mã ứng dụng? Sử dụng trang này!",
 	"index.feedback": "Phản hồi",
 	"index.feedbackDescription": "Thích hoặc muốn thay đổi cái gì đó? Hãy cho chúng tôi biết",
 	"index.feedbackDescriptionMore": "Chúng tôi nghe nếu bạn thích hay ghét gì đó. Xin vui lòng cho chúng tôi biết!",
@@ -67,15 +64,5 @@
 	"sweetSpot.looksGood": "Có vẻ tốt! Có phải dấu chấm đỏ gần nơi Ring hoạt động trên điện thoại của bạn?",
 	"sweetSpot.showHelp": "Hiện trợ giúp",
 	"sweetSpot.done": "Đã xong. Cảm ơn bạn!",
-	"sweetSpot.areYouSureActions": "Bạn có chắc bạn muốn xóa của bạn hành động trước đó không?",
-	"register.emailTitle": "Địa chỉ Email:",
-	"register.title": "Đăng ký Ring của bạn",
-	"register.passwordTitle": "Mật khẩu:",
-	"register.passwordAgainTitle": "Nhập lại mật khẩu:",
-	"register.passwordsDontMatch": "Mật khẩu không khớp",
-	"register.success": "Đăng ký thành công, bây giờ Bạn có thể sử dụng tên người dùng/mật khẩu của bạn để xác minh ứng dụng NFC Ring Unlock App",
-	"register.notNFCRingTitle": "Uh oh",
-	"register.notNFCRing": "Có lẽ đây không phải là NFC Ring chính hãng, hãy thử phía bên kia Ring của bạn",
-	"register.resetPasswordPrompt": "Bạn đã đăng ký cho một tài khoản NFC Ring Unlock vì vậy bạn không cần phải làm bất cứ điều gì.  Bạn có muốn reset mật khẩu của bạn?",
-	"register.resetPasswordPromptTitle": "Bạn đã được đăng ký"
+	"sweetSpot.areYouSureActions": "Bạn có chắc bạn muốn xóa của bạn hành động trước đó không?"
 }

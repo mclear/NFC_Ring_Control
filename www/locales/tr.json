@@ -14,7 +14,6 @@
 	"index.createDescription": "Yüzüğünüz için yeni bir eylem yazma",
 	"index.read": "Oku",
 	"index.settings": "Ayarlar",
-	"index.register": "Kaydol",
 	"index.feedback": "Geri bildirim",
 	"index.feedbackDescriptionMore": "Aşk veya nefret, bir şeyler duymak isterdik. Lütfen bize bildiriniz!",
 	"context.recentActions": "Son eylemlerini görüntüle.",
@@ -50,12 +49,5 @@
 	"sweetSpot.yay": "Yaşasın! İşe yarıyor. Harika bir şey olduğun için teşekkürler.",
 	"sweetSpot.showHelp": "Yardımı gör.",
 	"sweetSpot.askToShare": "Yüzüğünüz hazırdır. Harika ve yardım diğerleri bu telefon modeli için tatlı nokta konum paylaşımı ister misiniz?",
-	"sweetSpot.done": "Bitti. Teşekkür ederiz!",
-	"register.emailTitle": "Eposta adresi:",
-	"register.title": "Yüzüğünü kaydet",
-	"register.passwordTitle": "Parola:",
-	"register.passwordAgainTitle": "Tekrar şifre",
-	"register.passwordsDontMatch": "Parolalar birbiriyle uyuşmuyor.",
-	"register.success": "Kayıt başarılı",
-	"register.resetPasswordPromptTitle": "Zaten kayıtlısınız"
+	"sweetSpot.done": "Bitti. Teşekkür ederiz!"
 }

@@ -18,7 +18,6 @@
 	"index.settings": "إعدادات",
 	"index.settingsDescription": "اعداد تطبيقك",
 	"index.settingsDescriptionMore": "اعداد تطبيقك",
-	"index.register": "افتح حسابًا",
 	"index.feedback": "رأيك",
 	"index.feedbackDescription": "اتحب شيئا او تريد تغير شيئا؟ اعلمنا بذلك",
 	"index.feedbackDescriptionMore": "نحن نريد ان نسمع منك ان كنت قد احببت او كرهت شيئا. رجاءا اعلمنا بذلك.",
@@ -55,10 +54,5 @@
 	"actions.text.optionText": "ما هو النص الخاص بك؟",
 	"sweetSpot.showHelp": "إظهار المساعدة",
 	"sweetSpot.done": "تم. شكراً لك!",
-	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أوامرك السابقة؟",
-	"register.emailTitle": "عنوان البريد الإلكتروني:",
-	"register.passwordTitle": "كلمة المرور:",
-	"register.passwordAgainTitle": "تكرار كلمة المرور:",
-	"register.passwordsDontMatch": "كلمة المرور غير متطابقة",
-	"register.resetPasswordPromptTitle": "انت مسجل مسبقا"
+	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أوامرك السابقة؟"
 }

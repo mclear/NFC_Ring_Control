@@ -18,9 +18,6 @@
 	"index.settings": "Impostazioni",
 	"index.settingsDescription": "Cambia la configurazione dell'applicazione",
 	"index.settingsDescriptionMore": "Cambia la configurazione dell'applicazione.",
-	"index.register": "Registra",
-	"index.registerDescription": "Registra il tuo anello NFC per ottenere il codice di sblocco per l'app",
-	"index.registerDescriptionMore": "Vuoi il codice di sblocco per l'app NFC ring? Utilizzare questa pagina!",
 	"index.feedback": "Commenti",
 	"index.feedbackDescription": "Hai suggerimenti per migliorare l'applicazione? Facci sapere",
 	"index.feedbackDescriptionMore": "Ci piacerebbe sentire se ami o odii qualcosa. Faccelo sapere!",
@@ -89,16 +86,6 @@
 	"sweetSpot.done": "Fatto. Grazie!",
 	"sweetSpot.areYouSureSS": "Sei sicuro di voler cancellare la posizione memorizzata del \"punto sensibile\"?",
 	"sweetSpot.areYouSureActions": "Sei sicuro di che voler cancellare lo storico delle azioni precedenti?",
-	"register.emailTitle": "Indirizzo email:",
-	"register.title": "Registra il tuo anello",
-	"register.passwordTitle": "Password:",
-	"register.passwordAgainTitle": "Ripeti la password:",
-	"register.passwordsDontMatch": "Le password non coincidono",
-	"register.success": "Registrazione avvenuta con successo, ora puoi usare il tuo nome utente/password per verificare l'applicazione",
 	"vcard.loading": "Caricamento contatti",
-	"vcard.noResults": "Nessun contatto trovato",
-	"register.notNFCRingTitle": "Oops",
-	"register.notNFCRing": "Questo potrebbe non essere un vero e proprio anello NFC, prova l'altro lato dell'anello",
-	"register.resetPasswordPrompt": "Hai già registrato un'utenza NFC Ring Unlock quindi non devi fare nulla. Vuoi reimpostare la tua password?",
-	"register.resetPasswordPromptTitle": "Sei già registrato"
+	"vcard.noResults": "Nessun contatto trovato"
 }

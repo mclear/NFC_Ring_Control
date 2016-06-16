@@ -34,11 +34,6 @@
 	"actions.etherpad.optionText": "He aha tōu URL pad?",
 	"sweetSpot.showHelp": "Tītohungia tautāwhi",
 	"sweetSpot.done": "Ka mutu.  Tēnā koe!",
-	"register.emailTitle": "Wāhi īmēra:",
-	"register.passwordTitle": "Kupu muna:",
-	"register.passwordAgainTitle": "Kupu muna, ano:",
-	"register.passwordsDontMatch": "Kāhore whakaae ngā kupu muna",
 	"vcard.loading": "E tukua ana ngā tāngata...",
-	"vcard.noResults": "Kāhore he tāngata e kitea ana",
-	"register.notNFCRingTitle": "Auē!"
+	"vcard.noResults": "Kāhore he tāngata e kitea ana"
 }

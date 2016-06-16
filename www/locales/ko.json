@@ -21,9 +21,6 @@
 	"index.settings": "설정",
 	"index.settingsDescription": "당신의 앱 설정하기",
 	"index.settingsDescriptionMore": "당신의 앱을 설정하세요.",
-	"index.register": "등록하기",
-	"index.registerDescription": "NFC 링을 등록하고 당신의 NFC 링 잠금 해제 앱 코드를 구하세요",
-	"index.registerDescriptionMore": "당신의 NFC 링 잠금 해제 앱 코드를 원하신가요? 이 페이지를 사용하세요!",
 	"index.feedback": "피드백",
 	"index.feedbackDescription": "무언가를 사랑하거나 무언가를 바꾸고 싶으신가요? 우리에게 알려주세요",
 	"index.feedbackDescriptionMore": "우리는 무언가를 사랑하거나 미워한다는 것을 듣고 싶어요. 우리가 알게 해주세요!",
@@ -85,13 +82,5 @@
 	"sweetSpot.askToShare": "당신의 링이 준비되었습니다. 당신이 굉장하기를 원하고 이 전화 모델에 대해 달콤한 자리 위치를 공유하여 다른 사용자에게 도움을 주겠습니까?",
 	"sweetSpot.done": "완료. 감사합니다!",
 	"sweetSpot.areYouSureSS": "당신의 달콤한 자리 데이터를 지우겠습니까?",
-	"sweetSpot.areYouSureActions": "당신의 이전 행동을 지우겠습니까?",
-	"register.emailTitle": "이메일 주소:",
-	"register.title": "당신의 링 등록하기",
-	"register.passwordTitle": "비밀번호:",
-	"register.passwordAgainTitle": "비밀번호 다시 입력:",
-	"register.passwordsDontMatch": "비밀번호가 일치하지 않습니다",
-	"register.success": "등록 성공. 당신은 이제 NFC 링 해제 앱을 확인하기 위해 당신의 사용자명/비밀번호를 쓸 수 있습니다.",
-	"register.notNFCRingTitle": "어 이런",
-	"register.resetPasswordPromptTitle": "이미 등록되어 있습니다."
+	"sweetSpot.areYouSureActions": "당신의 이전 행동을 지우겠습니까?"
 }

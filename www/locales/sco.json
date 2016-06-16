@@ -17,9 +17,6 @@
 	"index.settings": "Settins",
 	"index.settingsDescription": "Confeegure yer app",
 	"index.settingsDescriptionMore": "Confeegure yer app",
-	"index.register": "Register",
-	"index.registerDescription": "Register yer NFC Ring n obtain yer NFC Ring lowse app code",
-	"index.registerDescriptionMore": "Want yer NFC Ring lowse app code? Than uise this page!",
 	"index.feedback": "Feedback",
 	"index.feedbackDescription": "Love sommit or want tae chynge sommit? Than lat us ken",
 	"index.feedbackDescriptionMore": "We'd love tae hear gif ye love or hate sommit. Please dae lat us ken!",
@@ -83,15 +80,5 @@
 	"sweetSpot.askToShare": "Yer ring is readie. Wid ye lik tae be awesome n heelp ithers bi shairin the sweet spot location fer this phane model?",
 	"sweetSpot.done": "Dun. Thank ye!",
 	"sweetSpot.areYouSureSS": "Ar ye sair that ye want tae clear yer sweet spat data?",
-	"sweetSpot.areYouSureActions": "Ar ye sair that ye want tae clear yer afore-gaun actions?",
-	"register.emailTitle": "Email address:",
-	"register.title": "Register yer ring",
-	"register.passwordTitle": "Passwaird:",
-	"register.passwordAgainTitle": "Passwaird again:",
-	"register.passwordsDontMatch": "Passwairds dinna match",
-	"register.success": "Registration successfu, Ye can nou uise yer uisername/passwird tae verify the NFC Ring Onlock App",
-	"register.notNFCRingTitle": "Uh oh",
-	"register.notNFCRing": "This micht nae be a genuine NFC Ring, please try the ither side o yer Ring",
-	"register.resetPasswordPrompt": "Ye hae already registered for an NFC Ring Unlock accoont so ye dinna need tae dae onything.  Would ye lik tae Reset yer passwird?",
-	"register.resetPasswordPromptTitle": "Ye are already registered"
+	"sweetSpot.areYouSureActions": "Ar ye sair that ye want tae clear yer afore-gaun actions?"
 }
