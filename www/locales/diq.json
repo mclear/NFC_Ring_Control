@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Marmase"
+			"Marmase",
+			"Kumkumuk"
 		]
 	},
 	"index.wantHelp": "Tay peşti wazene ?",
@@ -10,7 +11,8 @@
 	"index.createDescription": "Qande gıştani aksiyono newe bınusne",
 	"index.read": "Bıwan",
 	"index.settings": "Eyari",
-	"index.register": "Qeyd Be",
+	"index.settingsDescription": "Dezgeha xo araşt ke",
+	"index.settingsDescriptionMore": "Dezgeha xo araşt ke",
 	"index.feedback": "Peydrışten",
 	"context.recentActions": "Aksiyonane peyenan bımocne",
 	"context.history": "Tarix",
@@ -18,21 +20,31 @@
 	"option.next": "Bahdoyên",
 	"writeRing.finish": "Qediya",
 	"writeRing.woohoo": "Hurra!",
-	"writeRing.ready": "Gıştaney to yo newe waneno?",
+	"writeRing.ready": "Gıştaney to yo NCF newe waneno?",
 	"readRing.contents": "Zerreka gıştani:",
+	"settings.previousActions": "Kerdenê mınê verêni",
 	"settings.version": "Versiyon",
 	"settings.phoneModel": "Modela telefuni",
 	"help.helpTips": "Tay peşteki",
 	"help.gotIt": "Temam, Mı fahm ke",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Name:",
 	"actions.twitter.name": "Twitter",
+	"actions.twitter.description": "Linka Karberê Twitteri",
+	"actions.twitter.optionText": "Karber namey Twitter de şıma çıçi yo?",
 	"actions.facebook.name": "Facebook",
+	"actions.facebook.description": "Grey pela Facebooki",
+	"actions.facebook.optionText": "URL'y pela facebookda şıma çıçi yo?",
 	"actions.link.name": "Link",
+	"actions.link.description": "Adresta webi rê gre",
+	"actions.link.optionText": "URL'y web sitada şıma çıçi yo?",
 	"actions.youtube.name": "YouTube",
+	"actions.youtube.description": "Grey vidyoy yana kenal",
+	"actions.youtube.optionText": "Namey YouTube vidyo- kenal da şıma çıçi yo?",
 	"actions.text.name": "Metın",
+	"actions.text.optionText": "Metnê şıma çıçi yo?",
+	"actions.etherpad.name": "EtherPad",
+	"actions.etherpad.description": "Etherpad'i rê yo gre",
 	"sweetSpot.showHelp": "Peşti bımocne",
-	"sweetSpot.done": "Qeyd bıya. Teşekur kena!",
-	"register.emailTitle": "Adresa e-posta:",
-	"register.passwordTitle": "Parola:",
-	"register.passwordAgainTitle": "Fına parola:",
-	"register.passwordsDontMatch": "Paroley zey pê niyê"
+	"sweetSpot.done": "Qeyd bıya. Teşekur kena!"
 }

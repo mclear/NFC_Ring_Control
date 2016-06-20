@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Csega"
+			"Csega",
+			"Wolf Rex"
 		]
 	},
 	"index.wantHelp": "Szeretnél egy kis segítséget?",
@@ -48,6 +49,7 @@
 	"help.another": "Próbálj ki egy másik NFC eszközt, ha van",
 	"help.winPhone": "A Windows Phone csak akkor ismeri fel az NFC gyűrűdet, ha azon már van egy link. Ehhez fogj egy Androidos eszközt, vagy egy másik appot és írj ki egy URL-t a telefonodra, innentől az NFC Ring Control app képes lesz URL írásra",
 	"help.gotIt": "OK, értem",
+	"actions.vcard.optionText": "Név:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Linkelés Twitter felhasználóhoz",
 	"actions.twitter.optionText": "Mi a Twitter felhasználóneved?",
@@ -79,5 +81,7 @@
 	"sweetSpot.askToShare": "A gyűrűd készen áll. Szeretnél segíteni másoknak azzal, hogy megosztod az érzékeny pont helyét ezen a típuson?",
 	"sweetSpot.done": "Kész. Köszönjük!",
 	"sweetSpot.areYouSureSS": "Biztos, hogy törölni szeretnéd az érzékeny pont adataidat?",
-	"sweetSpot.areYouSureActions": "Biztos, hogy törölni akarod a korábbi tevékenységeidet?"
+	"sweetSpot.areYouSureActions": "Biztos, hogy törölni akarod a korábbi tevékenységeidet?",
+	"vcard.loading": "Kapcsolatok betöltése",
+	"vcard.noResults": "Nincsenek kapcsolatok"
 }
