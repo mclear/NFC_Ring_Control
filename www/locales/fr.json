@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Wladek92"
 		]
 	},
 	"index.wantHelp": "Voulez-vous de l’aide ?",
@@ -9,7 +10,7 @@
 	"index.whatDoYouWantToDoToday": "Que voulez-vous faire aujourd’hui ?",
 	"index.create": "Créer",
 	"index.createDescription": "Écrire une nouvelle action sur votre anneau",
-	"index.createDescriptionMore": "Utiliser cette page pour écrire un nouveau contenu ou de nouvelles actions à votre Anneau NFC. Vous devez savoir ce que vous voulez écrire comme une URL, et vous aurez besoin de votre Anneau NFC.",
+	"index.createDescriptionMore": "Utiliser cette page pour écrire un nouveau contenu ou de nouvelles actions à votre Anneau NFC. Vous devez savoir ce que vous voulez écrire en tant qu'URL, et vous aurez besoin de votre Anneau NFC.",
 	"index.read": "Lire",
 	"index.readDescription": "Voir ce qu’il y a sur votre anneau",
 	"index.readDescriptionMore": "Vous voulez vérifier ce qui est déjà sur votre anneau ? Utilisez cette option.",
@@ -21,10 +22,10 @@
 	"index.feedbackDescriptionMore": "Nous aimons savoir si vous aimez ou détestez quelque chose. Faites-le nous savoir !",
 	"context.recentActions": "Afficher vos actions récentes",
 	"context.history": "Historique",
-	"action.whatDoYouWantYourRingToDo": "Que voulez-vous que fasse votre anneau ?",
+	"action.whatDoYouWantYourRingToDo": "Que voulez-vous que votre anneau fasse ?",
 	"option.next": "Suivant",
 	"option.dataWontFit": "Attention : Cette quantité de données pourrait ne pas tenir sur votre Anneau NFC",
-	"option.dataWontFitUpgrade": "Attention : Cette quantité de données peut ne pas tenir sur votre Anneau NFC. Mettez-le à jour maintenant pour avoir plus de place",
+	"option.dataWontFitUpgrade": "Attention : Cette quantité de données pourrait ne pas tenir sur votre Anneau NFC. Mettez-le à jour maintenant pour avoir plus de place",
 	"writeRing.finish": "Terminer",
 	"writeRing.noNFC": "La fonctionnalité NFC ne marche pas. NFC est-il activé sur votre appareil ?",
 	"writeRing.woohoo": "Wahou !",
