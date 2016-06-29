@@ -31,31 +31,14 @@
                         {
                             "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
                         }
                     ],
-                    "/widget": [
-                        {
-                            "xml": "<feature name=\"NfcPlugin\"><param name=\"android-package\" value=\"com.chariotsolutions.nfc.plugin.NfcPlugin\" /></feature>",
-                            "count": 1
-                        }
-                    ]
+                    "/widget": []
                 }
             },
             "AndroidManifest.xml": {
                 "parents": {
                     "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.NFC\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.nfc\" android:required=\"false\" />",
-                            "count": 1
-                        },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
@@ -83,9 +66,6 @@
         "com.borismus.webintent": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
-        "com.chariotsolutions.nfc.plugin": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
@@ -102,6 +82,9 @@
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
+        "phonegap-nfc": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },

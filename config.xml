@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.3.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.mclear.nfcringpro" version="0.3.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>NFC Ring Control</name>
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
@@ -10,11 +10,10 @@
     <preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="*" />
-    <access origin="https://parse.com" />
     <access origin="http://127.0.0.1" />
-    <access origin="https://*.parse.com" />
     <access origin="https://*.nfcring.com" />
     <access origin="http://*.nfcring.com" />
+    <access origin="mailto:*" launch-external="yes"/>
     <allow-intent href="mailto:*" />
 
 <platform name="android">
