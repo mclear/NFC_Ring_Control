@@ -6,7 +6,8 @@
 			"Revi",
 			"Twotwo2019",
 			"SeoJeongHo",
-			"Hwangjy9"
+			"Hwangjy9",
+			"Ykhwong"
 		]
 	},
 	"index.wantHelp": "도움이 필요하신가요?",
@@ -52,6 +53,7 @@
 	"help.slowly": "당신의 링을 천천히 기기 뒤로 움직이십시오",
 	"help.another": "다른 NFC 기기가 있다면 시도",
 	"help.gotIt": "알겠습니다",
+	"actions.vcard.name": "vCard",
 	"actions.vcard.optionText": "이름:",
 	"actions.twitter.name": "트위터",
 	"actions.twitter.description": "트위터 계정과 연결",
@@ -82,5 +84,7 @@
 	"sweetSpot.askToShare": "당신의 링이 준비되었습니다. 당신이 굉장하기를 원하고 이 전화 모델에 대해 달콤한 자리 위치를 공유하여 다른 사용자에게 도움을 주겠습니까?",
 	"sweetSpot.done": "완료. 감사합니다!",
 	"sweetSpot.areYouSureSS": "당신의 달콤한 자리 데이터를 지우겠습니까?",
-	"sweetSpot.areYouSureActions": "당신의 이전 행동을 지우겠습니까?"
+	"sweetSpot.areYouSureActions": "당신의 이전 행동을 지우겠습니까?",
+	"vcard.loading": "연락처를 불러오는 중",
+	"vcard.noResults": "연락처가 없습니다"
 }
