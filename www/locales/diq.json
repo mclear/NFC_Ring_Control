@@ -25,6 +25,7 @@
 	"settings.previousActions": "Kerdenê mınê verêni",
 	"settings.version": "Versiyon",
 	"settings.phoneModel": "Modela telefuni",
+	"settings.changeLanguage": "Zıwanê dezgeh bıvurne",
 	"help.helpTips": "Tay peşteki",
 	"help.gotIt": "Temam, Mı fahm ke",
 	"actions.vcard.name": "vCard",
@@ -45,6 +46,9 @@
 	"actions.text.optionText": "Metnê şıma çıçi yo?",
 	"actions.etherpad.name": "EtherPad",
 	"actions.etherpad.description": "Etherpad'i rê yo gre",
+	"actions.etherpad.optionText": "Pad URL çıçi yo?",
 	"sweetSpot.showHelp": "Peşti bımocne",
-	"sweetSpot.done": "Qeyd bıya. Teşekur kena!"
+	"sweetSpot.done": "Qeyd bıya. Teşekur kena!",
+	"vcard.loading": "Kontakti bar benê",
+	"vcard.noResults": "Kontakti nêvibeyay"
 }
