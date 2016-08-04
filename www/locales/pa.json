@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Babanwalia",
+			"Tow"
+		]
+	},
+	"index.wantHelp": "ਕੋਈ ਮਦਦ ਚਾਹੀਦੀ ਹੈ?",
+	"index.whatDoYouWantToDoToday": "ਤੁਸੀਂ ਅੱਜ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+	"index.create": "ਬਣਾਉ",
+	"index.read": "ਪੜ੍ਹੋ",
+	"index.settings": "ਸੈਟਿੰਗਾਂ",
+	"index.feedback": "ਫ਼ੀਡਬੈਕ",
+	"context.recentActions": "ਆਪਣੀਆਂ ਹਾਲੀਆ ਕਾਰਵਾਈਆਂ ਵੇਖੋ",
+	"context.history": "ਅਤੀਤ",
+	"option.next": "ਅੱਗੇ",
+	"writeRing.finish": "ਖ਼ਤਮ",
+	"writeRing.woohoo": "ਹੱਛ ਕੇ!",
+	"settings.version": "ਵਰਜਨ",
+	"settings.phoneModel": "ਫ਼ੋਨ ਦਾ ਮਾਡਲ",
+	"settings.changeLanguage": "ਐਪ ਦੀ ਭਾਸ਼ਾ ਬਦਲੋ",
+	"help.helpTips": "ਮਦਦਗਾਰ ਗੁਰ",
+	"help.gotIt": "ਠੀਕ ਹੈ, ਪਤਾ ਲੱਗ ਗਿਆ",
+	"actions.vcard.optionText": "ਨਾਂ:",
+	"actions.twitter.name": "ਟਵਿਟਰ",
+	"actions.twitter.optionText": "ਤੁਹਾਡਾ ਟਵਿਟਰ ਉੱਤੇ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਕੀ ਹੈ?",
+	"actions.facebook.name": "ਫ਼ੇਸਬੁੱਕ",
+	"actions.link.name": "ਕੜੀ",
+	"actions.youtube.name": "ਯੂਟਿਊਬ",
+	"actions.text.name": "ਲਿਖਤ",
+	"actions.text.optionText": "ਤੁਹਾਡੀ ਲਿਖਤ ਕੀ ਹੈ?",
+	"actions.etherpad.name": "ਈਥਰਪੈਡ",
+	"actions.etherpad.description": "ਕਿਸੇ ਈਥਰਪੈਡ ਦੀ ਕੜੀ",
+	"sweetSpot.showHelp": "ਮਦਦ ਵਿਖਾਉ",
+	"sweetSpot.done": "ਹੋ ਗਿਆ। ਮਿਹਰਬਾਨੀ!",
+	"vcard.loading": "ਸੰਪਰਕ ਲੱਦੇ ਜਾ ਰਹੇ ਹਨ",
+	"vcard.noResults": "ਕੋਈ ਸੰਪਰਕ ਨਹੀੰ ਲੱਭੇ"
+}

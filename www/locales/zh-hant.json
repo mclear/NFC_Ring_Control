@@ -12,11 +12,13 @@
 	"index.read": "讀",
 	"index.settings": "設定",
 	"index.settingsDescription": "設定您的應用程序",
+	"index.settingsDescriptionMore": "設定您的應用程序。",
 	"index.feedback": "回饋",
 	"context.history": "歷史",
 	"option.next": "下一步",
 	"writeRing.finish": "結束",
 	"writeRing.woohoo": "嗚呼！",
+	"settings.previousActions": "我過去的行動",
 	"settings.version": "版本",
 	"settings.phoneModel": "行動電話型號",
 	"settings.changeLanguage": "變更應用程式語言",
@@ -35,6 +37,7 @@
 	"actions.text.description": "寫一段任意的文字例如位元幣金鑰。",
 	"actions.etherpad.description": "Etherpad 的連結",
 	"actions.etherpad.optionText": "您平板的網址是？",
+	"sweetSpot.showHelp": "顯示說明",
 	"sweetSpot.done": "完成。謝謝您！",
 	"vcard.loading": "載入聯絡人"
 }
