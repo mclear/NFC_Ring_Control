@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Csega",
-			"Wolf Rex"
+			"Wolf Rex",
+			"Tacsipacsi"
 		]
 	},
 	"index.wantHelp": "Szeretnél egy kis segítséget?",
@@ -25,6 +26,7 @@
 	"action.whatDoYouWantYourRingToDo": "Mit csináljon a gyűrűd?",
 	"option.next": "Következő",
 	"option.dataWontFit": "Figyelem: Ennyi adat nem biztos, hogy elfér az NFC gyűrűdön.",
+	"option.dataWontFitUpgrade": "Figyelem: Ennyi adat nem biztos, hogy elfér az NFC gyűrűdön. Frissítsd az NFC gyűrűdet több helyért.",
 	"writeRing.finish": "Befejezés",
 	"writeRing.noNFC": "Az NFC funkció nem működik. Az NFC engedélyezve van az eszközödön?",
 	"writeRing.woohoo": "Juhhúú!",
@@ -49,6 +51,8 @@
 	"help.another": "Próbálj ki egy másik NFC eszközt, ha van",
 	"help.winPhone": "A Windows Phone csak akkor ismeri fel az NFC gyűrűdet, ha azon már van egy link. Ehhez fogj egy Androidos eszközt, vagy egy másik appot és írj ki egy URL-t a telefonodra, innentől az NFC Ring Control app képes lesz URL írásra",
 	"help.gotIt": "OK, értem",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Készíts egy vCardot, hogy megoszthasd a saját vagy valaki más elérhetőségeit",
 	"actions.vcard.optionText": "Név:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Linkelés Twitter felhasználóhoz",
