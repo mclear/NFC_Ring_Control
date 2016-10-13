@@ -3,7 +3,8 @@
 		"authors": [
 			"Laaknor",
 			"Tarjeimo",
-			"SuperPotato"
+			"SuperPotato",
+			"Jon Harald Søby"
 		]
 	},
 	"index.wantHelp": "Vil du ha litt hjelp?",
@@ -75,5 +76,6 @@
 	"sweetSpot.pressTheScreen": "Trykk på skjermen på posisjonen der ringen din ble registrert.",
 	"sweetSpot.holdRingToPhoneByDot": "Hold ringen på baksiden av telefonen din på den posisjonen indikert av de fargede dottene.",
 	"sweetSpot.noDataYet": "Det virker som vårt fantastiske fellesskap ikke har laget \"sweet-spottet\" for telefonen din ennå.",
+	"sweetSpot.moveTheRing": "Flytt ringen rundt på baksiden av telefonen til du får et varsel. Dette kan ta litt tid, så vær tålmodig. :-)",
 	"vcard.noResults": "Ingen kontakter funnet"
 }

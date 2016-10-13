@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"सरोज कुमार ढकाल"
+			"सरोज कुमार ढकाल",
+			"राम प्रसाद जोशी"
 		]
 	},
 	"index.wantHelp": "केही सहायता आवश्यक छ ?",
@@ -9,10 +10,10 @@
 	"index.create": "सृजना गर्नुहोस्",
 	"index.createDescription": "तपाईँको रिङ्को लागि नयाँ क्रियाकलाप लेख्नुहोस्",
 	"index.read": "पढ्ने",
-	"index.readDescription": "तपाईँको रिङमा के छ",
+	"index.readDescription": "तपाईंको रिङमा के छ हेर्नुहोस्",
 	"index.settings": "सेटिङ्हरू",
 	"index.settingsDescription": "तपाईँको एप मिलाउनुहोस्",
-	"index.settingsDescriptionMore": "तपाईँको एप मिलाउनुहोस् ।",
+	"index.settingsDescriptionMore": "तपाईंको एप मिलाउनुहोस् ।",
 	"index.feedback": "प्रतिक्रिया",
 	"context.recentActions": "तपाईँका हालका क्रियाकलापहरू हेर्नुहोस्",
 	"context.history": "इतिहास",
