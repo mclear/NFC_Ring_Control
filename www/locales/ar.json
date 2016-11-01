@@ -3,10 +3,11 @@
 		"authors": [
 			"Khaled",
 			"Test Create account",
-			"Meno25"
+			"Meno25",
+			"ديفيد"
 		]
 	},
-	"index.wantHelp": "تريد بعض المساعدة؟",
+	"index.wantHelp": "هل تريد بعض المساعدة؟",
 	"index.wantHelpLong": "يبدو ان هذه هي تجربتك الأولى في استخدام NFC Ring Control app. هل تريد بعض المساعدة؟",
 	"index.whatDoYouWantToDoToday": "ماذا تريد ان تفعل اليوم؟",
 	"index.create": "أنشئ",
@@ -25,19 +26,19 @@
 	"context.history": "تاريخ",
 	"action.whatDoYouWantYourRingToDo": "ماذا تريد نطاقك ليفعل؟",
 	"option.next": "التالي",
-	"writeRing.finish": "أنهي",
+	"writeRing.finish": "أنه",
 	"writeRing.woohoo": "روعة!",
 	"readRing.contents": "محتويات النطاق:",
 	"settings.clearMySweetSpot": "مكاني المفضل",
 	"settings.clearMySweetSpotDescription": "احذف محفوظات مكاني المفضل",
 	"settings.mySweetSpot": "مكاني المفضل",
-	"settings.mySweetSpotDescription": "اعد ادخال موقع مكاني المفضل",
-	"settings.previousActions": "احداثي المفضلة",
+	"settings.mySweetSpotDescription": "أعد إدخال موقع مكاني المفضل",
+	"settings.previousActions": "أحداثي المفضلة",
 	"settings.version": "نسخة",
 	"settings.phoneModel": "موديل الهاتف",
 	"settings.changeLanguage": "تغيير لغة التطبيق",
 	"help.helpTips": "نصائح للمساعدة",
-	"help.gotIt": "حسناً, لقد حصلت عليه",
+	"help.gotIt": "حسناً، لقد حصلت عليه",
 	"actions.twitter.name": "تويتر",
 	"actions.twitter.description": "رابط لمستخدم تويتر",
 	"actions.twitter.optionText": "ما هو اسم المستخدم الخاص بك على تويتر؟",
@@ -49,10 +50,10 @@
 	"actions.link.optionText": "ما هو رابط موقعك الإلكتروني؟",
 	"actions.youtube.name": "يوتيوب",
 	"actions.youtube.description": "رابط لفيديو أو قناة",
-	"actions.youtube.optionText": "ما هو الفيديو الخاص بك على اليوتيوب أو قناتك الخاصة على اليوتيوب؟",
+	"actions.youtube.optionText": "ما هو الفيديو الخاص بك على يوتيوب أو قناتك الخاصة على يوتيوب؟",
 	"actions.text.name": "النص",
 	"actions.text.optionText": "ما هو النص الخاص بك؟",
 	"sweetSpot.showHelp": "إظهار المساعدة",
 	"sweetSpot.done": "تم. شكراً لك!",
-	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أوامرك السابقة؟"
+	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أفعالك السابقة؟"
 }
