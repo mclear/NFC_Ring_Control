@@ -78,5 +78,7 @@
 	"sweetSpot.noDataYet": "Det virker som vårt fantastiske fellesskap ikke har laget \"sweet-spottet\" for telefonen din ennå.",
 	"sweetSpot.moveTheRing": "Flytt ringen rundt på baksiden av telefonen til du får et varsel. Dette kan ta litt tid, så vær tålmodig. :-)",
 	"sweetSpot.showHelp": "Vis hjelp",
+	"sweetSpot.done": "Ferdig. Takk!",
+	"vcard.loading": "Laster kontakter",
 	"vcard.noResults": "Ingen kontakter funnet"
 }
