@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Robby",
+			"Shirayuki",
+			"Siebrand"
+		]
+	},
+	"index.create": "{{Identical|Create}}",
+	"index.createDescription": "Used as description for {{msg-nfc|Index.create}}.",
+	"index.read": "{{Identical|Read}}",
+	"index.settings": "{{Identical|Settings}}",
+	"index.feedback": "{{Identical|Feedback}}",
+	"context.history": "{{Identical|History}}",
+	"option.next": "{{Identical|Next}}",
+	"writeRing.finish": "{{Identical|Finish}}",
+	"writeRing.woohoo": "Title for message to indicate that data was written to the NFC ring.",
+	"settings.version": "{{Identical|Version}}",
+	"settings.changeLanguage": "Used as label for the \"Language\" dropdown box.",
+	"actions.vcard.optionText": "{{Identical|Name}}",
+	"actions.twitter.name": "{{Identical|Twitter}}",
+	"actions.twitter.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}",
+	"actions.facebook.name": "{{Identical|Facebook}}",
+	"actions.facebook.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}",
+	"actions.link.name": "{{Identical|Link}}",
+	"actions.link.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}",
+	"actions.youtube.name": "{{Identical|YouTube}}",
+	"actions.youtube.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}",
+	"actions.text.name": "{{Identical|Text}}",
+	"actions.text.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}",
+	"actions.etherpad.description": "This message is related to \"''help.winPhone''\": {{NFCRingControl:help.winPhone/en}}"
+}
