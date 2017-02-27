@@ -4,7 +4,8 @@
 			"Marmase",
 			"Kumkumuk",
 			"Mirzali",
-			"Asmen"
+			"Asmen",
+			"Gırd"
 		]
 	},
 	"index.wantHelp": "Tay peşti wazene ?",
@@ -46,7 +47,7 @@
 	"actions.facebook.description": "Grey pela Facebooki",
 	"actions.facebook.optionText": "URL'y pela facebookda şıma çıçi yo?",
 	"actions.link.name": "Link",
-	"actions.link.description": "Adresta webi rê gre",
+	"actions.link.description": "Link adresê webi rê",
 	"actions.link.optionText": "URL'y web sitada şıma çıçi yo?",
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Grey vidyoy yana kenal",
