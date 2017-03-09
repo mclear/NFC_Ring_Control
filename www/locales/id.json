@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Marwan Mohamad"
+			"Marwan Mohamad",
+			"Hidayatsrf"
 		]
 	},
 	"index.wantHelp": "Butuh bantuan?",
@@ -46,6 +47,8 @@
 	"help.slowly": "Pindahkan cincin anda perlahan-lahan di belakang perangkat anda",
 	"help.another": "Coba dengan Perangkat NFC lain jika anda punya",
 	"help.gotIt": "OK, saya mengerti",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Nama:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Pranala ke pengguna Twitter",
 	"actions.twitter.optionText": "Apa nama pengguna Twitter anda?",
@@ -68,5 +71,7 @@
 	"sweetSpot.yay": "Hore! Ini bekerja. Terima kasih untuk menjadi luar biasa.",
 	"sweetSpot.showHelp": "Tampilkan bantuan",
 	"sweetSpot.done": "Selesai. Terimakasih!",
-	"sweetSpot.areYouSureActions": "Apakah anda yakin ingin menghapus tindakan anda sebelumnya?"
+	"sweetSpot.areYouSureActions": "Apakah anda yakin ingin menghapus tindakan anda sebelumnya?",
+	"vcard.loading": "Memuat kontak",
+	"vcard.noResults": "Tidak ada kontak ditemukan"
 }

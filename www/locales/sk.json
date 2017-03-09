@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Jaroslav.micek",
-			"Kusavica"
+			"Kusavica",
+			"Lexected"
 		]
 	},
 	"index.wantHelp": "Chcete nejakú pomoc?",
@@ -25,6 +26,7 @@
 	"action.whatDoYouWantYourRingToDo": "Čo chcete, aby Váš prsteň urobil?",
 	"option.next": "Ďalej",
 	"option.dataWontFit": "Upozornenie: Toto množstvo údajov sa nemusí zmestiť do Vášho NFC prsteňa",
+	"option.dataWontFitUpgrade": "Upozornenie: Tento objem dát sa nemusí zmestiť na váš NFC Ring. Inovujte váš NFC Ring teraz pre viac miesta",
 	"writeRing.finish": "Dokončiť",
 	"writeRing.noNFC": "Funkcie NFC nepracujú. Je na Vašom zariadení NFC zapnuté?",
 	"writeRing.woohoo": "Hurá!",
@@ -49,6 +51,9 @@
 	"help.another": "Skúste s iným NFC zariadením (ak máte)",
 	"help.winPhone": "Telefón so systémom Windows vyžaduje, aby už bol v NFC prsteni zapísaný odkaz. Použite zariadenie Android, alebo inú aplikáciu na zapísanie odkazu URL na Váš telefón.",
 	"help.gotIt": "OK, mám to",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Vytvoriť vCard na zdieľanie vašich alebo niekoho iného detailov",
+	"actions.vcard.optionText": "Meno:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Odkaz na používateľa Twitter",
 	"actions.twitter.optionText": "Aké je Vaše používateľské meno na Twitter?",
@@ -80,5 +85,7 @@
 	"sweetSpot.askToShare": "Váš prsteň je pripravený. Chceli by ste byť taký/á úžasný/á a podeliť sa s ostatnými o umiestnenie sweet spot pre model Vášho telefónu?",
 	"sweetSpot.done": "Hotovo. Ďakujeme!",
 	"sweetSpot.areYouSureSS": "Naozaj chcete vymazať údaje sweet spot?",
-	"sweetSpot.areYouSureActions": "Naozaj chcete vymazať vaše predchádzajúce akcie?"
+	"sweetSpot.areYouSureActions": "Naozaj chcete vymazať vaše predchádzajúce akcie?",
+	"vcard.loading": "Načítanie kontaktov",
+	"vcard.noResults": "Žiadne kontakty neboli nájdené"
 }
