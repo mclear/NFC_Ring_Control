@@ -58,6 +58,7 @@
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Ligam cap a un Etherpad",
 	"actions.etherpad.optionText": "Quina es l’URL de vòstre document ?",
+	"sweetSpot.struggling": "Avètz de dificultats per trobar vòstre punt ideal ?",
 	"sweetSpot.showHelp": "Afichar l’ajuda",
 	"sweetSpot.done": "Es fait. Mercé !",
 	"vcard.loading": "Cargament dels contactes",
