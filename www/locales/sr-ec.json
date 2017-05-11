@@ -4,7 +4,8 @@
 			"Milicevic01",
 			"Srdjan m",
 			"Сербијана",
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"Obsuser"
 		]
 	},
 	"index.wantHelp": "Требате ли помоћ?",
@@ -27,6 +28,7 @@
 	"action.whatDoYouWantYourRingToDo": "Шта желите да ваш прстен ради?",
 	"option.next": "Следеће",
 	"option.dataWontFit": "Упозорење: Оволико количина података можда неће моћи стати на NFC прстен",
+	"option.dataWontFitUpgrade": "Упозорење: Оволика количина података можда неће стати на Ваш NFC Ring. Ажурирајте свој NFC Ring сада за више простора",
 	"writeRing.finish": "Заврши",
 	"writeRing.noNFC": "NFC функционалост не ради. Да ли je NFC укључен на вашем уређају?",
 	"writeRing.woohoo": "Јуху!",
@@ -52,6 +54,7 @@
 	"help.winPhone": "Windows Phone захтева да NFC прстен већ има везу. Како бисте ово поправили, узмети Android телефон или другу апликацију и напишите везу на свој телефон, те ћете тада можи користити апликацију за контролу NFC прстена како бисте написали везу",
 	"help.gotIt": "У реду, разумем",
 	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Направите vCard за дељење својих или туђих контактних информација",
 	"actions.vcard.optionText": "Име:",
 	"actions.twitter.name": "Твитер",
 	"actions.twitter.description": "Повежите корисника Твитера",
