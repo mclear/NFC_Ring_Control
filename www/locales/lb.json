@@ -32,6 +32,8 @@
 	"actions.youtube.name": "YouTube",
 	"actions.text.name": "Text",
 	"actions.text.optionText": "Wéi ass Ären Text?",
+	"actions.etherpad.name": "Etherpad",
+	"actions.etherpad.description": "Link op en Etherpad",
 	"sweetSpot.yay": "Elo funktionéiert et. Merci fir Är Ausdauer.",
 	"sweetSpot.showHelp": "Hëllef weisen",
 	"sweetSpot.done": "Fäerdeg. Merci!",
