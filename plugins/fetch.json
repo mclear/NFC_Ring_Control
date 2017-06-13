@@ -53,7 +53,7 @@
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-whitelist"
+            "id": "cordova-plugin-whitelist@^1.3.2"
         },
         "is_top_level": true,
         "variables": {}
@@ -61,7 +61,15 @@
     "phonegap-nfc": {
         "source": {
             "type": "registry",
-            "id": "phonegap-nfc"
+            "id": "phonegap-nfc@^0.6.6"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-vibration": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-vibration"
         },
         "is_top_level": true,
         "variables": {}

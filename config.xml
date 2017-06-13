@@ -4,7 +4,7 @@
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
     </description>
-    <author href="http://nfcring.com" email="john@mclear.co">
+    <author email="john@mclear.co" href="http://nfcring.com">
         NFC Ring Team
     </author>
     <preference name="orientation" value="portrait" />
@@ -13,19 +13,21 @@
     <access origin="http://127.0.0.1" />
     <access origin="https://*.nfcring.com" />
     <access origin="http://*.nfcring.com" />
-    <access origin="mailto:*" launch-external="yes"/>
+    <access launch-external="yes" origin="mailto:*" />
     <allow-intent href="mailto:*" />
-
-<platform name="android">
-    <icon src="res/icon/android/mdpi.png" density="mdpi" />
-    <icon src="res/icon/android/hdpi.png" density="hdpi" />
-    <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
-</platform>
-<platform name="wp8">
-    <icon src="res/icon/wp8/icon.png" width="99" height="99" />
-    <icon src="res/icon/wp8/background.png" width="159" height="159" />
-    <splash src="res/screen/wp8/splash.jpg" width="768" height="1280"/>
-</platform>
-
+    <platform name="android">
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+    </platform>
+    <platform name="wp8">
+        <icon height="99" src="res/icon/wp8/icon.png" width="99" />
+        <icon height="159" src="res/icon/wp8/background.png" width="159" />
+        <splash height="1280" src="res/screen/wp8/splash.jpg" width="768" />
+    </platform>
+    <engine name="android" spec="~6.2.3" />
+    <plugin name="cordova-plugin-dialogs" spec="^1.3.3" />
+    <plugin name="cordova-plugin-vibration" spec="^2.1.5" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="phonegap-nfc" spec="^0.6.6" />
 </widget>
-

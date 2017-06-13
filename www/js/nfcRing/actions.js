@@ -52,15 +52,6 @@ nfcRing.actions = {
     format: function (option) {
       return this.prefix + option
     }
-  },
-  etherpad: {
-    label: "Etherpad",
-    description: "Link to an Etherpad",
-    optionText: "What is your Pad URL?",
-    placeHolder: "http://beta.etherpad.org/p/foowie",
-    format: function (option) {
-      return option
-    }
   }
 };
 

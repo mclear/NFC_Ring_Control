@@ -26,10 +26,10 @@ sudo npm install -g cordova
 git clone https://github.com/mclear/NFC_Ring_Control.git
 cd NFC_Ring_Control
 cordova platform add android
-cordova plugin add https://github.com/chariotsolutions/phonegap-nfc.git
-cordova plugin add https://github.com/apache/cordova-plugin-device.git
-cordova plugin add org.apache.cordova.dialogs
-cordova plugin add org.apache.cordova.vibration
+cordova plugin add phonegap-nfc
+cordova plugin add cordova-plugin-whitelist
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-vibration
 ```
 Obviously some changes need to be made to the below
 

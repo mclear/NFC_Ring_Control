@@ -66,7 +66,7 @@
     // console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
     // alert(nfcRing.userValues.location); // This is index and that's wrong!!
     if(nfcRing.userValues.location !== "writeRing"){
-      console.log("We're not on a write or read page so do nothing");
+      console.log("We're not on a erase, write or read page so do nothing");
       return false;
     }
 
@@ -79,6 +79,11 @@
 
     if(nfcRing.userValues.activity == "read"){
       nfcRing.nfcEvent.read(nfcEvent);
+    }
+
+    if(nfcRing.userValues.activity == "erase"){
+      console.log("here")
+      nfcRing.nfcEvent.erase(nfcEvent);
     }
 
     if(nfcRing.userValues.activity == "register"){
@@ -211,6 +216,15 @@
     }else{
       alert("No NDEF data found", false, "Unable to read");
     }
+  },
+  erase: function(nfcEvent){ // Read an NFC NDEF record
+    navigator.notification.vibrate(100);
+    clearTimeout(nfcRing.ui.helpTimeout);
+    $('#needHelp').hide();
+    console.log("Erasing", nfcEvent);
+    nfc.erase(function(){
+      alert(html10n.get("eraseRing.success"), false, html10n.get("eraseRing.success"));
+    });
   },
   isValidURL: function(url){ // Is NFC NDEF Record a Valid URL
     // borrowed with great pride from http://stackoverflow.com/questions/1701898/how-to-detect-whether-a-string-is-in-url-format-using-javascript after many others failed..

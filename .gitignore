@@ -7,3 +7,4 @@ parseDetails.js*
 www/css/prepros.cfg
 platforms/*
 plugins/*
+node_modules/*

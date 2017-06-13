@@ -66,6 +66,13 @@ nfcRing.ui = {
       nfcRing.ui.prepareWritePage("read");
     });
 
+    $('body').on('click', '#eraseBtn', function(){
+      nfcRing.heatmap.init();
+      nfcRing.userValues.toWrite = false;
+      nfcRing.ui.displayPage("writeRing"); // Erase uses the same UI as writeRing just with different event listeners
+      nfcRing.ui.prepareWritePage("erase");
+    });
+
     $('body').on('click', '#registerBtn', function(){
       nfcRing.heatmap.init();
       nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
@@ -415,6 +422,8 @@ nfcRing.ui = {
       return false;
     }
 
+    // Temp fix
+
     console.log("Location", nfcRing.userValues.location);
     if(nfcRing.userValues.location !== "#writeRing"){
       $('#heatMap').css("opacity","0");
@@ -459,7 +468,12 @@ nfcRing.ui = {
         });
         $('.icon-next').hide();
         $('#optionForm').hide();
+        $("#vCardForm").hide();
       }
+    }
+
+    if(page === "erase"){
+console.log("fooo")
     }
  
     if(page === "settings"){

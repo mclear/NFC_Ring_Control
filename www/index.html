@@ -75,10 +75,8 @@ window.onerror = function(msg,url,line){
   <ul class="link-list">
     <li><div id="actionBtn" class="icon icon-plus" data-intro="{{html10n "index.createDescriptionMore"}}">{{html10n "index.create"}}<span>{{html10n "index.createDescription"}}</span></div></li>
     <li><div id="readBtn" class="icon icon-eye" data-step="2" data-intro="{{html10n "index.readDescriptionMore"}}">{{html10n "index.read"}}<span>{{html10n "index.readDescription"}}</span></div></li>
+    <li><div id="eraseBtn" class="icon icon-remove" data-step="6" data-intro="{{html10n "index.eraseDescriptionMore"}}">{{html10n "index.erase"}}<span>{{html10n "index.eraseDescription"}}</span></div></li>
     <li><div id="settingsBtn" class="icon icon-settings" data-step="3" data-intro="{{html10n "index.settingsDescriptionMore"}}">{{html10n "index.settings"}}<span>{{html10n "index.settingsDescription"}}</span></div></li>
-<!--
-    <li><div id="registerBtn" class="icon icon-key" data-step="4" data-intro="{{html10n "index.registerDescriptionMore"}}">{{html10n "index.register"}}<span>{{html10n "index.registerDescription"}}</span></div></li>
--->
     <li><div id="feedbackBtn" class="icon icon-envelop" data-step="5" data-intro="{{html10n "index.feedbackDescriptionMore"}}">{{html10n "index.feedback"}}<span>{{html10n "index.feedbackDescription"}}</span></div></li>
   </ul>
 </script>
@@ -147,6 +145,30 @@ window.onerror = function(msg,url,line){
   </div>
 </script>
 
+<script id="eraseRing" class="step eraseRing" type="x-handlebars-template">
+  <header id="header">
+    <div id="title">test</div>
+  </header>
+  <div class="actionName" id="eraseRingTitle">
+  </div>
+  <ul class="link-list bottom">
+    <li><div id="finish" class="icon icon-exit">{{html10n "eraseRing.finish"}}</div></li>
+  </ul>
+  <div id="needHelp"><p id="helpLink">{{html10n "sweetSpot.struggling"}}<br><a href="#">{{html10n "sweetSpot.showHelp"}}</a></p></div>
+  <div id="helpContents" class="white-popup mfp-hide">
+    <h3 class="icon icon-support">{{html10n "help.helpTips"}}</h3>
+    <ul>
+      <li>{{html10n "help.facing"}}</li>
+      <li>{{html10n "help.cases"}}</li>
+      <li>{{html10n "help.volume"}}</li>
+      <li>{{html10n "help.on"}}</li>
+      <li>{{html10n "help.slowly"}}</li>
+      <li>{{html10n "help.another"}}</li>
+      <li class="win32">{{html10n "help.winPhone"}}</li>
+    </ul>
+    <button class="button" id="helpClose">{{html10n "help.gotIt"}}</button>
+  </div>
+</script>
 
 <script id="writeRing" class="step writeRing" type="x-handlebars-template">
   <header id="header">
