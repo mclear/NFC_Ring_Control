@@ -457,6 +457,10 @@ nfcRing.ui = {
       nfcRing.ui.prepareWritePage("register");
     }
 
+    if(nfcRing.userValues.action !== "vcard"){
+      $("#vCardForm").hide();
+    }
+
     if(page === "option"){
       $('.optionName').html('<h2>' + nfcRing.userValues.optionTitle + '</h2>');
       if(nfcRing.userValues.isVCard){
@@ -472,10 +476,6 @@ nfcRing.ui = {
       }
     }
 
-    if(page === "erase"){
-console.log("fooo")
-    }
- 
     if(page === "settings"){
       console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
