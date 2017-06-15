@@ -4,7 +4,8 @@
 			"Aftab1995",
 			"Tauhid16",
 			"Aftabuzzaman",
-			"Wikisagnik"
+			"Wikisagnik",
+			"Mohammed Galib Hasan"
 		]
 	},
 	"index.wantHelp": "সাহায্য দরকার?",
@@ -13,6 +14,7 @@
 	"index.create": "তৈরি করুন",
 	"index.createDescription": "আপনার আংটিতে একটি নতুন কর্ম লিখুন",
 	"index.read": "পড়ুন",
+	"index.erase": "মুছুন",
 	"index.readDescription": "আপনার আংটিতে কি আছে দেখুন",
 	"index.settings": "সেটিংস",
 	"index.settingsDescription": "আপনার অ্যাপ কনফিগার করুন",
@@ -23,6 +25,7 @@
 	"option.next": "পরবর্তী",
 	"writeRing.finish": "সম্পন্ন",
 	"writeRing.ready": "আপনার NFC রিং এখন প্রস্তুত",
+	"eraseRing.finish": "সম্পন্ন",
 	"settings.version": "সংস্করণ",
 	"settings.phoneModel": "ফোন মডেল",
 	"settings.changeLanguage": "অ্যাপের ভাষা পরিবর্তন করুন",

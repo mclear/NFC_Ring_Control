@@ -24,6 +24,7 @@
 	"action.whatDoYouWantYourRingToDo": "¿Qué quies que faiga'l to aniellu?",
 	"option.next": "Siguiente",
 	"option.dataWontFit": "Atención: esta cantidá de datos podríen nun caber nel to aniellu NFC",
+	"option.dataWontFitUpgrade": "Alvertencia: esta cantidá de datos podríen nun caber nel aniellu NFC. Anueva'l to aniellu NFC agora pa tener más espaciu",
 	"writeRing.finish": "Acabar",
 	"writeRing.noNFC": "La funcionalidá NFC nun funciona. ¿Ta activáu NFC nel to preséu?",
 	"writeRing.woohoo": "¡Ixuxú!",
@@ -48,6 +49,9 @@
 	"help.another": "Prueba con otru preséu NFC si tienes unu",
 	"help.winPhone": "Windows Phone necesita que l'aniellu NFC yá tenga un enllaz activáu. Pa igualo, cueyi un teléfonu Android o otra app y escribi una URL al to teléfonu, darréu podrás usar la app de control del aniellu NFC pa escribir una URL",
 	"help.gotIt": "D'alcuerdo, entendío",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Crea una vCard pa compartir los tos datos de contactu o los de dalguna otra persona",
+	"actions.vcard.optionText": "Nome:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Enllaz con un usuariu de Twitter",
 	"actions.twitter.optionText": "¿Cuál ye'l to nome d'usuariu de Twitter?",
@@ -60,5 +64,14 @@
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Enllaz a un videu o una canal",
 	"actions.youtube.optionText": "¿Cuál ye'l to videu o canal de Youtube?",
-	"actions.text.name": "Testu"
+	"actions.text.name": "Testu",
+	"actions.text.description": "Escribir un testu cualquiera, como una clave pública de Bitcoin.",
+	"actions.text.optionText": "¿Cuál ye'l to testu?",
+	"actions.etherpad.name": "Etherpad",
+	"actions.etherpad.description": "Enllaz a un Etherpad",
+	"actions.etherpad.optionText": "¿Cuál ye la URL del to bloc?",
+	"sweetSpot.showHelp": "Amosar l'ayuda",
+	"sweetSpot.done": "Fecho. ¡Gracies!",
+	"vcard.loading": "Cargando contactos",
+	"vcard.noResults": "Nun s'alcontraron contactos"
 }

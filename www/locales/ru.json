@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Okras",
-			"Vaniaspeedy"
+			"Vaniaspeedy",
+			"Facenapalm"
 		]
 	},
 	"index.wantHelp": "Нужна помощь?",
@@ -12,6 +13,9 @@
 	"index.createDescription": "Записать новое действие в ваше кольцо",
 	"index.createDescriptionMore": "Используйте эту страницу, чтобы записать новое содержимое и действия в NFC-кольцо. Для этого вы должны знать, что хотите записать (например, URL-адрес), а также вам нужну само NFC-кольцо.",
 	"index.read": "Читать",
+	"index.erase": "Стереть",
+	"index.eraseDescription": "Стереть содержимое вашего кольца",
+	"index.eraseDescriptionMore": "Хотите стереть содержимое вашего кольца? Используйте этот пункт",
 	"index.readDescription": "Посмотреть, что есть в вашем кольце",
 	"index.readDescriptionMore": "Хотите проверить, что уже есть в вашем кольце? Используйте этот пункт.",
 	"index.settings": "Настройки",
@@ -31,6 +35,8 @@
 	"writeRing.woohoo": "Класс!",
 	"writeRing.ready": "Теперь ваше NFC-кольцо готово",
 	"writeRing.fail": "Невозможно записать данные в ваше NFC-кольцо",
+	"eraseRing.success": "Стёртое содержимое вашего кольца",
+	"eraseRing.finish": "Завершить",
 	"readRing.contents": "Содержимое кольца:",
 	"settings.clearMySweetSpot": "Моя активная зона",
 	"settings.clearMySweetSpotDescription": "Очистить сохранённое расположение активной зоны",
