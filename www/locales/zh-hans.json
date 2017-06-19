@@ -13,6 +13,7 @@
 	"index.createDescription": "将一段新操作写入您的戒指",
 	"index.createDescriptionMore": "使用此页面将新内容或活动写入您的NFC戒指。您将需要知道您需要写入内容的URL并且您需要您的NFC戒指。",
 	"index.read": "阅读",
+	"index.eraseDescription": "清除您戒指上的内容",
 	"index.readDescription": "看看您的戒指是什么",
 	"index.readDescriptionMore": "希望检查您的戒指是否已准备工作？使用此选项吧。",
 	"index.settings": "设置",
