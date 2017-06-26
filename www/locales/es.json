@@ -5,7 +5,8 @@
 			"Fitoschido",
 			"VegaDark",
 			"Macofe",
-			"Indiralena"
+			"Indiralena",
+			"Josecurioso"
 		]
 	},
 	"index.wantHelp": "¿Necesitas ayuda?",
@@ -16,7 +17,7 @@
 	"index.createDescriptionMore": "Utiliza esta página para escribir contenido nuevo o acciones en tu anillo NFC. Necesitas saber lo que quieres escribir como una dirección URL, y necesitarás tu anillo NFC.",
 	"index.read": "Leer",
 	"index.erase": "Borrar",
-	"index.eraseDescription": "Borrar contenido en tu anillo",
+	"index.eraseDescription": "Borrar contenido de tu anillo",
 	"index.eraseDescriptionMore": "¿Quieres borrar lo que hay en tu anillo? Utiliza esta opción",
 	"index.readDescription": "Ver qué hay en tu anillo",
 	"index.readDescriptionMore": "¿Quieres comprobar lo que hay en tu anillo? Utiliza esta opción.",

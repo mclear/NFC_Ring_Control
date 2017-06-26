@@ -3,7 +3,8 @@
 		"authors": [
 			"Okras",
 			"Vaniaspeedy",
-			"Facenapalm"
+			"Facenapalm",
+			"Jack who built the house"
 		]
 	},
 	"index.wantHelp": "Нужна помощь?",
@@ -55,7 +56,7 @@
 	"help.slowly": "Проведите медленно ваше кольцо около задней стороны устройства",
 	"help.another": "Попробуйте другое NFC-устройство, если оно у вас есть",
 	"help.winPhone": "Windows Phone требует, чтобы у NFC-кольца уже была ссылка. Чтобы исправить это, возьмите телефон на Android или другое приложение и запишите URL-адрес в ваш телефон. После этого вы сможете использовать приложение управления NFC-кольцом для записи URL-адресов.",
-	"help.gotIt": "Ок, понятно",
+	"help.gotIt": "Окей, я понял",
 	"actions.vcard.name": "vCard",
 	"actions.vcard.description": "Создайте vCard, чтоб поделиться информацией о ваших или чьих-то чужих контактах",
 	"actions.vcard.optionText": "Имя:",
