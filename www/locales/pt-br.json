@@ -4,7 +4,8 @@
 			"Luckas",
 			"Macofe",
 			"Rodrigo codignoli",
-			"Almondega"
+			"Almondega",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"index.wantHelp": "Precisa de ajuda?",
@@ -14,6 +15,9 @@
 	"index.createDescription": "Escreva uma nova ação para o seu anel",
 	"index.createDescriptionMore": "Use essa pagina para escrever novos conteudos ou ações para o seu anel  NFC. Você precisa saber o que quer escrever como URL e você tambem precisa do seu anel NFC.",
 	"index.read": "Ler",
+	"index.erase": "Apagar",
+	"index.eraseDescription": "Apague o conteúdo do seu anel",
+	"index.eraseDescriptionMore": "Deseja apagar o que está no seu anel? Use esta opção",
 	"index.readDescription": "Ver o que esta em seu anel.",
 	"index.readDescriptionMore": "Quer ver o que ja esta em seu anel? Use essa opção.",
 	"index.settings": "Configurações",
@@ -33,6 +37,8 @@
 	"writeRing.woohoo": "Woohoo!",
 	"writeRing.ready": "Seu anel NFC esta pronto",
 	"writeRing.fail": "Indisponivel para escrever em seu anel NFC",
+	"eraseRing.success": "Conteúdo apagado no seu anel",
+	"eraseRing.finish": "Finalizar",
 	"readRing.contents": "Conteudos do anel:",
 	"settings.clearMySweetSpot": "Meu doce local",
 	"settings.clearMySweetSpotDescription": "Limpar a localização do meu doce local",
