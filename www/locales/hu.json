@@ -3,7 +3,8 @@
 		"authors": [
 			"Csega",
 			"Wolf Rex",
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Bencemac"
 		]
 	},
 	"index.wantHelp": "Szeretnél egy kis segítséget?",
@@ -13,6 +14,9 @@
 	"index.createDescription": "Új tevékenység írása a gyűrűdre",
 	"index.createDescriptionMore": "Ezen oldal használatával új tartalmat vagy tevékenységet tudsz kiírni az NFC gyűrűdre. Ehhez tudnod kell, mit akarsz kiírni - például egy URL címet -, és szükséged van az NFC gyűrűdre.",
 	"index.read": "Olvasás",
+	"index.erase": "Törlés",
+	"index.eraseDescription": "Gyűrűd tartalmának törlése",
+	"index.eraseDescriptionMore": "Törölni szeretnéd a gyűrűd tartalmát? Válaszd ezt az opciót",
 	"index.readDescription": "Nézd meg, mi van a gyűrűdön",
 	"index.readDescriptionMore": "Szeretnéd megnézni, mi van a gyűrűdön? Használd ezt a lehetőséget.",
 	"index.settings": "Beállítások",
@@ -32,6 +36,8 @@
 	"writeRing.woohoo": "Juhhúú!",
 	"writeRing.ready": "Az NFC gyűrűd készen áll",
 	"writeRing.fail": "Nem sikerült írni az NFC gyűrűdre",
+	"eraseRing.success": "A gyűrűd tartalma törölve",
+	"eraseRing.finish": "Befejezés",
 	"readRing.contents": "A gyűrű tartalma:",
 	"settings.clearMySweetSpot": "Az én érzékeny pontom",
 	"settings.clearMySweetSpotDescription": "Töröld a mentett érzékeny pont helyemet",
