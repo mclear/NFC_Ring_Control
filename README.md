@@ -30,6 +30,7 @@ cordova plugin add phonegap-nfc
 cordova plugin add cordova-plugin-whitelist
 cordova plugin add cordova-plugin-dialogs
 cordova plugin add cordova-plugin-vibration
+cordova plugin add cordova-plugin-contacts
 ```
 Obviously some changes need to be made to the below
 
