@@ -10,13 +10,13 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "co.mclear.nfcringpro"
+        },
         "uk.co.whiteoctober.cordova.appversion": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         },
         "phonegap-nfc": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "co.mclear.nfcringpro"
         }
     },

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="co.mclear.nfcringpro" version="0.3.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="co.mclear.nfcringpro" version="0.4.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>NFC Ring Control</name>
     <description>
 	Read from and Write to your NFC Ring.  Create links to your favorite social network profile or read your current NFC Ring.
@@ -25,7 +25,8 @@
         <icon height="159" src="res/icon/wp8/background.png" width="159" />
         <splash height="1280" src="res/screen/wp8/splash.jpg" width="768" />
     </platform>
-    <engine name="android" spec="~6.2.3" />
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-plugin-contacts" spec="^1.1.0" />
     <plugin name="cordova-plugin-dialogs" spec="^1.3.3" />
     <plugin name="cordova-plugin-vibration" spec="^2.1.5" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />

@@ -45,7 +45,7 @@
     "cordova-plugin-dialogs": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-dialogs"
+            "id": "cordova-plugin-dialogs@^1.3.3"
         },
         "is_top_level": true,
         "variables": {}
@@ -69,7 +69,15 @@
     "cordova-plugin-vibration": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-vibration"
+            "id": "cordova-plugin-vibration@^2.1.5"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-contacts": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-contacts@^1.0.0"
         },
         "is_top_level": true,
         "variables": {}
