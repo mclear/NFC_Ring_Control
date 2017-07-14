@@ -14,10 +14,11 @@
         }
     },
     "dependencies": {
-        "cordova-android": "~6.2.3",
-        "cordova-plugin-dialogs": "^1.3.3",
-        "cordova-plugin-vibration": "^2.1.5",
-        "cordova-plugin-whitelist": "^1.3.2",
-        "phonegap-nfc": "^0.6.6"
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-dialogs": "*",
+        "cordova-plugin-vibration": "*",
+        "cordova-plugin-whitelist": "*",
+	"cordova-plugin-contacts":"*"
+        "phonegap-nfc": "*"
     }
 }
