@@ -3,7 +3,8 @@
 		"authors": [
 			"Matik7",
 			"Ty221",
-			"Woytecr"
+			"Woytecr",
+			"InternerowyGołąb"
 		]
 	},
 	"index.wantHelp": "Potrzebujesz pomocy?",
@@ -12,11 +13,16 @@
 	"index.create": "Utwórz",
 	"index.createDescription": "Napisz nową akcję do twojego pierścienia",
 	"index.read": "Czytaj",
+	"index.erase": "Wyczyść",
+	"index.eraseDescription": "Wymarz zawartość twojego tagu",
+	"index.eraseDescriptionMore": "Chcesz wymazać to, co jest na twoim tagu? Użyj tej opcji",
 	"index.readDescription": "Zobaczyć, co jest w twoim pierścieniu",
+	"index.readDescriptionMore": "Chcesz zobaczyć, co już jest na twoim tagu? Użyj tej opcji.",
 	"index.settings": "Ustawienia",
 	"index.settingsDescription": "Dostosuj swoją aplikację",
 	"index.settingsDescriptionMore": "Dostosuj swoją aplikację.",
 	"index.feedback": "Opinia",
+	"index.feedbackDescription": "Kochasz coś czy chcesz coś zmienić? Daj nam znać",
 	"context.history": "Historia",
 	"option.next": "Następny",
 	"option.dataWontFit": "Ostrzeżenie: Ta ilość danych może nie pasować na twoje urządzenie NFC",
@@ -24,6 +30,7 @@
 	"writeRing.noNFC": "Funkcja NFC nie działa. Czy w urządzeniu włączono NFC?",
 	"writeRing.woohoo": "Woohoo!",
 	"writeRing.ready": "Twój Pierścień NFC jest gotowy",
+	"eraseRing.finish": "Zakończ",
 	"readRing.contents": "Zawartość pierścienia:",
 	"settings.previousActionsDescription": "Wyczyść historię moich poprzednich działań",
 	"settings.version": "Wersja",
@@ -49,6 +56,7 @@
 	"actions.link.optionText": "Jaki jest adres URL strony?",
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Link do filmu lub kanału",
+	"actions.text.name": "Tekst",
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Link do Etherpada",
 	"sweetSpot.showHelp": "Pokaż pomoc",
