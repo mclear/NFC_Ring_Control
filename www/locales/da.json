@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gizmo",
-			"Thomsen"
+			"Thomsen",
+			"Joedalton"
 		]
 	},
 	"index.wantHelp": "Vil du have lidt hjælp?",
@@ -12,6 +13,9 @@
 	"index.createDescription": "Skriv en ny aktion til din ring",
 	"index.createDescriptionMore": "Brug denne side til at skrive nye indhold eller handlinger til din NFC Ring. Du skal vide, hvad du ønsker at skrive, såsom en URL-adresse og du skal bruge din NFC Ring.",
 	"index.read": "Læs",
+	"index.erase": "Slet",
+	"index.eraseDescription": "Slet indhold på din ring",
+	"index.eraseDescriptionMore": "Ønsker du at slette indholdet på din ring? Brug denne indstilling",
 	"index.readDescription": "Se hvad der er på din ring",
 	"index.readDescriptionMore": "Ønsker du at tjekke, hvad der er på din ring allerede? Brug af denne mulighed.",
 	"index.settings": "Indstillinger",
@@ -24,10 +28,15 @@
 	"context.history": "Historik",
 	"action.whatDoYouWantYourRingToDo": "Hvad vil du have din ring skal gøre?",
 	"option.next": "Næste",
+	"option.dataWontFit": "Advarsel: Denne datamængde passer måske ikke til din NFC-ring",
+	"option.dataWontFitUpgrade": "Advarsel: Denne datamængde passer måske ikke på din NFC-ring. Opgrader din NFC-ring nu til mere plads",
 	"writeRing.finish": "Finish",
 	"writeRing.noNFC": "NFC funktionalitet virker ikke. Er NFC aktiveret på enheden?",
 	"writeRing.woohoo": "Woohoo!",
 	"writeRing.ready": "Din NFC ring er nu klar",
+	"writeRing.fail": "Kunne ikke skrive til din NFC-ring",
+	"eraseRing.success": "Slettede indhold på din ring",
+	"eraseRing.finish": "Afslut",
 	"readRing.contents": "Ring indhold:",
 	"settings.clearMySweetSpot": "Mit sweet spot",
 	"settings.clearMySweetSpotDescription": "Ryd min lagrede sweet spot placering",
@@ -37,6 +46,7 @@
 	"settings.previousActionsDescription": "Ryd min forrige handling historie",
 	"settings.version": "Version",
 	"settings.phoneModel": "Telefon-model",
+	"settings.changeLanguage": "Ændr app-sprog",
 	"help.helpTips": "Hjælpe tips",
 	"help.facing": "Sørg for at den farvede, ikke metal del af ringen er rørende og mod bagsiden af enheden",
 	"help.cases": "Fjern eventuelle cover fra din enhed",
@@ -46,6 +56,9 @@
 	"help.another": "Prøv med en anden NFC enhed, hvis du har en",
 	"help.winPhone": "Windows Phone kræver NFC Ring allerede have et link på. For at løse dette tag en Android Håndsæt eller brug en anden app og skrive en URL-adresse til din telefon, så vil du være i stand til at bruge NFC Ring kontrol app til at skrive en URL-adresse",
 	"help.gotIt": "OK, jeg forstår",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Opret et vCard til at dele dine eller en andens kontaktdetaljer",
+	"actions.vcard.optionText": "Navn:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Link til en Twitter-bruger",
 	"actions.twitter.optionText": "Hvad er dit Twitter-brugernavn?",
@@ -77,5 +90,7 @@
 	"sweetSpot.askToShare": "Din ring er klar. Ønsker du at være awesome og hjælpe andre ved at dele sweet spot placeringen for denne telefonmodel?",
 	"sweetSpot.done": "Færdig. Tak skal du have!",
 	"sweetSpot.areYouSureSS": "Er du sikker på du ønsker at slette dit sweet spot data?",
-	"sweetSpot.areYouSureActions": "Er du sikker på du vil slette din tidligere handlinger?"
+	"sweetSpot.areYouSureActions": "Er du sikker på du vil slette din tidligere handlinger?",
+	"vcard.loading": "Indlæser kontakter",
+	"vcard.noResults": "Ingen kontakter fundet"
 }
