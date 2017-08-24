@@ -65,8 +65,12 @@
 	"actions.youtube.description": "Lënk do filmù abò kanału",
 	"actions.youtube.optionText": "Jaczi je twójé YouTube-Wideò abò kanał YouTube?",
 	"actions.text.name": "Tekst",
+	"actions.text.optionText": "Jaczi je twój tekst?",
 	"actions.etherpad.name": "Etherpad",
+	"actions.etherpad.description": "Lënk do Etherpada",
+	"actions.etherpad.optionText": "Jakô je twòjô URL adresa do Etherpada?",
 	"sweetSpot.showHelp": "Wëskrzëni pòmòc",
+	"sweetSpot.done": "Fardich. Dzãkùjemë!",
 	"vcard.loading": "Wladënk łączbów",
 	"vcard.noResults": "Felënk łączbów"
 }
