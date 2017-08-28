@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Belkacem77"
+			"Belkacem77",
+			"Sayem AtVkm"
 		]
 	},
 	"index.wantHelp": "Tebɣiḍ kra n tallelt?",
@@ -11,6 +12,9 @@
 	"index.read": "Ɣeṛ",
 	"index.erase": "Sfeḍ",
 	"index.eraseDescription": "Sfeḍ igburen n txatem-ik",
+	"index.eraseDescriptionMore": "Tebɣiḍ ad tekksed ayen yellan ɣef uzebg inek(m)? Seqdec aɣewwar-agi",
+	"index.readDescription": "Wali ayen yellan ɣef uzebg inek(m)",
+	"index.readDescriptionMore": "Tebɣiḍ ad tselkeneḍ ayen yellan yakan ɣef uzebg inek(m)? Seqdec aɣewwar-agi.",
 	"index.settings": "Iɣewwaren",
 	"index.settingsDescription": "Swel asnas-ik",
 	"index.settingsDescriptionMore": "Swel asnas-ik.",
@@ -20,6 +24,7 @@
 	"writeRing.finish": "Fak",
 	"writeRing.woohoo": "Ihuh!",
 	"eraseRing.finish": "Fak",
+	"readRing.contents": "Agbur n uzebg:",
 	"settings.previousActions": "Tigawin-iw yezrin",
 	"settings.previousActionsDescription": "Sfeḍ amazray n tigawin yezrin",
 	"settings.version": "Lqem",
