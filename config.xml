@@ -17,10 +17,12 @@
     <allow-intent href="mailto:*" />
     <icon src="res/icon/ios/180.png" />
     <preference name="SplashScreen" value="none"/>
+    <preference name="FadeSplashScreenDuration" value="0"/> 
     <platform name="ios">
         <!-- todo -->
         <icon src="res/icon/ios/180.png" width="180" height="180" />
         <preference name="SplashScreen" value="none"/>
+        <preference name="FadeSplashScreenDuration" value="0"/> 
         <!-- end todo -->
     </platform>
     <platform name="android">
