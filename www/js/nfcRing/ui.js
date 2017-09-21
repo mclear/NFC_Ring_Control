@@ -66,8 +66,8 @@ nfcRing.ui = {
       if(device.platform === "iOS"){
         nfcRing.userValues.activity = "iOSRead";
         nfc.beginSession(
-          function(r){ alert("read", r) }, 
-          function(e){ alert("error", e) }
+          function(r){ }, 
+          function(e){ alert("Error reading" )}
         );
 
       }else{
