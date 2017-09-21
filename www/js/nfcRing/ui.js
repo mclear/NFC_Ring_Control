@@ -63,8 +63,8 @@ nfcRing.ui = {
       if(device.platform === "iOS"){
         
         nfc.beginSession(
-          function(r){ alert(r.ndefRecord) }, 
-          function(e){ alert(e) }
+          function(r){ alert("read", r) }, 
+          function(e){ alert("error", e) }
         );
 
       }else{
@@ -408,7 +408,6 @@ nfcRing.ui = {
         alert("Failed to create VCard");
       }
     });
-
   },
 
   updateVersion: function(){ // show Version number on the page
@@ -516,7 +515,10 @@ nfcRing.ui = {
     },200); 
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
+
+    console.log("checking for iOS!")
     if(device && device.platform === "iOS"){
+      console.log("hiding none IOS elements");
       nfcRing.ui.hideNoneIOS();
     }
   }, 
