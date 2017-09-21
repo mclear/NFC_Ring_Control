@@ -15,12 +15,7 @@ var app = {
 
     // Begin listening for NFC Tags
     if(device && device.platform === "iOS"){
-      $('#nav-btn').remove();
-      $('#actionBtn').parent().remove();
-      $('#eraseBtn').parent().remove();
-      $('#clearSweetSpot').parent().remove();
-      $('#clearPreviousActions').parent().remove();
-      $('#sweetSpotBtn').parent().remove();
+      console.log("IOS so not creating bindings to NFC")
     }else{
       nfcRing.nfcEvent.init();  
     }

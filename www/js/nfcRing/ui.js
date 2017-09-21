@@ -409,11 +409,6 @@ nfcRing.ui = {
       }
     });
 
-    if(device.platform === "iOS"){
-      $('#actionBtn').remove();
-      $('#eraseBtn').remove();
-    }
-
   },
 
   updateVersion: function(){ // show Version number on the page
@@ -425,6 +420,15 @@ nfcRing.ui = {
       }
       $('#modelName').text(device.model);
     }
+  },
+
+  hideNoneIOS: function(){
+    $('#nav-btn').hide();
+    $('#actionBtn').parent().hide();
+    $('#eraseBtn').parent().hide();
+    $('#clearSweetSpot').parent().hide();
+    $('#clearPreviousActions').parent().hide();
+    $('#sweetSpotBtn').parent().hide();
   },
 
   displayPage: function(page){ // Display a page
@@ -512,6 +516,9 @@ nfcRing.ui = {
     },200); 
     nfcRing.userValues.history.get(); // always update the history on each page view so context is always updated
     $(".timeago").timeago(); // show " time ago " strings
+    if(device && device.platform === "iOS"){
+      nfcRing.ui.hideNoneIOS();
+    }
   }, 
 
   handleBack: function(){  // Init the Back Button event handlers
