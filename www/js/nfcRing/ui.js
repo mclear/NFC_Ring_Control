@@ -61,11 +61,12 @@ nfcRing.ui = {
 
     $('body').on('click', '#readBtn', function(){
       if(device.platform === "iOS"){
+        
         nfc.beginSession(
-          function(r){ alert(r.tag.ndefRecord) }
-        },
+          function(r){ alert(r.tag.ndefRecord) }, 
           function(e){ alert(e) }
-        )
+        );
+
       }else{
         nfcRing.heatmap.init();
         nfcRing.userValues.toWrite = false;
