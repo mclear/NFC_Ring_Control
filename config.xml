@@ -17,12 +17,7 @@
     <allow-intent href="mailto:*" />
     <platform name="ios">
         <!-- todo -->
-        <icon density="mdpi" src="res/icon/ios/mdpi.png" />
-        <icon density="hdpi" src="res/icon/ios/hdpi.png" />
-        <icon density="xhdpi" src="res/icon/ios/xhdpi.png" />
-        <splash src="res/screen/wp8/splash.jpg" />
-        <preference name="FadeSplashScreen" value="false"/>
-        <preference name="FadeSplashScreenDuration" value="0"/>
+        <icon src="res/icon/ios/180.png" width="180" height="180" />
         <!-- end todo -->
     </platform>
     <platform name="android">
