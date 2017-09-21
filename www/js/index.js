@@ -15,8 +15,7 @@ var app = {
 
     // Begin listening for NFC Tags
     if(device && device.platform === "iOS"){
-      console.log("IOS so not creating bindings to NFC");
-      // cake
+      nfcRing.ui.hideNoneIOS();
     }
     nfcRing.nfcEvent.init();  
     
