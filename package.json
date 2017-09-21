@@ -9,10 +9,10 @@
         "plugins": {
             "phonegap-nfc": {},
             "cordova-plugin-whitelist": {},
-            "cordova-plugin-dialogs": {},
             "cordova-plugin-vibration": {},
             "cordova-plugin-contacts": {},
-            "cordova-plugin-console": {}
+            "cordova-plugin-console": {},
+            "cordova-plugin-dialogs": {}
         }
     },
     "dependencies": {
