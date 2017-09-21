@@ -20,9 +20,25 @@
     <preference name="FadeSplashScreenDuration" value="0"/> 
     <platform name="ios">
         <!-- todo -->
+        <icon src="res/icon/ios/Icon-40.png" width="40" height="40" />
+        <icon src="res/icon/ios/Icon-50.png" width="50" height="50" />
+        <icon src="res/icon/ios/Icon-60.png" width="60" height="60" />
+        <icon src="res/icon/ios/Icon-72.png" width="72" height="72" />
+        <icon src="res/icon/ios/Icon-76.png" width="76" height="76" />
+        <icon src="res/icon/ios/Icon-167.png" width="167" height="167" />
         <icon src="res/icon/ios/180.png" width="180" height="180" />
-        <preference name="SplashScreen" value="none"/>
-        <preference name="FadeSplashScreenDuration" value="0"/> 
+
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
+        
         <!-- end todo -->
     </platform>
     <platform name="android">
