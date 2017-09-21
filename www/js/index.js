@@ -15,10 +15,10 @@ var app = {
 
     // Begin listening for NFC Tags
     if(device && device.platform === "iOS"){
-      console.log("IOS so not creating bindings to NFC")
-    }else{
-      nfcRing.nfcEvent.init();  
+      console.log("IOS so not creating bindings to NFC");
+      // cake
     }
+    nfcRing.nfcEvent.init();  
     
     if (device){
       if (device.platform == "Win32NT") {

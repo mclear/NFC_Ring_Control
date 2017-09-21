@@ -65,7 +65,7 @@
   readOrWrite: function(nfcEvent, type){ // Should we read or write to an NFC Event?
     // console.log("Read or write event", nfcEvent, nfcRing.userValues.activity, type);
     // alert(nfcRing.userValues.location); // This is index and that's wrong!!
-    if(nfcRing.userValues.location !== "writeRing"){
+    if(nfcRing.userValues.location !== "writeRing" && nfcRing.userValues.activity !== "iOSRead"){
       console.log("We're not on a erase, write or read page so do nothing");
       return false;
     }
@@ -81,8 +81,12 @@
       nfcRing.nfcEvent.read(nfcEvent);
     }
 
+    if(nfcRing.userValues.activity == "iOSRead"){
+      nfcRing.nfcEvent.read(nfcEvent);
+    }
+
+
     if(nfcRing.userValues.activity == "erase"){
-      console.log("here")
       nfcRing.nfcEvent.erase(nfcEvent);
     }
 
