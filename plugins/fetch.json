@@ -61,7 +61,7 @@
     "phonegap-nfc": {
         "source": {
             "type": "registry",
-            "id": "phonegap-nfc@^0.6.6"
+            "id": "https://github.com/chariotsolutions/phonegap-nfc#ios"
         },
         "is_top_level": true,
         "variables": {}
@@ -78,6 +78,14 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-contacts@^1.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console"
         },
         "is_top_level": true,
         "variables": {}

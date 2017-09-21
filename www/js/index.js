@@ -14,7 +14,13 @@ var app = {
     confirm = navigator.notification.confirm;
 
     // Begin listening for NFC Tags
-    nfcRing.nfcEvent.init();
+    if(device && device.platform === "iOS"){
+      $('#actionBtn').remove();
+      $('#eraseBtn').remove();
+    }else{
+      nfcRing.nfcEvent.init();  
+    }
+    
     if (device){
       if (device.platform == "Win32NT") {
         $('#read').hide();

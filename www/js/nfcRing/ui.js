@@ -60,10 +60,18 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#readBtn', function(){
-      nfcRing.heatmap.init();
-      nfcRing.userValues.toWrite = false;
-      nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
-      nfcRing.ui.prepareWritePage("read");
+      if(device.platform === "iOS"){
+        nfc.beginSession(
+          function(r){ alert(r.tag.ndefRecord) }
+        },
+          function(e){ alert(e) }
+        )
+      }else{
+        nfcRing.heatmap.init();
+        nfcRing.userValues.toWrite = false;
+        nfcRing.ui.displayPage("writeRing"); // Read uses the same UI as writeRing just with different event listeners
+        nfcRing.ui.prepareWritePage("read");
+      }
     });
 
     $('body').on('click', '#eraseBtn', function(){
