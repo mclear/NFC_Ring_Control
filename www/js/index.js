@@ -33,6 +33,11 @@ var app = {
     FastClick.attach(document.body);
 
     nfcRing.ui.updateVersion();
+
+    if(device && device.platform === "iOS"){
+      console.log("hiding none IOS elements");
+      nfcRing.ui.hideNoneIOS();
+    }
   },
 
   intentEvent: function() {

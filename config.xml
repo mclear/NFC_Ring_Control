@@ -8,6 +8,8 @@
         NFC Ring Team
     </author>
     <preference name="orientation" value="portrait" />
+    <preference name="FadeSplashScreen" value="false"/>
+    <preference name="FadeSplashScreenDuration" value="0"/>
     <content src="index.html" />
     <access origin="*" />
     <access origin="http://127.0.0.1" />
@@ -15,6 +17,14 @@
     <access origin="http://*.nfcring.com" />
     <access launch-external="yes" origin="mailto:*" />
     <allow-intent href="mailto:*" />
+    <platform name="ios">
+        <!-- todo -->
+        <icon density="mdpi" src="res/icon/ios/mdpi.png" />
+        <icon density="hdpi" src="res/icon/ios/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/ios/xhdpi.png" />
+        <splash height="1280" src="res/screen/wp8/splash.jpg" width="768" />
+        <!-- end todo -->
+    </platform>
     <platform name="android">
         <icon density="mdpi" src="res/icon/android/mdpi.png" />
         <icon density="hdpi" src="res/icon/android/hdpi.png" />

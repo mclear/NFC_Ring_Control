@@ -60,6 +60,9 @@ nfcRing.ui = {
     });
 
     $('body').on('click', '#readBtn', function(){
+
+      // iOS read event implementation
+      // Probably needs moving at some point...
       if(device.platform === "iOS"){
         
         nfc.beginSession(
