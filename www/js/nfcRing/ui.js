@@ -400,6 +400,11 @@ nfcRing.ui = {
       }
     });
 
+    if(device.platform === "iOS"){
+      $('#actionBtn').remove();
+      $('#eraseBtn').remove();
+    }
+
   },
 
   updateVersion: function(){ // show Version number on the page
