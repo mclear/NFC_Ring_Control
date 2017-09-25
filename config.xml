@@ -24,6 +24,7 @@
         <icon height="60" src="res/icon/ios/Icon-60.png" width="60" />
         <icon height="72" src="res/icon/ios/Icon-72.png" width="72" />
         <icon height="76" src="res/icon/ios/Icon-76.png" width="76" />
+        <icon height="120" src="res/icon/ios/120.png" width="120" />
         <icon height="167" src="res/icon/ios/Icon-167.png" width="167" />
         <icon height="180" src="res/icon/ios/180.png" width="180" />
         <splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
