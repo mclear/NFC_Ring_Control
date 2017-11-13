@@ -217,16 +217,43 @@ nfcRing.ui = {
       nfcRing.userValues.isUrl = false;
       console.log("key", key);
       if(key.toLowerCase() === "vcard"){
-        console.log("VCard so adding autocomplete class");
-        $('#vcardInput').addClass("autocomplete");
-        $('#vcardInput').on("keypress", function(e){
-          if(e.which == 13){
-            return false;
+
+
+        nfcRing.permissions = cordova.plugins.permissions;
+        nfcRing.permissions.checkPermission(nfcRing.permissions.READ_CONTACTS, function( status ){
+          console.log("status", status);
+          if(!status.hasPermission){
+            nfcRing.permissions.requestPermission(nfcRing.permissions.READ_CONTACTS, function(){
+              console.log("Contact permissions granted to app");
+              $('#vcardInput').addClass("autocomplete");
+              $('#vcardInput').on("keypress", function(e){
+                if(e.which == 13){
+                  return false;
+                }
+              });
+              $('.icon-next').hide();
+              $("#optionForm").hide();
+              $("#vCardForm").show();
+            }, function(){
+              console.log("unable to proceed, application will exit");
+              nfcRing.ui.displayPage("index");
+            });
+          }else{
+            console.log("Contact Permissions available for App");
+            $('#vcardInput').addClass("autocomplete");
+            $('#vcardInput').on("keypress", function(e){
+              if(e.which == 13){
+                return false;
+              }
+            });
+            $('.icon-next').hide();
+            $("#optionForm").hide();
+            $("#vCardForm").show();
+
           }
         });
-        $('.icon-next').hide();
-        $("#optionForm").hide();
-        $("#vCardForm").show();
+
+
       }else{
         $("#optionForm").show();
         $("#vCardForm").hide();
