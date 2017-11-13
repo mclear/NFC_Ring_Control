@@ -1,40 +1,43 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
     },
-    "installed_plugins": {
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "uk.co.whiteoctober.cordova.appversion": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "phonegap-nfc": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        }
+    "uk.co.whiteoctober.cordova.appversion": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
     },
-    "dependent_plugins": {
-        "com.borismus.webintent": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "org.apache.cordova.contacts": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        },
-        "org.apache.cordova.vibration": {
-            "PACKAGE_NAME": "co.mclear.nfcringpro"
-        }
+    "phonegap-nfc": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
     }
+  },
+  "dependent_plugins": {
+    "com.borismus.webintent": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    },
+    "org.apache.cordova.contacts": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    },
+    "org.apache.cordova.dialogs": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    },
+    "org.apache.cordova.vibration": {
+      "PACKAGE_NAME": "co.mclear.nfcringpro"
+    }
+  }
 }

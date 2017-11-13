@@ -1,27 +1,29 @@
 {
-    "name": "co.mclear.nfcringpro",
-    "version": "0.3.7",
-    "displayName": "NFC Ring Control",
-    "cordova": {
-        "platforms": [
-            "android"
-        ],
-        "plugins": {
-            "phonegap-nfc": {},
-            "cordova-plugin-whitelist": {},
-            "cordova-plugin-vibration": {},
-            "cordova-plugin-contacts": {},
-            "cordova-plugin-console": {},
-            "cordova-plugin-dialogs": {}
-        }
-    },
-    "dependencies": {
-        "cordova-android": "^6.2.3",
-        "cordova-plugin-console": "^1.0.7",
-        "cordova-plugin-contacts": "^1.1.0",
-        "cordova-plugin-dialogs": "^1.3.3",
-        "cordova-plugin-vibration": "^2.1.5",
-        "cordova-plugin-whitelist": "^1.3.2",
-        "phonegap-nfc": "git+https://github.com/chariotsolutions/phonegap-nfc.git#ios"
+  "name": "co.mclear.nfcringpro",
+  "version": "0.3.7",
+  "displayName": "NFC Ring Control",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "phonegap-nfc": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-contacts": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-android-permissions": {}
     }
+  },
+  "dependencies": {
+    "cordova-android": "^6.2.3",
+    "cordova-plugin-android-permissions": "^1.0.0",
+    "cordova-plugin-console": "^1.0.7",
+    "cordova-plugin-contacts": "^1.1.0",
+    "cordova-plugin-dialogs": "^1.3.3",
+    "cordova-plugin-vibration": "^2.1.5",
+    "cordova-plugin-whitelist": "^1.3.2",
+    "phonegap-nfc": "git+https://github.com/chariotsolutions/phonegap-nfc.git#ios"
+  }
 }
