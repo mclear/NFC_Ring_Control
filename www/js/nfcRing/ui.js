@@ -363,8 +363,9 @@ nfcRing.ui = {
 
     $('html').on('click', '#nav-btn', function() {
       $('body').toggleClass('context-open');
+      nfcRing.ui.updateVersion();
     });
-    
+
     $('html').on('click', '#nav-btn-close', function() {
       $('body').toggleClass('context-open');
     });
@@ -499,6 +500,7 @@ nfcRing.ui = {
     if(page === "settings"){
       console.log("Displaying settings page with value", nfcRing.userValues.language);
       $('.changeLanguage').val(nfcRing.userValues.language);
+      nfcRing.ui.updateVersion();
     }
     
     if(page === "vcard"){
