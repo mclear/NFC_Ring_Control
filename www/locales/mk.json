@@ -68,7 +68,7 @@
 	"actions.link.optionText": "Како гласи URL-адресата на мрежното место?",
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Врска до видео или канал",
-	"actions.youtube.optionText": "Како гласи видеото или каналот?",
+	"actions.youtube.optionText": "Како гласи видеото или каналот на YouTube?",
 	"actions.text.name": "Текст",
 	"actions.text.description": "Напишете некој произволен текст како јавна шифра за Bitcoin.",
 	"actions.text.optionText": "Што сакате да напишете?",
