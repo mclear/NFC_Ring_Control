@@ -4,7 +4,8 @@
 			"Khaled",
 			"Test Create account",
 			"Meno25",
-			"ديفيد"
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"index.wantHelp": "هل تريد بعض المساعدة؟",
@@ -34,6 +35,7 @@
 	"settings.mySweetSpot": "مكاني المفضل",
 	"settings.mySweetSpotDescription": "أعد إدخال موقع مكاني المفضل",
 	"settings.previousActions": "أحداثي المفضلة",
+	"settings.previousActionsDescription": "أزل تاريخ نشاطاتي السابقة",
 	"settings.version": "نسخة",
 	"settings.phoneModel": "موديل الهاتف",
 	"settings.changeLanguage": "تغيير لغة التطبيق",
@@ -55,5 +57,7 @@
 	"actions.text.optionText": "ما هو النص الخاص بك؟",
 	"sweetSpot.showHelp": "إظهار المساعدة",
 	"sweetSpot.done": "تم. شكراً لك!",
-	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أفعالك السابقة؟"
+	"sweetSpot.areYouSureActions": "هل أنت متأكد أنك تريد مسح أفعالك السابقة؟",
+	"vcard.loading": "تحميل جهات الاتصال",
+	"vcard.noResults": "لم يعثر على جهات اتصال"
 }
