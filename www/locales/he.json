@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"Ronel1",
-			"Guycn2"
+			"Guycn2",
+			"המקיסט"
 		]
 	},
 	"index.wantHelp": "נחוצה לך עזרה?",
@@ -11,13 +12,14 @@
 	"index.whatDoYouWantToDoToday": "מה בא לך לעשות היום?",
 	"index.create": "ליצור",
 	"index.read": "לקרוא",
+	"index.erase": "מחק",
 	"index.settings": "הגדרות",
-	"index.register": "רישום",
 	"index.feedback": "משוב",
 	"context.history": "היסטוריה",
 	"option.next": "הבאה",
 	"writeRing.finish": "סיום",
 	"writeRing.woohoo": "יש!",
+	"eraseRing.finish": "סיים",
 	"readRing.contents": "תוכן הטבעת:",
 	"settings.version": "גרסה",
 	"settings.phoneModel": "דגם הטלפון",
@@ -32,13 +34,5 @@
 	"actions.etherpad.name": "אתרפאד",
 	"sweetSpot.yay": "יש! זה עבד. תודה על מגניבותך.",
 	"sweetSpot.showHelp": "הצגת עזרה",
-	"sweetSpot.done": "בוצע. תודה!",
-	"register.emailTitle": "כתובת דוא״ל:",
-	"register.title": "רישום הטבעת שלך",
-	"register.passwordTitle": "ססמה:",
-	"register.passwordAgainTitle": "ססמה שוב:",
-	"register.passwordsDontMatch": "הססמאות אינן תואמות",
-	"register.success": "הרישום הצליח",
-	"register.notNFCRingTitle": "אבוי...",
-	"register.resetPasswordPromptTitle": "אתם כבר רשומים"
+	"sweetSpot.done": "בוצע. תודה!"
 }

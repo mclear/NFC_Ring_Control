@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alp Er Tunqa"
+		]
+	},
+	"index.wantHelp": "کؤمک ایسته‌ییرسینیزمی؟",
+	"index.whatDoYouWantToDoToday": "بۇگۆن نه ایش گؤرمک ایسته‌ییرسینیز؟",
+	"index.create": "یارات",
+	"index.read": "اوْخو",
+	"index.settings": "تنظیملر",
+	"index.feedback": "فیدبک",
+	"context.history": "گئچمیش",
+	"option.next": "سوْنراکی",
+	"writeRing.finish": "سوْن",
+	"writeRing.woohoo": "یاشا!",
+	"settings.version": "نوسخه‌",
+	"help.gotIt": "اولسون، آنلادیم",
+	"actions.vcard.name": "ویزیت کارتی",
+	"actions.vcard.optionText": "آد:",
+	"actions.twitter.name": "توئیتر",
+	"actions.facebook.name": "فئیس‌بوک",
+	"actions.link.name": "لینک",
+	"actions.youtube.name": "یوتیوب",
+	"actions.text.name": "متن",
+	"actions.etherpad.name": "اترپد",
+	"sweetSpot.showHelp": "کؤمگی گؤستر",
+	"sweetSpot.done": "ائدیلدی. تشکور!"
+}

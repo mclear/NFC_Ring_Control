@@ -9,7 +9,6 @@
 	"index.create": "راس كردن",
 	"index.createDescription": "یه گل کارکردن سی حلقه تو بنیسید",
 	"index.read": "حنن",
-	"index.register": "ثوت نام کردن",
 	"index.feedback": "بازحرد",
 	"context.history": "ويرگار",
 	"option.next": "نها",
@@ -28,10 +27,5 @@
 	"actions.text.name": "متن",
 	"actions.text.optionText": "یه متن شمانه؟",
 	"sweetSpot.showHelp": "نشو دئن هومیاری",
-	"sweetSpot.done": "انجوم بی منمون!",
-	"register.emailTitle": "نشونی ايميل:",
-	"register.passwordTitle": "پاسورد:",
-	"register.passwordAgainTitle": "پاسورد هنی:",
-	"register.passwordsDontMatch": "رمز یکی نئ",
-	"register.success": "ثوت نام وا خوش سرانجومی بی"
+	"sweetSpot.done": "انجوم بی منمون!"
 }

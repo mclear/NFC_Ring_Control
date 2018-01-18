@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anuragbihani94",
+			"Suyog"
+		]
+	},
+	"index.wantHelp": "काही मदत हवी आहे का?",
+	"index.wantHelpLong": "असा दिसता आहे के तुम्ही NFC रिंग कंट्रोल अप्प पाहिलांदा वापरात आहात, तुमाला काही मदत हवी आहे का?",
+	"index.whatDoYouWantToDoToday": "तुम्हाला काही मदत हवी आहे का?",
+	"index.create": "निर्मित करा",
+	"index.createDescription": "नवीन action रिंगमध्ये नोंदवा",
+	"index.createDescriptionMore": "या पानावर नवीन मजकूर किंवा action तुमच्या NFC रिंग मध्ये नोंदवा. तुम्हाला कय लिहायचे ते माहित हवे उदा. संकेतस्थळ आणि तुमचे NFC रिंग तुम्हाला माहित हवे.",
+	"index.read": "वाचा",
+	"index.readDescription": "तुमचे रिंगवर कय आहे ते पहा",
+	"index.readDescriptionMore": "तुमच्या रिंगवर कय आहे ते पहा? हा पर्याय वापरा",
+	"index.settings": "मांडणी",
+	"index.settingsDescription": "अप्प संयोजीत करा",
+	"index.feedback": "प्रतिक्रिया",
+	"index.feedbackDescription": "काही आवडले किंवा काही बदल सुचवयेचे आहेत? आह्माला कालवा",
+	"index.feedbackDescriptionMore": "काही आवडले किंवा काही आक्षेप नोंदवायचे  आहेत? कृपया आह्माला कळवा.",
+	"context.history": "इतिहास",
+	"option.next": "पुढील",
+	"writeRing.finish": "पूर्ण झाले",
+	"writeRing.woohoo": "अरे!",
+	"writeRing.ready": "तुमची NFC रिंग तयार आहे",
+	"settings.version": "आवृत्ती",
+	"settings.phoneModel": "फोन मॉडेल",
+	"settings.changeLanguage": "अप्पची भाषा बदला",
+	"help.helpTips": "मदत टिप",
+	"actions.text.name": "मजकुर"
+}

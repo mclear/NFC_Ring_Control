@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aguve"
+		]
+	},
+	"index.wantHelp": "Ehiã kpekpeɖeŋu aɖea?",
+	"index.wantHelpLong": "Ewɔ abe esiae nye zi gbãtɔ nèle NFC Ring Control dɔwɔnua zãm. Ehiã kpekpeɖeŋu aɖea?",
+	"index.whatDoYouWantToDoToday": "Nu kae nèdi be yeawɔ egbea?",
+	"index.create": "Dze egɔme",
+	"index.createDescription": "Ŋlɔ nu bubu si nàdi be wòawɔ",
+	"index.createDescriptionMore": "Ŋlɔ nu bubu si nèdi be wòanɔ NFC Ring la me alo nu bubu siwo nàdi be wòawɔ le axa sia. Ehiã nànya nu si nèdi be yeaŋlɔ abe URL ene eye àhiã wò NFC Ring la.",
+	"index.read": "Xlẽ",
+	"index.readDescription": "Kpɔ nu si le edzi",
+	"index.readDescriptionMore": "Èdi be yeakpɔ nu siwo le edzi xoxoa? Zã mɔnu sia.",
+	"index.settings": "Nutiaƒe",
+	"index.settingsDescription": "Tia wò dɔwɔnua dzi nuwo",
+	"index.settingsDescriptionMore": "Tia wò dɔwɔnua dzi nuwo.",
+	"index.feedback": "Dɔgbedenya",
+	"index.feedbackDescription": "Èdi nane alo èdi be yeatrɔ nanea? Na míanya",
+	"index.feedbackDescriptionMore": "Ne nane dzɔ dzi na wò alo medzɔ dzi na wò o la, míeɖe kuku na míanya.",
+	"context.recentActions": "Kpɔ nu siwo nèwɔ nyitsɔ laa",
+	"context.history": "Ŋutinya",
+	"action.whatDoYouWantYourRingToDo": "Nu kae nèdi be wòawɔ?",
+	"option.next": "Ŋgɔgbe",
+	"option.dataWontFit": "Nuxlɔ̃ame: Wò NFC Ring la mate ŋu axɔ nyatakaka gbogbo sia o.",
+	"writeRing.finish": "Ewu Nu.",
+	"writeRing.noNFC": "NFC mewɔ le dɔ wɔm o. Èsi NFC le dɔwɔnua dzia?",
+	"writeRing.woohoo": "Oooooo!",
+	"writeRing.ready": "Wò NFC Ring sɔ gbe azɔ",
+	"writeRing.fail": "Mete ŋu le nu ŋlɔm le wò NFC Ring la me o",
+	"readRing.contents": "Ring me nyawo:"
+}
