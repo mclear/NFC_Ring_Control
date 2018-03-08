@@ -3,7 +3,8 @@
 		"authors": [
 			"Nike",
 			"Peter22FIN",
-			"McSalama"
+			"McSalama",
+			"Pyscowicz"
 		]
 	},
 	"index.wantHelp": "Tarvitsetko apua?",
@@ -40,6 +41,7 @@
 	"help.helpTips": "Vinkkejä",
 	"help.volume": "Nosta äänenvoimakkuutta",
 	"help.gotIt": "OK, selvä",
+	"actions.vcard.optionText": "Nimi:",
 	"actions.twitter.name": "Twitter",
 	"actions.twitter.description": "Liitä Twitter-tili",
 	"actions.twitter.optionText": "Mikä on Twitter-tilisi?",
