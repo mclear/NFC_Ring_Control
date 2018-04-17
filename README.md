@@ -1,3 +1,5 @@
+![Logo of the project](https://raw.githubusercontent.com/mclear/NFC_Ring_Control/master/res/icon/android/xhdpi.png)
+
 # What is this?
 This is the NFC Ring Control App.  This repository contains the source code for our Android, Windows Phone and Blackberry app.  
 
