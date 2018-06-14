@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"AZISS",
+			"Cekli829"
+		]
+	},
+	"index.wantHelp": "Köməyə ehtiyacın var?",
+	"index.whatDoYouWantToDoToday": "Bu gün nə etmək istəyirsən?",
+	"index.create": "Yarat",
+	"index.read": "Oxu",
+	"index.erase": "Sil",
+	"index.settings": "Nizamlamalar",
+	"index.feedback": "Rəy",
+	"context.history": "Tarix",
+	"option.next": "Növbəti",
+	"writeRing.finish": "Son",
+	"writeRing.woohoo": "Əla!",
+	"writeRing.ready": "Sənin NFC Üzüyün artıq hazırdır",
+	"eraseRing.finish": "Son",
+	"settings.version": "Versiya",
+	"settings.phoneModel": "Telefon modeli",
+	"help.helpTips": "Kömək",
+	"help.gotIt": "Okey, başa düşdüm",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "Ad:",
+	"actions.twitter.name": "Twitter",
+	"actions.facebook.name": "Facebook",
+	"actions.link.name": "Keçid",
+	"actions.youtube.name": "YouTube",
+	"actions.text.name": "Mətn"
+}
