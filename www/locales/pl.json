@@ -4,7 +4,8 @@
 			"Matik7",
 			"Ty221",
 			"Woytecr",
-			"InternerowyGołąb"
+			"InternerowyGołąb",
+			"DeRudySoulStorm"
 		]
 	},
 	"index.wantHelp": "Potrzebujesz pomocy?",
@@ -30,6 +31,7 @@
 	"writeRing.noNFC": "Funkcja NFC nie działa. Czy w urządzeniu włączono NFC?",
 	"writeRing.woohoo": "Woohoo!",
 	"writeRing.ready": "Twój Pierścień NFC jest gotowy",
+	"eraseRing.success": "Wymarz zawartość twojego tagu",
 	"eraseRing.finish": "Zakończ",
 	"readRing.contents": "Zawartość pierścienia:",
 	"settings.previousActionsDescription": "Wyczyść historię moich poprzednich działań",
