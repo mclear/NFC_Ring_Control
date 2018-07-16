@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mehtab ahmed"
+			"Mehtab ahmed",
+			"Tweety"
 		]
 	},
 	"index.wantHelp": "ڇا توهان کي ڪجھ مدد گھرجي ٿي؟",
@@ -13,7 +14,7 @@
 	"index.feedbackDescription": "ڪا شيءِ پسند ڪريو ٿا يا ڪجھ تبديل ڪرڻ چاهيو ٿا؟ اسان کي ٻڌايو",
 	"context.recentActions": "پنهنجا تازا عمل ڏسو",
 	"context.history": "سوانح",
-	"option.next": "ايندڙ",
+	"option.next": "اڳيون",
 	"writeRing.finish": "ختم ڪريو",
 	"settings.version": "ورزن",
 	"settings.changeLanguage": "ايپ جي ٻولي تبديل ڪريو",
