@@ -3,7 +3,8 @@
 		"authors": [
 			"Beta16",
 			"LorenzoM",
-			"Macofe"
+			"Macofe",
+			"Ontsed"
 		]
 	},
 	"index.wantHelp": "Hai bisogno di aiuto?",
@@ -13,6 +14,9 @@
 	"index.createDescription": "Scrivi una nuova azione nel tuo anello",
 	"index.createDescriptionMore": "Usa questa pagina per scrivere nuovi contenuti o azioni per il tuo anello NFC. Avrai bisogno di sapere che cosa vuoi scrivere (come ad esempio un URL) e avrai bisogno del tuo anello NFC.",
 	"index.read": "Leggi",
+	"index.erase": "Cancella",
+	"index.eraseDescription": "Cancella il contenuto sul tuo anello",
+	"index.eraseDescriptionMore": "Vuoi cancellare il contenuto del tuo anello? Usa questa opzione",
 	"index.readDescription": "Leggi il contenuto del tuo anello",
 	"index.readDescriptionMore": "Vuoi controllare cosa c'è sull'anello? Utilizza questa opzione.",
 	"index.settings": "Impostazioni",
@@ -32,6 +36,8 @@
 	"writeRing.woohoo": "Uauh!",
 	"writeRing.ready": "Il tuo anello NFC è pronto",
 	"writeRing.fail": "Impossibile scrivere sul tuo anello NFC",
+	"eraseRing.success": "Contenuto del tuo anello cancellato",
+	"eraseRing.finish": "Termina",
 	"readRing.contents": "Contenuto dell'anello:",
 	"settings.clearMySweetSpot": "Il mio \"punto sensibile\"",
 	"settings.clearMySweetSpotDescription": "Elimina il \"punto sensibile\" salvato",
