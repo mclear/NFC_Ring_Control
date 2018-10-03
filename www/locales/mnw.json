@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aue Nai"
+		]
+	},
+	"index.wantHelp": "နွံပၟိက်ကဵုရီုဗၚ်ညိ?",
+	"index.whatDoYouWantToDoToday": "မုမၞးမိက်ဂွံကၠောန်ရောတ္ၚဲဏအ်?",
+	"index.create": "ခၞံကၠောန်",
+	"index.read": "ဗှ်",
+	"index.erase": "ဇိုတ်",
+	"index.settings": "ဖျေဟ်ဒၞာဲ",
+	"index.feedback": "ကဵုကသပ်",
+	"context.history": "အရာမဗှ်လဝ်တုဲ",
+	"option.next": "ဂတ",
+	"writeRing.finish": "တုဲဒှ်",
+	"writeRing.woohoo": "Woohoo!",
+	"eraseRing.finish": "တုဲဒှ်",
+	"settings.version": "မူ",
+	"settings.changeLanguage": "သၠာဲ အရေဝ်ဘာသာ",
+	"help.gotIt": "ခိုဟ်, အဲဂွံယျ",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "ယၟု:",
+	"actions.twitter.name": "Twitter",
+	"actions.twitter.description": "ဓနက်ကဵု ညးလွပ် Twitter",
+	"actions.twitter.optionText": "ယၟုညးလွပ် Twitter မၞး မုရော ?",
+	"actions.facebook.name": "Facebook",
+	"actions.facebook.description": "ဓနက် ကဵု မုက်လိက် Facebook",
+	"actions.facebook.optionText": "URL မုက်လိက် Facebook မၞး မုရော?",
+	"actions.link.name": "လေန်",
+	"actions.link.description": "ဓနက် ကဵု ဌာန်ဝပ်မွဲ",
+	"actions.youtube.name": "YouTube",
+	"actions.text.name": "လိက်",
+	"actions.etherpad.name": "Etherpad",
+	"sweetSpot.done": "တုဲယျ. တၚ်ဂုဏ်ရ!"
+}
