@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rul1902"
+		]
+	},
+	"index.wantHelp": "ၜးသာဆ်ုမာၜိုဝ်မာဆိုင်မိင်မိင်ၯး?",
+	"index.create": "ပ္တုံထံင်း",
+	"index.read": "မ်ုပဝ်ႋ",
+	"index.erase": "ထုဂ်",
+	"index.settings": "ဆ်ုအင်းဆ်ုတာင်",
+	"index.feedback": "မ်ုဖှ်ေဆ်ုကုံးဆ်ုမံင်း",
+	"context.history": "မေင်ႋစိင်",
+	"option.next": "အ်ုမေံယာ့ခဝ့်",
+	"writeRing.finish": "ၯံင်ယုဂ်",
+	"eraseRing.finish": "ၯံင်ယုဂ်",
+	"settings.version": "ၜါႋယှေန်ႋ",
+	"settings.phoneModel": "Phone model",
+	"settings.changeLanguage": "မ်ုအင်းလယ် app ဆ်ုခၠါင်ဘာႋသာ့",
+	"help.gotIt": "OK, ဏေဝ်ႋယုဂ်",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.optionText": "မိင်:",
+	"actions.twitter.name": "တွစ်တာႋ",
+	"actions.facebook.name": "Facebook",
+	"actions.link.name": "လင့်",
+	"actions.youtube.name": "YouTube",
+	"actions.text.name": "လိက်ဖၠုံး",
+	"actions.etherpad.name": "Etherpad",
+	"sweetSpot.showHelp": "ဍုဂ်ဏဲဆ်ုမာၜိုဝ်မာဆိုင်"
+}
