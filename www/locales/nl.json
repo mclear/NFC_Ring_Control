@@ -6,7 +6,8 @@
 			"Southparkfan",
 			"Romaine",
 			"Sjoerddebruin",
-			"Wdejager"
+			"Wdejager",
+			"Marcelhospers"
 		]
 	},
 	"index.wantHelp": "Hulp nodig?",
@@ -16,6 +17,8 @@
 	"index.createDescription": "Schrijf een nieuwe actie naar uw ring",
 	"index.createDescriptionMore": "Gebruik deze pagina om nieuwe inhoud of andere acties naar uw NFC-ring te schrijven. U moet weten wat u wilt schrijven, zoals een URL, en u hebt uw NFC-ring nodig.",
 	"index.read": "Lezen",
+	"index.erase": "Wissen",
+	"index.eraseDescription": "Wis de inhoud op je ring",
 	"index.readDescription": "Bekijken wat er op uw ring staat",
 	"index.readDescriptionMore": "Wilt u bekijken wat er al op uw ring staat? Gebruik deze optie.",
 	"index.settings": "Instellingen",
@@ -35,6 +38,8 @@
 	"writeRing.woohoo": "Gelukt!",
 	"writeRing.ready": "Uw NFC-ring is klaar voor gebruik",
 	"writeRing.fail": "Het is niet mogelijk om te schrijven naar uw NFC-ring",
+	"eraseRing.success": "Gewiste inhoud op je ring",
+	"eraseRing.finish": "Voltooien",
 	"readRing.contents": "Ringinhoud:",
 	"settings.clearMySweetSpot": "Mijn sweetspot",
 	"settings.clearMySweetSpotDescription": "Sweetspotlocatie verwijderen",
