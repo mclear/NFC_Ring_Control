@@ -5,7 +5,8 @@
 			"Kumkumuk",
 			"Mirzali",
 			"Asmen",
-			"Gırd"
+			"Gırd",
+			"Orbot707"
 		]
 	},
 	"index.wantHelp": "Tay peşti wazene ?",
@@ -14,6 +15,7 @@
 	"index.createDescription": "Qande gıştani aksiyono newe bınusne",
 	"index.read": "Bıwane",
 	"index.erase": "Bestere",
+	"index.eraseDescription": "Ringê xo de zerreki pak kerê",
 	"index.readDescription": "Gıştaney to çıçi yo bıvin",
 	"index.settings": "Eyari",
 	"index.settingsDescription": "Dezgeha xo araşt ke",
@@ -26,6 +28,7 @@
 	"writeRing.finish": "Qediya",
 	"writeRing.woohoo": "Hurra!",
 	"writeRing.ready": "Gıştaney to yo NCF newe waneno?",
+	"eraseRing.success": "Zerrekê Ringê xo pak kerê",
 	"eraseRing.finish": "Qediya",
 	"readRing.contents": "Zerreka gıştani:",
 	"settings.clearMySweetSpot": "Cay mınê xaseki",
