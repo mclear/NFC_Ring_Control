@@ -4,7 +4,8 @@
 			"Okras",
 			"Vaniaspeedy",
 			"Facenapalm",
-			"Jack who built the house"
+			"Jack who built the house",
+			"Diralik"
 		]
 	},
 	"index.wantHelp": "Нужна помощь?",
@@ -32,7 +33,7 @@
 	"option.dataWontFit": "Внимание: Такой объём данных может не поместиться на вашем NFC-кольце",
 	"option.dataWontFitUpgrade": "Внимание: Такой объём данных может не поместиться в вашем NFC Ring. Обновите ваше NFC Ring, чтоб получить больше места",
 	"writeRing.finish": "Завершить",
-	"writeRing.noNFC": "Не работает функционал NFC. Он включен на вашем устройстве?",
+	"writeRing.noNFC": "Не работает функционал NFC. Он включён на вашем устройстве?",
 	"writeRing.woohoo": "Класс!",
 	"writeRing.ready": "Теперь ваше NFC-кольцо готово",
 	"writeRing.fail": "Невозможно записать данные в ваше NFC-кольцо",
