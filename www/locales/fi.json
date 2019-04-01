@@ -16,6 +16,7 @@
 	"index.read": "Lue",
 	"index.erase": "Poista",
 	"index.eraseDescription": "Poista sisältöä sormuksessasi",
+	"index.eraseDescriptionMore": "Haluatko tyhjentää mitä renkaasi sisältää? Käytä tätä toimintoa",
 	"index.readDescription": "Katso mitä sormuksessasi on",
 	"index.readDescriptionMore": "Käytä tätä valintaa, jos haluat tietää mitä sormuksessasi on jo valmiiksi.",
 	"index.settings": "Asetukset",
