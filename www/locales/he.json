@@ -56,6 +56,7 @@
 	"actions.text.description": "ניתן לכתוב טקסט שרירותי כמו למשל מפתח ציבורי של ביטקוין.",
 	"actions.text.optionText": "מה הטקסט שלך?",
 	"actions.etherpad.name": "אתרפאד",
+	"actions.etherpad.description": "קישור ל־Etherpad",
 	"sweetSpot.yay": "יש! זה עבד. תודה על מגניבותך.",
 	"sweetSpot.showHelp": "הצגת עזרה",
 	"sweetSpot.done": "בוצע. תודה!",
