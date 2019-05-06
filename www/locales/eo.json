@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"KuboF",
+			"Mirin"
+		]
+	},
+	"index.wantHelp": "Volas esti helpata?",
+	"index.whatDoYouWantToDoToday": "Kion vi volas fari hodiaŭ?",
+	"index.create": "Krei",
+	"index.read": "Legi",
+	"index.erase": "Forviŝi",
+	"index.eraseDescription": "Forviŝi la enhavon de via ringo",
+	"index.settings": "Agordoj",
+	"context.history": "Historio",
+	"option.next": "Sekva",
+	"writeRing.finish": "Fini",
+	"writeRing.woohoo": "Gratulon!",
+	"eraseRing.finish": "Fini",
+	"readRing.contents": "Enhavo de ringo:",
+	"settings.version": "Versio",
+	"settings.changeLanguage": "Ŝanĝi aplikaĵan lingvon",
+	"help.gotIt": "Bone, komprenite",
+	"actions.vcard.name": "vCard",
+	"actions.vcard.description": "Krei vCard-on por diskonigi vian aŭ aliulan kontaktan informon",
+	"actions.vcard.optionText": "Nomo:",
+	"actions.twitter.name": "Twitter",
+	"actions.facebook.name": "Facebook",
+	"actions.facebook.description": "Ligi Facebook-paĝon",
+	"actions.link.name": "Ligilo",
+	"actions.youtube.name": "YouTube",
+	"actions.youtube.description": "Ligi videaĵon aŭ videan kanalon",
+	"actions.text.name": "Teksto",
+	"sweetSpot.yay": "Hura! Ĝi funkciis. Dankon por via bonegeco.",
+	"sweetSpot.showHelp": "Montri helpon",
+	"sweetSpot.done": "Farita. Dankon!",
+	"vcard.noResults": "Neniu kontakto trovita"
+}

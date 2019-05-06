@@ -4,7 +4,8 @@
 			"Chmee2",
 			"Clon",
 			"Cvanca",
-			"LukasJandera"
+			"LukasJandera",
+			"Walter Klosse"
 		]
 	},
 	"index.wantHelp": "Chcete nějakou pomoc?",
@@ -14,6 +15,7 @@
 	"index.createDescription": "Napsat novou činnost pro svůj prsten",
 	"index.createDescriptionMore": "Pomocí této stránky můžete psát nový obsah nebo akce pro vaše NFC prsteny. Budete potřebovat vědět, co chcete napsat, jako například adresy URL, a budete potřebovat vaše NFC prsteny.",
 	"index.read": "Číst",
+	"index.erase": "Vymazat",
 	"index.readDescription": "Podívejte se, co je na vašem prstenu",
 	"index.readDescriptionMore": "Chtějí zjistit, co je na vašem prstenu? Použijte tuto možnost.",
 	"index.settings": "Nastavení",
@@ -33,6 +35,7 @@
 	"writeRing.woohoo": "Hurá!",
 	"writeRing.ready": "Váš NFC prsten je nyní připraven",
 	"writeRing.fail": "Nelze zapisovat na váš NFC prsten",
+	"eraseRing.finish": "Dokončit",
 	"readRing.contents": "Prsten obsahuje:",
 	"settings.clearMySweetSpot": "Můj sweet spot",
 	"settings.clearMySweetSpotDescription": "Vymazat uloženou pozici sweet spotu",
@@ -51,6 +54,7 @@
 	"help.slowly": "Pomalu pohybujte prstenem po zadní straně vašeho zařízení.",
 	"help.another": "Vyzkoušejte jiné zařízení vybavené NFC pokud nějaké máte",
 	"help.gotIt": "OK, mám to",
+	"actions.vcard.name": "vCard",
 	"actions.vcard.description": "Vytvořte soubor vCard a sdílejte kontakt na vás nebo někoho dalšího",
 	"actions.vcard.optionText": "Jméno:",
 	"actions.twitter.name": "Twitter",
@@ -72,6 +76,9 @@
 	"actions.etherpad.description": "Odkaz na Etherpad",
 	"actions.etherpad.optionText": "Jaká je URL adresa vašeho Eherpadu?",
 	"sweetSpot.holdRingToPhoneByDot": "Držte NFC prsten na zadní straně vašeho telefonu v místě, označeném barevnými tečkami.",
+	"sweetSpot.yay": "Hurá! Fungovalo to. Děkuji za to že jsi úžasný.",
+	"sweetSpot.struggling": "Nedaří se Vám najít váš sweet spot?",
+	"sweetSpot.showHelp": "Ukázat pomoc",
 	"sweetSpot.done": "Hotovo. Děkujeme!",
 	"sweetSpot.areYouSureSS": "Jste si jisti, že chcete vymazat vaše sweet spot data?",
 	"sweetSpot.areYouSureActions": "Jste si jisti, že chcete vymazat vaše předchozí činnosti?",
