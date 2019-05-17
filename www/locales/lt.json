@@ -3,7 +3,8 @@
 		"authors": [
 			"Swanas",
 			"Aswanas",
-			"Zygimantus"
+			"Zygimantus",
+			"Naktis"
 		]
 	},
 	"index.wantHelp": "Reikia pagalbos?",
@@ -13,6 +14,9 @@
 	"index.createDescription": "Parašyti naują veiksmą į jūsų žiedą",
 	"index.createDescriptionMore": "Naudokite šį puslapį norėdami įrašyti naują turinį arba veiksmus į savo NFC žiedą. Jums reikia žinoti, ką jūs norite įrašyti, pvz. URL, ir jums reikia jūsų NFC žiedo.",
 	"index.read": "Skaityti",
+	"index.erase": "Ištrinti",
+	"index.eraseDescription": "Ištrinkite turinį savo žiede",
+	"index.eraseDescriptionMore": "Norite ištrinti tai kas yra jūsų žiede? Naudokite šią parinktį",
 	"index.readDescription": "Peržiūrėkite, kas yra įrašyta į jūsų žiedą",
 	"index.readDescriptionMore": "Norite patikrinti, kas  jūsų žiede jau yra? Naudokite šią parinktį.",
 	"index.settings": "Nustatymai",
@@ -32,6 +36,8 @@
 	"writeRing.woohoo": "Ooooo!",
 	"writeRing.ready": "Jūsų NFC Žiedas dabar yra paruoštas",
 	"writeRing.fail": "Neįmanoma įrašyti į jūsų NFC Žiedą",
+	"eraseRing.success": "Ištrintas turinys jūsų žiede",
+	"eraseRing.finish": "Užbaigti",
 	"readRing.contents": "Žiedo turinys:",
 	"settings.clearMySweetSpot": "Mano mielas taškas",
 	"settings.clearMySweetSpotDescription": "Panaikinti išsaugotą mano mielo taško vietą",
