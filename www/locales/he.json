@@ -5,7 +5,8 @@
 			"Ronel1",
 			"Guycn2",
 			"המקיסט",
-			"YaronSh"
+			"YaronSh",
+			"Steeve815"
 		]
 	},
 	"index.wantHelp": "נחוצה לך עזרה?",
@@ -22,6 +23,8 @@
 	"index.settingsDescription": "הגדרת היישום שלך",
 	"index.settingsDescriptionMore": "הגדרת היישום שלך.",
 	"index.feedback": "משוב",
+	"index.feedbackDescription": "אוהב דבר מסוים או רוצה לשנות משהו? יידע אותנו",
+	"index.feedbackDescriptionMore": "נשמח לשמוע אם אתה אוהב או לא אוהב דבר כלשהו. אנא יידע אותנו!",
 	"context.recentActions": "הצגת הפעולות האחרונות שלך",
 	"context.history": "היסטוריה",
 	"action.whatDoYouWantYourRingToDo": "מה ברצונך שהטבעת שלך תעשה?",
@@ -38,6 +41,8 @@
 	"settings.version": "גרסה",
 	"settings.phoneModel": "דגם הטלפון",
 	"settings.changeLanguage": "\nשינוי App שפה",
+	"help.volume": "הגברת עוצמת השמע של מכשירך",
+	"help.on": "ודא שהמסך של המכשיר שלך דולק והמכשיר עצמו פועל (בדרך כלל המכשירים עוברים למצב שינה)",
 	"help.gotIt": "בסדר, הבנתי",
 	"actions.vcard.optionText": "שם:",
 	"actions.twitter.name": "טוויטר",
