@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Baloch Afghanistan"
+			"Baloch Afghanistan",
+			"Sultanselim baloch"
 		]
 	},
 	"index.wantHelp": "کومکا لوٹیت؟",
@@ -10,7 +11,7 @@
 	"index.create": "جوڑ کورتین",
 	"index.createDescription": "نوشتن عملی جدید بر روی حلقه‌تان",
 	"index.createDescriptionMore": "از این صفحه برای نوشتن محتویات یا اعمال جدید بر روی حقلهٔ ان‌اف‌سی‌تان استفاده کنید. شما نیازمند این خواهید شد که بدانید چه چیزی می‌خواهید بنویسید از قبیل یک نشانی اینترنتی و شما حقلهٔ ان‌اف‌سی‌تان را نیاز خواهید داشت.",
-	"index.read": "وانتن",
+	"index.read": "وانگ",
 	"index.readDescription": "ببینید چه چیزی بر روی حلقه‌تان است",
 	"index.readDescriptionMore": "می خواهد بررسی کنید چه چیزی بر روی حلقه‌یتان در حال حاضر وجود دارد؟ از این گزینه استفاده کنید",
 	"index.settings": "تنظیمات",
