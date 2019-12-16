@@ -5,7 +5,8 @@
 			"Ty221",
 			"Woytecr",
 			"InternerowyGołąb",
-			"DeRudySoulStorm"
+			"DeRudySoulStorm",
+			"WaldiSt"
 		]
 	},
 	"index.wantHelp": "Potrzebujesz pomocy?",
@@ -13,6 +14,7 @@
 	"index.whatDoYouWantToDoToday": "Co chcesz dzisiaj robić?",
 	"index.create": "Utwórz",
 	"index.createDescription": "Napisz nową akcję do twojego pierścienia",
+	"index.createDescriptionMore": "Użyj tej strony, aby zapisać nowe treści lub działania na swoim pierścieniu NFC. Musisz wiedzieć, co chcesz napisać, na przykład adres URL, i potrzebujesz swojego pierścienia NFC.",
 	"index.read": "Czytaj",
 	"index.erase": "Wyczyść",
 	"index.eraseDescription": "Wymarz zawartość twojego tagu",
@@ -24,6 +26,8 @@
 	"index.settingsDescriptionMore": "Dostosuj swoją aplikację.",
 	"index.feedback": "Opinia",
 	"index.feedbackDescription": "Kochasz coś czy chcesz coś zmienić? Daj nam znać",
+	"index.feedbackDescriptionMore": "Chcielibyśmy usłyszeć, jeśli coś kochasz lub nienawidzisz. Daj nam znać!",
+	"context.recentActions": "Zobacz swoje ostatnie działania",
 	"context.history": "Historia",
 	"option.next": "Następny",
 	"option.dataWontFit": "Ostrzeżenie: Ta ilość danych może nie pasować na twoje urządzenie NFC",
@@ -31,6 +35,7 @@
 	"writeRing.noNFC": "Funkcja NFC nie działa. Czy w urządzeniu włączono NFC?",
 	"writeRing.woohoo": "Woohoo!",
 	"writeRing.ready": "Twój Pierścień NFC jest gotowy",
+	"writeRing.fail": "Nie można zapisać na twoim pierścieniu NFC",
 	"eraseRing.success": "Wymarz zawartość twojego tagu",
 	"eraseRing.finish": "Zakończ",
 	"readRing.contents": "Zawartość pierścienia:",
@@ -59,10 +64,17 @@
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Link do filmu lub kanału",
 	"actions.text.name": "Tekst",
+	"actions.text.optionText": "Jaki jest Twój tekst?",
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Link do Etherpada",
+	"sweetSpot.looksGood": "Wygląda dobrze! Czy czerwona kropka jest blisko miejsca, w którym pierścień działa z telefonem?",
+	"sweetSpot.yay": "Tak! Zadziałało. Dziękujemy za bycie niesamowitym.",
+	"sweetSpot.struggling": "Próbujesz znaleźć swoje ulubione miejsce?",
 	"sweetSpot.showHelp": "Pokaż pomoc",
+	"sweetSpot.askToShare": "Twój pierścionek jest gotowy. Czy chcesz być niesamowity i pomagać innym, dzieląc się ulubioną lokalizacją dla tego modelu telefonu?",
 	"sweetSpot.done": "Gotowe. Dziękujemy!",
+	"sweetSpot.areYouSureSS": "Czy na pewno chcesz wyczyścić swoje ulubione dane?",
+	"sweetSpot.areYouSureActions": "Czy na pewno chcesz wyczyścić poprzednie działania?",
 	"vcard.loading": "Ładowanie kontaktów",
 	"vcard.noResults": "Nie znaleziono żadnych kontaktów"
 }
