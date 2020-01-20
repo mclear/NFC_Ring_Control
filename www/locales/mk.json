@@ -75,7 +75,7 @@
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Врска до Etherpad",
 	"actions.etherpad.optionText": "Како гласи URL-адресата на тетратката?",
-	"sweetSpot.pressTheScreen": "Стиснете на екранот онаму кајшто се регистрираше прстенот.",
+	"sweetSpot.pressTheScreen": "Стиснете на екранот онаму кајшто е пријавен прстенот.",
 	"sweetSpot.holdRingToPhoneByDot": "Држете го NFC-престенот на опачината на телефонот, на местото обележано со обоени точки.",
 	"sweetSpot.noDataYet": "Изгледа дека нашата заедница досега го нема складирано осетливото место на вашиот телефон.",
 	"sweetSpot.moveTheRing": "Движете го прстенот по опачината од телефонот додека не добиете потврда. Ова може малку да потрае, па затоа ве молиме за трпение :).",
