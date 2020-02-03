@@ -6,7 +6,8 @@
 			"Mirzali",
 			"Asmen",
 			"Gırd",
-			"Orbot707"
+			"Orbot707",
+			"1917 Ekim Devrimi"
 		]
 	},
 	"index.wantHelp": "Tay peşti wazene ?",
@@ -28,6 +29,7 @@
 	"writeRing.finish": "Qediya",
 	"writeRing.woohoo": "Hurra!",
 	"writeRing.ready": "Gıştaney to yo NCF newe waneno?",
+	"writeRing.fail": "NFC Ringê şıma rê nênusiyeno",
 	"eraseRing.success": "Zerrekê Ringê xo pak kerê",
 	"eraseRing.finish": "Qediya",
 	"readRing.contents": "Zerreka gıştani:",
@@ -41,7 +43,9 @@
 	"settings.phoneModel": "Modela telefuni",
 	"settings.changeLanguage": "Zıwanê dezgeh bıvurne",
 	"help.helpTips": "Tay peşteki",
+	"help.cases": "Dahwaya cihazê hora wedarne",
 	"help.volume": "Haleta to vengi akena",
+	"help.another": "Ek yewna NFC cihazê şıma esto se eya bıcerrebnê",
 	"help.gotIt": "Temam, mı fehm kerd",
 	"actions.vcard.name": "vCard",
 	"actions.vcard.optionText": "Name:",
@@ -63,6 +67,7 @@
 	"actions.etherpad.description": "Yew Etherpadi rê gıre",
 	"actions.etherpad.optionText": "Pad URL çıçi yo?",
 	"sweetSpot.yay": "Aho! Guriyeno. Tı zaf merdımê do ihtişamınê teşekur kem",
+	"sweetSpot.struggling": "İdeal noktaya ho vinayışi re şımayê mıcadele danê?",
 	"sweetSpot.showHelp": "Peşti bımocne",
 	"sweetSpot.done": "Temam. Teşekur kenan!",
 	"vcard.loading": "Kontakti bar benê",
