@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Marcelhospers",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
-			"Southparkfan",
-			"Romaine",
 			"Sjoerddebruin",
-			"Wdejager",
-			"Marcelhospers"
+			"Southparkfan",
+			"Wdejager"
 		]
 	},
 	"index.wantHelp": "Hulp nodig?",

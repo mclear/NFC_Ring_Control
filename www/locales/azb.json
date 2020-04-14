@@ -1,20 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alp Er Tunqa"
+			"Alp Er Tunqa",
+			"E THP"
 		]
 	},
 	"index.wantHelp": "کؤمک ایسته‌ییرسینیزمی؟",
+	"index.wantHelpLong": "بو ایلک دفعه NFC نظارت پروقرامین‌دان ایستیفاده ائتدیینیز کیمی گؤرونور. کؤمک ایستی‌یرسن؟",
 	"index.whatDoYouWantToDoToday": "بۇگۆن نه ایش گؤرمک ایسته‌ییرسینیز؟",
 	"index.create": "یارات",
 	"index.read": "اوْخو",
+	"index.erase": "سیلمک",
 	"index.settings": "تنظیملر",
 	"index.feedback": "فیدبک",
 	"context.history": "گئچمیش",
 	"option.next": "سوْنراکی",
 	"writeRing.finish": "سوْن",
 	"writeRing.woohoo": "یاشا!",
+	"eraseRing.finish": "سوْن۱۰۰٪ تطبیق",
+	"settings.mySweetSpot": "منیم گؤزل یئریم",
 	"settings.version": "نوسخه‌",
+	"settings.phoneModel": "گوشی مدلی",
 	"help.gotIt": "اولسون، آنلادیم",
 	"actions.vcard.name": "ویزیت کارتی",
 	"actions.vcard.optionText": "آد:",
@@ -25,5 +31,6 @@
 	"actions.text.name": "متن",
 	"actions.etherpad.name": "اترپد",
 	"sweetSpot.showHelp": "کؤمگی گؤستر",
-	"sweetSpot.done": "ائدیلدی. تشکور!"
+	"sweetSpot.done": "ائدیلدی. تشکور!",
+	"vcard.loading": "تماس معلوماتلاری یوکله‌نیر"
 }
