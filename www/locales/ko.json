@@ -3,6 +3,7 @@
 		"authors": [
 			"Hwangjy9",
 			"Hym411",
+			"Nuevo Paso",
 			"Revi",
 			"SeoJeongHo",
 			"Twotwo2019",
@@ -70,7 +71,7 @@
 	"actions.youtube.description": "비디오나 채널과 연결",
 	"actions.youtube.optionText": "당신의 유튜브 비디오나 유튜브 채널은 무엇입니까?",
 	"actions.text.name": "텍스트",
-	"actions.text.description": "비트코인 공개 키와 같은 임의 텍스트를 써주세요.",
+	"actions.text.description": "비트코인 공개 키 같은 임의의 텍스트를 써주세요.",
 	"actions.text.optionText": "당신의 텍스트가 무엇입니까?",
 	"actions.etherpad.name": "Etherpad",
 	"actions.etherpad.description": "Etherpad와 연결",
