@@ -35,7 +35,7 @@
 	"action.whatDoYouWantYourRingToDo": "당신의 링이 무엇을 하기를 원하는가요?",
 	"option.next": "다음",
 	"option.dataWontFit": "경고: 이 용량의 데이터는 당신의 NFC 링에 적합하지 않을 수 있습니다",
-	"option.dataWontFitUpgrade": "주의: 이 정도 크기의 데이터는 현재 NFC 링으로 옮기기 힘듭니다. NFC 링의 저장공간을 업그레이드하세요.",
+	"option.dataWontFitUpgrade": "경고: 이 규모의 데이터는 NFC 링에 맞지 않습니다. 더 많은 공간을 위해 NFC 링을 업그레이드하세요.",
 	"writeRing.finish": "완료",
 	"writeRing.noNFC": "NFC 기능이 작동하지 않습니다. 기기에 NFC가 활성화되어 있습니까?",
 	"writeRing.woohoo": "유후!",
