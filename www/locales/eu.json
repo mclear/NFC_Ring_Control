@@ -3,7 +3,8 @@
 		"authors": [
 			"EukeneFL",
 			"Mikel Ibaiba",
-			"Subi"
+			"Subi",
+			"Xabier Armendaritz"
 		]
 	},
 	"index.wantHelp": "Laguntzarik nahi?",
@@ -65,7 +66,7 @@
 	"actions.facebook.name": "Facebook",
 	"actions.facebook.description": "Lotu Facebookeko orrialde batekin",
 	"actions.facebook.optionText": "Zein da zure Facebookeko Orrialdearen URLa?",
-	"actions.link.name": "Lotura",
+	"actions.link.name": "Esteka",
 	"actions.link.description": "Lotu web helbide batekin",
 	"actions.link.optionText": "Zein da webgunearen URLa?",
 	"actions.youtube.name": "YouTube",
