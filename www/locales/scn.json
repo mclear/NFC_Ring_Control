@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Sarvaturi"
 		]
 	},
@@ -11,6 +12,7 @@
 	"index.createDescription": "Scrivi n'azzioni nova ntô tò aneddu",
 	"index.createDescriptionMore": "Usa sta pàggina pi scrìviri cuntinuti o azzioni novi pô tò aneddu NFC. Hai bisognu di sapiri zocchi voi scrìviri (comu p'esempiu n'URL) e hai bisognu dô tò aneddu NFC.",
 	"index.read": "Leggi",
+	"index.erase": "Cancella",
 	"index.readDescription": "Leggi lu cuntinutu dô tò aneddu",
 	"index.readDescriptionMore": "Voi cuntrullari zocchi c'è nta l'aneddu? Utilizza st'opzioni.",
 	"index.settings": "Mpustazzioni",
