@@ -35,6 +35,7 @@
 	"writeRing.ready": "Lu tò aneddu NFC è prontu",
 	"writeRing.fail": "Mpussìbbili scrìviri ntô tò aneddu NFC",
 	"eraseRing.success": "Cuntinutu dû tò aneddu cancillatu",
+	"eraseRing.finish": "Termina",
 	"readRing.contents": "Cuntinutu di l'aneddu:",
 	"settings.clearMySweetSpot": "Lu mè \"puntu sinzìbbili\"",
 	"settings.clearMySweetSpotDescription": "Elìmina lu \"puntu sinzìbbili\" sarvatu",
