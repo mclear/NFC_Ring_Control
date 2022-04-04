@@ -34,7 +34,7 @@
 	"option.next": "Bahdoyên",
 	"option.dataWontFit": "Tembe: no ziyeed de NFC Ring nêdarıyeno tede",
 	"option.dataWontFitUpgrade": "Uyarı: No ziyed de data nêdariyena NFC Ringê şıma. NFC Ring da ho de ziyed ca akerdışi rê statuya cı barz kerê",
-	"writeRing.finish": "Qediya",
+	"writeRing.finish": "Bıqedene",
 	"writeRing.noNFC": "Fonksiyonê NFC nêgureniyeno. NFC cihazê şıma de aktivo?",
 	"writeRing.woohoo": "Hurra!",
 	"writeRing.ready": "Gıştaney to yo NCF newe waneno?",
