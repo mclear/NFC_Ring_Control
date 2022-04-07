@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sampi│ϡ"
+		]
+	},
+	"index.wantHelp": "Voléd-vos de l'éde ?",
+	"index.wantHelpLong": "O semblle qu'o est la premiére fês qu'utilisâd l’aplicacion contrôlo de l’anél NFC. Voléd-vos de l'éde ?",
+	"index.whatDoYouWantToDoToday": "Ce què que voléd fâre enqu'houé ?",
+	"index.create": "Crèar",
+	"index.read": "Liére",
+	"index.erase": "Èfaciér",
+	"index.settings": "Configuracion",
+	"index.feedback": "Comentèros",
+	"context.history": "Historico",
+	"option.next": "Aprés",
+	"writeRing.finish": "Chavonar",
+	"writeRing.woohoo": "Bravô !",
+	"eraseRing.finish": "Chavonar",
+	"settings.version": "Vèrsion",
+	"settings.phoneModel": "Modèlo de tèlèfono",
+	"actions.vcard.name": "vCard",
+	"actions.twitter.name": "Twitter",
+	"actions.facebook.name": "Facebook",
+	"actions.link.name": "Lim",
+	"actions.youtube.name": "YouTube",
+	"actions.text.name": "Tèxto",
+	"sweetSpot.showHelp": "Aposar l'éde",
+	"sweetSpot.done": "O est fêt. Marci !"
+}
