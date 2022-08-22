@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hidayatsrf",
-			"Marwan Mohamad"
+			"Marwan Mohamad",
+			"Veracious"
 		]
 	},
 	"index.wantHelp": "Butuh bantuan?",
@@ -12,6 +13,7 @@
 	"index.createDescription": "Tulis tindakan baru untuk lingkaran Anda",
 	"index.createDescriptionMore": "Gunakan halaman ini untuk menulis konten atau tindakan baru untuk NFC Ring anda. Anda akan perlu tahu apa yang ingin anda tulis seperti URL dan anda akan perlu NFC Ring.",
 	"index.read": "Baca",
+	"index.erase": "Hapus",
 	"index.readDescription": "Lihat apa yang ada di lingkaran anda",
 	"index.readDescriptionMore": "Ingin memeriksa apa yang sudah ada di cincin anda? Gunakan opsi ini.",
 	"index.settings": "Pengaturan",
