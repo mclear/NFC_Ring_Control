@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bada Kaji",
 			"राम प्रसाद जोशी",
 			"सरोज कुमार ढकाल"
 		]
@@ -9,7 +10,7 @@
 	"index.whatDoYouWantToDoToday": "आज के गर्न चाहनुहुन्छ ?",
 	"index.create": "सृजना गर्नुहोस्",
 	"index.createDescription": "तपाईंको रिङ्को लागि नयाँ क्रियाकलाप लेख्नुहोस्",
-	"index.read": "पढ्ने",
+	"index.read": "पढ्नुहोस्",
 	"index.readDescription": "तपाईंको रिङमा के छ हेर्नुहोस्",
 	"index.settings": "सेटिङ्हरू",
 	"index.settingsDescription": "तपाईंको एप मिलाउनुहोस्",
