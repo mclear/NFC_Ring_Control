@@ -3,7 +3,8 @@
 		"authors": [
 			"Chairego apc",
 			"Elisardojm",
-			"Macofe"
+			"Macofe",
+			"Toliño"
 		]
 	},
 	"index.wantHelp": "Precisas axuda?",
@@ -11,7 +12,7 @@
 	"index.whatDoYouWantToDoToday": "Que queres facer hoxe?",
 	"index.create": "Crear",
 	"index.createDescription": "Escribir unha nova acción no seu anel",
-	"index.createDescriptionMore": "Utilice esta páxina para escribir contido novo ou accións no seu anel NFC. Necesita saber o que quere escribir como unha dirección URL, e necesitará o seu anel NFC.",
+	"index.createDescriptionMore": "Utilice esta páxina para escribir contido novo ou accións no seu anel NFC. Necesita saber o que quere escribir como un enderezo URL, e necesitará o seu anel NFC.",
 	"index.read": "Ler",
 	"index.erase": "Borrar",
 	"index.eraseDescription": "Borrar contidos no seu anel",
@@ -54,7 +55,7 @@
 	"help.on": "Asegúrese de que a pantalla está acesa e o dispositivo está aceso(os dispositivos a miúdo pasan a estado latente)",
 	"help.slowly": "Mueva o seu anel lentamente ó redor da parte posterior do dispositivo",
 	"help.another": "Probe con outro dispositivo NFC se ten un",
-	"help.winPhone": "Windows Phone require que o anel NFC teña unha ligazón. Para solucionalo, colla un teléfono Android ou outra aplicación e escriba unha dirección URL ó seu teléfono, entón poderá utilizar a aplicación de control do anel NFC para escribir unha dirección URL",
+	"help.winPhone": "Windows Phone require que o anel NFC teña unha ligazón. Para solucionalo, colla un teléfono Android ou outra aplicación e escriba un enderezo URL ó seu teléfono, entón poderá utilizar a aplicación de control do anel NFC para escribir un enderezo URL",
 	"help.gotIt": "Entendido",
 	"actions.vcard.name": "vCard",
 	"actions.vcard.description": "Crear unha vCard para compartir os seus detalles de contacto, ou os detalles doutros",
@@ -66,8 +67,8 @@
 	"actions.facebook.description": "Ligar cunha páxina de Facebook",
 	"actions.facebook.optionText": "Cal é a URL da súa páxina de Facebook?",
 	"actions.link.name": "Ligazón",
-	"actions.link.description": "Ligazón a unha dirección web",
-	"actions.link.optionText": "Cal é a dirección URL da páxina web?",
+	"actions.link.description": "Ligazón a un enderezo web",
+	"actions.link.optionText": "Cal é o enderezo URL da páxina web?",
 	"actions.youtube.name": "YouTube",
 	"actions.youtube.description": "Ligar cun vídeo ou cunha canle",
 	"actions.youtube.optionText": "Cal é o seu vídeo ou canle de Youtube?",
