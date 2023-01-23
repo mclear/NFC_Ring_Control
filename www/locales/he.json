@@ -31,7 +31,7 @@
 	"context.history": "היסטוריה",
 	"action.whatDoYouWantYourRingToDo": "מה ברצונך שהטבעת שלך תעשה?",
 	"option.next": "הבאה",
-	"option.dataWontFit": "אזהרה: כמות כזו של נתונים עשויה שלא לחרוג מיכולת האחסון של טבעת ה־NFC שלך",
+	"option.dataWontFit": "אזהרה: כמות כזאת של נתונים עשויה לחרוג מיכולת האחסון של טבעת ה־NFC שלך",
 	"option.dataWontFitUpgrade": "אזהרה: יכול להיות שכמות זו של נתונים חורגת מכמה שניתן לאחסן על טבעת ה־NFC שלך. נא לשדרג את טבעת ה־NFC שלך כדי לקבל עוד מקום",
 	"writeRing.finish": "סיום",
 	"writeRing.noNFC": "תכונת ה־NFC לא עובדת. האם NFC פועל על המכשיר שלך?",
