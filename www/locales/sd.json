@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Charan",
 			"Mehtab ahmed",
 			"Tweety"
 		]
@@ -10,6 +11,7 @@
 	"index.whatDoYouWantToDoToday": "اڄ توهان ڇا ڪرڻ چاهيو ٿا؟",
 	"index.create": "تخليق ڪريو",
 	"index.createDescription": "پنهنجي دائري ۾ نئون ايڪشن لکو",
+	"index.createDescriptionMore": "ھن صفحي کي 'اين ايف سي رنگ' ۾ نئون مواد لکڻ لاءِ استعمال ڪيو. اوھان کي ڄاڻڻو پوندو تہ اوھان کي ڇا لکڻو آھي، جيئن ڳنڍڻو ۽ اوھان کي پنھنجي 'اين ايف سي رنگ' جي ضرورت پوندي.",
 	"index.read": "پڙهو",
 	"index.erase": "ختم ڪيو",
 	"index.eraseDescription": "پنهنجي دائري مان مواد ختم ڪيو",
@@ -24,7 +26,9 @@
 	"index.feedbackDescriptionMore": "اوهان کي ايپ پسند آيو يا نه؟ مهرباني ڪري اسان کي ٻڌايو!",
 	"context.recentActions": "پنهنجا تازا عمل ڏسو",
 	"context.history": "سوانح",
+	"action.whatDoYouWantYourRingToDo": "اوھان ڇا ٿا چاھيو تہ اوھان جو رنگ ڇا ڪري؟",
 	"option.next": "اڳيون",
+	"option.dataWontFit": "چتاءُ: ممڪن آھي تہ ھيتري ڏيٽا اوھان جي 'اين ايف سي رنگ' ۾ داخل نہ ٿي سگھي",
 	"writeRing.finish": "ختم ڪريو",
 	"eraseRing.finish": "مڪمل",
 	"readRing.contents": "دائرو مواد:",
