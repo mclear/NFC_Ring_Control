@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Marcelhospers",
+			"McDutchie",
 			"Romaine",
 			"SPQRobin",
 			"Siebrand",
@@ -58,7 +59,7 @@
 	"help.on": "Zorg ervoor dat het scherm van uw apparaat is ingeschakeld en het apparaat is ingeschakeld (apparaten gaan vaak automatisch op standby)",
 	"help.slowly": "Beweeg de ring langzaam rond de achterkant van uw apparaat",
 	"help.another": "Probeer met een ander NFC-apparaat, mocht u die hebben",
-	"help.winPhone": "Windows Phone vereist dat de NFC-ring als een koppeling bevat. Gebruik een toestel met Android of een andere app om dit op te lossen en schrijf de URL van uw telefoon op de NFC-ring. Daarna is het mogelijk om met de NFC Ring control app een URL te schrijven",
+	"help.winPhone": "Windows Phone vereist dat de NFC-ring al een koppeling bevat. Gebruik een toestel met Android of een andere app om dit op te lossen en schrijf de URL van uw telefoon op de NFC-ring. Daarna is het mogelijk om met de NFC Ring control app een URL te schrijven",
 	"help.gotIt": "Oké, ik begrijp het",
 	"actions.vcard.name": "vCard",
 	"actions.vcard.description": "Maak een vCard aan om de uw contactgegevens of die van iemand anders te delen",
