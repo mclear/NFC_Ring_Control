@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"index.wantHelp": "Wëllt Dir Hëllef?",
@@ -33,6 +34,7 @@
 	"actions.link.description": "Link op eng Internetadress",
 	"actions.link.optionText": "Wéi ass d'URL vum Internetsite?",
 	"actions.youtube.name": "YouTube",
+	"actions.youtube.optionText": "Wéi heescht Äre YouTube-Video oder YouTube-Kanal?",
 	"actions.text.name": "Text",
 	"actions.text.optionText": "Wéi ass Ären Text?",
 	"actions.etherpad.name": "Etherpad",
