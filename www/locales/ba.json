@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Ilmira",
+			"MR973",
 			"Sagan",
 			"Азат Хәлилов",
 			"Ләйсән"
 		]
 	},
 	"index.wantHelp": "Ярҙам кәрәкме?",
-	"index.wantHelpLong": "NFC Ring Control беренсе мәртәбә ҡулланаһығыҙ, ахыры.  Ярҙам кәрәкме?",
+	"index.wantHelpLong": "Күрәһең, һеҙ тәүге тапҡыр NFC Ring Control ҡушымтаһын ҡулланаһығыҙ. Бәлки, ярҙам кәрәктер?",
 	"index.whatDoYouWantToDoToday": "Бөгөн нимә эшләргә теләйһегеҙ?",
 	"index.create": "Яһарға",
 	"index.createDescription": "Яңы эште һеҙҙең түңәрәккә яҙҙырырға",
