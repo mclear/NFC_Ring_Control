@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Baloch Afghanistan",
+			"Moshtank",
 			"Sultanselim baloch"
 		]
 	},
 	"index.wantHelp": "کومکا لوٹیت؟",
 	"index.wantHelpLong": "به نظر می‌رسید این اولین باری است که شما از برنامه کنترل حلقهٔ ان‌اف‌سی استفاده می‌کند. آیا کمک می‌خواهید؟",
 	"index.whatDoYouWantToDoToday": "مروچی چیا لوٹیت که انجام دهیت؟",
-	"index.create": "جوڑ کورتین",
+	"index.create": "بنݔنگ",
 	"index.createDescription": "نوشتن عملی جدید بر روی حلقه‌تان",
 	"index.createDescriptionMore": "از این صفحه برای نوشتن محتویات یا اعمال جدید بر روی حقلهٔ ان‌اف‌سی‌تان استفاده کنید. شما نیازمند این خواهید شد که بدانید چه چیزی می‌خواهید بنویسید از قبیل یک نشانی اینترنتی و شما حقلهٔ ان‌اف‌سی‌تان را نیاز خواهید داشت.",
 	"index.read": "وانگ",
