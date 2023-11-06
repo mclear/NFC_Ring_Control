@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"AmaryllisGardener",
+			"CiphriusKane",
 			"John Reid"
 		]
 	},
 	"index.wantHelp": "Want some heelp?",
 	"index.wantHelpLong": "It luiks like this is the first time that ye'v uised the NFC Ring Control app. Wid ye like some heelp?",
 	"index.whatDoYouWantToDoToday": "Whit dae ye want tae dae theday?",
-	"index.create": "Cræft",
+	"index.create": "Mak",
 	"index.createDescription": "Write ae new action oan yer ring",
 	"index.createDescriptionMore": "Uise this page tae write new content or actions til yer NFC Ring. Ye'll need tae ken whit ye want tae write lik ae URL n ye'll need yer NFC Ring.",
 	"index.read": "Read",
@@ -21,7 +22,7 @@
 	"index.feedbackDescription": "Love sommit or want tae chynge sommit? Than lat us ken",
 	"index.feedbackDescriptionMore": "We'd love tae hear gif ye love or hate sommit. Please dae lat us ken!",
 	"context.recentActions": "See yer recynt actions",
-	"context.history": "Histerie",
+	"context.history": "History",
 	"action.whatDoYouWantYourRingToDo": "Whit dae ye want yer ring tae dae?",
 	"option.next": "Nex",
 	"option.dataWontFit": "Wairnin: This amoont o data micht nae fit on yer NFC Ring",
