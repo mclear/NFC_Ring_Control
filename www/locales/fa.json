@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Arash.pt",
+			"Darafsh",
 			"Ebraminio",
 			"Hamisun",
 			"Mjbmr",
@@ -61,7 +62,7 @@
 	"actions.vcard.name": "کارت ویزیت",
 	"actions.vcard.description": "با ساخت کارت ویزبت مجازی اطلاعات خود را با دیگران به اشتراک بگذارید",
 	"actions.vcard.optionText": "نام",
-	"actions.twitter.name": "توئیتر",
+	"actions.twitter.name": "توییتر",
 	"actions.twitter.description": "پیوند به یک کاربر تئیوتر",
 	"actions.twitter.optionText": "نام کاربری توئیتر شما چیست؟",
 	"actions.facebook.name": "فیس‌بوک",
