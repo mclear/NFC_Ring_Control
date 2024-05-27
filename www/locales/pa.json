@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Babanwalia",
+			"Cabal",
 			"Tow"
 		]
 	},
@@ -10,7 +11,7 @@
 	"index.create": "ਬਣਾਉ",
 	"index.read": "ਪੜ੍ਹੋ",
 	"index.settings": "ਸੈਟਿੰਗਾਂ",
-	"index.feedback": "ਫ਼ੀਡਬੈਕ",
+	"index.feedback": "ਸੁਝਾਅ",
 	"context.recentActions": "ਆਪਣੀਆਂ ਹਾਲੀਆ ਕਾਰਵਾਈਆਂ ਵੇਖੋ",
 	"context.history": "ਅਤੀਤ",
 	"option.next": "ਅੱਗੇ",
