@@ -2,14 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"AZISS",
-			"Cekli829"
+			"Cekli829",
+			"Nemoralis"
 		]
 	},
 	"index.wantHelp": "Köməyə ehtiyacın var?",
+	"index.wantHelpLong": "Deyəsən, NFC Ring Control proqramından ilk dəfə istifadə edirsiniz. Kömək lazımdır?",
 	"index.whatDoYouWantToDoToday": "Bu gün nə etmək istəyirsən?",
 	"index.create": "Yarat",
+	"index.createDescription": "Üzüyünə yeni bir fəaliyyət yazın",
+	"index.createDescriptionMore": "NFC Ring-ə yeni məzmun və ya hərəkətlər yazmaq üçün bu səhifədən istifadə edin. Siz URL kimi nə yazmaq istədiyinizi bilməlisiniz və sizə NFC Ring lazımdır.",
 	"index.read": "Oxu",
 	"index.erase": "Sil",
+	"index.eraseDescription": "Üzüyünüzün məzmunu silin",
+	"index.eraseDescriptionMore": "Üzüyündəkiləri silmək istəyirsən? Bu seçimdən istifadə edin",
+	"index.readDescription": "Üzüyündə nə olduğuna bax",
 	"index.settings": "Nizamlamalar",
 	"index.feedback": "Rəy",
 	"context.history": "Tarix",
