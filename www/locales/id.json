@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akmaie Ajam",
 			"Hidayatsrf",
 			"Marwan Mohamad",
 			"Veracious"
@@ -36,6 +37,7 @@
 	"writeRing.ready": "Cincin NFC anda sudah siap",
 	"writeRing.fail": "Tidak dapat menulis ke Cincin NFC Anda",
 	"eraseRing.success": "Menghapus konten di cincin Anda",
+	"eraseRing.finish": "Selesai",
 	"readRing.contents": "Konten cincin:",
 	"settings.clearMySweetSpot": "Tempat manis saya",
 	"settings.mySweetSpot": "Tempat manis saya",
