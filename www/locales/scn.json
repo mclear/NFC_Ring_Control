@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"GianAntonucci",
 			"Sarvaturi"
 		]
 	},
 	"index.wantHelp": "Hai bisognu d'aiutu?",
 	"index.wantHelpLong": "Pari ch'è la prima vota c'usi st'app. Voi aiutu?",
-	"index.whatDoYouWantToDoToday": "Chi voi fari oi?",
+	"index.whatDoYouWantToDoToday": "Chi voi fari oji?",
 	"index.create": "Crea",
 	"index.createDescription": "Scrivi n'azzioni nova ntô tò aneddu",
 	"index.createDescriptionMore": "Usa sta pàggina pi scrìviri cuntinuti o azzioni novi pô tò aneddu NFC. Hai bisognu di sapiri zocchi voi scrìviri (comu p'esempiu n'URL) e hai bisognu dô tò aneddu NFC.",
