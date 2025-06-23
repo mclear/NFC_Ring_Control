@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"index.wantHelp": "مرسته غواړئ؟",
@@ -10,13 +11,13 @@
 	"index.createDescription": "خپلې کړۍ کې يوه نوې چاره ليکل",
 	"index.read": "لوستل",
 	"index.readDescription": "وگورئ چې کړۍ کې مو څه دي",
-	"index.settings": "امستنې",
+	"index.settings": "اوڼنې",
 	"context.history": "پېښليک",
 	"option.next": "راتلونکی",
 	"writeRing.finish": "پای",
 	"writeRing.woohoo": "اوهوو!",
 	"writeRing.ready": "ستاسې اېن اېف سي کړۍ اوس چمتو ده",
-	"settings.version": "بڼه",
+	"settings.version": "بل‌بڼه",
 	"settings.phoneModel": "ټيليفون مخبېلگه",
 	"settings.changeLanguage": "د کاريال ژبه بدلول",
 	"help.helpTips": "د لارښود مشورې",
