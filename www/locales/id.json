@@ -4,6 +4,7 @@
 			"Akmaie Ajam",
 			"Hidayatsrf",
 			"Marwan Mohamad",
+			"Penyuwangi",
 			"Veracious"
 		]
 	},
@@ -78,7 +79,7 @@
 	"sweetSpot.pressTheScreen": "Tekan layar di lokasi terdaftar pada cincin Anda.",
 	"sweetSpot.holdRingToPhoneByDot": "Tempatkan Cincin NFC Anda di bagian belakang ponsel Anda, di lokasi yang ditunjukkan oleh titik-titik berwarna.",
 	"sweetSpot.moveTheRing": "Gerakkan cincin di bagian belakang telepon sampai Anda menerima konfirmasi. Ini bisa memakan sedikit waktu, jadi bersabarlah :).",
-	"sweetSpot.unableToConnect": "Kami tak dapat terhubung ke server lokasi ''sweet spot'' komunitas kami. Lokasi ''sweet spot'' akan membantu Anda mengidentifikasi di mana harus memegang cincin di ponsel Anda. Anda mungkin perlu mengaktifkan koneksi internet untuk mengakses server kami. Terima kasih.",
+	"sweetSpot.unableToConnect": "Kami tak dapat tersambung ke peladen lokasi ''sweet spot'' komunitas kami. Lokasi ''sweet spot'' akan membantu Anda mengidentifikasi di mana harus memegang cincin di ponsel Anda. Anda mungkin perlu menyalakan sambungan internet untuk mengakses peladen kami. Terima kasih.",
 	"sweetSpot.looksGood": "Terlihat bagus! Apakah titik merah dekat dengan tempat cincin berfungsi dengan ponsel Anda?",
 	"sweetSpot.yay": "Hore! Ini bekerja. Terima kasih untuk menjadi luar biasa.",
 	"sweetSpot.showHelp": "Tampilkan bantuan",
