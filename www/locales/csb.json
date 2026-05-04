@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Iketsi",
 			"Kaszeba"
 		]
 	},
 	"index.wantHelp": "Trza ce pòmòcë?",
-	"index.wantHelpLong": "Wëzdrzi za tim, że  je to twòjé pierszé zrëszënié NFC Ring Control. Nót ce je pòmòcë?",
+	"index.wantHelpLong": "Wëzdrzi za tim, że je to twòjé pierszé zrëszënié NFC Ring Control. Nót ce je pòmòcë?",
 	"index.whatDoYouWantToDoToday": "Co chcesz dzysô robic?",
 	"index.create": "Ùsadzë",
 	"index.createDescription": "Napiszë nowé dzejanié do twòjegò piestrzinia",
