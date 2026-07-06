@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Iketsi",
-			"Kaszeba"
+			"Kaszeba",
+			"Terrus38"
 		]
 	},
 	"index.wantHelp": "Trza ce pòmòcë?",
@@ -16,7 +17,7 @@
 	"index.eraseDescriptionMore": "Chcesz wëczëszczëc co je w twòjim piestrziniu? Ùżëjë ti òptacëji",
 	"index.readDescription": "Òbôczë co je w twòjim piestrziniu",
 	"index.readDescriptionMore": "Chcesz sprôwdzëc co je w twòjim piestrziniu? Ùżëjë ti òptacëji.",
-	"index.settings": "Nastôwë",
+	"index.settings": "Nastôw",
 	"index.settingsDescription": "Kònfigùrëjë twòjã aplikacëjã",
 	"index.settingsDescriptionMore": "Kònfigùrëjë twòjã aplikacëjã.",
 	"index.feedback": "Òpinije",
