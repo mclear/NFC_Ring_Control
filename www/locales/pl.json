@@ -4,6 +4,7 @@
 			"DeRudySoulStorm",
 			"InternerowyGołąb",
 			"Matik7",
+			"PanWor",
 			"Ty221",
 			"WaldiSt",
 			"Woytecr"
@@ -30,7 +31,7 @@
 	"context.recentActions": "Zobacz swoje ostatnie działania",
 	"context.history": "Historia",
 	"option.next": "Następny",
-	"option.dataWontFit": "Ostrzeżenie: Ta ilość danych może nie pasować na twoje urządzenie NFC",
+	"option.dataWontFit": "Ostrzeżenie: Ta ilość danych może nie pasować na Twoje urządzenie NFC",
 	"writeRing.finish": "Zakończ",
 	"writeRing.noNFC": "Funkcja NFC nie działa. Czy w urządzeniu włączono NFC?",
 	"writeRing.woohoo": "Woohoo!",
