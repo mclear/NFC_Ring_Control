@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ar choler",
 			"Fohanno",
 			"Fulup",
 			"Gwenn-Ael"
@@ -21,7 +22,7 @@
 	"index.settings": "Arventennoù",
 	"index.settingsDescription": "Kefluniañ hoc'h arload",
 	"index.settingsDescriptionMore": "Kefluniañ hoc'h arload.",
-	"index.feedback": "Sonjoù",
+	"index.feedback": "Evezhiadennoù",
 	"index.feedbackDescription": "Plijout a ra un dra bennak deoc'h pe c'hoant ho peus da cheñch un dra bennak ? En roit dimp da c'houzout ?",
 	"index.feedbackDescriptionMore": "Plijout a ra dimp gouzout ma plij un dra bennak deoc'h pe ma ne blij ket deoc'h. En roit dimp da c'houzout !",
 	"context.recentActions": "Diskwel hoc'h oberoù nevez",
