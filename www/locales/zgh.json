@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Aslmad mohamed belarhzali",
+			"Daoudsfouli",
 			"Hakim1bal"
 		]
 	},
 	"index.wantHelp": "ⵜⵅⵙⴷ ⴽⵔⴰ ⵏ ⵜⵡⵉⵙⵉ?",
+	"index.wantHelpLong": "ⵢⵓⵎⴰⵏ ⵉⵙ ⵉⴷ ⵜⵉⴽⴽⵍⵜ ⵜⴰⵎⵣⵡⴰⵔⵓⵜ ⵏⵏⴰ ⵜⵙⵎⵔⵙⴷ ⵜⵉⵙⵏⵙⵉ ⵏ ⴰⵏⴱⴰⴹ ⵏ ⵓⴱⴰⵏⴷⵓ ⵏ NFC. ⵉⵙ ⵜⵔⵉⴷ ⴽⵔⴰ ⵏ ⵜⵡⵉⵙⵉ?",
 	"index.whatDoYouWantToDoToday": "ⵎⴰ'ⵢⴷ ⵜⵔⵉⴷ ⴰⴷ ⵜⵙⴽⵔⴷ ⴰⵙⵙⴰ?",
 	"index.create": "ⵙⵏⴼⵍⵓⵍ",
+	"index.createDescription": "ⴰⵔⴰ ⵢⴰⵜ ⵜⵉⴳⴰⵡⵜ ⵜⴰⵎⴰⵢⵏⵓⵜ ⵉ ⵓⴱⴰⵏⴷⵓ ⵏⵏⴽ",
 	"index.read": "ⵖⵔ",
 	"index.erase": "ⵙⴼⴹ",
 	"index.settings": "ⵜⵉⵙⵖⴰⵍ",
